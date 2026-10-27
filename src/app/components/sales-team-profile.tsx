@@ -1554,76 +1554,95 @@ function LocalitySettings() {
 }
 
 // ── Configuration Settings ──
-const configTabs = ['User Management', 'Location and Address', 'Financial And Sales', 'Settings And Miscellaneous', 'KPI Configuration', 'Commission Criteria'];
-const nestedTabs = ['Sales App Rights Group', 'Additional Users', 'Widgets'];
+const configTabs = [
+  'User Management', 'Location And Address', 'Financial And Sales', 'Settings And Miscellaneous', 'Verification Types',
+  'Brands', 'KPI Configuration', 'Branding', 'CAS Systems', 'General Sales Dashboard',
+];
+const nestedTabs = ['Sales App Rights Groups', 'Additional Users', 'Widgets', 'Shift Profile'];
 
 function ConfigurationSettings() {
   const [activeConfigTab, setActiveConfigTab] = useState('User Management');
-  const [activeNestedTab, setActiveNestedTab] = useState('Sales App Rights Group');
+  const [activeNestedTab, setActiveNestedTab] = useState('Sales App Rights Groups');
+  const [lines, setLines] = useState<Record<string, string[]>>({ 'Sales App Rights Groups': ['Onboarding req'] });
+  const current = lines[activeNestedTab] ?? [];
+  const setCurrent = (next: string[]) => setLines(prev => ({ ...prev, [activeNestedTab]: next }));
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-2">
       <span className="text-[17px] text-[#000b25] font-medium">Configuration Settings</span>
-      <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-6">
-        {/* Top Tabs */}
-        <div className="bg-[#f1f5f9] rounded-[4px] flex items-center gap-2 px-2 py-1">
-          <button className="bg-[#dbedf8] border border-[#dbedf8] w-8 h-8 rounded-full flex items-center justify-center active:scale-95 transition-transform">
-            <ChevronLeft size={14} className="text-[#0072ce]" />
-          </button>
-          <div className="flex-1 flex gap-[2px]">
-            {configTabs.map(tab => (
-              <button
-                key={tab}
-                onClick={() => setActiveConfigTab(tab)}
-                className={`flex-1 py-2 px-4 rounded-[4px] text-[14px] text-center transition-all active:scale-95 whitespace-nowrap ${
-                  activeConfigTab === tab
-                    ? 'bg-white border border-[#0072ce] text-[#0072ce] font-medium'
-                    : 'text-[rgba(0,11,37,0.64)]'
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-          <button className="bg-[#dbedf8] border border-[#dbedf8] w-8 h-8 rounded-full flex items-center justify-center active:scale-95 transition-transform">
-            <ChevronRight size={14} className="text-[#0072ce]" />
-          </button>
+      <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4">
+        {/* Top tabs */}
+        <div className="bg-[#f1f5f9] rounded-[4px] flex gap-[2px] p-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {configTabs.map(tab => (
+            <button
+              key={tab}
+              onClick={() => setActiveConfigTab(tab)}
+              className={`flex-1 py-2 px-2 rounded-[4px] text-[12px] text-center transition-all whitespace-nowrap ${
+                activeConfigTab === tab
+                  ? 'bg-white border border-[#0072ce] text-[#0072ce] font-medium'
+                  : 'text-[rgba(0,11,37,0.64)] hover:bg-white/60'
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
         </div>
 
-        {/* User Management Content */}
-        <div className="bg-[#f8fafc] rounded-[4px] border border-[#e2e8f0] px-3 py-4 flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <span className="text-[16px] text-[#000b25] font-medium">User Management</span>
-            <span className="text-[14px] text-[rgba(0,11,37,0.64)]">Configure user roles, permissions, and access controls</span>
+        <div className="bg-[#f8fafc] rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4">
+          <div className="flex flex-col gap-1">
+            <span className="text-[14px] text-[#000b25] font-medium">{activeConfigTab}</span>
+            <span className="text-[12px] text-[rgba(0,11,37,0.64)]">
+              {activeConfigTab === 'User Management'
+                ? 'Configure user roles, permissions, and access controls'
+                : `Configure ${activeConfigTab.toLowerCase()} settings`}
+            </span>
           </div>
-          {/* Nested Tabs */}
-          <div className="bg-white border border-[#e2e8f0] rounded-[4px] flex gap-[2px] p-1">
-            {nestedTabs.map(tab => (
-              <button
-                key={tab}
-                onClick={() => setActiveNestedTab(tab)}
-                className={`flex-1 py-2 rounded-[4px] text-[14px] text-center transition-all active:scale-95 ${
-                  activeNestedTab === tab
-                    ? 'bg-[#0072ce] text-white font-medium'
-                    : 'text-[rgba(0,11,37,0.64)]'
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-          {/* Table */}
-          <div className="bg-white border border-[#e2e8f0] rounded-[4px] overflow-hidden">
-            <div className="bg-[#f3f9fd] px-4 py-3 border-b border-[#e2e8f0]">
-              <div className="flex items-center gap-1">
-                <span className="text-[12px] text-[#000b25] font-medium">Name</span>
-                <ChevronDown size={10} className="text-[#000b25]" />
+
+          {activeConfigTab === 'User Management' ? (
+            <>
+              {/* Nested tabs */}
+              <div className="bg-white border border-[#e2e8f0] rounded-[4px] flex gap-[2px] p-1">
+                {nestedTabs.map(tab => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveNestedTab(tab)}
+                    className={`flex-1 py-2 rounded-[4px] text-[13px] text-center transition-all ${
+                      activeNestedTab === tab
+                        ? 'bg-[#0072ce] text-white font-medium'
+                        : 'text-[rgba(0,11,37,0.64)] hover:bg-[#f8fafc]'
+                    }`}
+                  >
+                    {tab}
+                  </button>
+                ))}
               </div>
+
+              {/* Table */}
+              <div className="bg-white border border-[#e2e8f0] rounded-[4px] overflow-hidden">
+                <div className="bg-[#f3f4f6] px-4 py-2.5 border-b border-[#e2e8f0] text-[12px] text-[#000b25] font-medium">Name</div>
+                {current.map((value, i) => (
+                  <div key={i} className="flex items-center gap-2 px-4 py-1.5 border-b border-[#e2e8f0]">
+                    <input
+                      value={value}
+                      onChange={e => setCurrent(current.map((v, j) => (j === i ? e.target.value : v)))}
+                      placeholder="Name"
+                      className="flex-1 h-8 bg-transparent text-[13px] text-[#0072ce] outline-none placeholder:text-[rgba(0,11,37,0.4)]"
+                    />
+                    <button onClick={() => setCurrent(current.filter((_, j) => j !== i))} aria-label="Remove line" className="text-[#f02b02] hover:bg-[#fdecea] rounded p-1 active:scale-95 transition-all">
+                      <X size={14} />
+                    </button>
+                  </div>
+                ))}
+                <button onClick={() => setCurrent([...current, ''])} className="w-full text-left px-4 py-2.5 text-[13px] text-[#0072ce] font-medium flex items-center gap-1.5 hover:bg-[#f8fafc] transition-colors">
+                  <Plus size={12} /> Add a line
+                </button>
+              </div>
+            </>
+          ) : (
+            <div className="bg-white border border-dashed border-[#e2e8f0] rounded-[4px] py-8 text-center text-[13px] text-[rgba(0,11,37,0.57)]">
+              Nothing configured yet
             </div>
-            <div className="px-4 py-3">
-              <button className="text-[14px] text-[#4297dd] font-medium active:scale-95 transition-transform">Add a line</button>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
