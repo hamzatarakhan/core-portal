@@ -1302,32 +1302,12 @@ function FormSection({ title }: { title: string }) {
   );
 }
 
-function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = true }: { onOpenHierarchySettings?: () => void; showHierarchyView?: boolean }) {
-  const [showParents, setShowParents] = useState(false);
+function ChannelMemberDetails({ onOpenHierarchySettings }: { onOpenHierarchySettings?: () => void }) {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between">
         <span className="text-[17px] text-[#000b25] font-medium">Channel Member Details</span>
         <div className="flex items-center gap-2">
-          {showHierarchyView && (
-            <div className="relative group">
-              <button
-                onClick={() => setShowParents(true)}
-                aria-describedby="hierarchy-view-tip"
-                className="h-9 px-3 rounded-[4px] bg-[#f4f4f5] text-[14px] text-[#000000] font-medium flex items-center gap-2 hover:bg-[#e4e4e7] active:scale-95 transition-all"
-              >
-                <ListTree size={16} /> Hierarchy View
-                <span className="bg-[#000000] text-white text-[11px] px-1.5 rounded-full">{parents.length - 1}</span>
-              </button>
-              <div
-                id="hierarchy-view-tip"
-                role="tooltip"
-                className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full mt-2 z-40 whitespace-nowrap rounded-[4px] bg-[#000b25] px-3 py-1.5 text-[12px] text-white shadow-lg opacity-0 transition-opacity duration-150 group-hover:opacity-100"
-              >
-                It will show this member's position in the hierarchy
-              </div>
-            </div>
-          )}
           <div className="relative group">
             <button
               aria-disabled="true"
@@ -1346,20 +1326,13 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
           </div>
         </div>
       </div>
-      <ChannelMemberParentsDrawer isOpen={showParents} onClose={() => setShowParents(false)} />
       <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4">
-        <FormSection title="Account Management" />
-        <div className="grid grid-cols-3 gap-x-4 gap-y-3">
-          <SelectField label="Account Manager" value="Omer Khaled" disabled />
-          <SelectField label="Regional Account Manager" value="Yousef Qat" disabled />
-          <SelectField label="Outlet Type" value="Kiosk" disabled />
-        </div>
-
         <FormSection title="Member Information" />
         <div className="grid grid-cols-3 gap-x-4 gap-y-3">
           <ReadonlyField label="Member Code" value="5456589" />
           <TextField label="Name" value="aaaz" />
           <TextField label="Phone" value="966554444443" />
+          <TextField label="Email" value="ss@gmail.com" />
         </div>
 
         <FormSection title="Organization Details" />
@@ -1372,11 +1345,47 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
           <TextField label="Bank IBAN Proof" value="SA0380000000608010167519" />
           <TextField label="Owner Name" value="Khaled Al Harbi" />
           <TextField label="Owner Civil ID" value="21321" />
-          <TextField label="Email" value="ss@gmail.com" />
+          <SelectField label="Outlet Type" value="Kiosk" disabled />
         </div>
         <FormField label="National Address">
           <textarea className={`${inputCls} h-[72px] py-2 font-normal resize-none`} defaultValue="Makkah, Al Aziziyah, Prince Sultan Street, Building 8218" />
         </FormField>
+      </div>
+    </div>
+  );
+}
+
+// Every parent in the hierarchy tree as a read-only field: label = their position, value = their name.
+function AccountManagement() {
+  const ancestors = parents.filter(p => !p.active);
+  const [showTree, setShowTree] = useState(false);
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="flex items-center justify-between">
+        <span className="text-[17px] text-[#000b25] font-medium">Account Management</span>
+        <div className="relative group">
+          <button
+            onClick={() => setShowTree(true)}
+            aria-describedby="hierarchy-view-tip"
+            className="h-9 px-3 rounded-[4px] bg-[#f4f4f5] text-[14px] text-[#000000] font-medium flex items-center gap-2 hover:bg-[#e4e4e7] active:scale-95 transition-all"
+          >
+            <ListTree size={16} /> Hierarchy View
+            <span className="bg-[#000000] text-white text-[11px] px-1.5 rounded-full">{parents.length - 1}</span>
+          </button>
+          <div
+            id="hierarchy-view-tip"
+            role="tooltip"
+            className="pointer-events-none absolute right-0 top-full mt-2 z-40 whitespace-nowrap rounded-[4px] bg-[#000b25] px-3 py-1.5 text-[12px] text-white shadow-lg opacity-0 transition-opacity duration-150 group-hover:opacity-100"
+          >
+            It will show this member's position in the hierarchy
+          </div>
+        </div>
+      </div>
+      <ChannelMemberParentsDrawer isOpen={showTree} onClose={() => setShowTree(false)} />
+      <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 grid grid-cols-3 gap-x-4 gap-y-3">
+        {ancestors.map(p => (
+          <ReadonlyField key={p.name} label={p.role} value={p.name} />
+        ))}
       </div>
     </div>
   );
@@ -1674,10 +1683,13 @@ export function SalesTeamProfile({ onOpenHierarchySettings, variant = 1 }: { onO
           <SmartButtonsRow />
         </div>
 
+        {/* Account Management (parents in the tree) */}
+        {variant === 1 && <AccountManagement />}
+
         {/* Channel Member Details */}
         {variant === 2 ? (
           <div className="grid grid-cols-[2fr_1fr] items-start gap-4">
-            <ChannelMemberDetails onOpenHierarchySettings={onOpenHierarchySettings} showHierarchyView={false} />
+            <ChannelMemberDetails onOpenHierarchySettings={onOpenHierarchySettings} />
             <div className="flex flex-col gap-2">
               <div className="flex items-center h-9">
                 <span className="text-[17px] text-[#000b25] font-medium">Hierarchy</span>
