@@ -157,4 +157,6 @@
 :where(.dark) .bg-zinc-200 { background-color: #17233b; }
 :where(.dark) .hover\:bg-zinc-100:hover { background-color: #17233b; }
 :where(.dark) .border-zinc-300 { border-color: #3a4663; }
+:where(.dark) .bg-\[\#d4d4d8\]:hover { background-color: #475569; }
+:where(.dark) .hover\:bg-\[\#d4d4d8\]:hover { background-color: #475569; }
 }

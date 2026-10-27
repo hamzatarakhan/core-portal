@@ -1312,7 +1312,7 @@ function ChannelMemberDetails({ onOpenHierarchySettings }: { onOpenHierarchySett
             <button
               aria-disabled="true"
               aria-describedby="hierarchy-settings-tip"
-              className="h-9 px-3 rounded-[4px] bg-[#f4f4f5] text-[14px] text-[#000000] font-medium flex items-center gap-2 cursor-default"
+              className="h-9 px-3 rounded-[4px] bg-[#e4e4e7] text-[14px] text-[#000000] font-medium flex items-center gap-2 cursor-default"
             >
               <Network size={16} /> Hierarchy Settings
             </button>
@@ -1367,7 +1367,7 @@ function AccountManagement() {
           <button
             onClick={() => setShowTree(true)}
             aria-describedby="hierarchy-view-tip"
-            className="h-9 px-3 rounded-[4px] bg-[#f4f4f5] text-[14px] text-[#000000] font-medium flex items-center gap-2 hover:bg-[#e4e4e7] active:scale-95 transition-all"
+            className="h-9 px-3 rounded-[4px] bg-[#e4e4e7] text-[14px] text-[#000000] font-medium flex items-center gap-2 hover:bg-[#d4d4d8] active:scale-95 transition-all"
           >
             <ListTree size={16} /> Hierarchy View
             <span className="bg-[#000000] text-white text-[11px] px-1.5 rounded-full">{parents.length - 1}</span>
