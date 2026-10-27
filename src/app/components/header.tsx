@@ -25,7 +25,8 @@ export function Header({ title, description }: HeaderProps) {
         )}
       </div>
       
-      <div className="flex items-center gap-6">
+      {/* Theme toggle, notifications and profile menu are inactive for the client preview */}
+      <div className="flex items-center gap-6 pointer-events-none select-none" ref={el => el?.setAttribute('inert', '')}>
         <div className="flex items-center gap-4">
           <button 
             onClick={toggleTheme}

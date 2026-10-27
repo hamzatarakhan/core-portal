@@ -20,7 +20,7 @@ import { ComponentStates } from './components/component-states';
 import { Toaster } from 'sonner';
 
 export default function App() {
-  const [currentSubItem, setCurrentSubItem] = useState('Profile');
+  const [currentSubItem, setCurrentSubItem] = useState('Profile - option 1');
   const [selectedCycle, setSelectedCycle] = useState<any | null>(null);
   const [selectedPlan, setSelectedPlan] = useState<any | null>(null);
   const [selectedBrandId, setSelectedBrandId] = useState<string | null>(null);
@@ -74,8 +74,14 @@ export default function App() {
       return <TerritoryHierarchy />;
     }
 
-    if (currentSubItem === 'Profile') {
-      return <SalesTeamProfile onOpenHierarchySettings={() => handleSubItemClick('Territory Hierarchy')} />;
+    if (currentSubItem === 'Profile - option 1' || currentSubItem === 'Profile - option 2') {
+      return (
+        <SalesTeamProfile
+          key={currentSubItem}
+          variant={currentSubItem === 'Profile - option 2' ? 2 : 1}
+          onOpenHierarchySettings={() => handleSubItemClick('Territory Hierarchy')}
+        />
+      );
     }
 
     if (currentSubItem === 'Excluded Members') {

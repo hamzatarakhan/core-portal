@@ -1302,42 +1302,69 @@ function FormSection({ title }: { title: string }) {
   );
 }
 
-function ChannelMemberDetails({ onOpenHierarchySettings }: { onOpenHierarchySettings?: () => void }) {
+function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = true }: { onOpenHierarchySettings?: () => void; showHierarchyView?: boolean }) {
   const [showParents, setShowParents] = useState(false);
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between">
         <span className="text-[17px] text-[#000b25] font-medium">Channel Member Details</span>
         <div className="flex items-center gap-2">
-          <button
-            onClick={() => setShowParents(true)}
-            className="h-9 px-3 rounded-[4px] bg-[#eef5fd] text-[14px] text-[#0072ce] font-medium flex items-center gap-2 hover:bg-[#dbeafb] active:scale-95 transition-all"
-          >
-            <ListTree size={16} /> Hierarchy View
-            <span className="bg-[#0072ce] text-white text-[11px] px-1.5 rounded-full">{parents.length - 1}</span>
-          </button>
-          <button
-            onClick={onOpenHierarchySettings}
-            className="h-9 px-3 rounded-[4px] bg-[#eef5fd] text-[14px] text-[#0072ce] font-medium flex items-center gap-2 hover:bg-[#dbeafb] active:scale-95 transition-all"
-          >
-            <Network size={16} /> Hierarchy Settings
-          </button>
+          {showHierarchyView && (
+            <div className="relative group">
+              <button
+                onClick={() => setShowParents(true)}
+                aria-describedby="hierarchy-view-tip"
+                className="h-9 px-3 rounded-[4px] bg-[#eef5fd] text-[14px] text-[#0072ce] font-medium flex items-center gap-2 hover:bg-[#dbeafb] active:scale-95 transition-all"
+              >
+                <ListTree size={16} /> Hierarchy View
+                <span className="bg-[#0072ce] text-white text-[11px] px-1.5 rounded-full">{parents.length - 1}</span>
+              </button>
+              <div
+                id="hierarchy-view-tip"
+                role="tooltip"
+                className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full mt-2 z-40 whitespace-nowrap rounded-[4px] bg-[#000b25] px-3 py-1.5 text-[12px] text-white shadow-lg opacity-0 transition-opacity duration-150 group-hover:opacity-100"
+              >
+                It will show this member's position in the hierarchy
+              </div>
+            </div>
+          )}
+          <div className="relative group">
+            <button
+              aria-disabled="true"
+              aria-describedby="hierarchy-settings-tip"
+              className="h-9 px-3 rounded-[4px] bg-[#eef5fd] text-[14px] text-[#0072ce] font-medium flex items-center gap-2 cursor-default"
+            >
+              <Network size={16} /> Hierarchy Settings
+            </button>
+            <div
+              id="hierarchy-settings-tip"
+              role="tooltip"
+              className="pointer-events-none absolute right-0 top-full mt-2 z-40 whitespace-nowrap rounded-[4px] bg-[#000b25] px-3 py-1.5 text-[12px] text-white shadow-lg opacity-0 translate-y-1 transition-all duration-150 group-hover:opacity-100 group-hover:translate-y-0"
+            >
+              It will open the hierarchy type page
+            </div>
+          </div>
         </div>
       </div>
       <ChannelMemberParentsDrawer isOpen={showParents} onClose={() => setShowParents(false)} />
       <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4">
+        <FormSection title="Account Management" />
+        <div className="grid grid-cols-3 gap-x-4 gap-y-3">
+          <SelectField label="Account Manager" value="Omer Khaled" disabled />
+          <SelectField label="Regional Account Manager" value="Yousef Qat" disabled />
+          <SelectField label="Outlet Type" value="Kiosk" disabled />
+        </div>
+
         <FormSection title="Member Information" />
-        <div className="grid grid-cols-4 gap-x-4 gap-y-3">
+        <div className="grid grid-cols-3 gap-x-4 gap-y-3">
           <ReadonlyField label="Member Code" value="5456589" />
           <TextField label="Name" value="aaaz" />
           <TextField label="Phone" value="966554444443" />
-          <TextField label="Email" value="ss@gmail.com" />
         </div>
 
         <FormSection title="Organization Details" />
         <div className="grid grid-cols-3 gap-x-4 gap-y-3">
           <SelectField label="Store Name" value="tet" options={['Store A', 'Store B']} />
-          <SelectField label="Outlet Type" value="Kiosk" disabled />
           <TextField label="Organization ID" value="21323" />
           <TextField label="Commercial Registration (CR)" value="tes" />
           <TextField label="CR Expiry Date" type="date" value="2026-10-13" />
@@ -1345,8 +1372,8 @@ function ChannelMemberDetails({ onOpenHierarchySettings }: { onOpenHierarchySett
           <TextField label="Bank IBAN Proof" value="SA0380000000608010167519" />
           <TextField label="Owner Name" value="Khaled Al Harbi" />
           <TextField label="Owner Civil ID" value="21321" />
+          <TextField label="Email" value="ss@gmail.com" />
         </div>
-
         <FormField label="National Address">
           <textarea className={`${inputCls} h-[72px] py-2 font-normal resize-none`} defaultValue="Makkah, Al Aziziyah, Prince Sultan Street, Building 8218" />
         </FormField>
@@ -1413,6 +1440,32 @@ const parents = [
   { letter: 'A', name: 'aaaz', role: 'Point of Sales Store', color: '#1d9a9a', active: true },
 ];
 
+function HierarchyTree() {
+  return (
+    <div className="relative flex flex-col gap-4">
+      {/* Vertical connector through the avatars */}
+      <div className="absolute left-[28px] top-6 bottom-[88px] w-px bg-[#c7d2e0]" />
+      {parents.map((p, i) => (
+        <div
+          key={i}
+          className={`relative flex items-center gap-3 rounded-[4px] px-3 py-2 ${
+            p.active ? 'ml-8 bg-[#eef5fd] border border-[#90c2f0]' : 'bg-[#f5f5f5]'
+          }`}
+        >
+          <div className="w-8 h-8 rounded-full flex items-center justify-center text-white text-[12px] shrink-0" style={{ backgroundColor: p.color }}>
+            {p.letter}
+          </div>
+          <div className="flex flex-col min-w-0">
+            <span className="text-[13px] text-[#000b25] font-medium truncate">{p.name}</span>
+            <span className="text-[11px] text-[rgba(0,11,37,0.57)] truncate">{p.role}</span>
+          </div>
+          {p.active && <ChevronsDown size={16} className="ml-auto text-[rgba(0,11,37,0.64)]" />}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function ChannelMemberParentsDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   return (
     <div
@@ -1434,27 +1487,7 @@ function ChannelMemberParentsDrawer({ isOpen, onClose }: { isOpen: boolean; onCl
           </button>
         </div>
         <div className="flex-1 overflow-y-auto p-5">
-          <div className="relative flex flex-col gap-4">
-            {/* Vertical connector through the avatars */}
-            <div className="absolute left-[28px] top-6 bottom-[88px] w-px bg-[#c7d2e0]" />
-            {parents.map((p, i) => (
-              <div
-                key={i}
-                className={`relative flex items-center gap-3 rounded-[4px] px-3 py-2 ${
-                  p.active ? 'ml-8 bg-[#eef5fd] border border-[#90c2f0]' : 'bg-[#f5f5f5]'
-                }`}
-              >
-                <div className="w-8 h-8 rounded-full flex items-center justify-center text-white text-[12px] shrink-0" style={{ backgroundColor: p.color }}>
-                  {p.letter}
-                </div>
-                <div className="flex flex-col min-w-0">
-                  <span className="text-[13px] text-[#000b25] font-medium truncate">{p.name}</span>
-                  <span className="text-[11px] text-[rgba(0,11,37,0.57)] truncate">{p.role}</span>
-                </div>
-                {p.active && <ChevronsDown size={16} className="ml-auto text-[rgba(0,11,37,0.64)]" />}
-              </div>
-            ))}
-          </div>
+          <HierarchyTree />
         </div>
       </div>
     </div>
@@ -1598,7 +1631,7 @@ function ConfigurationSettings() {
 }
 
 // ── Main Profile Component ──
-export function SalesTeamProfile({ onOpenHierarchySettings }: { onOpenHierarchySettings?: () => void } = {}) {
+export function SalesTeamProfile({ onOpenHierarchySettings, variant = 1 }: { onOpenHierarchySettings?: () => void; variant?: 1 | 2 } = {}) {
   return (
     <div className="h-full overflow-y-auto custom-scrollbar-profile">
       <div className="min-w-[1040px] bg-[#f5f6fa] p-6 flex flex-col gap-6">
@@ -1623,13 +1656,24 @@ export function SalesTeamProfile({ onOpenHierarchySettings }: { onOpenHierarchyS
         </div>
 
         {/* Channel Member Details */}
-        <ChannelMemberDetails onOpenHierarchySettings={onOpenHierarchySettings} />
+        {variant === 2 ? (
+          <div className="grid grid-cols-[2fr_1fr] items-start gap-4">
+            <ChannelMemberDetails onOpenHierarchySettings={onOpenHierarchySettings} showHierarchyView={false} />
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center h-9">
+                <span className="text-[17px] text-[#000b25] font-medium">Hierarchy</span>
+              </div>
+              <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4">
+                <HierarchyTree />
+              </div>
+            </div>
+          </div>
+        ) : (
+          <ChannelMemberDetails onOpenHierarchySettings={onOpenHierarchySettings} />
+        )}
 
         {/* Upload Document */}
         <UploadDocument />
-
-        {/* Locality Settings */}
-        <LocalitySettings />
 
         {/* Configuration Settings */}
         <ConfigurationSettings />

@@ -28,7 +28,8 @@ import logo from 'figma:asset/7a47870d2a1694273f16e4200d2c98592ab1c763.png';
 // Broadcast, Endpoints, Reporting, Tickets, Shift Planning, Stock, Form Builder, Integrations)
 // can be restored from git history.
 const navItems: { icon: React.ElementType; label: string; subItems?: string[] }[] = [
-  { icon: IdCard, label: 'Profile' },
+  { icon: IdCard, label: 'Profile - option 1' },
+  { icon: IdCard, label: 'Profile - option 2' },
 ];
 
 interface SidebarProps {
@@ -37,7 +38,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ activeSubItem, onSubItemClick }: SidebarProps) {
-  const [activeItem, setActiveItem] = useState('Profile');
+  const [activeItem, setActiveItem] = useState('Profile - option 1');
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [openMenus, setOpenMenus] = useState<string[]>(['Sales Team']);
 
