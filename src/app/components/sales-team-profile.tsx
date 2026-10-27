@@ -1351,10 +1351,7 @@ function ChannelMemberDetails({ onOpenHierarchySettings }: { onOpenHierarchySett
           </div>
         </div>
 
-        <FormSection title="Hierarchy & Organization" />
-        <div className="grid grid-cols-3 gap-x-4 gap-y-3">
-          <ReadonlyField label="Parent Hierarchy" value="Sales Rep" />
-          <SelectField label="Parent" value="Sales Rep1" options={['Sales Rep2']} />
+        <div className="grid grid-cols-3 gap-x-4">
           <SelectField label="Outlet Type" value="Kiosk" disabled />
         </div>
       </div>
@@ -1627,12 +1624,6 @@ export function SalesTeamProfile({ onOpenHierarchySettings }: { onOpenHierarchyS
         {/* Smart Buttons */}
         <div className="shadow-[0_3px_10px_rgba(0,0,0,0.05)]">
           <SmartButtonsRow />
-        </div>
-
-        {/* Area Manager | Dealer Support */}
-        <div className="grid grid-cols-2 items-stretch gap-4">
-          <DealerCard title="Area Manager" dealerName="Dealer Name" />
-          <DealerCard title="Dealer Support" dealerName="Dealer Name" />
         </div>
 
         {/* Channel Member Details */}
