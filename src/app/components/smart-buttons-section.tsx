@@ -19,7 +19,7 @@ function SegmentedText({ text, isActive, onClick }: SegmentedTextProps) {
     >
       <p className={`font-medium leading-[1.2] relative shrink-0 text-[14px] text-nowrap transition-colors ${
         isActive 
-          ? 'text-[#0071cd] dark:text-blue-400 opacity-0' 
+          ? 'text-[#000000] dark:text-zinc-500 opacity-0' 
           : 'text-[rgba(0,11,37,0.64)] dark:text-gray-400'
       }`}>
         {text}
@@ -76,7 +76,7 @@ function RejectModal({ isOpen, onClose, onConfirm }: RejectModalProps) {
               <div className="relative">
                 <button 
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="w-full flex items-center justify-between px-3 h-[42px] bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md text-sm text-gray-900 dark:text-gray-100 hover:border-blue-400 transition-all text-left"
+                  className="w-full flex items-center justify-between px-3 h-[42px] bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md text-sm text-gray-900 dark:text-gray-100 hover:border-zinc-500 transition-all text-left"
                 >
                   <span className={selectedType ? "text-gray-900 dark:text-gray-100" : "text-gray-400"}>
                     {selectedType || "Select a reason type"}
@@ -95,10 +95,10 @@ function RejectModal({ isOpen, onClose, onConfirm }: RejectModalProps) {
                           setSelectedType(type);
                           setIsDropdownOpen(false);
                         }}
-                        className="w-full text-left px-4 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-colors flex items-center justify-between"
+                        className="w-full text-left px-4 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900/40 transition-colors flex items-center justify-between"
                       >
                         {type}
-                        {selectedType === type && <div className="size-1.5 bg-blue-500 rounded-full" />}
+                        {selectedType === type && <div className="size-1.5 bg-black rounded-full" />}
                       </button>
                     ))}
                   </div>
@@ -254,7 +254,7 @@ export function SmartButtonsSection() {
                 }}
               >
                 <div className="absolute content-stretch flex gap-[4px] h-[33px] items-center justify-center inset-0 px-[24px] py-[8px] rounded-[4px]" data-name="Segmented">
-                  <p className="font-medium leading-[1.2] relative shrink-0 text-[#0071cd] dark:text-blue-400 text-[14px] text-nowrap">
+                  <p className="font-medium leading-[1.2] relative shrink-0 text-[#000000] dark:text-zinc-500 text-[14px] text-nowrap">
                     {activeSegment}
                   </p>
                 </div>

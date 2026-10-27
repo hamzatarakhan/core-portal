@@ -90,7 +90,7 @@ function TextText({ text, additionalClassNames = "" }: TextTextProps) {
 
 export default function Frame() {
   return (
-    <div className="bg-[#f3f9fd] content-stretch flex flex-col items-start relative size-full">
+    <div className="bg-[#f4f4f5] content-stretch flex flex-col items-start relative size-full">
       <div className="h-[55px] relative shrink-0 w-full" data-name="Table Row">
         <div className="absolute border-[#e2e8f0] border-[0px_1px_0px_0px] border-solid h-[55px] left-0 top-0 w-[40px]" data-name="Table Cell" />
         <div className="absolute h-[55px] left-[40px] top-0 w-[682.594px]" data-name="Table Cell">

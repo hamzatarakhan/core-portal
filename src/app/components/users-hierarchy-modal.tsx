@@ -160,7 +160,7 @@ const nodeUsersData: Record<string, NodeUser[]> = {
 
 // ─── Avatar helpers ───────────────────────────────────────────────────────────
 
-const AVATAR_COLORS = ['#0072CE','#00a86b','#f59e0b','#8b5cf6','#ec4899','#06b6d4','#84cc16','#ef4444'];
+const AVATAR_COLORS = ['#000000','#00a86b','#f59e0b','#8b5cf6','#ec4899','#06b6d4','#84cc16','#ef4444'];
 function avatarColor(name: string) { return AVATAR_COLORS[name.charCodeAt(0) % AVATAR_COLORS.length]; }
 function initials(name: string)    { return name.split(' ').map(p => p[0]).slice(0, 2).join('').toUpperCase(); }
 
@@ -187,8 +187,8 @@ function NodeUsersModal({ nodeName, onClose }: { nodeName: string; onClose: () =
         <div style={{ padding: '20px 24px 16px', borderBottom: '1px solid #e2e8f0', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <div style={{ width: 32, height: 32, borderRadius: 8, background: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Users size={16} color="#0072CE" />
+              <div style={{ width: 32, height: 32, borderRadius: 8, background: '#f4f4f5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Users size={16} color="#000000" />
               </div>
               <h3 style={{ margin: 0, fontSize: 16, fontWeight: 600, color: '#000b25' }}>{nodeName}</h3>
             </div>
@@ -297,7 +297,7 @@ function OrgChartNode({
       {/* ── Node box ── */}
       <div style={{ display: 'flex', alignItems: 'center', border: '1.5px solid #5aaee8', borderRadius: 6, background: '#fff', whiteSpace: 'nowrap', userSelect: 'none', overflow: 'hidden' }}>
         {/* Label */}
-        <span style={{ padding: '6px 10px 6px 14px', color: '#0072CE', fontSize: 12, fontWeight: 400 }}>
+        <span style={{ padding: '6px 10px 6px 14px', color: '#000000', fontSize: 12, fontWeight: 400 }}>
           {node.label}
         </span>
 
@@ -305,8 +305,8 @@ function OrgChartNode({
         <button
           title={`View users in ${node.label}`}
           onClick={e => { e.stopPropagation(); onShowUsers(node.label); }}
-          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 26, height: '100%', minHeight: 28, borderTop: 'none', borderRight: 'none', borderBottom: 'none', borderLeft: '1px solid #dbedf8', background: 'transparent', cursor: 'pointer', color: '#93c5fd', padding: '0 5px', transition: 'background 0.12s, color 0.12s' }}
-          onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#eff6ff'; el.style.color = '#0072CE'; }}
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 26, height: '100%', minHeight: 28, borderTop: 'none', borderRight: 'none', borderBottom: 'none', borderLeft: '1px solid #e4e4e7', background: 'transparent', cursor: 'pointer', color: '#93c5fd', padding: '0 5px', transition: 'background 0.12s, color 0.12s' }}
+          onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#f4f4f5'; el.style.color = '#000000'; }}
           onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'transparent'; el.style.color = '#93c5fd'; }}
           onMouseDown={e => { (e.currentTarget as HTMLElement).style.transform = 'scale(0.9)'; }}
           onMouseUp={e => { (e.currentTarget as HTMLElement).style.transform = 'scale(1)'; }}
@@ -333,9 +333,9 @@ function OrgChartNode({
             style={{
               width: 18, height: 18, borderRadius: '50%', border: '1.5px solid #5aaee8',
               background: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
-              color: '#0072CE', fontSize: 13, fontWeight: 700, lineHeight: 1, padding: 0, zIndex: 1, transition: 'background 0.12s',
+              color: '#000000', fontSize: 13, fontWeight: 700, lineHeight: 1, padding: 0, zIndex: 1, transition: 'background 0.12s',
             }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#eff6ff'; }}
+            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#f4f4f5'; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#fff'; }}
           >
             {isCollapsed ? '+' : '−'}
@@ -443,7 +443,7 @@ export function UsersHierarchyModal({ isOpen, onClose, brandName, title }: Users
             <div className="flex items-center gap-2">
               <button onClick={() => toggleUserSelection(user.id)} className="relative size-[20px] flex items-center justify-center hover:scale-110 transition-transform active:scale-95">
                 <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
-                  <path d={svgPaths.p17146600} stroke={isSelected ? '#0072CE' : '#E2E8F0'} strokeWidth="1.5" fill={isSelected ? '#0072CE' : 'transparent'} />
+                  <path d={svgPaths.p17146600} stroke={isSelected ? '#000000' : '#E2E8F0'} strokeWidth="1.5" fill={isSelected ? '#000000' : 'transparent'} />
                 </svg>
                 {isSelected && (
                   <svg className="w-3 h-3 text-white relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -452,7 +452,7 @@ export function UsersHierarchyModal({ isOpen, onClose, brandName, title }: Users
                 )}
               </button>
               {hasChildren && (
-                <button className="text-[#0072ce] hover:text-[#005fa3] transition-colors">
+                <button className="text-[#000000] hover:text-[#262626] transition-colors">
                   {user.isExpanded ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
                 </button>
               )}
@@ -499,7 +499,7 @@ export function UsersHierarchyModal({ isOpen, onClose, brandName, title }: Users
                   onClick={() => setActiveTab(tab)}
                   className={`h-[34px] px-5 text-[13px] font-medium rounded-t-[4px] border-b-2 transition-colors capitalize ${
                     activeTab === tab
-                      ? 'text-[#0072CE] border-[#0072CE] bg-blue-50/50'
+                      ? 'text-[#000000] border-[#000000] bg-zinc-100/50'
                       : 'text-[rgba(0,11,37,0.5)] border-transparent hover:text-[#000b25]'
                   }`}
                 >
@@ -518,7 +518,7 @@ export function UsersHierarchyModal({ isOpen, onClose, brandName, title }: Users
                       className="flex-1 bg-transparent text-[14px] text-[rgba(0,11,37,0.57)] placeholder:text-[rgba(0,11,37,0.4)] focus:outline-none" />
                   </div>
                 </div>
-                <button className="bg-[#0072ce] text-white px-4 h-[40px] rounded-[4px] flex items-center gap-2 text-[14px] font-medium hover:bg-[#005fa3] transition-colors active:scale-95">
+                <button className="bg-[#000000] text-white px-4 h-[40px] rounded-[4px] flex items-center gap-2 text-[14px] font-medium hover:bg-[#262626] transition-colors active:scale-95">
                   <Plus className="w-4 h-4" /> Add Members
                 </button>
               </div>
@@ -551,11 +551,11 @@ export function UsersHierarchyModal({ isOpen, onClose, brandName, title }: Users
               <div className="h-full overflow-auto custom-scrollbar">
                 <table className="w-full">
                   <thead className="sticky top-0 z-10">
-                    <tr className="bg-[#dbedf8] h-[48px] border-b border-[#e2e8f0]">
+                    <tr className="bg-[#e4e4e7] h-[48px] border-b border-[#e2e8f0]">
                       <th className="text-left px-4 py-3 w-[100px]">
                         <button onClick={toggleSelectAll} className="relative size-[20px] flex items-center justify-center hover:scale-110 transition-transform active:scale-95">
                           <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
-                            <path d={svgPaths.p17146600} stroke={selectedUsers.length > 0 ? '#0072CE' : '#E2E8F0'} strokeWidth="1.5" fill={selectedUsers.length > 0 ? '#0072CE' : 'transparent'} />
+                            <path d={svgPaths.p17146600} stroke={selectedUsers.length > 0 ? '#000000' : '#E2E8F0'} strokeWidth="1.5" fill={selectedUsers.length > 0 ? '#000000' : 'transparent'} />
                           </svg>
                           {selectedUsers.length > 0 && (
                             <svg className="w-3 h-3 text-white relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -567,7 +567,7 @@ export function UsersHierarchyModal({ isOpen, onClose, brandName, title }: Users
                       {[{ label: 'Name', field: 'name' }, { label: 'Hierarchy Type', field: null }, { label: 'Code', field: 'code' }, { label: 'Segment', field: 'segment' }, { label: 'Phone', field: 'phone' }, { label: 'Stage', field: 'stage' }].map(({ label, field }) => (
                         <th key={label} className="text-left px-4 py-3">
                           {field ? (
-                            <button onClick={() => handleSort(field)} className="flex items-center gap-2 hover:text-[#0072ce] transition-colors">
+                            <button onClick={() => handleSort(field)} className="flex items-center gap-2 hover:text-[#000000] transition-colors">
                               <p className="font-medium text-[#000b25] text-[12px]">{label}</p>
                               {sortField === field && (sortDirection === 'asc' ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />)}
                             </button>

@@ -36,7 +36,7 @@ function Circle() {
 
 function Badge() {
   return (
-    <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[4px] overflow-clip px-[4px] py-[2px] rounded-[160px] top-[-8px]" data-name="Badge">
+    <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[4px] overflow-clip px-[4px] py-[2px] rounded-[160px] top-[-8px]" data-name="Badge">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[10px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">16</p>
       </div>
@@ -73,7 +73,7 @@ function Circle1() {
 
 function Badge1() {
   return (
-    <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[4px] overflow-clip px-[4px] py-[2px] rounded-[160px] top-[-8px]" data-name="Badge">
+    <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[4px] overflow-clip px-[4px] py-[2px] rounded-[160px] top-[-8px]" data-name="Badge">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[10px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">16</p>
       </div>
@@ -110,7 +110,7 @@ function Circle2() {
 
 function Badge2() {
   return (
-    <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[4px] overflow-clip px-[4px] py-[2px] rounded-[160px] top-[-8px]" data-name="Badge">
+    <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[4px] overflow-clip px-[4px] py-[2px] rounded-[160px] top-[-8px]" data-name="Badge">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[10px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">16</p>
       </div>
@@ -317,13 +317,13 @@ function WalletBalance2() {
 
 function Card3() {
   return (
-    <div className="bg-[#f5faff] flex-[1_0_0] h-[78px] min-h-px min-w-px relative rounded-[4px]" data-name="Card">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] h-[78px] min-h-px min-w-px relative rounded-[4px]" data-name="Card">
       <div className="flex flex-row items-center justify-center overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex items-center justify-center p-[12px] relative size-full">
           <WalletBalance2 />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#d1e9ff] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
     </div>
   );
 }
@@ -410,7 +410,7 @@ function Container1() {
 
 function Button() {
   return (
-    <div className="content-stretch flex gap-[8px] items-center justify-center leading-[0] relative rounded-[4px] shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" data-name="Button">
+    <div className="content-stretch flex gap-[8px] items-center justify-center leading-[0] relative rounded-[4px] shrink-0 text-[#000000] text-[14px] whitespace-nowrap" data-name="Button">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center relative shrink-0" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Add New Guarantee</p>
       </div>
@@ -449,7 +449,7 @@ function SubsectionTitle() {
                 <div className="h-full relative w-[33px]">
                   <div className="absolute inset-[-1px_-3.03%]">
                     <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 2">
-                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #8DC1EC)" strokeLinecap="round" strokeWidth="2" />
+                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #d4d4d8)" strokeLinecap="round" strokeWidth="2" />
                     </svg>
                   </div>
                 </div>
@@ -758,12 +758,12 @@ function Container2() {
 
 function Button1() {
   return (
-    <div className="bg-[#dbedf8] content-stretch flex gap-[8px] h-[24px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0072ce] text-[10px] text-center whitespace-nowrap">
+    <div className="bg-[#e4e4e7] content-stretch flex gap-[8px] h-[24px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[10px] text-center whitespace-nowrap">
         <p className="leading-[normal]">plus</p>
       </div>
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Add Credit Limit</p>
       </div>
     </div>

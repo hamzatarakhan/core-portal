@@ -7,7 +7,7 @@ import { Download, Search, TrendingDown, Users, AlertCircle, Tag, ChevronDown, X
 
 // ─── Palette (validated against Leading Point surface #f8fafc) ────────────────
 const C = {
-  blue:   '#0072CE',
+  blue:   '#000000',
   amber:  '#d97706',
   red:    '#dc2626',
   purple: '#7c3aed',
@@ -376,7 +376,7 @@ function SearchPanel({ dateFrom, setDateFrom, dateTo, setDateTo, groupBy, setGro
           >{p.label}</button>
         ))}
         <button onClick={() => setCustomDate(v => !v)}
-          style={{ display: 'flex', alignItems: 'center', gap: 5, width: '100%', textAlign: 'left', padding: '5px 8px', borderRadius: 5, border: 'none', background: 'none', cursor: 'pointer', color: '#0072CE', fontSize: 13, marginTop: 2 }}
+          style={{ display: 'flex', alignItems: 'center', gap: 5, width: '100%', textAlign: 'left', padding: '5px 8px', borderRadius: 5, border: 'none', background: 'none', cursor: 'pointer', color: '#000000', fontSize: 13, marginTop: 2 }}
           onMouseEnter={e => (e.currentTarget.style.background = '#f3f4f6')}
           onMouseLeave={e => (e.currentTarget.style.background = 'none')}
         >
@@ -403,11 +403,11 @@ function SearchPanel({ dateFrom, setDateFrom, dateTo, setDateTo, groupBy, setGro
         </div>
         {([['channel', 'Channel'] as const, ['reason', 'Rejection Reason'] as const]).map(([val, lbl]) => (
           <button key={val} onClick={() => toggleGroup(val)}
-            style={{ display: 'flex', alignItems: 'center', gap: 8, width: '100%', textAlign: 'left', padding: '5px 8px', borderRadius: 5, border: 'none', background: 'none', cursor: 'pointer', color: groupBy === val ? '#0072CE' : '#374151', fontSize: 13, fontWeight: groupBy === val ? 600 : 400 }}
+            style={{ display: 'flex', alignItems: 'center', gap: 8, width: '100%', textAlign: 'left', padding: '5px 8px', borderRadius: 5, border: 'none', background: 'none', cursor: 'pointer', color: groupBy === val ? '#000000' : '#374151', fontSize: 13, fontWeight: groupBy === val ? 600 : 400 }}
             onMouseEnter={e => (e.currentTarget.style.background = '#f3f4f6')}
             onMouseLeave={e => (e.currentTarget.style.background = 'none')}
           >
-            <span style={{ width: 14, display: 'inline-block', color: '#0072CE', fontSize: 14 }}>{groupBy === val ? '✓' : ''}</span>
+            <span style={{ width: 14, display: 'inline-block', color: '#000000', fontSize: 14 }}>{groupBy === val ? '✓' : ''}</span>
             {lbl}
           </button>
         ))}
@@ -467,7 +467,7 @@ function OdooSearchBar({
         border: '1px solid #d1d5db', borderRadius: 6, background: '#fff',
         padding: '4px 0 4px 10px', minHeight: 36, flex: 1,
         boxShadow: open ? '0 0 0 2px rgba(0,114,206,0.15)' : 'none',
-        borderColor: open ? '#0072CE' : '#d1d5db',
+        borderColor: open ? '#000000' : '#d1d5db',
         transition: 'border-color 0.15s, box-shadow 0.15s',
       }}>
         <Search size={14} color="#9ca3af" style={{ flexShrink: 0 }} />
@@ -476,11 +476,11 @@ function OdooSearchBar({
         {chips.map(chip => (
           <span key={chip.label} style={{
             display: 'inline-flex', alignItems: 'center', gap: 4,
-            background: '#dbeafe', color: '#0072CE', borderRadius: 4,
+            background: '#dbeafe', color: '#000000', borderRadius: 4,
             fontSize: 12, fontWeight: 500, padding: '2px 6px 2px 8px', flexShrink: 0,
           }}>
             {chip.label}
-            <button onClick={chip.onRemove} style={{ display: 'flex', alignItems: 'center', background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: '#0072CE' }}>
+            <button onClick={chip.onRemove} style={{ display: 'flex', alignItems: 'center', background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: '#000000' }}>
               <X size={11} />
             </button>
           </span>
@@ -657,11 +657,11 @@ export function OnboardingRejectionReport() {
         {/* Tab switcher */}
         <div style={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #e2e8f0' }}>
           {chartsVisible && (
-            <button onClick={() => setTab('charts')} style={{ padding: '8px 20px', fontSize: 13, fontWeight: 500, border: 'none', background: 'transparent', cursor: 'pointer', color: tab === 'charts' ? '#0072CE' : 'rgba(0,11,37,0.5)', borderBottom: tab === 'charts' ? '2px solid #0072CE' : '2px solid transparent' }}>
+            <button onClick={() => setTab('charts')} style={{ padding: '8px 20px', fontSize: 13, fontWeight: 500, border: 'none', background: 'transparent', cursor: 'pointer', color: tab === 'charts' ? '#000000' : 'rgba(0,11,37,0.5)', borderBottom: tab === 'charts' ? '2px solid #000000' : '2px solid transparent' }}>
               Charts
             </button>
           )}
-          <button onClick={() => setTab('table')} style={{ padding: '8px 20px', fontSize: 13, fontWeight: 500, border: 'none', background: 'transparent', cursor: 'pointer', color: tab === 'table' ? '#0072CE' : 'rgba(0,11,37,0.5)', borderBottom: tab === 'table' ? '2px solid #0072CE' : '2px solid transparent' }}>
+          <button onClick={() => setTab('table')} style={{ padding: '8px 20px', fontSize: 13, fontWeight: 500, border: 'none', background: 'transparent', cursor: 'pointer', color: tab === 'table' ? '#000000' : 'rgba(0,11,37,0.5)', borderBottom: tab === 'table' ? '2px solid #000000' : '2px solid transparent' }}>
             Detail Table
           </button>
 
@@ -669,7 +669,7 @@ export function OnboardingRejectionReport() {
           <button
             onClick={() => { const next = !chartsVisible; setChartsVisible(next); setTab(next ? 'charts' : 'table'); }}
             title={chartsVisible ? 'Hide charts' : 'Show charts'}
-            style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 6, padding: '4px 12px', marginBottom: 4, borderRadius: 6, border: '1px solid #e2e8f0', background: chartsVisible ? '#eff6ff' : '#fff', cursor: 'pointer', fontSize: 12, fontWeight: 500, color: chartsVisible ? '#0072CE' : 'rgba(0,11,37,0.5)', transition: 'all 0.15s' }}
+            style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 6, padding: '4px 12px', marginBottom: 4, borderRadius: 6, border: '1px solid #e2e8f0', background: chartsVisible ? '#eff6ff' : '#fff', cursor: 'pointer', fontSize: 12, fontWeight: 500, color: chartsVisible ? '#000000' : 'rgba(0,11,37,0.5)', transition: 'all 0.15s' }}
           >
             {chartsVisible ? <EyeOff size={13} /> : <BarChart2 size={13} />}
             {chartsVisible ? 'Hide Charts' : 'Show Charts'}

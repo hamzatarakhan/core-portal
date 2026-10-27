@@ -17,14 +17,14 @@ const features = [
     icon: Zap,
     title: 'Commission Engine',
     description: 'Enterprise-grade processing engine for high-volume commission calculations with precise accuracy.',
-    color: 'bg-blue-50 text-blue-600',
+    color: 'bg-zinc-100 text-black',
     tag: 'Core'
   },
   {
     icon: Calendar,
     title: 'Cycle Planning',
     description: 'Schedule recurring calculation runs or execute manual on-demand cycles for any period.',
-    color: 'bg-indigo-50 text-indigo-600',
+    color: 'bg-zinc-100 text-black',
     tag: 'Automation'
   },
   {
@@ -59,7 +59,7 @@ const features = [
 
 export function FeaturesDashboard() {
   return (
-    <div className="flex-1 overflow-y-auto bg-[#f8faff] dark:bg-slate-950 p-[24px]">
+    <div className="flex-1 overflow-y-auto bg-[#f4f4f5] dark:bg-slate-950 p-[24px]">
       <div className="max-w-[1200px] mx-auto space-y-[32px]">
 
         {/* Welcome Section */}
@@ -80,7 +80,7 @@ export function FeaturesDashboard() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-slate-900 border border-[#e1e1e1] dark:border-slate-800 p-[24px] rounded-[12px] group hover:border-[#0071cd] dark:hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300"
+              className="bg-white dark:bg-slate-900 border border-[#e1e1e1] dark:border-slate-800 p-[24px] rounded-[12px] group hover:border-[#000000] dark:hover:border-black/50 hover:shadow-xl hover:shadow-zinc-800/5 transition-all duration-300"
             >
               <div className="flex flex-col h-full gap-[16px]">
                 <div className="flex items-center justify-between">
@@ -92,14 +92,14 @@ export function FeaturesDashboard() {
                   </span>
                 </div>
                 <div className="space-y-[8px]">
-                  <h3 className="text-[18px] font-bold text-[#000b25] dark:text-white group-hover:text-[#0071cd] transition-colors">
+                  <h3 className="text-[18px] font-bold text-[#000b25] dark:text-white group-hover:text-[#000000] transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-[14px] text-[#000b25]/60 dark:text-slate-400 leading-[1.5]">
                     {feature.description}
                   </p>
                 </div>
-                <div className="mt-auto pt-[16px] flex items-center gap-[6px] text-[#0071cd] dark:text-blue-400 font-medium text-[14px] cursor-pointer active:scale-95 transition-transform origin-left">
+                <div className="mt-auto pt-[16px] flex items-center gap-[6px] text-[#000000] dark:text-zinc-500 font-medium text-[14px] cursor-pointer active:scale-95 transition-transform origin-left">
                   <span>Explore Module</span>
                   <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -109,18 +109,18 @@ export function FeaturesDashboard() {
         </div>
 
         {/* Quick Actions / Getting Started */}
-        <div className="bg-[#0071cd] rounded-[16px] p-[32px] text-white overflow-hidden relative group">
+        <div className="bg-[#000000] rounded-[16px] p-[32px] text-white overflow-hidden relative group">
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-[24px]">
             <div className="space-y-[12px]">
               <h2 className="text-[24px] font-bold">Ready to process your first cycle?</h2>
-              <p className="text-blue-100 max-w-[500px]">
+              <p className="text-zinc-100 max-w-[500px]">
                 Start by creating a new cycle plan or check the existing runs for real-time status updates on your commissions.
               </p>
               <div className="flex flex-wrap gap-[12px] pt-[8px]">
-                <button className="h-[44px] px-[24px] bg-white text-[#0071cd] rounded-[8px] font-bold text-[15px] hover:bg-blue-50 transition-colors active:scale-95 shadow-lg shadow-black/10">
+                <button className="h-[44px] px-[24px] bg-white text-[#000000] rounded-[8px] font-bold text-[15px] hover:bg-zinc-100 transition-colors active:scale-95 shadow-lg shadow-black/10">
                   Create Cycle Plan
                 </button>
-                <button className="h-[44px] px-[24px] bg-blue-600/30 border border-blue-400/30 text-white rounded-[8px] font-bold text-[15px] hover:bg-blue-600/50 transition-colors active:scale-95">
+                <button className="h-[44px] px-[24px] bg-black/30 border border-zinc-500/30 text-white rounded-[8px] font-bold text-[15px] hover:bg-black/50 transition-colors active:scale-95">
                   View Latest Reports
                 </button>
               </div>

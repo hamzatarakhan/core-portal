@@ -57,7 +57,7 @@ type PaginationTextProps = {
 
 function PaginationText({ text }: PaginationTextProps) {
   return (
-    <div className="bg-[#0071cd] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[30px]">
+    <div className="bg-[#000000] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[30px]">
       <div aria-hidden="true" className="absolute border-[#e2e8f0] border-[0.75px] border-solid inset-[-0.375px] pointer-events-none rounded-[4.375px]" />
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[10.5px] text-center text-nowrap text-white">
         <p className="leading-[normal]">{text}</p>
@@ -212,7 +212,7 @@ type TableStatusTextProps = {
 
 function TableStatusText({ text }: TableStatusTextProps) {
   return (
-    <div className="bg-[#eff6ff] content-stretch flex gap-[3.6px] h-full items-start justify-center px-[8px] py-[2px] relative rounded-[49px] shrink-0">
+    <div className="bg-[#f4f4f5] content-stretch flex gap-[3.6px] h-full items-start justify-center px-[8px] py-[2px] relative rounded-[49px] shrink-0">
       <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[49px]" />
       <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#3b82f6] text-[9px] text-center text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
         {text}
@@ -227,7 +227,7 @@ function Icon() {
       <div className="absolute inset-0" style={{ "--stroke-0": "rgba(0, 113, 205, 1)" } as React.CSSProperties}>
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 12">
           <g id="Icon">
-            <path d={svgPaths.p194c3bf0} stroke="var(--stroke-0, #0071CD)" strokeWidth="1.125" />
+            <path d={svgPaths.p194c3bf0} stroke="var(--stroke-0, #000000)" strokeWidth="1.125" />
           </g>
         </svg>
       </div>
@@ -504,10 +504,10 @@ export default function CardPlans() {
   return (
     <div className="bg-white content-stretch flex flex-col items-start relative rounded-[8px] shadow-[0px_3px_20px_0px_rgba(0,0,0,0.05)] size-full" data-name="Card - Plans">
       <div className="bg-white relative rounded-tl-[8px] rounded-tr-[8px] shrink-0 w-full" data-name="SMS">
-        <div aria-hidden="true" className="absolute border-[#d9eaf8] border-[1px_1px_0px] border-solid inset-0 pointer-events-none rounded-tl-[8px] rounded-tr-[8px]" />
+        <div aria-hidden="true" className="absolute border-[#e4e4e7] border-[1px_1px_0px] border-solid inset-0 pointer-events-none rounded-tl-[8px] rounded-tr-[8px]" />
         <div className="flex flex-row items-center size-full">
           <div className="content-stretch flex gap-[8px] items-center pb-0 pt-[12px] px-[16px] relative w-full">
-            <div className="bg-[#0071cd] content-stretch flex flex-col items-center justify-center relative rounded-[120px] shrink-0 size-[30px]" data-name="icon">
+            <div className="bg-[#000000] content-stretch flex flex-col items-center justify-center relative rounded-[120px] shrink-0 size-[30px]" data-name="icon">
               <div aria-hidden="true" className="absolute border-[#e1e1e1] border-[0.75px] border-solid inset-0 pointer-events-none rounded-[120px]" />
               <p className="font-['Font_Awesome_6_Pro:Solid',sans-serif] leading-[normal] not-italic relative shrink-0 text-[12px] text-nowrap text-white">v.1</p>
             </div>
@@ -560,7 +560,7 @@ export default function CardPlans() {
                       <div className="content-stretch flex items-center relative shrink-0">
                         <div className="content-stretch flex items-center relative shrink-0">
                           <Wrapper>
-                            Members (<span className="text-[#0071cd]">20</span>)
+                            Members (<span className="text-[#000000]">20</span>)
                           </Wrapper>
                         </div>
                       </div>
@@ -633,7 +633,7 @@ export default function CardPlans() {
         </div>
       </div>
       <div className="bg-white relative rounded-bl-[8px] rounded-br-[8px] shrink-0 w-full" data-name="SMS">
-        <div aria-hidden="true" className="absolute border-[#d9eaf8] border-[0px_1px_1px] border-solid inset-0 pointer-events-none rounded-bl-[8px] rounded-br-[8px]" />
+        <div aria-hidden="true" className="absolute border-[#e4e4e7] border-[0px_1px_1px] border-solid inset-0 pointer-events-none rounded-bl-[8px] rounded-br-[8px]" />
         <div className="flex flex-row items-center size-full">
           <div className="content-stretch flex items-center pb-[12px] pt-[16px] px-[16px] relative w-full">
             <div className="basis-0 content-stretch flex flex-col gap-[8px] grow items-end min-h-px min-w-px relative shrink-0">
@@ -740,7 +740,7 @@ export default function CardPlans() {
                 <div className="bg-[#f8fafc] content-stretch flex gap-[1.5px] h-full items-center justify-center px-[6px] py-[1.5px] relative rounded-[4px] shrink-0" data-name="Count Of Pages">
                   <div aria-hidden="true" className="absolute border-[#e2e8f0] border-[0.75px] border-solid inset-[-0.375px] pointer-events-none rounded-[4.375px]" />
                   <div className="content-stretch flex h-full items-center justify-center relative rounded-[4px] shrink-0" data-name="Pagination item">
-                    <Wrapper3 additionalClassNames="text-[#0071cd] text-center">10</Wrapper3>
+                    <Wrapper3 additionalClassNames="text-[#000000] text-center">10</Wrapper3>
                   </div>
                   <div className="content-stretch flex flex-col h-full items-center justify-center relative shrink-0" data-name="Slash">
                     <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[10.5px] text-[rgba(0,11,37,0.57)] text-center text-nowrap">

@@ -22,6 +22,7 @@ import {
   AlignRight,
 } from 'lucide-react';
 import logo from 'figma:asset/7a47870d2a1694273f16e4200d2c98592ab1c763.png';
+import beyondOneLogo from '../../assets/beyond-one-logo.png';
 
 // Client preview: only the Profile item is shown. The full menu (Sales Team, POS Devices, Tracking,
 // E-Reload, Notification, Dynamic Elements, Orders, Visit, KPI Builder, Users, Brand Management,
@@ -56,20 +57,12 @@ export function Sidebar({ activeSubItem, onSubItemClick }: SidebarProps) {
       {/* Header */}
       <div className={`h-[60px] flex items-center ${isCollapsed ? 'justify-center' : 'justify-between px-4'} border-b border-slate-100 dark:border-slate-900`}>
         {!isCollapsed && (
-          <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 flex items-center justify-center flex-shrink-0 bg-blue-50 dark:bg-blue-900/30 rounded-md p-1">
-              <img src={logo} alt="Leading Point" className="w-full h-full object-contain" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[13px] font-bold text-slate-900 dark:text-white leading-none">Leading Point</span>
-              <span className="text-[9px] text-slate-400 font-medium mt-0.5 tracking-tight">Enterprise Suite</span>
-            </div>
-          </div>
+          <img src={beyondOneLogo} alt="Beyond One" className="h-8 object-contain dark:brightness-0 dark:invert" />
         )}
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
           aria-label="Toggle menu"
-          className="w-9 h-9 rounded-[4px] border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-blue-600 transition-colors"
+          className="w-9 h-9 rounded-[4px] border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-black transition-colors"
         >
           <AlignRight size={16} />
         </button>
@@ -86,12 +79,12 @@ export function Sidebar({ activeSubItem, onSubItemClick }: SidebarProps) {
                   onClick={() => handleItemClick(item)}
                   className={`w-full flex items-center justify-between h-[42px] px-3 rounded-md text-[13px] text-left transition-colors ${
                     isActive
-                      ? 'text-blue-600 bg-blue-50/60 dark:bg-blue-950/40 font-medium'
+                      ? 'text-black bg-zinc-100/60 dark:bg-zinc-900/40 font-medium'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-200'
                   }`}
                 >
                   <div className="flex items-center gap-3 min-w-0">
-                    <item.icon size={16} className={`shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-500'}`} fill="currentColor" fillOpacity={0.12} />
+                    <item.icon size={16} className={`shrink-0 ${isActive ? 'text-black' : 'text-slate-500'}`} fill="currentColor" fillOpacity={0.12} />
                     {!isCollapsed && <span className="truncate">{item.label}</span>}
                   </div>
                   {!isCollapsed && item.subItems && (
@@ -111,7 +104,7 @@ export function Sidebar({ activeSubItem, onSubItemClick }: SidebarProps) {
                         onClick={() => onSubItemClick(sub)}
                         className={`w-full flex items-center h-[32px] px-3.5 text-[12px] transition-colors active:scale-[0.96] ${
                           activeSubItem === sub
-                            ? 'text-blue-600 font-medium bg-blue-50/50 dark:bg-blue-900/10'
+                            ? 'text-black font-medium bg-zinc-100/50 dark:bg-zinc-900/10'
                             : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50'
                         }`}
                       >

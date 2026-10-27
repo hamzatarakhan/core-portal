@@ -28,7 +28,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
       <div className="flex w-full">
         {/* Checkbox Column Header */}
         <div className="content-stretch flex flex-col items-start relative shrink-0 w-[62px]">
-          <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tl-[4px] shrink-0 w-full">
+          <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tl-[4px] shrink-0 w-full">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tl-[4px]" />
             <div className="flex-[1_0_0] min-h-px min-w-px relative">
               <div className="flex flex-row items-center size-full">
@@ -37,7 +37,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
                     <button className="content-stretch cursor-pointer flex flex-col items-center justify-center relative shrink-0 size-[20px]">
                       <div className="relative shrink-0 size-[16px]">
                         <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
-                          <rect width="14" height="14" x="1" y="1" stroke="#0072CE" strokeWidth="1.5" rx="2" />
+                          <rect width="14" height="14" x="1" y="1" stroke="#000000" strokeWidth="1.5" rx="2" />
                         </svg>
                       </div>
                     </button>
@@ -50,7 +50,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
 
         {/* Brand Logo Header */}
         <div className="content-stretch flex flex-col items-start relative shrink-0 w-[140px]">
-          <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
+          <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
             <div className="content-stretch flex items-center px-[16px] relative shrink-0">
               <div className="content-stretch flex gap-[8px] items-center relative shrink-0 text-[12px]">
@@ -64,7 +64,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
 
         {/* Brand Name Header */}
         <div className="content-stretch flex flex-col items-start relative shrink-0 w-[180px]">
-          <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
+          <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
             <div className="content-stretch flex items-center px-[16px] relative shrink-0">
               <div className="content-stretch flex gap-[8px] items-center relative shrink-0 text-[12px]">
@@ -78,7 +78,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
 
         {/* Status Header */}
         <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative">
-          <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
+          <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
             <div className="content-stretch flex items-center px-[16px] relative shrink-0">
               <div className="content-stretch flex gap-[8px] items-center relative shrink-0 text-[12px]">
@@ -92,7 +92,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
 
         {/* Primary Color Header */}
         <div className="content-stretch flex flex-col items-start relative shrink-0 w-[160px]">
-          <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
+          <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
             <div className="content-stretch flex items-center px-[16px] relative shrink-0">
               <div className="content-stretch flex gap-[8px] items-center relative shrink-0 text-[12px]">
@@ -106,7 +106,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
 
         {/* Secondary Color Header */}
         <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative">
-          <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
+          <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
             <div className="content-stretch flex items-center px-[16px] relative shrink-0">
               <div className="content-stretch flex gap-[8px] items-center relative shrink-0 text-[12px]">
@@ -120,7 +120,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
 
         {/* Created Date Header */}
         <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative">
-          <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
+          <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
             <div className="content-stretch flex items-center px-[16px] relative shrink-0">
               <div className="content-stretch flex gap-[8px] items-center relative shrink-0 text-[12px]">
@@ -134,7 +134,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
 
         {/* Actions Header */}
         <div className="content-stretch flex flex-col items-start relative shrink-0 w-[118px]">
-          <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tr-[4px] shrink-0 w-full">
+          <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tr-[4px] shrink-0 w-full">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tr-[4px]" />
             <div className="content-stretch flex items-center px-[16px] relative shrink-0">
               <div className="content-stretch flex gap-[8px] items-center relative shrink-0 text-[12px]">
@@ -160,7 +160,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
                     <button className="content-stretch cursor-pointer flex flex-col items-center justify-center relative shrink-0 size-[20px]">
                       <div className="relative shrink-0 size-[16px]">
                         <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
-                          <rect width="14" height="14" x="1" y="1" stroke="#0072CE" strokeWidth="1.5" rx="2" />
+                          <rect width="14" height="14" x="1" y="1" stroke="#000000" strokeWidth="1.5" rx="2" />
                         </svg>
                       </div>
                     </button>
@@ -189,7 +189,7 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
                   />
                 ) : (
                   <div className="w-[20px] h-[20px] flex items-center justify-center rounded-[4px] bg-[#f8fafc]">
-                    <Palette className="w-[12px] h-[12px] text-[#4297dd]" />
+                    <Palette className="w-[12px] h-[12px] text-[#3f3f46]" />
                   </div>
                 )}
               </div>
@@ -346,10 +346,10 @@ export function BrandTableFigma({ brands, onEdit, onDelete }: BrandTableFigmaPro
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => onEdit(brand)}
-                    className="relative size-[24px] flex items-center justify-center rounded-full hover:bg-[#0072ce]/5 transition-all active:scale-95"
+                    className="relative size-[24px] flex items-center justify-center rounded-full hover:bg-[#000000]/5 transition-all active:scale-95"
                     title="Edit brand"
                   >
-                    <Pencil className="w-[12px] h-[12px] text-[#0072ce]" />
+                    <Pencil className="w-[12px] h-[12px] text-[#000000]" />
                   </button>
                   <button
                     onClick={() => onDelete(brand.id)}

@@ -17,7 +17,7 @@ function Field({ children, active }: React.PropsWithChildren<{ active?: boolean 
     <div className={clsx(
       "basis-0 grow min-h-px min-w-px relative rounded-[4px] shrink-0 border transition-all duration-200",
       active 
-        ? "bg-blue-50 dark:bg-blue-900/10 border-blue-500 ring-1 ring-blue-500/10" 
+        ? "bg-zinc-100 dark:bg-zinc-900/10 border-black ring-1 ring-black/10" 
         : "bg-[#f8fafc] dark:bg-slate-900/40 border-[#e2e8f0] dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-600"
     )}>
       <div className="flex flex-row items-center size-full">
@@ -55,7 +55,7 @@ export function DownloadVouchers() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[12px] md:gap-[16px]">
               <Card className="bg-[#f5f6fa] dark:bg-slate-800/50">
                 <div className="bg-white dark:bg-slate-700 flex items-center justify-center rounded-[4px] shrink-0 size-[42px] border border-slate-100 dark:border-slate-600">
-                  <User className="text-[#4297dd]" size={20} />
+                  <User className="text-[#3f3f46]" size={20} />
                 </div>
                 <div className="flex flex-col gap-1 justify-center min-w-0">
                   <span className="text-[13px] md:text-[14px] text-slate-900 dark:text-slate-400 font-normal truncate">Channel member name</span>
@@ -65,7 +65,7 @@ export function DownloadVouchers() {
 
               <Card className="bg-[#f5f6fa] dark:bg-slate-800/50">
                 <div className="bg-white dark:bg-slate-700 flex items-center justify-center rounded-[4px] shrink-0 size-[42px] border border-slate-100 dark:border-slate-600">
-                  <Wallet className="text-[#4297dd]" size={20} />
+                  <Wallet className="text-[#3f3f46]" size={20} />
                 </div>
                 <div className="flex flex-col gap-1 justify-center min-w-0">
                   <span className="text-[13px] md:text-[14px] text-slate-900 dark:text-slate-400 font-normal truncate">Wallet Balance (wallet name)</span>
@@ -84,14 +84,14 @@ export function DownloadVouchers() {
                       <div className={clsx(
                         "size-[20px] rounded-full border-2 flex items-center justify-center transition-all duration-300",
                         manipulation === 'increment' 
-                          ? "border-[#0072ce] bg-white" 
+                          ? "border-[#000000] bg-white" 
                           : "border-slate-300 dark:border-slate-600 group-hover:border-slate-400"
                       )}>
-                        {manipulation === 'increment' && <div className="size-[10px] bg-[#0072ce] rounded-full animate-in zoom-in duration-300" />}
+                        {manipulation === 'increment' && <div className="size-[10px] bg-[#000000] rounded-full animate-in zoom-in duration-300" />}
                       </div>
                       <span className={clsx(
                         "text-[14px] font-normal transition-colors",
-                        manipulation === 'increment' ? "text-[#000b25] dark:text-blue-300" : "text-[#000b25] dark:text-slate-300"
+                        manipulation === 'increment' ? "text-[#000b25] dark:text-zinc-300" : "text-[#000b25] dark:text-slate-300"
                       )}>Increment</span>
                     </div>
                   </Field>
@@ -102,14 +102,14 @@ export function DownloadVouchers() {
                       <div className={clsx(
                         "size-[20px] rounded-full border-2 flex items-center justify-center transition-all duration-300",
                         manipulation === 'deduct' 
-                          ? "border-[#0072ce] bg-white" 
+                          ? "border-[#000000] bg-white" 
                           : "border-slate-300 dark:border-slate-600 group-hover:border-slate-400"
                       )}>
-                        {manipulation === 'deduct' && <div className="size-[10px] bg-[#0072ce] rounded-full animate-in zoom-in duration-300" />}
+                        {manipulation === 'deduct' && <div className="size-[10px] bg-[#000000] rounded-full animate-in zoom-in duration-300" />}
                       </div>
                       <span className={clsx(
                         "text-[14px] font-normal transition-colors",
-                        manipulation === 'deduct' ? "text-[#000b25] dark:text-blue-300" : "text-[#000b25] dark:text-slate-300"
+                        manipulation === 'deduct' ? "text-[#000b25] dark:text-zinc-300" : "text-[#000b25] dark:text-slate-300"
                       )}>Deduct</span>
                     </div>
                   </Field>
@@ -140,9 +140,9 @@ export function DownloadVouchers() {
 
             {/* Bottom Card */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px]">
-              <Card className="bg-[#f3f9fd] dark:bg-blue-900/10">
+              <Card className="bg-[#f4f4f5] dark:bg-zinc-900/10">
                 <div className="bg-white dark:bg-slate-700 flex items-center justify-center rounded-[4px] shrink-0 size-[42px] border border-slate-100 dark:border-slate-800">
-                  <Wallet className="text-[#4297dd]" size={20} />
+                  <Wallet className="text-[#3f3f46]" size={20} />
                 </div>
                 <div className="flex flex-col gap-1 justify-center min-w-0">
                   <span className="text-[13px] md:text-[14px] text-slate-900 dark:text-slate-400 font-normal truncate">Wallet Balance (OMR)</span>
@@ -153,7 +153,7 @@ export function DownloadVouchers() {
 
             {/* Action Bar */}
             <div className="flex justify-end pt-4 md:pt-6">
-              <button className="w-full md:w-auto bg-[#0072ce] hover:bg-[#005fa3] active:scale-[0.98] text-white px-10 h-[44px] md:h-[40px] rounded-[4px] font-medium text-[14px] transition-all">
+              <button className="w-full md:w-auto bg-[#000000] hover:bg-[#262626] active:scale-[0.98] text-white px-10 h-[44px] md:h-[40px] rounded-[4px] font-medium text-[14px] transition-all">
                 Submit
               </button>
             </div>

@@ -19,11 +19,11 @@ function Title({ text, text1 }: TitleProps) {
 
 export default function Card() {
   return (
-    <div className="bg-gradient-to-r from-[#e6f1fa] relative rounded-[8px] size-full to-[rgba(218,215,246,0.51)] via-[#e6f1fa] via-[50.481%]" data-name="Card">
+    <div className="bg-gradient-to-r from-[#f4f4f5] relative rounded-[8px] size-full to-[rgba(218,215,246,0.51)] via-[#f4f4f5] via-[50.481%]" data-name="Card">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center overflow-clip px-[24px] py-[16px] relative size-full">
           <div className="basis-0 content-stretch flex gap-[8px] grow items-center min-h-px min-w-px relative shrink-0" data-name="Container">
-            <div className="bg-[#0071cd] content-stretch flex items-center justify-center relative rounded-[32px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.12)] shrink-0" data-name="Icon">
+            <div className="bg-[#000000] content-stretch flex items-center justify-center relative rounded-[32px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.12)] shrink-0" data-name="Icon">
               <div className="absolute content-stretch flex items-center left-[10px] top-[10px]" data-name="Rectangle">
                 <div className="relative shrink-0 size-[20px]" data-name="rectangle">
                   <p className="absolute font-['Font_Awesome_6_Pro:Solid',sans-serif] inset-0 leading-[normal] not-italic text-[20px] text-center text-nowrap text-white"></p>
@@ -39,7 +39,7 @@ export default function Card() {
                     </p>
                   </div>
                   <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Title">
-                    <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0071cd] text-[14px] text-nowrap">
+                    <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[14px] text-nowrap">
                       <p className="leading-[normal]"></p>
                     </div>
                   </div>
@@ -70,7 +70,7 @@ export default function Card() {
           </div>
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#b0d3f0] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_3px_20px_0px_rgba(0,0,0,0.05)]" />
+      <div aria-hidden="true" className="absolute border border-[#d4d4d8] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_3px_20px_0px_rgba(0,0,0,0.05)]" />
     </div>
   );
 }

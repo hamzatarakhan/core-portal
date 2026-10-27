@@ -8,7 +8,7 @@ function Icon() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -28,7 +28,7 @@ function Icon1() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -48,7 +48,7 @@ function Icon2() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -104,8 +104,8 @@ function LogoContainer() {
     <div className="absolute inset-0 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-0.001px_0px] mask-size-[40px_37.513px]" data-name="Logo Container" style={{ maskImage: `url('${imgLogoContainer}')` }}>
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19.9996 19.9997">
         <g id="Logo Container">
-          <path d={svgPaths.p3ba9b0e0} fill="var(--fill-0, #0072CE)" id="Path 31523" />
-          <path d={svgPaths.p36f8e500} fill="var(--fill-0, #0072CE)" id="Path 31524" />
+          <path d={svgPaths.p3ba9b0e0} fill="var(--fill-0, #000000)" id="Path 31523" />
+          <path d={svgPaths.p36f8e500} fill="var(--fill-0, #000000)" id="Path 31524" />
         </g>
       </svg>
     </div>
@@ -209,7 +209,7 @@ function Container2() {
     <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-name="Container">
       <div className="bg-white relative rounded-[4px] shrink-0 size-[20px]" data-name="Table - Multibrand">
         <div className="content-stretch flex gap-[2px] items-center overflow-clip p-[2px] relative rounded-[inherit] size-full">
-          <div className="bg-[#0072ce] flex-[1_0_0] h-full min-h-px min-w-px rounded-[2px]" data-name="Color Swatch" />
+          <div className="bg-[#000000] flex-[1_0_0] h-full min-h-px min-w-px rounded-[2px]" data-name="Color Swatch" />
         </div>
         <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[4px]" />
       </div>
@@ -330,7 +330,7 @@ export default function TableTrainingHub() {
     <div className="content-stretch flex items-center relative rounded-[4px] size-full" data-name="Table-Training Hub">
       <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-[-0.5px] pointer-events-none rounded-[4.5px]" />
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-[62px]" data-name="Table's Columns">
-        <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tl-[4px] shrink-0 w-full" data-name="Header Cell">
+        <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tl-[4px] shrink-0 w-full" data-name="Header Cell">
           <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tl-[4px]" />
           <div className="flex-[1_0_0] min-h-px min-w-px relative" data-name="Table Elements">
             <div className="flex flex-row items-center size-full">
@@ -365,7 +365,7 @@ export default function TableTrainingHub() {
         </div>
       </div>
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-[189.75px]" data-name="Table's Columns">
-        <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
+        <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
           <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
           <div className="content-stretch flex items-center px-[16px] relative shrink-0 w-[118px]" data-name="Table Elements">
             <Th />
@@ -394,7 +394,7 @@ export default function TableTrainingHub() {
         </div>
       </div>
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-[118px]" data-name="Table's Columns">
-        <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
+        <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
           <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
           <div className="content-stretch flex items-center px-[16px] relative shrink-0 w-[118px]" data-name="Table Elements">
             <Th1 />
@@ -423,7 +423,7 @@ export default function TableTrainingHub() {
         </div>
       </div>
       <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative" data-name="Table's Columns">
-        <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
+        <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
           <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
           <div className="content-stretch flex items-center px-[16px] relative shrink-0 w-[118px]" data-name="Table Elements">
             <Th2 />
@@ -432,8 +432,8 @@ export default function TableTrainingHub() {
         <div className="bg-white content-stretch flex flex-col items-start justify-center relative shrink-0 w-full" data-name="Cell">
           <div className="content-stretch flex gap-[7px] h-[48px] items-center px-[16px] relative shrink-0 w-[62px]" data-name="Table Elements">
             <div className="content-stretch flex gap-[4px] items-center px-[12px] py-[4px] relative rounded-[160px] shrink-0" data-name="Tagchips">
-              <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[160px]" />
-              <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+              <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
+              <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                 <p className="leading-[1.2]">55</p>
               </div>
             </div>
@@ -459,7 +459,7 @@ export default function TableTrainingHub() {
         </div>
       </div>
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-[118px]" data-name="Table's Columns">
-        <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
+        <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
           <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
           <div className="content-stretch flex items-center px-[16px] relative shrink-0 w-[118px]" data-name="Table Elements">
             <Th3 />
@@ -486,7 +486,7 @@ export default function TableTrainingHub() {
         </div>
       </div>
       <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative" data-name="Table's Columns">
-        <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
+        <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
           <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
           <div className="content-stretch flex items-center px-[16px] relative shrink-0 w-[118px]" data-name="Table Elements">
             <Th4 />
@@ -513,7 +513,7 @@ export default function TableTrainingHub() {
         </div>
       </div>
       <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative" data-name="Table's Columns">
-        <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
+        <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
           <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
           <div className="content-stretch flex items-center px-[16px] relative shrink-0 w-[118px]" data-name="Table Elements">
             <Th5 />
@@ -521,7 +521,7 @@ export default function TableTrainingHub() {
         </div>
         <div className="bg-white content-stretch flex flex-col items-start justify-center relative shrink-0 w-full" data-name="Cell">
           <div className="content-stretch flex gap-[7px] h-[48px] items-center px-[16px] relative shrink-0 w-[62px]" data-name="Table Elements">
-            <div className="bg-[#dbedf8] content-stretch flex gap-[3px] items-center leading-[0] px-[8px] py-[4px] relative rounded-[120px] shrink-0 text-[#0072ce] text-center whitespace-nowrap" data-name="Tagchips">
+            <div className="bg-[#e4e4e7] content-stretch flex gap-[3px] items-center leading-[0] px-[8px] py-[4px] relative rounded-[120px] shrink-0 text-[#000000] text-center whitespace-nowrap" data-name="Tagchips">
               <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[10px]" style={{ fontVariationSettings: "'wdth' 100" }}>
                 <p className="leading-[1.2]">Label</p>
               </div>
@@ -545,7 +545,7 @@ export default function TableTrainingHub() {
         </div>
       </div>
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-[118px]" data-name="Table's Columns">
-        <div className="bg-[#f3f9fd] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tr-[4px] shrink-0 w-full" data-name="Header Cell">
+        <div className="bg-[#f4f4f5] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tr-[4px] shrink-0 w-full" data-name="Header Cell">
           <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tr-[4px]" />
           <div className="content-stretch flex items-center px-[16px] relative shrink-0 w-[118px]" data-name="Table Elements">
             <Th6 />

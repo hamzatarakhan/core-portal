@@ -10,7 +10,7 @@ function Text() {
 
 function Button() {
   return (
-    <div className="bg-[#0071cd] content-stretch flex gap-[8px] h-[40px] items-center justify-center leading-[0] px-[16px] py-0 relative rounded-[4px] shrink-0 text-[14px] text-white" data-name="Button">
+    <div className="bg-[#000000] content-stretch flex gap-[8px] h-[40px] items-center justify-center leading-[0] px-[16px] py-0 relative rounded-[4px] shrink-0 text-[14px] text-white" data-name="Button">
       <div className="css-g0mm18 flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center not-italic relative shrink-0 text-center">
         <p className="css-ew64yg leading-[normal]">plus</p>
       </div>

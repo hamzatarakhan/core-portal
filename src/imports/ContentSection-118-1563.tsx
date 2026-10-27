@@ -253,7 +253,7 @@ function Handle() {
 
 function Toggle() {
   return (
-    <div className="bg-[#0071cd] content-stretch flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
+    <div className="bg-[#000000] content-stretch flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
       <Handle />
     </div>
   );
@@ -316,7 +316,7 @@ function Handle1() {
 
 function Toggle2() {
   return (
-    <div className="bg-[#0071cd] content-stretch flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
+    <div className="bg-[#000000] content-stretch flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
       <Handle1 />
     </div>
   );
@@ -388,7 +388,7 @@ function Handle2() {
 
 function Toggle4() {
   return (
-    <div className="bg-[#0071cd] content-stretch flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
+    <div className="bg-[#000000] content-stretch flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
       <Handle2 />
     </div>
   );
@@ -451,7 +451,7 @@ function Handle3() {
 
 function Toggle6() {
   return (
-    <div className="bg-[#0071cd] content-stretch flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
+    <div className="bg-[#000000] content-stretch flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
       <Handle3 />
     </div>
   );

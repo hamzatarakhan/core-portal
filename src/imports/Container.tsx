@@ -131,7 +131,7 @@ function Icon() {
       <div className="absolute inset-0" style={{ "--stroke-0": "rgba(0, 113, 205, 1)" } as React.CSSProperties}>
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 12">
           <g id="Icon">
-            <path d={svgPaths.p194c3bf0} stroke="var(--stroke-0, #0071CD)" strokeWidth="1.125" />
+            <path d={svgPaths.p194c3bf0} stroke="var(--stroke-0, #000000)" strokeWidth="1.125" />
           </g>
         </svg>
       </div>

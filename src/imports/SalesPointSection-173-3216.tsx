@@ -36,7 +36,7 @@ function Circle() {
 
 function Badge() {
   return (
-    <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
+    <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[7.5px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">16</p>
       </div>
@@ -69,7 +69,7 @@ function Circle1() {
 
 function Badge1() {
   return (
-    <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
+    <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[7.5px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">16</p>
       </div>
@@ -102,7 +102,7 @@ function Circle2() {
 
 function Badge2() {
   return (
-    <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
+    <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[7.5px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">16</p>
       </div>
@@ -125,7 +125,7 @@ function SmartButton2() {
 
 function Frame1() {
   return (
-    <div className="bg-[#f3f9fd] mb-[-1px] relative rounded-tl-[4px] rounded-tr-[4px] shrink-0 w-full">
+    <div className="bg-[#f4f4f5] mb-[-1px] relative rounded-tl-[4px] rounded-tr-[4px] shrink-0 w-full">
       <div aria-hidden="true" className="absolute border-[#e2e8f0] border-l border-r border-solid border-t inset-0 pointer-events-none rounded-tl-[4px] rounded-tr-[4px]" />
       <div className="content-stretch flex gap-[8px] items-start px-[16px] py-[12px] relative w-full">
         <SmartButton />
@@ -308,13 +308,13 @@ function WalletBalance2() {
 
 function Card2() {
   return (
-    <div className="bg-[#f5faff] flex-[1_0_0] h-[78px] min-h-px min-w-px relative rounded-[4px]" data-name="Card">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] h-[78px] min-h-px min-w-px relative rounded-[4px]" data-name="Card">
       <div className="flex flex-row items-center justify-center overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex items-center justify-center p-[12px] relative size-full">
           <WalletBalance2 />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#d1e9ff] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
     </div>
   );
 }
@@ -396,8 +396,8 @@ function Icon() {
     <div className="relative shrink-0 size-[14px]" data-name="Icon">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 14 14">
         <g id="Icon">
-          <path d="M2.91667 7H11.0833" id="Vector" stroke="var(--stroke-0, #0072CE)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16667" />
-          <path d="M7 2.91667V11.0833" id="Vector_2" stroke="var(--stroke-0, #0072CE)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16667" />
+          <path d="M2.91667 7H11.0833" id="Vector" stroke="var(--stroke-0, #000000)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16667" />
+          <path d="M7 2.91667V11.0833" id="Vector_2" stroke="var(--stroke-0, #000000)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16667" />
         </g>
       </svg>
     </div>
@@ -462,8 +462,8 @@ function Container1() {
 
 function Button() {
   return (
-    <div className="bg-[#0072ce] h-[36px] relative rounded-[4px] shrink-0" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#000000] h-[36px] relative rounded-[4px] shrink-0" data-name="Button">
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[8px] h-full items-center justify-center leading-[0] px-[16px] relative text-[12px] text-white whitespace-nowrap">
         <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center not-italic relative shrink-0 text-center">
           <p className="leading-[normal]">plus</p>
@@ -478,8 +478,8 @@ function Button() {
 
 function Container() {
   return (
-    <div className="bg-[#f3f9fd] relative rounded-[4px] shrink-0 w-full" data-name="Container">
-      <div aria-hidden="true" className="absolute border border-[#dbedf8] border-dashed inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#f4f4f5] relative rounded-[4px] shrink-0 w-full" data-name="Container">
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-dashed inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center justify-between px-[17px] py-[13px] relative w-full">
           <Container1 />

@@ -713,7 +713,7 @@ function MapTypeToggle({ mapType, setMapType }: { mapType: 'map' | 'satellite', 
         onClick={() => setMapType('map')}
         className={`px-6 py-2 text-sm font-medium rounded-l-lg transition-all ${
           mapType === 'map'
-            ? 'bg-blue-600 text-white'
+            ? 'bg-black text-white'
             : 'text-gray-700 hover:bg-gray-50'
         }`}
       >
@@ -723,7 +723,7 @@ function MapTypeToggle({ mapType, setMapType }: { mapType: 'map' | 'satellite', 
         onClick={() => setMapType('satellite')}
         className={`px-6 py-2 text-sm font-medium rounded-r-lg transition-all ${
           mapType === 'satellite'
-            ? 'bg-blue-600 text-white'
+            ? 'bg-black text-white'
             : 'text-gray-700 hover:bg-gray-50'
         }`}
       >
@@ -906,8 +906,8 @@ export function TerritoryHierarchy() {
 
   // Helper function to get icon color based on level and index
   const getIconColor = (level: number, index: number) => {
-    if (level === 0) return 'bg-blue-600';
-    if (level === 1) return 'bg-indigo-500';
+    if (level === 0) return 'bg-black';
+    if (level === 1) return 'bg-black';
     if (level === 2) return 'bg-purple-500';
     if (level === 3) return 'bg-pink-500';
     if (level === 4) return 'bg-rose-500';
@@ -921,8 +921,8 @@ export function TerritoryHierarchy() {
 
   // Helper function to get background color for selected state based on level
   const getSelectedBgColor = (level: number) => {
-    if (level === 0) return 'bg-blue-50';
-    if (level === 1) return 'bg-indigo-50';
+    if (level === 0) return 'bg-zinc-100';
+    if (level === 1) return 'bg-zinc-100';
     if (level === 2) return 'bg-purple-50';
     if (level === 3) return 'bg-pink-50';
     if (level === 4) return 'bg-rose-50';
@@ -936,8 +936,8 @@ export function TerritoryHierarchy() {
 
   // Helper function to get text color for selected state based on level
   const getSelectedTextColor = (level: number) => {
-    if (level === 0) return 'text-blue-600';
-    if (level === 1) return 'text-indigo-600';
+    if (level === 0) return 'text-black';
+    if (level === 1) return 'text-black';
     if (level === 2) return 'text-purple-600';
     if (level === 3) return 'text-pink-600';
     if (level === 4) return 'text-rose-600';
@@ -1061,7 +1061,7 @@ export function TerritoryHierarchy() {
                       onClick={() => handleTerritoryClick(child)}
                       className={`w-full flex items-center gap-2 p-2 rounded-lg text-left transition-colors ${
                         selectedTerritory === child.id
-                          ? 'bg-blue-50 text-blue-600'
+                          ? 'bg-zinc-100 text-black'
                           : 'hover:bg-gray-50 text-gray-600'
                       }`}
                     >
@@ -1099,7 +1099,7 @@ export function TerritoryHierarchy() {
           title="Drag to resize, double-click to reset"
         >
           {/* Hover indicator */}
-          <div className="absolute left-0 top-0 bottom-0 w-full bg-transparent group-hover:bg-blue-400 transition-all duration-200" />
+          <div className="absolute left-0 top-0 bottom-0 w-full bg-transparent group-hover:bg-zinc-500 transition-all duration-200" />
           
           {/* Grip lines - visible on hover */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
@@ -1128,7 +1128,7 @@ export function TerritoryHierarchy() {
                 {sidebarWidth >= 280 ? 'Territory' : 'Terr.'}
               </h2>
               {sidebarWidth >= 280 && (
-                <div className="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded-full flex-shrink-0">
+                <div className="px-2 py-0.5 bg-zinc-100 text-zinc-800 text-xs font-medium rounded-full flex-shrink-0">
                   {territoryData.length}
                 </div>
               )}
@@ -1269,7 +1269,7 @@ export function TerritoryHierarchy() {
                 {sidebarWidth >= 280 && (
                   <p className="text-xs text-gray-500 mb-4">Get started by adding your first territory</p>
                 )}
-                <button className={`bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-1.5 ${
+                <button className={`bg-black text-white font-medium rounded-lg hover:bg-zinc-800 transition-colors flex items-center gap-1.5 ${
                   sidebarWidth < 280 ? 'px-3 py-1.5 text-xs' : 'px-4 py-2 text-sm'
                 }`}>
                   <Plus size={14} />

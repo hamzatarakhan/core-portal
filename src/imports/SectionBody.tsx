@@ -5,7 +5,7 @@ function Icon() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -25,7 +25,7 @@ function Icon1() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -45,7 +45,7 @@ function Icon2() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -65,7 +65,7 @@ function Icon3() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -85,7 +85,7 @@ function Icon4() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -105,7 +105,7 @@ function Icon5() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -125,7 +125,7 @@ function Icon6() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -145,7 +145,7 @@ function Icon7() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -165,7 +165,7 @@ function Icon8() {
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
-          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0072CE)" strokeWidth="1.5" />
+          <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -358,7 +358,7 @@ function Subsection() {
       <div className="content-stretch flex items-center relative rounded-[4px] shrink-0 w-full" data-name="Table - List of Applicable Models">
         <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-[-1px] pointer-events-none rounded-[5px]" />
         <div className="content-stretch flex flex-col items-start relative shrink-0 w-[52px]" data-name="Table's Columns">
-          <div className="bg-[#dbedf8] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tl-[4px] shrink-0 w-full" data-name="Header Cell">
+          <div className="bg-[#e4e4e7] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tl-[4px] shrink-0 w-full" data-name="Header Cell">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tl-[4px]" />
             <div className="flex-[1_0_0] min-h-px min-w-px relative" data-name="Table Elements">
               <div className="flex flex-row items-center size-full">
@@ -509,7 +509,7 @@ function Subsection() {
           </div>
         </div>
         <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative" data-name="Table's Columns">
-          <div className="bg-[#dbedf8] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
+          <div className="bg-[#e4e4e7] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
             <div className="flex-[1_0_0] min-h-px min-w-px relative" data-name="Table Elements">
               <div className="flex flex-row items-center size-full">
@@ -652,7 +652,7 @@ function Subsection() {
           </div>
         </div>
         <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative" data-name="Table's Columns">
-          <div className="bg-[#dbedf8] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
+          <div className="bg-[#e4e4e7] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full" data-name="Header Cell">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
             <div className="content-stretch flex items-center px-[16px] relative shrink-0 w-[118px]" data-name="Table Elements">
               <Th1 />
@@ -769,7 +769,7 @@ function Subsection() {
           </div>
         </div>
         <div className="content-stretch flex flex-col items-start relative shrink-0 w-[73px]" data-name="Table's Columns">
-          <div className="bg-[#dbedf8] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tr-[4px] shrink-0 w-full" data-name="Header Cell">
+          <div className="bg-[#e4e4e7] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tr-[4px] shrink-0 w-full" data-name="Header Cell">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tr-[4px]" />
             <div className="content-stretch flex items-center px-[16px] relative shrink-0" data-name="Table Elements">
               <Th2 />

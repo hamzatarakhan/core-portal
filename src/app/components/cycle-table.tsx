@@ -193,7 +193,7 @@ export function CycleTable({
         <div className="sticky top-0 z-20 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 h-[48px] flex items-center px-[24px] justify-between shrink-0">
           <div className="flex items-center gap-3">
             {/* Search with Filter Dropdown */}
-            <div className="flex items-center h-[32px] border border-slate-200 dark:border-slate-700 rounded-[4px] bg-white dark:bg-slate-900 group focus-within:border-blue-400 transition-colors">
+            <div className="flex items-center h-[32px] border border-slate-200 dark:border-slate-700 rounded-[4px] bg-white dark:bg-slate-900 group focus-within:border-zinc-500 transition-colors">
               <div className="pl-3 pr-2 text-slate-400">
                 <Search size={14} />
               </div>
@@ -211,12 +211,12 @@ export function CycleTable({
 
           <div className="flex items-center gap-3">
             {/* Operations Button */}
-            <button className="flex items-center gap-2 px-3 h-[32px] border border-blue-500 rounded-[4px] text-blue-600 dark:text-blue-400 text-[13px] font-medium hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all cursor-pointer">
+            <button className="flex items-center gap-2 px-3 h-[32px] border border-black rounded-[4px] text-black dark:text-zinc-500 text-[13px] font-medium hover:bg-zinc-100 dark:hover:bg-zinc-900/20 transition-all cursor-pointer">
               Operations <ChevronDown size={14} />
             </button>
             
             {/* Create Button */}
-            <button className="px-4 h-[32px] bg-[#0072ce] hover:bg-[#005fa3] text-white rounded-[4px] text-[13px] font-semibold transition-all shadow-sm active:scale-[0.98] cursor-pointer">
+            <button className="px-4 h-[32px] bg-[#000000] hover:bg-[#262626] text-white rounded-[4px] text-[13px] font-semibold transition-all shadow-sm active:scale-[0.98] cursor-pointer">
               Create
             </button>
 
@@ -239,8 +239,8 @@ export function CycleTable({
           title === 'Download Vouchers' ? (
             <DownloadVouchers />
           ) : (
-            <div className="h-full flex flex-col items-center justify-center p-[24px] text-center bg-blue-50/10">
-              <div className="w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4 animate-pulse">
+            <div className="h-full flex flex-col items-center justify-center p-[24px] text-center bg-zinc-100/10">
+              <div className="w-16 h-16 rounded-full bg-zinc-100 dark:bg-zinc-900/30 flex items-center justify-center text-black dark:text-zinc-500 mb-4 animate-pulse">
                 <Construction size={32} />
               </div>
               <h3 className="text-base font-semibold text-foreground mb-2">{title || 'Module'} - Coming Soon</h3>
@@ -248,7 +248,7 @@ export function CycleTable({
                 We're currently engineering the next generation of commission plan management. This feature is under development and will be available in the next release.
               </p>
               <div className="mt-6 flex gap-2">
-                <div className="px-3 py-1 bg-blue-50 dark:bg-blue-950 rounded text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest border border-blue-100 dark:border-blue-900">
+                <div className="px-3 py-1 bg-zinc-100 dark:bg-zinc-900 rounded text-[10px] font-bold text-black dark:text-zinc-500 uppercase tracking-widest border border-zinc-100 dark:border-zinc-900">
                   In Progress
                 </div>
                 <div className="px-3 py-1 bg-gray-50 dark:bg-gray-900 rounded text-[10px] font-bold text-gray-500 uppercase tracking-widest border border-gray-100 dark:border-gray-800">
@@ -259,62 +259,62 @@ export function CycleTable({
           )
         ) : (
           <table className="w-full border-collapse text-[11px] min-w-[1000px]">
-            <thead className="sticky top-0 bg-[#e6f4ff] dark:bg-blue-950/40 z-10 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
+            <thead className="sticky top-0 bg-[#f4f4f5] dark:bg-zinc-900/40 z-10 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
               <tr className="text-left text-muted-foreground font-normal">
                 <th className="p-3 w-10">
                   <div 
                     onClick={toggleSelectAll}
                     className={`w-4 h-4 border rounded flex items-center justify-center cursor-pointer transition-colors ${
                       selectedRows.length === filteredData.length && filteredData.length > 0
-                      ? 'bg-blue-600 border-blue-600' 
-                      : 'bg-background border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20'
+                      ? 'bg-black border-black' 
+                      : 'bg-background border-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-900/20'
                     }`}
                   >
                     {selectedRows.length === filteredData.length && filteredData.length > 0 && (
                       <div className="w-2 h-0.5 bg-white rounded-full"></div>
                     )}
                     {selectedRows.length > 0 && selectedRows.length < filteredData.length && (
-                      <div className="w-2 h-0.5 bg-blue-600 rounded-full"></div>
+                      <div className="w-2 h-0.5 bg-black rounded-full"></div>
                     )}
                   </div>
                 </th>
                 <th 
-                  className="p-3 font-semibold group cursor-pointer hover:text-blue-600 transition-colors"
+                  className="p-3 font-semibold group cursor-pointer hover:text-black transition-colors"
                   onClick={() => requestSort('name')}
                 >
                   <div className="flex items-center gap-1">
                     Cycle Name
-                    <ChevronDown size={10} className={`transition-transform ${sortConfig?.key === 'name' && sortConfig.direction === 'desc' ? 'rotate-180' : ''} ${sortConfig?.key === 'name' ? 'opacity-100 text-blue-600' : 'opacity-0 group-hover:opacity-50'}`} />
+                    <ChevronDown size={10} className={`transition-transform ${sortConfig?.key === 'name' && sortConfig.direction === 'desc' ? 'rotate-180' : ''} ${sortConfig?.key === 'name' ? 'opacity-100 text-black' : 'opacity-0 group-hover:opacity-50'}`} />
                   </div>
                 </th>
                 <th 
-                  className="p-3 font-semibold group cursor-pointer hover:text-blue-600 transition-colors"
+                  className="p-3 font-semibold group cursor-pointer hover:text-black transition-colors"
                   onClick={() => requestSort('plan')}
                 >
                   <div className="flex items-center gap-1">
                     Cycle Plan
-                    <ChevronDown size={10} className={`transition-transform ${sortConfig?.key === 'plan' && sortConfig.direction === 'desc' ? 'rotate-180' : ''} ${sortConfig?.key === 'plan' ? 'opacity-100 text-blue-600' : 'opacity-0 group-hover:opacity-50'}`} />
+                    <ChevronDown size={10} className={`transition-transform ${sortConfig?.key === 'plan' && sortConfig.direction === 'desc' ? 'rotate-180' : ''} ${sortConfig?.key === 'plan' ? 'opacity-100 text-black' : 'opacity-0 group-hover:opacity-50'}`} />
                   </div>
                 </th>
                 <th className="p-3 font-semibold">Execution Time</th>
                 <th className="p-3 font-semibold">Cycle Start</th>
                 <th className="p-3 font-semibold">Cycle End</th>
                 <th 
-                  className="p-3 font-semibold text-right group cursor-pointer hover:text-blue-600"
+                  className="p-3 font-semibold text-right group cursor-pointer hover:text-black"
                   onClick={() => requestSort('count')}
                 >
                   <div className="flex items-center justify-end gap-1">
                     Records
-                    <ChevronDown size={10} className={`transition-transform ${sortConfig?.key === 'count' && sortConfig.direction === 'desc' ? 'rotate-180' : ''} ${sortConfig?.key === 'count' ? 'opacity-100 text-blue-600' : 'opacity-0 group-hover:opacity-50'}`} />
+                    <ChevronDown size={10} className={`transition-transform ${sortConfig?.key === 'count' && sortConfig.direction === 'desc' ? 'rotate-180' : ''} ${sortConfig?.key === 'count' ? 'opacity-100 text-black' : 'opacity-0 group-hover:opacity-50'}`} />
                   </div>
                 </th>
                 <th 
-                  className="p-3 font-semibold text-right group cursor-pointer hover:text-blue-600"
+                  className="p-3 font-semibold text-right group cursor-pointer hover:text-black"
                   onClick={() => requestSort('amount')}
                 >
                   <div className="flex items-center justify-end gap-1">
                     Total Amount
-                    <ChevronDown size={10} className={`transition-transform ${sortConfig?.key === 'amount' && sortConfig.direction === 'desc' ? 'rotate-180' : ''} ${sortConfig?.key === 'amount' ? 'opacity-100 text-blue-600' : 'opacity-0 group-hover:opacity-50'}`} />
+                    <ChevronDown size={10} className={`transition-transform ${sortConfig?.key === 'amount' && sortConfig.direction === 'desc' ? 'rotate-180' : ''} ${sortConfig?.key === 'amount' ? 'opacity-100 text-black' : 'opacity-0 group-hover:opacity-50'}`} />
                   </div>
                 </th>
                 <th className="p-3 font-semibold text-center">Stage</th>
@@ -328,7 +328,7 @@ export function CycleTable({
                 const rows = [
                   <tr 
                     key={row.name} 
-                    className={`transition-colors group ${selectedRows.includes(row.name) ? 'bg-blue-50/50 dark:bg-blue-900/10' : 'hover:bg-blue-50/20 dark:hover:bg-blue-900/5'} ${isExpanded ? 'bg-blue-50/10 dark:bg-blue-900/5' : ''} ${onRowClick ? 'cursor-pointer' : ''}`}
+                    className={`transition-colors group ${selectedRows.includes(row.name) ? 'bg-zinc-100/50 dark:bg-zinc-900/10' : 'hover:bg-zinc-100/20 dark:hover:bg-zinc-900/5'} ${isExpanded ? 'bg-zinc-100/10 dark:bg-zinc-900/5' : ''} ${onRowClick ? 'cursor-pointer' : ''}`}
                     onClick={() => onRowClick?.(row)}
                   >
                     <td className="p-3" onClick={(e) => e.stopPropagation()}>
@@ -336,8 +336,8 @@ export function CycleTable({
                         onClick={() => toggleSelectRow(row.name)}
                         className={`w-4 h-4 border rounded cursor-pointer transition-all ${
                           selectedRows.includes(row.name) 
-                          ? 'bg-blue-600 border-blue-600 scale-110' 
-                          : 'border-blue-200 dark:border-blue-900 group-hover:border-blue-400 bg-background'
+                          ? 'bg-black border-black scale-110' 
+                          : 'border-zinc-300 dark:border-zinc-900 group-hover:border-zinc-500 bg-background'
                         }`}
                        >
                          {selectedRows.includes(row.name) && (
@@ -355,13 +355,13 @@ export function CycleTable({
                               e.stopPropagation();
                               toggleExpand(row.name);
                             }}
-                            className="mt-1 p-0.5 hover:bg-blue-100 dark:hover:bg-blue-900/40 rounded text-blue-600 dark:text-blue-400 transition-colors"
+                            className="mt-1 p-0.5 hover:bg-zinc-100 dark:hover:bg-zinc-900/40 rounded text-black dark:text-zinc-500 transition-colors"
                           >
                             <ChevronRight size={12} className={`transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`} />
                           </button>
                         )}
                         <div className="flex flex-col">
-                          <span className="text-blue-600 dark:text-blue-400 font-medium cursor-pointer hover:underline truncate max-w-[300px]" title={row.name}>
+                          <span className="text-black dark:text-zinc-500 font-medium cursor-pointer hover:underline truncate max-w-[300px]" title={row.name}>
                             {row.name}
                           </span>
                           <span className="text-[9px] text-muted-foreground uppercase tracking-wider font-semibold mt-0.5">ID: {2025000 + i}</span>
@@ -397,7 +397,7 @@ export function CycleTable({
                     const childName = `${parentBase}/${(parentSerial + childIdx + 1).toString().padStart(4, '0')}`;
 
                     rows.push(
-                      <tr key={`${row.name}-child-${childIdx}`} className="bg-[#f3f9fd] dark:bg-slate-900/40 h-[55px] border-b border-border animate-in fade-in slide-in-from-top-1 duration-200">
+                      <tr key={`${row.name}-child-${childIdx}`} className="bg-[#f4f4f5] dark:bg-slate-900/40 h-[55px] border-b border-border animate-in fade-in slide-in-from-top-1 duration-200">
                         <td className="p-0 w-[40px] border-r border-border relative"></td>
                         <td className="p-0">
                           <div className="flex items-center h-full pl-[12.5px]">

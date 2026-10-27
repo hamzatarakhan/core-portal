@@ -63,7 +63,7 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
   );
 
   return (
-    <div className="flex flex-col h-full bg-[#f3f9fd] dark:bg-slate-950 font-['Roboto']">
+    <div className="flex flex-col h-full bg-[#f4f4f5] dark:bg-slate-950 font-['Roboto']">
       {/* Detail Header */}
       <div className="h-[64px] px-6 bg-white dark:bg-slate-900 border-b border-[#e1e1e1] dark:border-slate-800 flex items-center justify-between sticky top-0 z-20">
         <div className="flex items-center gap-4">
@@ -77,9 +77,9 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
             <div className="flex items-center gap-2 text-[12px] text-slate-400 font-medium uppercase tracking-wider">
               <span>Actions</span>
               <ChevronRight size={12} />
-              <span className="text-[#0071cd]">{formData.id}</span>
+              <span className="text-[#000000]">{formData.id}</span>
             </div>
-            <h1 className="text-[18px] font-bold text-[#000b25] dark:text-blue-100">{formData.name || 'New Action'}</h1>
+            <h1 className="text-[18px] font-bold text-[#000b25] dark:text-zinc-100">{formData.name || 'New Action'}</h1>
           </div>
         </div>
         <div className="flex items-center gap-3">
@@ -88,7 +88,7 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
           </button>
           <button 
             onClick={handleSave}
-            className="h-[36px] px-4 bg-[#0071cd] hover:bg-[#005da8] text-white text-[13px] font-bold rounded-[4px] flex items-center gap-2 transition-all shadow-sm active:scale-95"
+            className="h-[36px] px-4 bg-[#000000] hover:bg-[#005da8] text-white text-[13px] font-bold rounded-[4px] flex items-center gap-2 transition-all shadow-sm active:scale-95"
           >
             <Save size={16} />
             Save Changes
@@ -101,13 +101,13 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
           
           {/* Action Details Section */}
           <section className="space-y-4">
-            <h2 className="text-[17px] font-medium text-[#000b25] dark:text-blue-100">Action Details</h2>
+            <h2 className="text-[17px] font-medium text-[#000b25] dark:text-zinc-100">Action Details</h2>
             <div className="bg-white dark:bg-slate-900 border border-[#e1e1e1] dark:border-slate-800 rounded-[4px] p-4 space-y-4">
               <div className="grid grid-cols-3 gap-4">
                 <div className="flex flex-col gap-2">
                   <label className="text-[14px] text-slate-500/60 dark:text-slate-400">Action Name</label>
                   <div className="relative">
-                    <select className="w-full h-[38px] pl-3 pr-10 border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] text-slate-400 appearance-none bg-white dark:bg-slate-800 outline-none focus:border-[#0071cd]">
+                    <select className="w-full h-[38px] pl-3 pr-10 border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] text-slate-400 appearance-none bg-white dark:bg-slate-800 outline-none focus:border-[#000000]">
                       <option>Enter action name</option>
                     </select>
                     <ChevronDown size={18} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
@@ -116,7 +116,7 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
                 <div className="flex flex-col gap-2">
                   <label className="text-[14px] text-slate-500/60 dark:text-slate-400">Model</label>
                   <div className="relative">
-                    <select className="w-full h-[38px] pl-3 pr-10 border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] text-slate-400 appearance-none bg-white dark:bg-slate-800 outline-none focus:border-[#0071cd]">
+                    <select className="w-full h-[38px] pl-3 pr-10 border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] text-slate-400 appearance-none bg-white dark:bg-slate-800 outline-none focus:border-[#000000]">
                       <option>Select a model</option>
                     </select>
                     <ChevronDown size={18} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
@@ -140,7 +140,7 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
                 </div>
                 <button 
                   onClick={handleToggleStatus}
-                  className={`relative inline-flex h-[24px] w-[40px] items-center rounded-full transition-colors cursor-pointer active:scale-90 ${formData.status === 'Active' ? 'bg-[#0071cd]' : 'bg-[#bebebe] dark:bg-slate-700'}`}
+                  className={`relative inline-flex h-[24px] w-[40px] items-center rounded-full transition-colors cursor-pointer active:scale-90 ${formData.status === 'Active' ? 'bg-[#000000]' : 'bg-[#bebebe] dark:bg-slate-700'}`}
                 >
                   <span className={`inline-block h-[16px] w-[16px] transform rounded-full bg-white transition-transform ${formData.status === 'Active' ? 'translate-x-[20px]' : 'translate-x-[4px]'}`} />
                 </button>
@@ -150,7 +150,7 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
               <div className="pt-2">
                 <button 
                   onClick={() => setIsPlansExpanded(!isPlansExpanded)}
-                  className="w-full flex items-center justify-between py-2 border-t border-[#b0d3f0]/30"
+                  className="w-full flex items-center justify-between py-2 border-t border-[#d4d4d8]/30"
                 >
                   <span className="text-[14px] font-medium text-[#000b25] dark:text-slate-200">Active on Plans</span>
                   <div className={`transition-transform duration-200 ${isPlansExpanded ? 'rotate-180' : ''}`}>
@@ -162,7 +162,7 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
                     {['Hunting - Base', 'VM CS - Enhanced', 'KAM CS'].map((plan) => (
                       <div 
                         key={plan}
-                        className="px-3 py-1.5 bg-[#f3f9fd] dark:bg-blue-900/10 border border-[#dbedf8] dark:border-blue-800 rounded-[4px] text-[12px] font-medium text-[#0072ce]"
+                        className="px-3 py-1.5 bg-[#f4f4f5] dark:bg-zinc-900/10 border border-[#e4e4e7] dark:border-zinc-800 rounded-[4px] text-[12px] font-medium text-[#000000]"
                       >
                         {plan}
                       </div>
@@ -175,14 +175,14 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
 
           {/* Domain Filters Section */}
           <section className="space-y-4">
-            <h2 className="text-[17px] font-medium text-[#000b25] dark:text-blue-100">Domain Filters</h2>
+            <h2 className="text-[17px] font-medium text-[#000b25] dark:text-zinc-100">Domain Filters</h2>
             <div className="bg-white dark:bg-slate-900 border border-[#e1e1e1] dark:border-slate-800 rounded-[4px] p-4">
               <div className="bg-[#f8fafc] dark:bg-slate-900/50 border border-[#e2e8f0] border-dashed dark:border-slate-800 rounded-[4px] p-8 flex flex-col items-center justify-center gap-4 min-h-[240px]">
                 <div className="size-[50px] bg-[#e2e8f0] dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-500/60">
                   <Plus size={24} />
                 </div>
                 <p className="text-[14px] font-medium text-slate-500/60 dark:text-slate-400">No rules defined</p>
-                <button className="bg-[#0071cd] hover:bg-[#005da8] text-white px-4 h-[35px] rounded-[4px] flex items-center gap-2 text-[12px] font-medium transition-all active:scale-95 shadow-sm">
+                <button className="bg-[#000000] hover:bg-[#005da8] text-white px-4 h-[35px] rounded-[4px] flex items-center gap-2 text-[12px] font-medium transition-all active:scale-95 shadow-sm">
                   Add Rule <Plus size={14} />
                 </button>
               </div>
@@ -191,15 +191,15 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
 
           {/* Liked Plans Section */}
           <section className="space-y-4 pb-12">
-            <h2 className="text-[17px] font-medium text-[#000b25] dark:text-blue-100">Liked Plans</h2>
+            <h2 className="text-[17px] font-medium text-[#000b25] dark:text-zinc-100">Liked Plans</h2>
             <div className="bg-white dark:bg-slate-900 border border-[#e1e1e1] dark:border-slate-800 rounded-[4px] overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse text-[12px]">
                   <thead>
-                    <tr className="h-[48px] bg-[#e6f4ff] dark:bg-blue-950/40 text-left border-b border-slate-100 dark:border-slate-800">
+                    <tr className="h-[48px] bg-[#f4f4f5] dark:bg-zinc-900/40 text-left border-b border-slate-100 dark:border-slate-800">
                       <th className="px-4 w-[52px]">
-                        <div className="w-4 h-4 border border-[#0071cd] rounded bg-white flex items-center justify-center cursor-pointer">
-                          <div className="w-2 h-0.5 bg-[#0071cd] rounded-full" />
+                        <div className="w-4 h-4 border border-[#000000] rounded bg-white flex items-center justify-center cursor-pointer">
+                          <div className="w-2 h-0.5 bg-[#000000] rounded-full" />
                         </div>
                       </th>
                       {[
@@ -207,7 +207,7 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
                         'Assigned Users', 'Calculation Type', 'Cycle Plan'
                       ].map((header) => (
                         <th key={header} className="px-4 py-3 font-medium text-[#000b25] dark:text-slate-300">
-                          <div className="flex items-center gap-2 cursor-pointer hover:text-[#0071cd] transition-colors whitespace-nowrap">
+                          <div className="flex items-center gap-2 cursor-pointer hover:text-[#000000] transition-colors whitespace-nowrap">
                             {header}
                             <SortIcon />
                           </div>
@@ -219,7 +219,7 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
                     {tableData.map((row, idx) => (
                       <tr key={idx} className="h-[48px] hover:bg-[#f8fafc] dark:hover:bg-slate-800/50 transition-colors group">
                         <td className="px-4">
-                          <div className="w-4 h-4 border border-[#0071cd]/30 group-hover:border-[#0071cd] rounded bg-white dark:bg-slate-800 transition-colors" />
+                          <div className="w-4 h-4 border border-[#000000]/30 group-hover:border-[#000000] rounded bg-white dark:bg-slate-800 transition-colors" />
                         </td>
                         <td className="px-4 font-medium text-slate-700 dark:text-slate-300">{row.name}</td>
                         <td className="px-4 text-slate-500 dark:text-slate-400 tabular-nums">{row.validFrom}</td>
@@ -242,7 +242,7 @@ export function ActionDetail({ action, onBack, onSave }: ActionDetailProps) {
                 </table>
               </div>
               <div className="p-4 border-t border-slate-100 dark:border-slate-800">
-                <button className="flex items-center gap-2 text-[#0071cd] text-[12px] font-bold hover:underline active:scale-95 transition-all">
+                <button className="flex items-center gap-2 text-[#000000] text-[12px] font-bold hover:underline active:scale-95 transition-all">
                   Add a line <Plus size={14} />
                 </button>
               </div>

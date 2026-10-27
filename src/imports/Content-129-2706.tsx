@@ -261,7 +261,7 @@ function Frame3() {
                 <div className="h-full relative w-[33px]">
                   <div className="absolute inset-[-1px_-3.03%]" style={{ "--stroke-0": "rgba(176, 211, 240, 1)" } as React.CSSProperties}>
                     <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 2">
-                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #B0D3F0)" strokeLinecap="round" strokeWidth="2" />
+                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #d4d4d8)" strokeLinecap="round" strokeWidth="2" />
                     </svg>
                   </div>
                 </div>
@@ -282,7 +282,7 @@ function Text4() {
   return (
     <div className="relative shrink-0" data-name="Text">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative">
-        <p className="css-ew64yg font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[12px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+        <p className="css-ew64yg font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[12px]" style={{ fontVariationSettings: "'wdth' 100" }}>
           Hunting - Base
         </p>
       </div>
@@ -292,8 +292,8 @@ function Text4() {
 
 function Container() {
   return (
-    <div className="bg-[#f3f9fd] content-stretch flex h-[28px] items-center px-[13px] py-px relative rounded-[4px] shrink-0" data-name="Container">
-      <div aria-hidden="true" className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#f4f4f5] content-stretch flex h-[28px] items-center px-[13px] py-px relative rounded-[4px] shrink-0" data-name="Container">
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <Text4 />
     </div>
   );
@@ -303,7 +303,7 @@ function Text5() {
   return (
     <div className="relative shrink-0" data-name="Text">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative">
-        <p className="css-ew64yg font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[12px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+        <p className="css-ew64yg font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[12px]" style={{ fontVariationSettings: "'wdth' 100" }}>
           VM CS - Enhanced
         </p>
       </div>
@@ -313,8 +313,8 @@ function Text5() {
 
 function Container1() {
   return (
-    <div className="bg-[#f3f9fd] content-stretch flex h-[28px] items-center px-[13px] py-px relative rounded-[4px] shrink-0" data-name="Container">
-      <div aria-hidden="true" className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#f4f4f5] content-stretch flex h-[28px] items-center px-[13px] py-px relative rounded-[4px] shrink-0" data-name="Container">
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <Text5 />
     </div>
   );
@@ -324,7 +324,7 @@ function Text6() {
   return (
     <div className="relative shrink-0" data-name="Text">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative">
-        <p className="css-ew64yg font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[12px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+        <p className="css-ew64yg font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[12px]" style={{ fontVariationSettings: "'wdth' 100" }}>
           KAM CS
         </p>
       </div>
@@ -334,8 +334,8 @@ function Text6() {
 
 function Container2() {
   return (
-    <div className="bg-[#f3f9fd] content-stretch flex h-[28px] items-center px-[13px] py-px relative rounded-[4px] shrink-0" data-name="Container">
-      <div aria-hidden="true" className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#f4f4f5] content-stretch flex h-[28px] items-center px-[13px] py-px relative rounded-[4px] shrink-0" data-name="Container">
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <Text6 />
     </div>
   );
@@ -436,7 +436,7 @@ function Section() {
 
 function Button() {
   return (
-    <div className="bg-[#0071cd] content-stretch flex gap-[7.073px] h-[35.366px] items-center justify-center leading-[0] px-[14.147px] py-0 relative rounded-[3.743px] shrink-0 text-[12.378px] text-white" data-name="Button">
+    <div className="bg-[#000000] content-stretch flex gap-[7.073px] h-[35.366px] items-center justify-center leading-[0] px-[14.147px] py-0 relative rounded-[3.743px] shrink-0 text-[12.378px] text-white" data-name="Button">
       <div className="css-g0mm18 flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center relative shrink-0" style={{ fontVariationSettings: "'wdth' 100" }}>
         <p className="css-ew64yg leading-[1.2]">Add Rule</p>
       </div>

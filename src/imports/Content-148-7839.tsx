@@ -3,8 +3,8 @@ import svgPaths from "./svg-amttgssrsm";
 function Button() {
   return (
     <div className="content-stretch flex gap-[8px] h-[40px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Action</p>
       </div>
     </div>
@@ -13,8 +13,8 @@ function Button() {
 
 function Button1() {
   return (
-    <div className="bg-[#0072ce] content-stretch flex gap-[8px] h-[40px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#000000] content-stretch flex gap-[8px] h-[40px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[14px] text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Action</p>
       </div>
@@ -34,7 +34,7 @@ function Cta() {
 function Segmented() {
   return (
     <div className="absolute bg-white content-stretch flex gap-[4px] h-[33px] items-center justify-center left-0 px-[24px] py-[8px] rounded-[4px] top-0" data-name="Segmented">
-      <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#4297dd] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#3f3f46] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         Submitted
       </p>
     </div>
@@ -182,7 +182,7 @@ function Circle() {
 
 function Badge() {
   return (
-    <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[4px] overflow-clip px-[4px] py-[2px] rounded-[160px] top-[-8px]" data-name="Badge">
+    <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[4px] overflow-clip px-[4px] py-[2px] rounded-[160px] top-[-8px]" data-name="Badge">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[10px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">16</p>
       </div>
@@ -376,8 +376,8 @@ function Tagchips() {
   return (
     <div className="bg-[#f8fafc] content-stretch flex gap-[4px] h-full items-center justify-center px-[8px] py-[4px] relative rounded-[4px] shrink-0" data-name="Tagchips">
       <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <p className="font-['Font_Awesome_6_Pro:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#4297dd] text-[13px] text-center"></p>
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#4297dd] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <p className="font-['Font_Awesome_6_Pro:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#3f3f46] text-[13px] text-center"></p>
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#3f3f46] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]" dir="auto">
           Operator
         </p>
@@ -816,7 +816,7 @@ function Left3() {
 function Button3() {
   return (
     <div className="content-stretch flex gap-[8px] items-center justify-center relative shrink-0" data-name="Button">
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">View all</p>
       </div>
     </div>
@@ -843,8 +843,8 @@ function WidgetTitle3() {
 function Tagchips1() {
   return (
     <div className="content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[2px] relative rounded-[160px] shrink-0" data-name="Tagchips">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[160px]" />
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Label</p>
       </div>
     </div>
@@ -931,7 +931,7 @@ function Col() {
 
 function Item() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Item">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Item">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[12px] relative w-full">
           <Col />
@@ -944,8 +944,8 @@ function Item() {
 function Tagchips2() {
   return (
     <div className="content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[2px] relative rounded-[160px] shrink-0" data-name="Tagchips">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[160px]" />
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Label</p>
       </div>
     </div>
@@ -1032,7 +1032,7 @@ function Col2() {
 
 function Item1() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Item">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Item">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[12px] relative w-full">
           <Col2 />
@@ -1054,8 +1054,8 @@ function Container2() {
 function Tagchips3() {
   return (
     <div className="content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[2px] relative rounded-[160px] shrink-0" data-name="Tagchips">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[160px]" />
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Label</p>
       </div>
     </div>
@@ -1142,7 +1142,7 @@ function Col4() {
 
 function Item2() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Item">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Item">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[12px] relative w-full">
           <Col4 />
@@ -1155,8 +1155,8 @@ function Item2() {
 function Tagchips4() {
   return (
     <div className="content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[2px] relative rounded-[160px] shrink-0" data-name="Tagchips">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[160px]" />
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Label</p>
       </div>
     </div>
@@ -1243,7 +1243,7 @@ function Col6() {
 
 function Item3() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Item">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Item">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[12px] relative w-full">
           <Col6 />
@@ -1312,7 +1312,7 @@ function Left4() {
 function Button4() {
   return (
     <div className="content-stretch flex gap-[8px] items-center justify-center relative shrink-0" data-name="Button">
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">History</p>
       </div>
     </div>
@@ -1662,10 +1662,10 @@ function Card2() {
 function Segmented7() {
   return (
     <div className="bg-white flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Segmented">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex gap-[4px] items-center justify-center px-[24px] py-[8px] relative w-full">
-          <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>{`Plan 1 `}</p>
+          <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>{`Plan 1 `}</p>
         </div>
       </div>
     </div>
@@ -1792,7 +1792,7 @@ function Text23() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="text">
       <p className="font-['Roboto:Regular',sans-serif] font-normal leading-[1.2] relative shrink-0 text-[14px] text-[rgba(0,11,37,0.64)]" style={{ fontVariationSettings: "\'wdth\' 100" }}>{`Commission `}</p>
-      <div className="flex flex-col font-['Font_Awesome_6_Pro:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0072ce] text-[10px] text-center whitespace-nowrap">
+      <div className="flex flex-col font-['Font_Awesome_6_Pro:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[10px] text-center whitespace-nowrap">
         <p className="leading-[normal]"></p>
       </div>
     </div>
@@ -1802,7 +1802,7 @@ function Text23() {
 function Text24() {
   return (
     <div className="content-stretch flex items-start relative shrink-0" data-name="Text">
-      <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         5369 OMR
       </p>
     </div>
@@ -1811,8 +1811,8 @@ function Text24() {
 
 function Field8() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[4px]" data-name="field">
-      <div aria-hidden="true" className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#f4f4f5] flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[4px]" data-name="field">
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-col items-center justify-center size-full">
         <div className="content-stretch flex flex-col gap-[8px] items-center justify-center px-[8px] py-[12px] relative size-full">
           <Text23 />
@@ -1938,7 +1938,7 @@ function SubsectionTitle() {
                 <div className="h-full relative w-[33px]">
                   <div className="absolute inset-[-1px_-3.03%]">
                     <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 2">
-                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #8DC1EC)" strokeLinecap="round" strokeWidth="2" />
+                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #d4d4d8)" strokeLinecap="round" strokeWidth="2" />
                     </svg>
                   </div>
                 </div>
@@ -2084,7 +2084,7 @@ function SubsectionTitle1() {
                 <div className="h-full relative w-[33px]">
                   <div className="absolute inset-[-1px_-3.03%]">
                     <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 2">
-                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #8DC1EC)" strokeLinecap="round" strokeWidth="2" />
+                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #d4d4d8)" strokeLinecap="round" strokeWidth="2" />
                     </svg>
                   </div>
                 </div>
@@ -2299,7 +2299,7 @@ function Handle() {
 
 function Toggle1() {
   return (
-    <div className="bg-[#0072ce] content-stretch flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
+    <div className="bg-[#000000] content-stretch flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
       <Handle />
     </div>
   );
@@ -2362,7 +2362,7 @@ function SubsectionTitle2() {
                 <div className="h-full relative w-[33px]">
                   <div className="absolute inset-[-1px_-3.03%]">
                     <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 2">
-                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #8DC1EC)" strokeLinecap="round" strokeWidth="2" />
+                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #d4d4d8)" strokeLinecap="round" strokeWidth="2" />
                     </svg>
                   </div>
                 </div>
@@ -2541,7 +2541,7 @@ function SubsectionTitle3() {
                 <div className="h-full relative w-[33px]">
                   <div className="absolute inset-[-1px_-3.03%]">
                     <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 2">
-                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #8DC1EC)" strokeLinecap="round" strokeWidth="2" />
+                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #d4d4d8)" strokeLinecap="round" strokeWidth="2" />
                     </svg>
                   </div>
                 </div>
@@ -2733,7 +2733,7 @@ function SubsectionTitle4() {
                 <div className="h-full relative w-[33px]">
                   <div className="absolute inset-[-1px_-3.03%]">
                     <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 2">
-                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #8DC1EC)" strokeLinecap="round" strokeWidth="2" />
+                      <path d="M1 1H34" id="Line 1" stroke="var(--stroke-0, #d4d4d8)" strokeLinecap="round" strokeWidth="2" />
                     </svg>
                   </div>
                 </div>
@@ -3009,7 +3009,7 @@ function Frame7() {
       <div className="absolute inset-[0_-3.13%_0_0]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 33 32">
           <g id="Frame 1321314681">
-            <line id="Line 1" stroke="var(--stroke-0, #A8D0F0)" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="var(--stroke-0, #d4d4d8)" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -3083,7 +3083,7 @@ function Frame9() {
       <div className="absolute inset-[0_-3.13%_0_0]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 33 32">
           <g id="Frame 1321314681">
-            <line id="Line 1" stroke="var(--stroke-0, #A8D0F0)" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="var(--stroke-0, #d4d4d8)" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -3157,7 +3157,7 @@ function Frame13() {
       <div className="absolute inset-[0_-3.13%_0_0]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 33 32">
           <g id="Frame 1321314681">
-            <line id="Line 1" stroke="var(--stroke-0, #A8D0F0)" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="var(--stroke-0, #d4d4d8)" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -3167,7 +3167,7 @@ function Frame13() {
 
 function Icon13() {
   return (
-    <div className="bg-[#4297dd] content-stretch flex flex-col gap-[3.2px] items-center justify-center relative rounded-[128px] shrink-0 size-[32px]" data-name="Icon">
+    <div className="bg-[#3f3f46] content-stretch flex flex-col gap-[3.2px] items-center justify-center relative rounded-[128px] shrink-0 size-[32px]" data-name="Icon">
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#f8fafc] text-[12.8px] whitespace-nowrap">
         <p className="leading-[1.2]">H</p>
       </div>
@@ -3231,7 +3231,7 @@ function Frame14() {
 function Level2() {
   return (
     <div className="bg-[#eef2ff] content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[8px] shrink-0 w-[284px]" data-name="Level  11">
-      <div aria-hidden="true" className="absolute border border-[#8dc1ec] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <div aria-hidden="true" className="absolute border border-[#d4d4d8] border-solid inset-0 pointer-events-none rounded-[8px]" />
       <Inner3 />
       <Frame14 />
     </div>
@@ -3242,7 +3242,7 @@ function Frame8() {
   return (
     <div className="content-stretch flex flex-col gap-[10px] items-end justify-center relative shrink-0 w-full">
       <div className="absolute left-[32px] rounded-bl-[16px] rounded-tr-[16px] size-[25px] top-0" data-name="Line">
-        <div aria-hidden="true" className="absolute border-[#a8d0f0] border-b border-l border-solid inset-0 pointer-events-none rounded-bl-[16px] rounded-tr-[16px]" />
+        <div aria-hidden="true" className="absolute border-[#d4d4d8] border-b border-l border-solid inset-0 pointer-events-none rounded-bl-[16px] rounded-tr-[16px]" />
       </div>
       <Level2 />
     </div>
@@ -3255,7 +3255,7 @@ function Frame15() {
       <div className="absolute inset-[0_-1.25%_0_0]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 81 32">
           <g id="Frame 1321314694">
-            <line id="Line 1" stroke="var(--stroke-0, #A8D0F0)" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="var(--stroke-0, #d4d4d8)" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -3333,7 +3333,7 @@ function Frame16() {
       <div className="absolute inset-[0_-1.25%_0_0]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 81 32">
           <g id="Frame 1321314694">
-            <line id="Line 1" stroke="var(--stroke-0, #A8D0F0)" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="var(--stroke-0, #d4d4d8)" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -3411,7 +3411,7 @@ function Frame17() {
       <div className="absolute inset-[0_-1.25%_0_0]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 81 32">
           <g id="Frame 1321314694">
-            <line id="Line 1" stroke="var(--stroke-0, #A8D0F0)" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="var(--stroke-0, #d4d4d8)" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -3562,7 +3562,7 @@ function Left8() {
 
 function Button5() {
   return (
-    <div className="content-stretch flex gap-[8px] h-[32px] items-center justify-center leading-[0] px-[16px] relative rounded-[4px] shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" data-name="Button">
+    <div className="content-stretch flex gap-[8px] h-[32px] items-center justify-center leading-[0] px-[16px] relative rounded-[4px] shrink-0 text-[#000000] text-[14px] whitespace-nowrap" data-name="Button">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center relative shrink-0" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">View All</p>
       </div>
@@ -3709,7 +3709,7 @@ function Empty() {
 function Group23() {
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 w-full">
-      <div className="bg-[#f8fafc] border border-[#8dc1ec] border-dashed col-1 h-[182px] ml-0 mt-0 rounded-[4px] row-1 w-[1100px]" data-name="Upload file background" />
+      <div className="bg-[#f8fafc] border border-[#d4d4d8] border-dashed col-1 h-[182px] ml-0 mt-0 rounded-[4px] row-1 w-[1100px]" data-name="Upload file background" />
       <Empty />
     </div>
   );
@@ -3844,7 +3844,7 @@ function TableHeader3() {
 
 function TableHeader() {
   return (
-    <div className="bg-[#f3f9fd] content-stretch flex items-start relative rounded-tl-[4px] rounded-tr-[4px] shrink-0 w-full" data-name="Table-header">
+    <div className="bg-[#f4f4f5] content-stretch flex items-start relative rounded-tl-[4px] rounded-tr-[4px] shrink-0 w-full" data-name="Table-header">
       <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-tl-[4px] rounded-tr-[4px]" />
       <TableHeader1 />
       <TableHeader3 />
@@ -4009,7 +4009,7 @@ function TableCell8() {
     <div className="flex-[1_0_0] h-[48px] min-h-px min-w-px relative" data-name="Table cell">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center px-[16px] py-[12px] relative size-full">
-          <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#4297dd] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+          <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#3f3f46] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
             Add a line
           </p>
         </div>
@@ -4099,9 +4099,9 @@ function SectionTitle5() {
 
 function Button7() {
   return (
-    <div className="bg-[#dbedf8] content-stretch flex items-center justify-center relative rounded-[160px] shrink-0 size-[32px]" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[160px]" />
-      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0072ce] text-[14px] text-center whitespace-nowrap">
+    <div className="bg-[#e4e4e7] content-stretch flex items-center justify-center relative rounded-[160px] shrink-0 size-[32px]" data-name="Button">
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[160px]" />
+      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[14px] text-center whitespace-nowrap">
         <p className="leading-[normal]">chevron-left</p>
       </div>
     </div>
@@ -4111,8 +4111,8 @@ function Button7() {
 function Segmented10() {
   return (
     <div className="bg-white content-stretch flex gap-[4px] items-center justify-center px-[16px] py-[8px] relative rounded-[4px] shrink-0" data-name="Segmented">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         User Management
       </p>
     </div>
@@ -4198,9 +4198,9 @@ function Frame20() {
 
 function Button8() {
   return (
-    <div className="bg-[#dbedf8] content-stretch flex items-center justify-center relative rounded-[160px] shrink-0 size-[32px]" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[160px]" />
-      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0072ce] text-[14px] text-center whitespace-nowrap">
+    <div className="bg-[#e4e4e7] content-stretch flex items-center justify-center relative rounded-[160px] shrink-0 size-[32px]" data-name="Button">
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[160px]" />
+      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[14px] text-center whitespace-nowrap">
         <p className="leading-[normal]">chevron-right</p>
       </div>
     </div>
@@ -4244,7 +4244,7 @@ function Frame18() {
 
 function Segmented16() {
   return (
-    <div className="bg-[#0072ce] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Segmented">
+    <div className="bg-[#000000] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Segmented">
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex gap-[4px] items-center justify-center px-[24px] py-[8px] relative w-full">
           <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[14px] text-white" style={{ fontVariationSettings: "\'wdth\' 100" }}>
@@ -4332,7 +4332,7 @@ function TableHeader6() {
 
 function TableHeader5() {
   return (
-    <div className="bg-[#f3f9fd] content-stretch flex items-start relative rounded-tl-[4px] rounded-tr-[4px] shrink-0 w-full" data-name="Table-header">
+    <div className="bg-[#f4f4f5] content-stretch flex items-start relative rounded-tl-[4px] rounded-tr-[4px] shrink-0 w-full" data-name="Table-header">
       <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-tl-[4px] rounded-tr-[4px]" />
       <TableHeader6 />
     </div>
@@ -4344,7 +4344,7 @@ function TableCell9() {
     <div className="flex-[1_0_0] h-[48px] min-h-px min-w-px relative" data-name="Table cell">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center px-[16px] py-[12px] relative size-full">
-          <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#4297dd] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+          <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#3f3f46] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
             Add a line
           </p>
         </div>

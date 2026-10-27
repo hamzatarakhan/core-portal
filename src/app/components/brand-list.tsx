@@ -23,7 +23,7 @@ export function BrandList({ onBrandClick, onCreateBrand }: BrandListProps) {
 
   // Mock data - replace with actual data from your backend
   const [brands] = useState<Brand[]>([
-    { id: '1', name: 'Leading Point', primaryColor: '#0072CE', secondaryColor: '#0072CE', status: 'Active', usersLinked: 16, createdDate: '2024-01-15' },
+    { id: '1', name: 'Leading Point', primaryColor: '#000000', secondaryColor: '#000000', status: 'Active', usersLinked: 16, createdDate: '2024-01-15' },
     { id: '2', name: 'TechCorp', primaryColor: '#FF6B35', secondaryColor: '#FFA500', status: 'Active', usersLinked: 8, createdDate: '2024-02-20' },
     { id: '3', name: 'GlobalSales', primaryColor: '#4CAF50', secondaryColor: '#8BC34A', status: 'Inactive', usersLinked: 12, createdDate: '2024-03-10' },
     { id: '4', name: 'MegaBrand', primaryColor: '#9C27B0', secondaryColor: '#E91E63', status: 'Active', usersLinked: 24, createdDate: '2024-01-05' },
@@ -74,7 +74,7 @@ export function BrandList({ onBrandClick, onCreateBrand }: BrandListProps) {
             {/* Add Brand Button */}
             <button
               onClick={onCreateBrand}
-              className="bg-[#0072ce] text-white px-4 h-[38px] rounded-[4px] flex items-center gap-2 text-[14px] font-medium hover:bg-[#005fa3] transition-colors active:scale-95"
+              className="bg-[#000000] text-white px-4 h-[38px] rounded-[4px] flex items-center gap-2 text-[14px] font-medium hover:bg-[#262626] transition-colors active:scale-95"
             >
               <Plus className="w-4 h-4" />
               Add New Brand
@@ -89,7 +89,7 @@ export function BrandList({ onBrandClick, onCreateBrand }: BrandListProps) {
               <table className="w-full">
                 {/* Table Header */}
                 <thead>
-                  <tr className="bg-[#dbedf8] h-[48px]">
+                  <tr className="bg-[#e4e4e7] h-[48px]">
                     <th className="text-left px-4 py-3">
                       <div className="flex items-center gap-2">
                         <p className="font-medium text-[#000b25] text-[12px]">Brand Name</p>
@@ -160,9 +160,9 @@ export function BrandList({ onBrandClick, onCreateBrand }: BrandListProps) {
                               className="relative size-[24px] flex items-center justify-center hover:scale-110 transition-transform active:scale-95"
                             >
                               <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" fill="#0072CE" fillOpacity="0.05" r="12" />
+                                <circle cx="12" cy="12" fill="#000000" fillOpacity="0.05" r="12" />
                               </svg>
-                              <Edit className="w-[12px] h-[12px] text-[#0072ce] relative z-10" />
+                              <Edit className="w-[12px] h-[12px] text-[#000000] relative z-10" />
                             </button>
                             <button
                               onClick={(e) => handleDelete(brand.id, e)}
@@ -190,7 +190,7 @@ export function BrandList({ onBrandClick, onCreateBrand }: BrandListProps) {
                   {!searchQuery && (
                     <button
                       onClick={onCreateBrand}
-                      className="bg-[#0072ce] text-white px-4 h-[38px] rounded-[4px] flex items-center gap-2 text-[14px] font-medium hover:bg-[#005fa3] transition-colors active:scale-95"
+                      className="bg-[#000000] text-white px-4 h-[38px] rounded-[4px] flex items-center gap-2 text-[14px] font-medium hover:bg-[#262626] transition-colors active:scale-95"
                     >
                       <Plus className="w-4 h-4" />
                       Add Your First Brand
@@ -223,7 +223,7 @@ export function BrandList({ onBrandClick, onCreateBrand }: BrandListProps) {
                         onClick={() => setCurrentPage(page)}
                         className={`size-[32px] rounded-[4px] text-[12px] font-medium transition-colors active:scale-95 ${
                           currentPage === page
-                            ? 'bg-[#0072ce] text-white'
+                            ? 'bg-[#000000] text-white'
                             : 'border border-[#e2e8f0] bg-white hover:bg-[#f8fafc]'
                         }`}
                       >

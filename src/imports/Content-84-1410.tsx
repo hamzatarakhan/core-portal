@@ -6,7 +6,7 @@ function Icon() {
       <div className="absolute inset-0" style={{ "--stroke-0": "rgba(0, 113, 205, 1)" } as React.CSSProperties}>
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
           <g id="Icon">
-            <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0071CD)" strokeWidth="1.5" />
+            <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -417,7 +417,7 @@ function Icon10() {
       <div className="absolute inset-0" style={{ "--stroke-0": "rgba(0, 113, 205, 1)" } as React.CSSProperties}>
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
           <g id="Icon">
-            <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0071CD)" strokeWidth="1.5" />
+            <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -628,7 +628,7 @@ function Icon11() {
       <div className="absolute inset-0" style={{ "--stroke-0": "rgba(0, 113, 205, 1)" } as React.CSSProperties}>
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
           <g id="Icon">
-            <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0071CD)" strokeWidth="1.5" />
+            <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
           </g>
         </svg>
       </div>

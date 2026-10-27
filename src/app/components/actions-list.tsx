@@ -122,7 +122,7 @@ export function ActionsList() {
                   placeholder="Search actions by name or model..." 
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full h-9 pl-10 pr-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  className="w-full h-9 pl-10 pr-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-black/20 transition-all"
                 />
               </div>
               <button className="flex items-center gap-2 px-3 h-9 border border-slate-200 dark:border-slate-800 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">
@@ -130,7 +130,7 @@ export function ActionsList() {
                 Filters
               </button>
             </div>
-            <button className="flex items-center gap-2 px-4 h-9 bg-[#0071cd] hover:bg-[#005fa3] text-white rounded-lg text-sm font-semibold transition-all active:scale-95 shadow-sm">
+            <button className="flex items-center gap-2 px-4 h-9 bg-[#000000] hover:bg-[#262626] text-white rounded-lg text-sm font-semibold transition-all active:scale-95 shadow-sm">
               <Plus size={16} />
               Create Action
             </button>
@@ -139,11 +139,11 @@ export function ActionsList() {
           {/* Table Content */}
           <div className="flex-1 overflow-auto custom-scrollbar bg-white dark:bg-slate-950">
             <table className="w-full border-collapse min-w-[1000px] text-[11px] font-['Roboto']">
-              <thead className="sticky top-0 bg-[#e6f4ff] dark:bg-blue-950/40 z-10 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
+              <thead className="sticky top-0 bg-[#f4f4f5] dark:bg-zinc-900/40 z-10 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
                 <tr className="text-left h-[48px]">
                   <th className="px-[16px] w-[52px]">
-                    <div className="w-4 h-4 border border-blue-400 rounded bg-white flex items-center justify-center cursor-pointer">
-                      <div className="w-2 h-0.5 bg-blue-600 rounded-full opacity-0" />
+                    <div className="w-4 h-4 border border-zinc-500 rounded bg-white flex items-center justify-center cursor-pointer">
+                      <div className="w-2 h-0.5 bg-black rounded-full opacity-0" />
                     </div>
                   </th>
                   <th className="px-[16px] py-[12px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap">Action Name</th>
@@ -160,10 +160,10 @@ export function ActionsList() {
                   <tr 
                     key={action.id} 
                     onClick={() => setSelectedAction(action)}
-                    className="transition-all group h-[48px] hover:bg-blue-50/30 dark:hover:bg-blue-900/5 cursor-pointer active:scale-[0.998]"
+                    className="transition-all group h-[48px] hover:bg-zinc-100/30 dark:hover:bg-zinc-900/5 cursor-pointer active:scale-[0.998]"
                   >
                     <td className="px-[16px]" onClick={(e) => e.stopPropagation()}>
-                      <div className="w-4 h-4 border border-blue-200 dark:border-blue-800 group-hover:border-blue-400 bg-white rounded transition-colors" />
+                      <div className="w-4 h-4 border border-zinc-300 dark:border-zinc-800 group-hover:border-zinc-500 bg-white rounded transition-colors" />
                     </td>
                     <td className="px-[16px] py-[12px]">
                       <div className="flex flex-col">
@@ -186,7 +186,7 @@ export function ActionsList() {
                       <div className="flex justify-center">
                         <button 
                           onClick={() => toggleStatus(action.id)}
-                          className={`relative inline-flex h-[18px] w-[32px] items-center rounded-full transition-colors cursor-pointer active:scale-90 ${action.status === 'Active' ? 'bg-[#0071cd]' : 'bg-slate-200 dark:bg-slate-700'}`}
+                          className={`relative inline-flex h-[18px] w-[32px] items-center rounded-full transition-colors cursor-pointer active:scale-90 ${action.status === 'Active' ? 'bg-[#000000]' : 'bg-slate-200 dark:bg-slate-700'}`}
                         >
                           <span className={`inline-block h-[12px] w-[12px] transform rounded-full bg-white transition-transform ${action.status === 'Active' ? 'translate-x-[17px]' : 'translate-x-[3px]'}`} />
                         </button>
@@ -197,7 +197,7 @@ export function ActionsList() {
                         {action.linkedPlans.map((plan, i) => (
                           <div 
                             key={i}
-                            className="flex items-center gap-1 px-1.5 py-0.5 bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-800 rounded text-[9px] font-bold text-[#0071cd]"
+                            className="flex items-center gap-1 px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-900/10 border border-zinc-100 dark:border-zinc-800 rounded text-[9px] font-bold text-[#000000]"
                           >
                             <LinkIcon size={9} />
                             {plan}

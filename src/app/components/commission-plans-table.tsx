@@ -74,7 +74,7 @@ export function CommissionPlansTable({ onRowClick, title = 'Commission Plans' }:
       {/* Action Toolbar - Same as CycleTable */}
       <div className="sticky top-0 z-20 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 h-[48px] flex items-center px-[24px] justify-between shrink-0">
         <div className="flex items-center gap-3">
-          <div className="flex items-center h-[32px] border border-slate-200 dark:border-slate-700 rounded-[4px] bg-white dark:bg-slate-900 group focus-within:border-blue-400 transition-colors">
+          <div className="flex items-center h-[32px] border border-slate-200 dark:border-slate-700 rounded-[4px] bg-white dark:bg-slate-900 group focus-within:border-zinc-500 transition-colors">
             <div className="pl-3 pr-2 text-slate-400">
               <Search size={14} />
             </div>
@@ -91,13 +91,13 @@ export function CommissionPlansTable({ onRowClick, title = 'Commission Plans' }:
         </div>
 
         <div className="flex items-center gap-3">
-          <button className="flex items-center gap-2 px-3 h-[32px] border border-blue-500 rounded-[4px] text-blue-600 dark:text-blue-400 text-[13px] font-medium hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all cursor-pointer active:scale-[0.98]">
+          <button className="flex items-center gap-2 px-3 h-[32px] border border-black rounded-[4px] text-black dark:text-zinc-500 text-[13px] font-medium hover:bg-zinc-100 dark:hover:bg-zinc-900/20 transition-all cursor-pointer active:scale-[0.98]">
             Operations <ChevronDown size={14} />
           </button>
           
           <button 
             onClick={() => onRowClick?.(null)}
-            className="px-4 h-[32px] bg-[#0072ce] hover:bg-[#005fa3] text-white rounded-[4px] text-[13px] font-semibold transition-all shadow-sm active:scale-[0.98] cursor-pointer"
+            className="px-4 h-[32px] bg-[#000000] hover:bg-[#262626] text-white rounded-[4px] text-[13px] font-semibold transition-all shadow-sm active:scale-[0.98] cursor-pointer"
           >
             Create
           </button>
@@ -119,11 +119,11 @@ export function CommissionPlansTable({ onRowClick, title = 'Commission Plans' }:
       {title !== 'Cycle Plans' ? (
         <div className="flex-1 overflow-auto custom-scrollbar">
           <table className="w-full border-collapse min-w-[1200px] text-[11px] font-['Roboto']">
-            <thead className="sticky top-0 bg-[#e6f4ff] dark:bg-blue-950/40 z-10 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
+            <thead className="sticky top-0 bg-[#f4f4f5] dark:bg-zinc-900/40 z-10 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
               <tr className="text-left h-[48px]">
                 <th className="px-[16px] w-[52px]">
-                  <div className="w-4 h-4 border border-blue-400 rounded bg-white flex items-center justify-center cursor-pointer">
-                    <div className="w-2 h-0.5 bg-blue-600 rounded-full opacity-0" />
+                  <div className="w-4 h-4 border border-zinc-500 rounded bg-white flex items-center justify-center cursor-pointer">
+                    <div className="w-2 h-0.5 bg-black rounded-full opacity-0" />
                   </div>
                 </th>
                 <th className="px-[16px] py-[12px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap">Name</th>
@@ -160,10 +160,10 @@ export function CommissionPlansTable({ onRowClick, title = 'Commission Plans' }:
                 <tr 
                   key={row.id} 
                   onClick={() => onRowClick?.(row)}
-                  className="transition-all group h-[48px] hover:bg-blue-50/30 dark:hover:bg-blue-900/5 cursor-pointer active:scale-[0.998]"
+                  className="transition-all group h-[48px] hover:bg-zinc-100/30 dark:hover:bg-zinc-900/5 cursor-pointer active:scale-[0.998]"
                 >
                   <td className="px-[16px]" onClick={(e) => e.stopPropagation()}>
-                    <div className="w-4 h-4 border border-blue-200 dark:border-blue-800 group-hover:border-blue-400 bg-white rounded transition-colors" />
+                    <div className="w-4 h-4 border border-zinc-300 dark:border-zinc-800 group-hover:border-zinc-500 bg-white rounded transition-colors" />
                   </td>
                   <td className="px-[16px] py-[12px]">
                     <span className="text-slate-700 dark:text-slate-300 font-medium">{row.name}</span>
@@ -174,7 +174,7 @@ export function CommissionPlansTable({ onRowClick, title = 'Commission Plans' }:
                   <td className="px-[16px] py-[12px] text-slate-700 dark:text-slate-200 font-medium tabular-nums">{row.weightage}</td>
                   <td className="px-[16px] py-[12px]">
                     <div className="flex justify-center">
-                      <div className={`relative inline-flex h-[18px] w-[32px] items-center rounded-full transition-colors ${row.stagedPayout ? 'bg-[#0071cd]' : 'bg-slate-200 dark:bg-slate-700'}`}>
+                      <div className={`relative inline-flex h-[18px] w-[32px] items-center rounded-full transition-colors ${row.stagedPayout ? 'bg-[#000000]' : 'bg-slate-200 dark:bg-slate-700'}`}>
                         <span className={`inline-block h-[12px] w-[12px] transform rounded-full bg-white transition-transform ${row.stagedPayout ? 'translate-x-[17px]' : 'translate-x-[3px]'}`} />
                       </div>
                     </div>
@@ -182,7 +182,7 @@ export function CommissionPlansTable({ onRowClick, title = 'Commission Plans' }:
                   <td className="px-[16px] py-[12px] text-slate-500 dark:text-slate-400 text-right tabular-nums">{row.version}</td>
                   <td className="px-[16px] py-[12px]">
                     <div className="flex justify-center">
-                      <div className={`relative inline-flex h-[18px] w-[32px] items-center rounded-full transition-colors ${row.active ? 'bg-[#0071cd]' : 'bg-slate-200 dark:bg-slate-700'}`}>
+                      <div className={`relative inline-flex h-[18px] w-[32px] items-center rounded-full transition-colors ${row.active ? 'bg-[#000000]' : 'bg-slate-200 dark:bg-slate-700'}`}>
                         <span className={`inline-block h-[12px] w-[12px] transform rounded-full bg-white transition-transform ${row.active ? 'translate-x-[17px]' : 'translate-x-[3px]'}`} />
                       </div>
                     </div>
@@ -195,22 +195,22 @@ export function CommissionPlansTable({ onRowClick, title = 'Commission Plans' }:
       ) : (
         <div className="flex-1 overflow-auto custom-scrollbar">
           <table className="w-full border-collapse min-w-[1200px] text-[11px]">
-            <thead className="sticky top-0 bg-[#e6f4ff] dark:bg-blue-950/40 z-10 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
+            <thead className="sticky top-0 bg-[#f4f4f5] dark:bg-zinc-900/40 z-10 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
               <tr className="text-left h-[48px]">
                 <th className="px-[16px] w-[52px]">
                   <div 
                     onClick={toggleSelectAll}
                     className={`w-4 h-4 border rounded flex items-center justify-center cursor-pointer transition-colors ${
                       selectedRows.length === data.length && data.length > 0
-                      ? 'bg-blue-600 border-blue-600' 
-                      : 'bg-white border-blue-400 hover:bg-blue-50'
+                      ? 'bg-black border-black' 
+                      : 'bg-white border-zinc-500 hover:bg-zinc-100'
                     }`}
                   >
                     {selectedRows.length === data.length && data.length > 0 && (
                       <div className="w-2 h-0.5 bg-white rounded-full"></div>
                     )}
                     {selectedRows.length > 0 && selectedRows.length < data.length && (
-                      <div className="w-2 h-0.5 bg-blue-600 rounded-full"></div>
+                      <div className="w-2 h-0.5 bg-black rounded-full"></div>
                     )}
                   </div>
                 </th>
@@ -231,15 +231,15 @@ export function CommissionPlansTable({ onRowClick, title = 'Commission Plans' }:
                 <tr 
                   key={row.id} 
                   onClick={() => onRowClick?.(row)}
-                  className={`transition-colors group h-[48px] ${selectedRows.includes(row.id) ? 'bg-blue-50/50 dark:bg-blue-900/10' : 'hover:bg-blue-50/20 dark:hover:bg-blue-900/5'} ${onRowClick ? 'cursor-pointer' : ''}`}
+                  className={`transition-colors group h-[48px] ${selectedRows.includes(row.id) ? 'bg-zinc-100/50 dark:bg-zinc-900/10' : 'hover:bg-zinc-100/20 dark:hover:bg-zinc-900/5'} ${onRowClick ? 'cursor-pointer' : ''}`}
                 >
                   <td className="px-[16px]" onClick={(e) => e.stopPropagation()}>
                     <div 
                       onClick={() => toggleSelectRow(row.id)}
                       className={`w-4 h-4 border rounded cursor-pointer transition-all ${
                         selectedRows.includes(row.id) 
-                        ? 'bg-blue-600 border-blue-600 scale-110' 
-                        : 'border-blue-200 dark:border-blue-900 group-hover:border-blue-400 bg-white'
+                        ? 'bg-black border-black scale-110' 
+                        : 'border-zinc-300 dark:border-zinc-900 group-hover:border-zinc-500 bg-white'
                       }`}
                     >
                       {selectedRows.includes(row.id) && (
@@ -284,7 +284,7 @@ export function CommissionPlansTable({ onRowClick, title = 'Commission Plans' }:
                           e.stopPropagation();
                           toggleActive(row.id);
                         }}
-                        className={`relative inline-flex h-[18px] w-[30px] items-center rounded-full transition-colors focus:outline-none cursor-pointer active:scale-[0.9] ${row.isActive ? 'bg-blue-600' : 'bg-slate-300 dark:bg-slate-700'}`}
+                        className={`relative inline-flex h-[18px] w-[30px] items-center rounded-full transition-colors focus:outline-none cursor-pointer active:scale-[0.9] ${row.isActive ? 'bg-black' : 'bg-slate-300 dark:bg-slate-700'}`}
                       >
                         <span
                           className={`inline-block h-[12px] w-[12px] transform rounded-full bg-white transition-transform ${row.isActive ? 'translate-x-[15px]' : 'translate-x-[3px]'}`}
@@ -296,7 +296,7 @@ export function CommissionPlansTable({ onRowClick, title = 'Commission Plans' }:
                     <div className="flex justify-center">
                       <button 
                         onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1.5 px-3 h-[24px] bg-[#0072ce] hover:bg-[#005fa3] text-white rounded-[2px] text-[10px] font-bold transition-all active:scale-[0.98] cursor-pointer"
+                        className="flex items-center gap-1.5 px-3 h-[24px] bg-[#000000] hover:bg-[#262626] text-white rounded-[2px] text-[10px] font-bold transition-all active:scale-[0.98] cursor-pointer"
                       >
                         <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M8 5v14l11-7z" />

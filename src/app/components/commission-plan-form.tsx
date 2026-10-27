@@ -64,21 +64,21 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
   };
 
   return (
-    <div className="flex flex-col h-full bg-[#f8faff] dark:bg-slate-950 overflow-hidden">
+    <div className="flex flex-col h-full bg-[#f4f4f5] dark:bg-slate-950 overflow-hidden">
       {/* Top Header - Breadcrumbs & Actions */}
       <div className="flex flex-col shrink-0">
         <div className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 relative shrink-0 w-full min-h-[72px] flex items-center">
           <div className="flex flex-row items-center justify-between px-[24px] w-full">
             <div className="flex items-center gap-[4px] h-[41px]">
               <div className="flex items-center gap-[4px]">
-                <span className="text-[14px] font-medium text-[#000b25]/64 dark:text-blue-100/60 font-['Roboto']">Commission Management</span>
+                <span className="text-[14px] font-medium text-[#000b25]/64 dark:text-zinc-100/60 font-['Roboto']">Commission Management</span>
                 <ChevronRight size={12} className="text-[#000b25]/57" />
               </div>
               <div className="flex items-center gap-[4px]">
-                <span className="text-[14px] font-medium text-[#000b25]/64 dark:text-blue-100/60 font-['Roboto']">Commission Plans</span>
+                <span className="text-[14px] font-medium text-[#000b25]/64 dark:text-zinc-100/60 font-['Roboto']">Commission Plans</span>
                 <ChevronRight size={12} className="text-[#000b25]/57" />
               </div>
-              <span className="text-[14px] font-medium text-[#000b25] dark:text-blue-100 font-['Roboto'] truncate max-w-[200px]">
+              <span className="text-[14px] font-medium text-[#000b25] dark:text-zinc-100 font-['Roboto'] truncate max-w-[200px]">
                 {plan?.name || 'New Commission Plan'}
               </span>
             </div>
@@ -96,7 +96,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                     <img src="https://images.unsplash.com/photo-1659100941255-cb1bb7f9422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBoZWFkc2hvdCUyMGF2YXRhcnxlbnwxfHx8fDE3Njg3NDU0ODV8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Avatar" className="w-full h-full object-cover" />
                   </div>
                 </div>
-                <span className="text-[14px] font-normal text-[#000b25] dark:text-blue-100 font-['Roboto']">Mitchell Admin</span>
+                <span className="text-[14px] font-normal text-[#000b25] dark:text-zinc-100 font-['Roboto']">Mitchell Admin</span>
                 <ChevronDown size={14} className="text-[#000b25] opacity-60 ml-1" />
               </div>
             </div>
@@ -105,19 +105,19 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
 
         <div className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 relative shrink-0 w-full h-[64px] flex items-center">
           <div className="flex items-center justify-end px-[24px] w-full gap-3">
-             <div className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 rounded-[4px] border border-blue-100 dark:border-blue-800 mr-auto">
-               <span className="text-[12px] font-medium text-[#0071cd]">Draft Mode</span>
-               <div className="size-1.5 bg-[#0071cd] rounded-full animate-pulse" />
+             <div className="flex items-center gap-1.5 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-900/20 rounded-[4px] border border-zinc-100 dark:border-zinc-800 mr-auto">
+               <span className="text-[12px] font-medium text-[#000000]">Draft Mode</span>
+               <div className="size-1.5 bg-[#000000] rounded-full animate-pulse" />
              </div>
             <button 
               onClick={onBack}
-              className="h-[40px] px-[16px] border border-[#0071cd] text-[#0071cd] rounded-[4px] text-[14px] font-medium hover:bg-blue-50 transition-colors active:scale-[0.98] cursor-pointer"
+              className="h-[40px] px-[16px] border border-[#000000] text-[#000000] rounded-[4px] text-[14px] font-medium hover:bg-zinc-100 transition-colors active:scale-[0.98] cursor-pointer"
             >
               Discard
             </button>
             <button 
               onClick={() => onSave(formData)}
-              className="h-[40px] px-[16px] bg-[#0071cd] text-white rounded-[4px] text-[14px] font-medium hover:bg-[#005fa3] transition-all shadow-sm active:scale-[0.98] flex items-center gap-[8px] cursor-pointer"
+              className="h-[40px] px-[16px] bg-[#000000] text-white rounded-[4px] text-[14px] font-medium hover:bg-[#262626] transition-all shadow-sm active:scale-[0.98] flex items-center gap-[8px] cursor-pointer"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
               <span>Save Changes</span>
@@ -130,7 +130,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
         {/* General Information Section */}
         <div className="flex flex-col gap-[16px] w-full" data-name="Content-section">
           <div className="flex items-center h-[32px]">
-            <h2 className="text-[17px] font-medium text-[#000b25] dark:text-blue-100 font-['Roboto']">
+            <h2 className="text-[17px] font-medium text-[#000b25] dark:text-zinc-100 font-['Roboto']">
               Plan Details
             </h2>
           </div>
@@ -148,7 +148,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     placeholder="Enter the plan name"
-                    className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#0071cd] outline-none transition-all dark:bg-slate-800 font-['Roboto']"
+                    className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#000000] outline-none transition-all dark:bg-slate-800 font-['Roboto']"
                   />
                 </div>
               </div>
@@ -162,7 +162,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                     value={formData.weightage}
                     onChange={(e) => setFormData({...formData, weightage: e.target.value})}
                     placeholder="Enter weight"
-                    className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#0071cd] outline-none transition-all dark:bg-slate-800 font-['Roboto']"
+                    className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#000000] outline-none transition-all dark:bg-slate-800 font-['Roboto']"
                   />
                 </div>
               </div>
@@ -180,7 +180,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                     value={formData.validFrom}
                     onChange={(e) => setFormData({...formData, validFrom: e.target.value})}
                     placeholder="Pick a date"
-                    className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#0071cd] outline-none transition-all dark:bg-slate-800 font-['Roboto']"
+                    className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#000000] outline-none transition-all dark:bg-slate-800 font-['Roboto']"
                   />
                   <Calendar size={18} className="absolute right-[12px] top-1/2 -translate-y-1/2 text-[#000b25] dark:text-white pointer-events-none opacity-60" />
                 </div>
@@ -195,7 +195,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                     value={formData.validTo}
                     onChange={(e) => setFormData({...formData, validTo: e.target.value})}
                     placeholder="Pick a date"
-                    className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#0071cd] outline-none transition-all dark:bg-slate-800 font-['Roboto']"
+                    className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#000000] outline-none transition-all dark:bg-slate-800 font-['Roboto']"
                   />
                   <Calendar size={18} className="absolute right-[12px] top-1/2 -translate-y-1/2 text-[#000b25] dark:text-white pointer-events-none opacity-60" />
                 </div>
@@ -213,7 +213,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                     <select 
                       value={formData.cycleId}
                       onChange={(e) => setFormData({...formData, cycleId: e.target.value})}
-                      className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#0071cd] outline-none appearance-none bg-white dark:bg-slate-800 font-['Roboto'] cursor-pointer"
+                      className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#000000] outline-none appearance-none bg-white dark:bg-slate-800 font-['Roboto'] cursor-pointer"
                     >
                       <option value="">Select cycle plans</option>
                       {cycles.map(cycle => (
@@ -234,7 +234,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                           <select 
                             value={formData.triggerActionId}
                             onChange={(e) => setFormData({...formData, triggerActionId: e.target.value})}
-                            className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#0071cd] outline-none appearance-none bg-white dark:bg-slate-800 font-['Roboto'] cursor-pointer"
+                            className="w-full h-full px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#000000] outline-none appearance-none bg-white dark:bg-slate-800 font-['Roboto'] cursor-pointer"
                           >
                             <option value="">Select action</option>
                             {actions.map(action => (
@@ -243,7 +243,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                           </select>
                           <ChevronDown size={18} className="absolute right-[12px] top-1/2 -translate-y-1/2 text-[#000b25] dark:text-white pointer-events-none opacity-60" />
                         </div>
-                        <button className="h-[38px] w-[38px] flex items-center justify-center border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[#0071cd] hover:bg-blue-50 transition-colors active:scale-90">
+                        <button className="h-[38px] w-[38px] flex items-center justify-center border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[#000000] hover:bg-zinc-100 transition-colors active:scale-90">
                           <Plus size={18} />
                         </button>
                       </div>
@@ -254,12 +254,12 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
 
               {/* On Demand Hint Message */}
               {isOnDemand && (
-                <div className="bg-[#f3f9fd] dark:bg-blue-900/10 border-l-[3px] border-[#8dc1ec] p-[12px] flex items-start gap-[12px] animate-in fade-in slide-in-from-top-1 duration-200">
-                  <div className="mt-[2px] text-[#0071cd] dark:text-blue-400">
+                <div className="bg-[#f4f4f5] dark:bg-zinc-900/10 border-l-[3px] border-[#d4d4d8] p-[12px] flex items-start gap-[12px] animate-in fade-in slide-in-from-top-1 duration-200">
+                  <div className="mt-[2px] text-[#000000] dark:text-zinc-500">
                     <Info size={16} strokeWidth={2.5} />
                   </div>
                   <div className="flex flex-col gap-[2px]">
-                    <p className="text-[14px] font-medium text-[#000b25] dark:text-blue-100 font-['Roboto']">
+                    <p className="text-[14px] font-medium text-[#000b25] dark:text-zinc-100 font-['Roboto']">
                       On-Demand Cycle Detected
                     </p>
                     <p className="text-[13px] text-[#000b25] dark:text-slate-400 font-['Roboto'] leading-[1.4] opacity-80">
@@ -280,7 +280,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                     Commission in this plan will include 16% VAT.
                   </p>
                 </div>
-                <button className="relative inline-flex h-[24px] w-[40px] items-center rounded-full transition-colors bg-[#0071cd] shrink-0">
+                <button className="relative inline-flex h-[24px] w-[40px] items-center rounded-full transition-colors bg-[#000000] shrink-0">
                   <span className="inline-block h-[16px] w-[16px] translate-x-[20px] transform rounded-full bg-white transition-transform" />
                 </button>
               </div>
@@ -295,7 +295,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                 </div>
                 <button 
                   onClick={() => handleToggle('isActive')}
-                  className={`relative inline-flex h-[24px] w-[40px] items-center rounded-full transition-colors shrink-0 ${formData.isActive ? 'bg-[#0071cd]' : 'bg-[#bebebe]'}`}
+                  className={`relative inline-flex h-[24px] w-[40px] items-center rounded-full transition-colors shrink-0 ${formData.isActive ? 'bg-[#000000]' : 'bg-[#bebebe]'}`}
                 >
                   <span className={`inline-block h-[16px] w-[16px] transform rounded-full bg-white transition-transform ${formData.isActive ? 'translate-x-[20px]' : 'translate-x-[4px]'}`} />
                 </button>
@@ -311,7 +311,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                 </div>
                 <button 
                   onClick={() => handleToggle('stagedPayout')}
-                  className={`relative inline-flex h-[24px] w-[40px] items-center rounded-full transition-colors shrink-0 ${formData.stagedPayout ? 'bg-[#0071cd]' : 'bg-[#bebebe]'}`}
+                  className={`relative inline-flex h-[24px] w-[40px] items-center rounded-full transition-colors shrink-0 ${formData.stagedPayout ? 'bg-[#000000]' : 'bg-[#bebebe]'}`}
                 >
                   <span className={`inline-block h-[16px] w-[16px] transform rounded-full bg-white transition-transform ${formData.stagedPayout ? 'translate-x-[20px]' : 'translate-x-[4px]'}`} />
                 </button>
@@ -325,7 +325,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                     Commission will be calculated per row, in addition to the total.
                   </p>
                 </div>
-                <button className="relative inline-flex h-[24px] w-[40px] items-center rounded-full transition-colors bg-[#0071cd] shrink-0">
+                <button className="relative inline-flex h-[24px] w-[40px] items-center rounded-full transition-colors bg-[#000000] shrink-0">
                   <span className="inline-block h-[16px] w-[16px] translate-x-[20px] transform rounded-full bg-white transition-transform" />
                 </button>
               </div>
@@ -341,7 +341,7 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
                   value={formData.description}
                   onChange={(e) => setFormData({...formData, description: e.target.value})}
                   placeholder="Enter plan summary and description....."
-                  className="w-full h-full p-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#0071cd] outline-none transition-all dark:bg-slate-800 resize-none font-['Roboto']"
+                  className="w-full h-full p-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[16px] font-normal text-[#000b25] dark:text-white focus:border-[#000000] outline-none transition-all dark:bg-slate-800 resize-none font-['Roboto']"
                 />
               </div>
             </div>
@@ -351,10 +351,10 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
         {/* Linked Cycles Section */}
         <div className="flex flex-col gap-[16px] w-full pb-12">
           <div className="flex items-center justify-between h-[40px]">
-            <h2 className="text-[17px] font-medium text-[#000b25] dark:text-blue-100 font-['Roboto']">
+            <h2 className="text-[17px] font-medium text-[#000b25] dark:text-zinc-100 font-['Roboto']">
               Linked Cycles
             </h2>
-            <button className="bg-[#0071cd] flex gap-[8px] h-[40px] items-center justify-center px-[16px] rounded-[4px] text-[14px] text-white font-medium hover:bg-[#005fa3] transition-all cursor-pointer active:scale-[0.98]">
+            <button className="bg-[#000000] flex gap-[8px] h-[40px] items-center justify-center px-[16px] rounded-[4px] text-[14px] text-white font-medium hover:bg-[#262626] transition-all cursor-pointer active:scale-[0.98]">
               <Plus size={16} strokeWidth={3} />
               <span>Add Cycles</span>
             </button>
@@ -363,21 +363,21 @@ export function CommissionPlanForm({ plan, onBack, onSave }: CommissionPlanFormP
           <div className="bg-white dark:bg-slate-900 border border-[#e1e1e1] dark:border-slate-800 rounded-[4px] overflow-hidden">
             <table className="w-full border-collapse text-[12px] font-['Roboto']">
               <thead>
-                <tr className="bg-[#e6f4ff] dark:bg-blue-900/20 text-left border-b border-[#e1e1e1] dark:border-slate-800">
-                  <th className="px-[16px] py-[12px] font-medium text-[#000b25] dark:text-blue-100">Name</th>
-                  <th className="px-[16px] py-[12px] font-medium text-[#000b25] dark:text-blue-100">Frequency</th>
-                  <th className="px-[16px] py-[12px] font-medium text-[#000b25] dark:text-blue-100">Day</th>
-                  <th className="px-[16px] py-[12px] font-medium text-[#000b25] dark:text-blue-100 text-center">Active</th>
+                <tr className="bg-[#f4f4f5] dark:bg-zinc-900/20 text-left border-b border-[#e1e1e1] dark:border-slate-800">
+                  <th className="px-[16px] py-[12px] font-medium text-[#000b25] dark:text-zinc-100">Name</th>
+                  <th className="px-[16px] py-[12px] font-medium text-[#000b25] dark:text-zinc-100">Frequency</th>
+                  <th className="px-[16px] py-[12px] font-medium text-[#000b25] dark:text-zinc-100">Day</th>
+                  <th className="px-[16px] py-[12px] font-medium text-[#000b25] dark:text-zinc-100 text-center">Active</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#e1e1e1] dark:divide-slate-800">
                 <tr className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                  <td className="px-[16px] py-[12px] text-[#000b25] dark:text-blue-100 font-medium">Monthly Cycle</td>
+                  <td className="px-[16px] py-[12px] text-[#000b25] dark:text-zinc-100 font-medium">Monthly Cycle</td>
                   <td className="px-[16px] py-[12px] text-[#000b25]/70 dark:text-slate-400">Monthly</td>
                   <td className="px-[16px] py-[12px] text-[#000b25]/70 dark:text-slate-400">1</td>
                   <td className="px-[16px] py-[12px]">
                     <div className="flex justify-center">
-                      <div className="relative inline-flex h-[18px] w-[32px] items-center rounded-full bg-[#0071cd]">
+                      <div className="relative inline-flex h-[18px] w-[32px] items-center rounded-full bg-[#000000]">
                         <span className="inline-block h-[12px] w-[12px] translate-x-[17px] transform rounded-full bg-white transition-transform" />
                       </div>
                     </div>

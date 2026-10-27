@@ -67,12 +67,12 @@ function CycleSummaryTag({ icon, text }: { icon: React.ReactNode, text: string }
 
 function CycleRunSummaryCard() {
   return (
-    <div className="bg-gradient-to-r from-[#e6f1fa] relative rounded-[8px] w-full to-[rgba(218,215,246,0.51)] via-[#e6f1fa] via-[50.481%] dark:from-blue-900/20 dark:via-blue-950/20 dark:to-purple-900/10">
+    <div className="bg-gradient-to-r from-[#f4f4f5] relative rounded-[8px] w-full to-[rgba(218,215,246,0.51)] via-[#f4f4f5] via-[50.481%] dark:from-zinc-900/20 dark:via-zinc-900/20 dark:to-purple-900/10">
       <div className="flex flex-row items-center w-full">
         <div className="content-stretch flex items-center overflow-clip px-[24px] py-[16px] relative w-full">
           <div className="basis-0 content-stretch flex gap-[8px] grow items-center min-h-px min-w-px relative shrink-0">
             {/* Icon */}
-            <div className="bg-[#0071cd] content-stretch flex h-[40px] items-center justify-center relative rounded-[32px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.12)] shrink-0 w-[40px]">
+            <div className="bg-[#000000] content-stretch flex h-[40px] items-center justify-center relative rounded-[32px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.12)] shrink-0 w-[40px]">
               <RotateCcw size={20} className="text-white" />
             </div>
 
@@ -86,7 +86,7 @@ function CycleRunSummaryCard() {
                     </p>
                   </div>
                   <div className="content-stretch flex flex-col items-start relative shrink-0">
-                    <div className="text-[#0071cd] cursor-pointer hover:opacity-80 transition-opacity">
+                    <div className="text-[#000000] cursor-pointer hover:opacity-80 transition-opacity">
                       <ExternalLink size={14} />
                     </div>
                   </div>
@@ -119,7 +119,7 @@ function CycleRunSummaryCard() {
           </div>
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#b0d3f0] dark:border-blue-800/50 border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_3px_20px_0px_rgba(0,0,0,0.05)]" />
+      <div aria-hidden="true" className="absolute border border-[#d4d4d8] dark:border-zinc-800/50 border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_3px_20px_0px_rgba(0,0,0,0.05)]" />
     </div>
   );
 }
@@ -128,7 +128,7 @@ function SummaryCard({ title, value, unit, icon, isBlue = false }: { title: stri
   return (
     <div className={`relative overflow-hidden rounded-[8px] p-[12px] h-[84px] flex flex-col justify-center border transition-all hover:shadow-sm ${
       isBlue 
-        ? 'bg-[#e3f0fe] border-[#b0d9ef] dark:bg-blue-900/30 dark:border-blue-800' 
+        ? 'bg-[#f4f4f5] border-[#d4d4d8] dark:bg-zinc-900/30 dark:border-zinc-800' 
         : 'bg-[#f8fafc] border-[#e2e8f0] dark:bg-gray-900 dark:border-gray-800'
     }`}>
       <SpiralBackground />
@@ -171,8 +171,8 @@ const Icons = {
       <svg width="40" height="40" viewBox="0 0 34 34" fill="none">
         <circle cx="10" cy="17" r="5" fill="#3C4252" />
         <circle cx="24" cy="17" r="5" fill="#3C4252" />
-        <circle cx="17" cy="15" r="6" fill="#0071cd" />
-        <path d="M17 21C14.5 21 12 23 12 25H22C22 23 19.5 21 17 21Z" fill="#0071cd" />
+        <circle cx="17" cy="15" r="6" fill="#000000" />
+        <path d="M17 21C14.5 21 12 23 12 25H22C22 23 19.5 21 17 21Z" fill="#000000" />
       </svg>
     </div>
   ),
@@ -233,20 +233,20 @@ function CommissionSummaryView({ member, onBack }: { member: Member, onBack: () 
   return (
     <div className="flex-1 flex flex-col bg-[#f8fbfe] dark:bg-gray-950 overflow-y-auto p-6 space-y-6 custom-scrollbar animate-in slide-in-from-right duration-300">
       <div className="flex items-center gap-2 text-[11px] text-gray-400 font-medium uppercase tracking-wider">
-        <span className="cursor-pointer hover:text-blue-600 transition-colors" onClick={onBack}>Cycle Run Details</span>
+        <span className="cursor-pointer hover:text-black transition-colors" onClick={onBack}>Cycle Run Details</span>
         <ChevronRight size={12} />
-        <span className="text-blue-600 dark:text-blue-400">Commission Summary</span>
+        <span className="text-black dark:text-zinc-500">Commission Summary</span>
       </div>
 
       <div className="flex items-center justify-between">
         <button 
           onClick={onBack}
-          className="flex items-center gap-2 text-[#0071cd] font-medium text-[14px] hover:underline group active:scale-95 transition-all"
+          className="flex items-center gap-2 text-[#000000] font-medium text-[14px] hover:underline group active:scale-95 transition-all"
         >
           <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" />
           Back to Details
         </button>
-        <button className="flex items-center gap-2 text-[#0071cd] font-medium text-[14px] hover:underline active:scale-95 transition-all">
+        <button className="flex items-center gap-2 text-[#000000] font-medium text-[14px] hover:underline active:scale-95 transition-all">
           <History size={16} />
           Adjustments History
         </button>
@@ -338,7 +338,7 @@ function CommissionSummaryView({ member, onBack }: { member: Member, onBack: () 
         
         <div className="flex-1 flex flex-col gap-3">
           <div className="flex items-center gap-2">
-            <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-500 dark:text-blue-400 text-[10px] font-bold rounded border border-blue-100 dark:border-blue-800 uppercase tracking-tight">Type</span>
+            <span className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-900/20 text-black dark:text-zinc-500 text-[10px] font-bold rounded border border-zinc-100 dark:border-zinc-800 uppercase tracking-tight">Type</span>
             <span className="px-2 py-0.5 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 text-[10px] font-bold rounded border border-orange-100 dark:border-orange-800 italic">Caretaker 20%</span>
           </div>
           <div className="space-y-1">
@@ -390,7 +390,7 @@ function CommissionSummaryView({ member, onBack }: { member: Member, onBack: () 
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="text-[17px] font-medium text-[#000b25] dark:text-gray-100">Activities</h3>
-          <button className="flex items-center gap-2 px-4 py-2 bg-[#0071cd] text-white rounded font-medium text-sm hover:bg-blue-600 shadow-sm transition-all active:scale-95">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[#000000] text-white rounded font-medium text-sm hover:bg-black shadow-sm transition-all active:scale-95">
             <ExternalLink size={16} /> Export
           </button>
         </div>
@@ -419,7 +419,7 @@ function CommissionSummaryView({ member, onBack }: { member: Member, onBack: () 
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-[12px]">
               <thead>
-                <tr className="h-[48px] bg-[#e6f1fa] dark:bg-blue-950/40 text-left border-b border-gray-100 dark:border-gray-800">
+                <tr className="h-[48px] bg-[#f4f4f5] dark:bg-zinc-900/40 text-left border-b border-gray-100 dark:border-gray-800">
                   <th className="px-4 font-bold text-[#000b25] dark:text-gray-200">Member Code</th>
                   <th className="px-4 font-bold text-[#000b25] dark:text-gray-200">Reference Number</th>
                   <th className="px-4 font-bold text-[#000b25] dark:text-gray-200">Activity Type</th>
@@ -457,7 +457,7 @@ function CommissionSummaryView({ member, onBack }: { member: Member, onBack: () 
             <button className="flex items-center gap-2 px-4 py-2 border border-gray-200 dark:border-gray-800 rounded font-medium text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
               <RotateCcw size={16} /> Refresh
             </button>
-            <button className="flex items-center gap-2 px-4 py-2 bg-[#0071cd] text-white rounded font-medium text-sm hover:bg-blue-600 shadow-sm transition-all active:scale-95">
+            <button className="flex items-center gap-2 px-4 py-2 bg-[#000000] text-white rounded font-medium text-sm hover:bg-black shadow-sm transition-all active:scale-95">
               <ExternalLink size={16} /> Export
             </button>
           </div>
@@ -490,7 +490,7 @@ function CommissionSummaryView({ member, onBack }: { member: Member, onBack: () 
                 <button 
                   key={i}
                   onClick={() => setActiveModelTab(tab)}
-                  className={`px-6 py-1.5 text-sm font-medium rounded transition-all min-w-[120px] ${activeModelTab === tab ? 'bg-white dark:bg-gray-700 text-[#0071cd] dark:text-blue-400 shadow-sm' : 'text-gray-500'}`}
+                  className={`px-6 py-1.5 text-sm font-medium rounded transition-all min-w-[120px] ${activeModelTab === tab ? 'bg-white dark:bg-gray-700 text-[#000000] dark:text-zinc-500 shadow-sm' : 'text-gray-500'}`}
                 >
                   {tab}
                 </button>
@@ -500,7 +500,7 @@ function CommissionSummaryView({ member, onBack }: { member: Member, onBack: () 
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-[12px]">
               <thead>
-                <tr className="h-[40px] bg-[#e6f1fa] dark:bg-blue-950/40 text-left">
+                <tr className="h-[40px] bg-[#f4f4f5] dark:bg-zinc-900/40 text-left">
                   <th className="px-4 font-bold text-[#000b25] dark:text-gray-200">Staff ID</th>
                   <th className="px-4 font-bold text-[#000b25] dark:text-gray-200 text-right">Total Revenue</th>
                 </tr>
@@ -544,13 +544,13 @@ function MemberActions({ member, onShowDetails }: { member: Member, onShowDetail
             >
               <button 
                 onClick={(e) => { e.stopPropagation(); setIsOpen(false); onShowDetails(); }}
-                className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-colors flex items-center gap-2"
+                className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900/40 transition-colors flex items-center gap-2"
               >
                 <LayoutGrid size={14} /> View Details
               </button>
               <button 
                 onClick={(e) => { e.stopPropagation(); setIsOpen(false); toast.info("Coming soon..."); }}
-                className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-colors flex items-center gap-2"
+                className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900/40 transition-colors flex items-center gap-2"
               >
                 <TrendingUp size={14} /> Performance
               </button>
@@ -633,11 +633,11 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
         <div className="flex-1 flex flex-col overflow-y-auto p-6 space-y-6 custom-scrollbar">
           {/* Breadcrumbs */}
       <nav className="flex items-center gap-2 text-[11px] text-gray-400 font-medium uppercase tracking-wider">
-        <span className="cursor-pointer hover:text-blue-600 transition-colors" onClick={onBack}>Commission Management</span>
+        <span className="cursor-pointer hover:text-black transition-colors" onClick={onBack}>Commission Management</span>
         <ChevronRight size={12} />
-        <span className="cursor-pointer hover:text-blue-600 transition-colors" onClick={onBack}>Cycles Run</span>
+        <span className="cursor-pointer hover:text-black transition-colors" onClick={onBack}>Cycles Run</span>
         <ChevronRight size={12} />
-        <span className="text-blue-600 dark:text-blue-400">Cycles Run Details</span>
+        <span className="text-black dark:text-zinc-500">Cycles Run Details</span>
       </nav>
 
       {/* Rejection Reason Alert - High Fidelity Banner */}
@@ -721,13 +721,13 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
               <div className="bg-[#edf1f5] dark:bg-gray-800 p-1 rounded-md flex items-center gap-1">
                 <button 
                   onClick={() => setView('plans')}
-                  className={`px-6 py-1.5 text-sm font-medium rounded transition-all ${view === 'plans' ? 'bg-white dark:bg-gray-700 text-[#0071cd] dark:text-blue-400 shadow-sm border border-gray-100 dark:border-gray-600' : 'text-gray-500'}`}
+                  className={`px-6 py-1.5 text-sm font-medium rounded transition-all ${view === 'plans' ? 'bg-white dark:bg-gray-700 text-[#000000] dark:text-zinc-500 shadow-sm border border-gray-100 dark:border-gray-600' : 'text-gray-500'}`}
                 >
                   Plans
                 </button>
                 <button 
                   onClick={() => setView('members')}
-                  className={`px-6 py-1.5 text-sm font-medium rounded transition-all ${view === 'members' ? 'bg-white dark:bg-gray-700 text-[#0071cd] dark:text-blue-400 shadow-sm border border-gray-100 dark:border-gray-600' : 'text-gray-500'}`}
+                  className={`px-6 py-1.5 text-sm font-medium rounded transition-all ${view === 'members' ? 'bg-white dark:bg-gray-700 text-[#000000] dark:text-zinc-500 shadow-sm border border-gray-100 dark:border-gray-600' : 'text-gray-500'}`}
                 >
                   Members
                 </button>
@@ -737,7 +737,7 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
                 <div className="relative">
                   <button 
                     onClick={() => setIsOperationsOpen(!isOperationsOpen)}
-                    className="flex items-center gap-2 px-4 py-2 border border-[#0071cd] text-[#0071cd] rounded font-medium text-sm hover:bg-blue-50 transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 border border-[#000000] text-[#000000] rounded font-medium text-sm hover:bg-zinc-100 transition-colors"
                   >
                     Operations
                     <ChevronDown size={16} className={`transition-transform duration-200 ${isOperationsOpen ? 'rotate-180' : ''}`} />
@@ -750,10 +750,10 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         className="absolute right-0 mt-2 w-56 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-xl z-50 py-2 overflow-hidden"
                       >
-                        <button onClick={() => { setIsOperationsOpen(false); toast.success("Export started..."); }} className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-colors flex items-center gap-2">
+                        <button onClick={() => { setIsOperationsOpen(false); toast.success("Export started..."); }} className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900/40 transition-colors flex items-center gap-2">
                           <ExternalLink size={14} /> Export to Excel
                         </button>
-                        <button onClick={() => { setIsOperationsOpen(false); toast.success("PDF Generation started..."); }} className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-colors flex items-center gap-2">
+                        <button onClick={() => { setIsOperationsOpen(false); toast.success("PDF Generation started..."); }} className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900/40 transition-colors flex items-center gap-2">
                           <List size={14} /> Download Summary PDF
                         </button>
                         <div className="border-t border-gray-100 dark:border-gray-800 my-1" />
@@ -765,7 +765,7 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
                   </AnimatePresence>
                 </div>
                 <div className="flex items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-1">
-                  <button className="p-1.5 bg-[#0071cd] text-white rounded">
+                  <button className="p-1.5 bg-[#000000] text-white rounded">
                     <LayoutGrid size={16} />
                   </button>
                   <button className="p-1.5 text-gray-400">
@@ -784,7 +784,7 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search by Plan, Member, or Account #" 
-                  className="w-full pl-10 pr-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md text-sm outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full pl-10 pr-4 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md text-sm outline-none focus:ring-1 focus:ring-black"
                 />
               </div>
 
@@ -797,7 +797,7 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
                   <div key={filter.key} className="relative">
                     <button 
                       onClick={() => setOpenFilter(openFilter === filter.key ? null : filter.key)}
-                      className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 rounded px-3 py-2 bg-white dark:bg-gray-800 hover:border-blue-500 transition-colors"
+                      className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 rounded px-3 py-2 bg-white dark:bg-gray-800 hover:border-black transition-colors"
                     >
                       <span className="text-sm text-gray-600 dark:text-gray-400">{filter.label}: <span className="text-gray-900 dark:text-gray-100 font-medium">{filters[filter.key as keyof typeof filters]}</span></span>
                       <ChevronDown size={14} className={`text-gray-400 transition-transform ${openFilter === filter.key ? 'rotate-180' : ''}`} />
@@ -814,10 +814,10 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
                             <button
                               key={opt}
                               onClick={() => handleFilterSelect(filter.key as keyof typeof filters, opt)}
-                              className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/40 flex items-center justify-between"
+                              className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900/40 flex items-center justify-between"
                             >
                               {opt}
-                              {filters[filter.key as keyof typeof filters] === opt && <Check size={14} className="text-blue-600" />}
+                              {filters[filter.key as keyof typeof filters] === opt && <Check size={14} className="text-black" />}
                             </button>
                           ))}
                         </motion.div>
@@ -840,7 +840,7 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
           {/* Hierarchical Content */}
           <div className="space-y-4">
             {filteredData.map(group => (
-              <div key={group.id} className="bg-[#e6f4ff]/30 dark:bg-blue-900/10 border border-[#b0d9ef]/30 dark:border-blue-800/20 rounded-lg overflow-hidden transition-all duration-300">
+              <div key={group.id} className="bg-[#f4f4f5]/30 dark:bg-zinc-900/10 border border-[#d4d4d8]/30 dark:border-zinc-800/20 rounded-lg overflow-hidden transition-all duration-300">
                 {/* Group Header Card */}
                 <div className="p-4 flex items-center justify-between">
                   <div className="flex-1 grid grid-cols-3 gap-8">
@@ -866,19 +866,19 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
                 </div>
 
                 {expandedGroups.includes(group.id) && group.plans.length > 0 && (
-                  <div className="border-t border-[#b0d9ef]/30 dark:border-blue-800/20 animate-in slide-in-from-top-2 duration-300 p-4 space-y-4 bg-white/50 dark:bg-gray-900/50">
+                  <div className="border-t border-[#d4d4d8]/30 dark:border-zinc-800/20 animate-in slide-in-from-top-2 duration-300 p-4 space-y-4 bg-white/50 dark:bg-gray-900/50">
                     {group.plans.map(plan => (
-                      <div key={plan.id} className="bg-white dark:bg-gray-900 rounded-xl border border-blue-100 dark:border-blue-900/30 overflow-hidden shadow-sm">
+                      <div key={plan.id} className="bg-white dark:bg-gray-900 rounded-xl border border-zinc-100 dark:border-zinc-900/30 overflow-hidden shadow-sm">
                         {/* Plan Header Card (Inspired by figma screenshot) */}
                         <div className="p-4 flex items-center gap-6 border-b border-gray-50 dark:border-gray-800">
                           <div className="flex items-center gap-3 min-w-[200px]">
-                            <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white text-sm font-bold shadow-lg shadow-blue-100 dark:shadow-none shrink-0">
+                            <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white text-sm font-bold shadow-lg shadow-zinc-100 dark:shadow-none shrink-0">
                               {plan.version}
                             </div>
                             <div className="flex flex-col">
                               <div className="flex items-center gap-2">
                                 <h4 className="text-sm font-bold text-gray-900 dark:text-gray-100">{plan.name}</h4>
-                                <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] font-bold rounded-full border border-blue-100 dark:border-blue-800">
+                                <span className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-900/30 text-black dark:text-zinc-500 text-[10px] font-bold rounded-full border border-zinc-100 dark:border-zinc-800">
                                   {plan.percentage}
                                 </span>
                               </div>
@@ -902,7 +902,7 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
                           <div className="h-10 w-px bg-gray-100 dark:bg-gray-800 hidden lg:block"></div>
 
                           <div className="flex-1 flex flex-col gap-1.5">
-                            <p className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Members ({plan.memberCount})</p>
+                            <p className="text-[10px] font-bold text-black dark:text-zinc-500 uppercase tracking-wider">Members ({plan.memberCount})</p>
                             <div className="flex items-center gap-1.5">
                               <span className="px-2 py-1 bg-[#f0fdf4] dark:bg-emerald-500/10 text-[#22c55e] dark:text-emerald-400 text-[9px] font-bold rounded flex items-center gap-1 border border-[#22c55e]/10 dark:border-emerald-500/20">
                                 <Check size={10} /> {plan.stats.included} Included
@@ -944,12 +944,12 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
                             {plan.members.map(member => (
                               <div key={member.id} className="bg-white dark:bg-gray-900 rounded border border-gray-100 dark:border-gray-800 py-3 px-4 flex items-center gap-6 hover:bg-gray-50/50 transition-colors group">
                                 <div className="flex items-center">
-                                  <input type="checkbox" className="size-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer" />
+                                  <input type="checkbox" className="size-4 rounded border-gray-300 text-black focus:ring-black cursor-pointer" />
                                 </div>
                                 
                                 <div className="flex flex-col gap-1.5 min-w-[200px]">
                                   <div className="flex items-center gap-1.5">
-                                    <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-500 dark:text-blue-400 text-[10px] font-bold rounded border border-blue-100 dark:border-blue-800 uppercase tracking-tight">Type</span>
+                                    <span className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-900/20 text-black dark:text-zinc-500 text-[10px] font-bold rounded border border-zinc-100 dark:border-zinc-800 uppercase tracking-tight">Type</span>
                                     <span className="px-2 py-0.5 bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 text-[10px] font-bold rounded border border-gray-200 dark:border-gray-700 uppercase tracking-tight">Code</span>
                                     <span className="px-2 py-0.5 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 text-[10px] font-bold rounded border border-orange-100 dark:border-orange-800 italic">Caretaker 20%</span>
                                   </div>
@@ -1018,10 +1018,10 @@ export function CycleRunDetails({ onBack }: { onBack?: () => void }) {
                             <div className="flex items-center justify-end gap-3 pt-4 pr-2">
                               <span className="text-[10px] font-bold text-gray-400 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 px-3 py-1 rounded-md">10 / 55</span>
                               <div className="flex items-center gap-1">
-                                <button className="w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-lg shadow-lg shadow-blue-100 dark:shadow-none hover:bg-blue-700 transition-colors">
+                                <button className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-lg shadow-lg shadow-zinc-100 dark:shadow-none hover:bg-zinc-800 transition-colors">
                                   <ChevronLeft size={16} />
                                 </button>
-                                <button className="w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-lg shadow-lg shadow-blue-100 dark:shadow-none hover:bg-blue-700 transition-colors">
+                                <button className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-lg shadow-lg shadow-zinc-100 dark:shadow-none hover:bg-zinc-800 transition-colors">
                                   <ChevronRight size={16} />
                                 </button>
                               </div>
@@ -1211,13 +1211,13 @@ export function ExcludedMembersView({ onRowClick }: { onRowClick?: (cycle: any) 
       <div className="p-2 flex items-center justify-between border-b border-border bg-background gap-4">
         <div className="flex items-center gap-2 flex-1">
           <div className="relative w-64 group">
-            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-blue-500 transition-colors" />
+            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-black transition-colors" />
             <input 
               type="text" 
               placeholder="Search cycle name..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-9 py-1.5 border border-border rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 bg-background text-foreground placeholder:text-muted-foreground"
+              className="w-full pl-9 pr-9 py-1.5 border border-border rounded text-xs focus:outline-none focus:ring-1 focus:ring-black bg-background text-foreground placeholder:text-muted-foreground"
             />
           </div>
         </div>
@@ -1233,7 +1233,7 @@ export function ExcludedMembersView({ onRowClick }: { onRowClick?: (cycle: any) 
       {/* Table consistent with CycleTable design */}
       <div className="flex-1 overflow-auto">
         <table className="w-full border-collapse text-[11px] min-w-[1200px]">
-          <thead className="sticky top-0 bg-[#e6f4ff] dark:bg-blue-950/40 z-10 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
+          <thead className="sticky top-0 bg-[#f4f4f5] dark:bg-zinc-900/40 z-10 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
             <tr className="text-left text-muted-foreground font-normal">
               <th className="p-3 font-semibold">Cycle Name</th>
               <th className="p-3 font-semibold">Cycle Plan</th>
@@ -1250,15 +1250,15 @@ export function ExcludedMembersView({ onRowClick }: { onRowClick?: (cycle: any) 
             {filteredCycles.map((cycle) => (
               <tr 
                 key={cycle.id} 
-                className="hover:bg-blue-50/20 dark:hover:bg-blue-900/5 transition-colors group cursor-pointer"
+                className="hover:bg-zinc-100/20 dark:hover:bg-zinc-900/5 transition-colors group cursor-pointer"
                 onClick={() => onRowClick?.(cycle)}
               >
                 <td className="p-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-500/20">
+                    <div className="w-8 h-8 rounded bg-zinc-100 dark:bg-black/10 flex items-center justify-center text-black dark:text-zinc-500 border border-zinc-100 dark:border-black/20">
                       <Calendar size={16} />
                     </div>
-                    <span className="text-blue-600 dark:text-blue-400 font-medium truncate max-w-[200px]" title={cycle.name}>
+                    <span className="text-black dark:text-zinc-500 font-medium truncate max-w-[200px]" title={cycle.name}>
                       {cycle.name}
                     </span>
                   </div>
@@ -1293,7 +1293,7 @@ export function ExcludedMembersView({ onRowClick }: { onRowClick?: (cycle: any) 
                       e.stopPropagation();
                       setIsRerunOpen(true);
                     }}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-bold rounded transition-all active:scale-95 shadow-sm whitespace-nowrap"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black hover:bg-zinc-800 text-white text-[10px] font-bold rounded transition-all active:scale-95 shadow-sm whitespace-nowrap"
                   >
                     <RotateCcw size={12} />
                     Rerun Excluded

@@ -43,8 +43,8 @@ function Textfield() {
 
 function Button() {
   return (
-    <div className="bg-[#0072ce] content-stretch flex gap-[8px] h-[36px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#000000] content-stretch flex gap-[8px] h-[36px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-center text-white whitespace-nowrap">
         <p className="leading-[normal]">save</p>
       </div>
@@ -59,10 +59,10 @@ function Button1() {
   return (
     <div className="content-stretch flex gap-[8px] h-[36px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap">
+      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap">
         <p className="leading-[normal]">close</p>
       </div>
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Cancel</p>
       </div>
     </div>
@@ -128,7 +128,7 @@ function HeaderCell() {
 
 function Button2() {
   return (
-    <div className="content-stretch flex gap-[8px] items-center justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] whitespace-nowrap" data-name="Button">
+    <div className="content-stretch flex gap-[8px] items-center justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] whitespace-nowrap" data-name="Button">
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center not-italic relative shrink-0">
         <p className="leading-[normal]">plus</p>
       </div>
@@ -444,8 +444,8 @@ function AlertMessage() {
 
 export default function Container() {
   return (
-    <div className="bg-[#f3f9fd] content-stretch flex flex-col gap-[16px] items-start px-[17px] py-[13px] relative rounded-[4px] size-full" data-name="Container">
-      <div aria-hidden="true" className="absolute border border-[#dbedf8] border-dashed inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#f4f4f5] content-stretch flex flex-col gap-[16px] items-start px-[17px] py-[13px] relative rounded-[4px] size-full" data-name="Container">
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-dashed inset-0 pointer-events-none rounded-[4px]" />
       <Frame2 />
       <NewTable />
       <AlertMessage />

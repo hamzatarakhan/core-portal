@@ -38,7 +38,7 @@ function Card({ children, additionalClassNames = "" }: React.PropsWithChildren<C
 function Icon() {
   return (
     <div className="content-stretch flex items-center justify-center relative rounded-[160px] shrink-0 size-[16px]">
-      <div aria-hidden="true" className="absolute border-2 border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[160px]" />
+      <div aria-hidden="true" className="absolute border-2 border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
     </div>
   );
 }
@@ -62,7 +62,7 @@ type IconTextProps = {
 function IconText({ text }: IconTextProps) {
   return (
     <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 size-[20px]">
-      <p className="font-['Font_Awesome_6_Pro:Solid',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#4297dd] text-[17px] text-nowrap">{text}</p>
+      <p className="font-['Font_Awesome_6_Pro:Solid',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#3f3f46] text-[17px] text-nowrap">{text}</p>
     </div>
   );
 }
@@ -180,7 +180,7 @@ export default function Content() {
                           </div>
                         </div>
                         <div className="content-stretch flex gap-[16px] items-start relative shrink-0 w-full">
-                          <Card additionalClassNames="bg-[#f3f9fd]">
+                          <Card additionalClassNames="bg-[#f4f4f5]">
                             <div className="bg-white content-stretch flex items-center justify-center p-[8px] relative rounded-[4px] shrink-0 size-[42px]">
                               <IconText text="" />
                             </div>
@@ -198,7 +198,7 @@ export default function Content() {
                           </div>
                         </div>
                         <div className="content-stretch flex items-center justify-end relative shrink-0 w-full" data-name="Action bar">
-                          <div className="bg-[#0072ce] content-stretch flex gap-[8px] h-[40px] items-center justify-center px-[16px] py-0 relative rounded-[4px] shrink-0" data-name="Button">
+                          <div className="bg-[#000000] content-stretch flex gap-[8px] h-[40px] items-center justify-center px-[16px] py-0 relative rounded-[4px] shrink-0" data-name="Button">
                             <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[14px] text-nowrap text-white" style={{ fontVariationSettings: "'wdth' 100" }}>
                               <p className="leading-[1.2]">Submit</p>
                             </div>

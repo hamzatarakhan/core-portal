@@ -138,7 +138,7 @@ const nodeUsersData: Record<string, NodeUser[]> = {
 
 // ─── Avatar helpers ───────────────────────────────────────────────────────────
 
-const COLORS = ['#0072CE','#00a86b','#f59e0b','#8b5cf6','#ec4899','#06b6d4','#84cc16','#ef4444'];
+const COLORS = ['#000000','#00a86b','#f59e0b','#8b5cf6','#ec4899','#06b6d4','#84cc16','#ef4444'];
 const avatarColor = (name: string) => COLORS[name.charCodeAt(0) % COLORS.length];
 const initials    = (name: string) => name.split(' ').map(p => p[0]).slice(0, 2).join('').toUpperCase();
 
@@ -194,7 +194,7 @@ function NodeUsersPage({ nodeName, onBack }: { nodeName: string; onBack: () => v
           Back
         </button>
         <div style={{ width: 1, height: 20, background: '#e2e8f0' }} />
-        <Users size={15} color="#0072CE" />
+        <Users size={15} color="#000000" />
         <span style={{ fontSize: 14, fontWeight: 500, color: '#000b25' }}>{nodeName} — Users</span>
       </div>
 
@@ -218,13 +218,13 @@ function NodeUsersPage({ nodeName, onBack }: { nodeName: string; onBack: () => v
         </div>
         {/* Right controls */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <button style={{ height: 34, padding: '0 14px', borderRadius: 6, border: '1px solid #0072CE', background: '#fff', cursor: 'pointer', fontSize: 13, fontWeight: 500, color: '#0072CE', display: 'flex', alignItems: 'center', gap: 6 }}>
+          <button style={{ height: 34, padding: '0 14px', borderRadius: 6, border: '1px solid #000000', background: '#fff', cursor: 'pointer', fontSize: 13, fontWeight: 500, color: '#000000', display: 'flex', alignItems: 'center', gap: 6 }}>
             Operations
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="6 9 12 15 18 9"/>
             </svg>
           </button>
-          <button style={{ height: 34, padding: '0 16px', borderRadius: 6, border: 'none', background: '#0072CE', cursor: 'pointer', fontSize: 13, fontWeight: 500, color: '#fff' }}>
+          <button style={{ height: 34, padding: '0 16px', borderRadius: 6, border: 'none', background: '#000000', cursor: 'pointer', fontSize: 13, fontWeight: 500, color: '#fff' }}>
             Create
           </button>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'rgba(0,11,37,0.5)' }}>
@@ -280,7 +280,7 @@ function NodeUsersPage({ nodeName, onBack }: { nodeName: string; onBack: () => v
                   <input type="checkbox" style={{ cursor: 'pointer' }} />
                 </td>
                 <td style={{ padding: '12px 16px', color: '#000b25', fontWeight: 400 }}>{user.name}</td>
-                <td style={{ padding: '12px 16px', color: '#0072CE' }}>{user.code}</td>
+                <td style={{ padding: '12px 16px', color: '#000000' }}>{user.code}</td>
                 <td style={{ padding: '12px 16px', color: 'rgba(0,11,37,0.55)' }}>{user.segment}</td>
                 <td style={{ padding: '12px 16px', color: 'rgba(0,11,37,0.7)' }}>{user.phone}</td>
                 <td style={{ padding: '12px 16px' }}>
@@ -338,7 +338,7 @@ function Toggle({ on, onChange }: { on: boolean; onChange: () => void }) {
   return (
     <div
       onClick={onChange}
-      style={{ width: 42, height: 24, borderRadius: 12, background: on ? '#0072CE' : '#cbd5e1', cursor: 'pointer', position: 'relative', flexShrink: 0, transition: 'background 0.2s' }}
+      style={{ width: 42, height: 24, borderRadius: 12, background: on ? '#000000' : '#cbd5e1', cursor: 'pointer', position: 'relative', flexShrink: 0, transition: 'background 0.2s' }}
     >
       <div style={{ position: 'absolute', top: 3, left: on ? 21 : 3, width: 18, height: 18, borderRadius: '50%', background: '#fff', transition: 'left 0.2s', boxShadow: '0 1px 3px rgba(0,0,0,0.2)' }} />
     </div>
@@ -375,8 +375,8 @@ function NodeDetailPage({ nodeName, fullPath, onBack }: { nodeName: string; full
           Back
         </button>
         <div style={{ width: 1, height: 20, background: '#e2e8f0' }} />
-        <div style={{ width: 28, height: 28, borderRadius: 7, border: '1px solid #dbedf8', background: '#f0f7ff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0072CE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <div style={{ width: 28, height: 28, borderRadius: 7, border: '1px solid #e4e4e7', background: '#f0f7ff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
           </svg>
         </div>
@@ -418,7 +418,7 @@ function NodeDetailPage({ nodeName, fullPath, onBack }: { nodeName: string; full
                 <label style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'rgba(0,11,37,0.5)', marginBottom: 7, fontWeight: 500 }}>
                   Parent <span style={{ color: '#93c5fd', fontSize: 11 }}>?</span>
                 </label>
-                <div style={{ height: 38, border: '1px solid #e2e8f0', borderRadius: 6, padding: '0 12px', fontSize: 13, color: '#0072CE', background: '#f8fafc', display: 'flex', alignItems: 'center' }}>
+                <div style={{ height: 38, border: '1px solid #e2e8f0', borderRadius: 6, padding: '0 12px', fontSize: 13, color: '#000000', background: '#f8fafc', display: 'flex', alignItems: 'center' }}>
                   {parent || '—'}
                 </div>
               </div>
@@ -426,7 +426,7 @@ function NodeDetailPage({ nodeName, fullPath, onBack }: { nodeName: string; full
                 <label style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'rgba(0,11,37,0.5)', marginBottom: 7, fontWeight: 500 }}>
                   Related Menu <span style={{ color: '#93c5fd', fontSize: 11 }}>?</span>
                 </label>
-                <div style={{ height: 38, border: '1px solid #e2e8f0', borderRadius: 6, padding: '0 12px', fontSize: 13, color: '#0072CE', background: '#f8fafc', display: 'flex', alignItems: 'center', overflow: 'hidden', whiteSpace: 'nowrap' }}>
+                <div style={{ height: 38, border: '1px solid #e2e8f0', borderRadius: 6, padding: '0 12px', fontSize: 13, color: '#000000', background: '#f8fafc', display: 'flex', alignItems: 'center', overflow: 'hidden', whiteSpace: 'nowrap' }}>
                   Sales Team/{relatedMenu}
                 </div>
               </div>
@@ -451,7 +451,7 @@ function NodeDetailPage({ nodeName, fullPath, onBack }: { nodeName: string; full
             {config.map((section, si) => (
               <div key={section.title}>
                 <div style={{ padding: '16px 24px 10px', display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <div style={{ width: 3, height: 16, borderRadius: 2, background: '#0072CE', flexShrink: 0 }} />
+                  <div style={{ width: 3, height: 16, borderRadius: 2, background: '#000000', flexShrink: 0 }} />
                   <span style={{ fontSize: 13, fontWeight: 600, color: '#000b25' }}>{section.title}</span>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
@@ -482,7 +482,7 @@ function NodeDetailPage({ nodeName, fullPath, onBack }: { nodeName: string; full
             Cancel
           </button>
           <button
-            style={{ height: 36, padding: '0 20px', borderRadius: 6, border: 'none', background: '#0072CE', cursor: 'pointer', fontSize: 13, fontWeight: 500, color: '#fff' }}
+            style={{ height: 36, padding: '0 20px', borderRadius: 6, border: 'none', background: '#000000', cursor: 'pointer', fontSize: 13, fontWeight: 500, color: '#fff' }}
           >
             Save Changes
           </button>
@@ -507,10 +507,10 @@ function UsersIconButton({ label, onShowUsers, count }: { label: string; onShowU
         position: 'relative',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         width: 28, minHeight: 30,
-        borderTop: 'none', borderRight: 'none', borderBottom: 'none', borderLeft: `1px solid ${hovered ? '#dbedf8' : '#dbedf8'}`,
-        background: hovered ? '#eff6ff' : 'transparent',
+        borderTop: 'none', borderRight: 'none', borderBottom: 'none', borderLeft: `1px solid ${hovered ? '#e4e4e7' : '#e4e4e7'}`,
+        background: hovered ? '#f4f4f5' : 'transparent',
         cursor: 'pointer',
-        color: hovered ? '#0072ce' : 'rgb(147 197 253)',
+        color: hovered ? '#000000' : 'rgb(147 197 253)',
         padding: '0 6px',
         transition: 'background 0.12s, color 0.12s',
       }}
@@ -523,7 +523,7 @@ function UsersIconButton({ label, onShowUsers, count }: { label: string; onShowU
         <span style={{
           position: 'absolute', top: 3, right: 2,
           minWidth: 13, height: 13, borderRadius: 7,
-          background: '#0072ce', color: '#fff',
+          background: '#000000', color: '#fff',
           fontSize: 8, fontWeight: 700, lineHeight: '13px',
           textAlign: 'center', padding: '0 2px',
           pointerEvents: 'none',
@@ -546,12 +546,12 @@ function CollapseButton({ collapsed, onClick }: { collapsed: boolean; onClick: (
       style={{
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         width: 22, minHeight: 30,
-        borderTop: 'none', borderRight: 'none', borderBottom: 'none', borderLeft: `1px solid ${hovered ? '#dbedf8' : '#dbedf8'}`,
-        background: hovered ? '#eff6ff' : 'transparent',
+        borderTop: 'none', borderRight: 'none', borderBottom: 'none', borderLeft: `1px solid ${hovered ? '#e4e4e7' : '#e4e4e7'}`,
+        background: hovered ? '#f4f4f5' : 'transparent',
         cursor: 'pointer', padding: '0 4px',
         borderRadius: '0 5px 5px 0',
         transition: 'background 0.12s',
-        color: hovered ? '#0072ce' : 'rgb(147 197 253)',
+        color: hovered ? '#000000' : 'rgb(147 197 253)',
       }}
     >
       <svg
@@ -590,8 +590,8 @@ function OrgNode({
       <div style={{ display: 'flex', alignItems: 'center', border: '1.5px solid #5aaee8', borderRadius: 7, background: '#fff', whiteSpace: 'nowrap', boxShadow: '0 1px 4px rgba(0,114,206,0.07)' }}>
         <span
           onClick={e => { e.stopPropagation(); onShowDetail(node.label, nodePath); }}
-          style={{ padding: '7px 10px 7px 14px', color: '#0072CE', fontSize: 12.5, fontWeight: 400, letterSpacing: 0.1, cursor: 'pointer', borderRadius: '5px 0 0 5px', transition: 'background 0.12s' }}
-          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#eff6ff'; }}
+          style={{ padding: '7px 10px 7px 14px', color: '#000000', fontSize: 12.5, fontWeight: 400, letterSpacing: 0.1, cursor: 'pointer', borderRadius: '5px 0 0 5px', transition: 'background 0.12s' }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#f4f4f5'; }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
         >
           {node.label}

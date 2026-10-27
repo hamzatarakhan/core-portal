@@ -9,7 +9,7 @@ const statusStyles: Record<string, string> = {
   'Pending Sales Support Approval': 'bg-[#fff7e6] text-[#b76e00] border-[#ffd591]',
   'Active': 'bg-[#e8f8ef] text-[#0f9d58] border-[#b7ebd0]',
   'Rejected': 'bg-[#fdecea] text-[#d93025] border-[#f5c2be]',
-  'Resubmitted': 'bg-[#e6f4ff] text-[#0072ce] border-[#b3d9f7]',
+  'Resubmitted': 'bg-[#f4f4f5] text-[#000000] border-[#d4d4d8]',
   'Suspended': 'bg-[#fff1e6] text-[#d4600a] border-[#ffd0a8]',
   'Terminated': 'bg-[#f1f1f1] text-[#5f6368] border-[#d9d9d9]',
   'Resigned': 'bg-[#f1f1f1] text-[#5f6368] border-[#d9d9d9]',
@@ -67,7 +67,7 @@ const defaultSmartButtons = [
 const metricCards = [
   { label: 'Available Credit Limit', value: '1000', bg: 'bg-[#f6fef9]', border: 'border-[#d3f8df]' },
   { label: 'Total Amount Due', value: '500', bg: 'bg-[#fff8f7]', border: 'border-[#ffccc7]/50' },
-  { label: 'Remaining Balance', value: '500', bg: 'bg-[#f5faff]', border: 'border-[#d1e9ff]' },
+  { label: 'Remaining Balance', value: '500', bg: 'bg-[#f4f4f5]', border: 'border-[#e4e4e7]' },
   { label: 'Pending Order Amount', value: '600', bg: 'bg-[#fefaf5]', border: 'border-[#fdead7]' },
 ];
 
@@ -274,7 +274,7 @@ function CreditLimitControl() {
   return (
     <div className="flex flex-col">
       {/* ═══ Smart Buttons Header ═══ */}
-      <div className="bg-[#f3f9fd] rounded-t-[4px] relative -mb-px">
+      <div className="bg-[#f4f4f5] rounded-t-[4px] relative -mb-px">
         <div aria-hidden="true" className="absolute inset-0 border border-[#e2e8f0] border-b-0 rounded-t-[4px] pointer-events-none" />
         <div className="flex gap-2 px-4 py-3 relative">
           {defaultSmartButtons.map((btn, i) => (
@@ -283,14 +283,14 @@ function CreditLimitControl() {
               onClick={() => setActiveSmartBtn(activeSmartBtn === i ? null : i)}
               className={`h-[30px] rounded-full flex items-center gap-1.5 px-3 relative active:scale-95 transition-all text-[10.5px] ${
                 activeSmartBtn === i
-                  ? 'bg-[#0072ce] text-white'
+                  ? 'bg-[#000000] text-white'
                   : 'bg-white text-[rgba(0,11,37,0.57)]'
               }`}
             >
               <div aria-hidden="true" className={`absolute inset-0 border border-solid border-[#e2e8f0] rounded-[4px] pointer-events-none ${activeSmartBtn === i ? 'border-transparent' : ''}`} />
               <CircleDot size={10.5} className={activeSmartBtn === i ? 'text-white' : 'text-[rgba(0,11,37,0.57)]'} />
               <span className="font-medium w-[108px] truncate text-left">{btn.label}</span>
-              <span className="absolute -top-1.5 left-[3px] bg-[#0072ce] text-white text-[7.5px] min-w-[14px] px-[3px] py-[1.5px] rounded-full flex items-center justify-center font-medium">
+              <span className="absolute -top-1.5 left-[3px] bg-[#000000] text-white text-[7.5px] min-w-[14px] px-[3px] py-[1.5px] rounded-full flex items-center justify-center font-medium">
                 {btn.badge}
               </span>
             </button>
@@ -331,8 +331,8 @@ function CreditLimitControl() {
                         className="h-[30px] px-3 bg-[#e8f7ff] hover:bg-[#d0ebfa] active:bg-[#b8e3f5] rounded-[4px] flex items-center gap-1.5 active:scale-95 transition-all relative"
                       >
                         <div aria-hidden="true" className="absolute inset-0 border border-solid border-[#d0ebfa] rounded-[4px] pointer-events-none" />
-                        <Pencil size={12} className="text-[#0072ce]" />
-                        <span className="text-[11px] font-medium text-[#0072ce]">Change</span>
+                        <Pencil size={12} className="text-[#000000]" />
+                        <span className="text-[11px] font-medium text-[#000000]">Change</span>
                       </button>
                     </div>
                   </div>
@@ -358,12 +358,12 @@ function CreditLimitControl() {
 
           {/* ── Credit Limit: Empty State ── */}
           {!creditLimitSet && !isSettingLimit && (
-            <div className="bg-[#f3f9fd] rounded-[4px] relative">
-              <div aria-hidden="true" className="absolute inset-0 border border-dashed border-[#dbedf8] rounded-[4px] pointer-events-none" />
+            <div className="bg-[#f4f4f5] rounded-[4px] relative">
+              <div aria-hidden="true" className="absolute inset-0 border border-dashed border-[#e4e4e7] rounded-[4px] pointer-events-none" />
               <div className="flex items-center justify-between px-[17px] py-[13px]">
                 <div className="h-9 flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[rgba(0,114,206,0.08)] flex items-center justify-center shrink-0">
-                    <Plus size={14} className="text-[#0072ce]" />
+                    <Plus size={14} className="text-[#000000]" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className="text-[12px] text-[rgba(0,11,37,0.64)] leading-[1.2]">No credit limit configured</span>
@@ -372,9 +372,9 @@ function CreditLimitControl() {
                 </div>
                 <button
                   onClick={() => { setPopupLimitValue(''); setPopupGuarantees([]); setPopupValidation(false); setShowChangeLimitPopup(true); }}
-                  className="h-9 bg-[#0072ce] rounded-[4px] relative px-4 flex items-center gap-2 text-[12px] text-white font-medium active:scale-95 transition-transform"
+                  className="h-9 bg-[#000000] rounded-[4px] relative px-4 flex items-center gap-2 text-[12px] text-white font-medium active:scale-95 transition-transform"
                 >
-                  <div aria-hidden="true" className="absolute inset-0 border border-[#0072ce] rounded-[4px] pointer-events-none" />
+                  <div aria-hidden="true" className="absolute inset-0 border border-[#000000] rounded-[4px] pointer-events-none" />
                   <Plus size={12} />
                   Set Credit Limit
                 </button>
@@ -384,8 +384,8 @@ function CreditLimitControl() {
 
           {/* ── Credit Limit: Editing State ── */}
           {!creditLimitSet && isSettingLimit && (
-            <div className="bg-[#f3f9fd] rounded-[4px] relative">
-              <div aria-hidden="true" className="absolute inset-0 border border-dashed border-[#dbedf8] rounded-[4px] pointer-events-none" />
+            <div className="bg-[#f4f4f5] rounded-[4px] relative">
+              <div aria-hidden="true" className="absolute inset-0 border border-dashed border-[#e4e4e7] rounded-[4px] pointer-events-none" />
               <div className="flex flex-col gap-4 px-[17px] py-[13px]">
                 {/* Amount Row */}
                 <div className="flex items-end justify-between">
@@ -431,9 +431,9 @@ function CreditLimitControl() {
                         setShowValidation(false);
                         setShowBankTable(true);
                       }}
-                      className="h-9 bg-[#0072ce] rounded-[4px] px-4 flex items-center gap-2 text-[12px] text-white font-medium active:scale-95 transition-transform relative"
+                      className="h-9 bg-[#000000] rounded-[4px] px-4 flex items-center gap-2 text-[12px] text-white font-medium active:scale-95 transition-transform relative"
                     >
-                      <div aria-hidden="true" className="absolute inset-0 border border-[#0072ce] rounded-[4px] pointer-events-none" />
+                      <div aria-hidden="true" className="absolute inset-0 border border-[#000000] rounded-[4px] pointer-events-none" />
                       <Save size={12} /> Save
                     </button>
                     <button
@@ -443,7 +443,7 @@ function CreditLimitControl() {
                         setGuarantees(guaranteesSnapshot);
                         setShowValidation(false);
                       }}
-                      className="h-9 rounded-[4px] px-4 flex items-center gap-2 text-[12px] text-[#0072ce] font-medium active:scale-95 transition-transform relative"
+                      className="h-9 rounded-[4px] px-4 flex items-center gap-2 text-[12px] text-[#000000] font-medium active:scale-95 transition-transform relative"
                     >
                       <div aria-hidden="true" className="absolute inset-0 border border-[#e2e8f0] rounded-[4px] pointer-events-none" />
                       <X size={12} /> Cancel
@@ -464,8 +464,8 @@ function CreditLimitControl() {
                           <div className="flex items-center gap-2">
                             <span className="text-[12px] text-[#000b25] font-medium">{col}</span>
                             <div className="flex flex-col items-center w-[9px] h-3">
-                              <ChevronUp size={9} className={`text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'asc' ? 'text-[#0072ce]' : ''}`} />
-                              <ChevronDown size={9} className={`-mt-1 text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'desc' ? 'text-[#0072ce]' : ''}`} />
+                              <ChevronUp size={9} className={`text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'asc' ? 'text-[#000000]' : ''}`} />
+                              <ChevronDown size={9} className={`-mt-1 text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'desc' ? 'text-[#000000]' : ''}`} />
                             </div>
                           </div>
                         </div>
@@ -475,23 +475,23 @@ function CreditLimitControl() {
                             {ci === 1 && <input type="text" value={g.guaranteeAmount} onChange={(e) => updateGuarantee(g.id, 'guaranteeAmount', e.target.value)} className="text-[14px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full" placeholder="Amount" />}
                             {ci === 2 && (
                               <div className="relative w-full">
-                                <input type="date" value={g.effectiveDate} onChange={(e) => updateGuarantee(g.id, 'effectiveDate', e.target.value)} className="text-[14px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full cursor-pointer hover:text-[#0072ce] transition-colors" />
+                                <input type="date" value={g.effectiveDate} onChange={(e) => updateGuarantee(g.id, 'effectiveDate', e.target.value)} className="text-[14px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full cursor-pointer hover:text-[#000000] transition-colors" />
                               </div>
                             )}
                             {ci === 3 && (
                               <div className="relative w-full">
-                                <input type="date" value={g.expiryDate} onChange={(e) => updateGuarantee(g.id, 'expiryDate', e.target.value)} min={g.effectiveDate || undefined} className="text-[14px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full cursor-pointer hover:text-[#0072ce] transition-colors" />
+                                <input type="date" value={g.expiryDate} onChange={(e) => updateGuarantee(g.id, 'expiryDate', e.target.value)} min={g.effectiveDate || undefined} className="text-[14px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full cursor-pointer hover:text-[#000000] transition-colors" />
                               </div>
                             )}
                             {ci === 4 && (
                               <div className="flex items-center justify-between w-full">
                                 {g.bankFileName ? (
-                                  <button onClick={() => openFilePreview(g)} className="text-[14px] text-[#0072ce] flex items-center gap-1.5 hover:underline active:scale-95 transition-all max-w-[140px]" title={g.bankFileName}>
+                                  <button onClick={() => openFilePreview(g)} className="text-[14px] text-[#000000] flex items-center gap-1.5 hover:underline active:scale-95 transition-all max-w-[140px]" title={g.bankFileName}>
                                     <Eye size={12} className="shrink-0" />
                                     <span className="truncate">{g.bankFileName}</span>
                                   </button>
                                 ) : (
-                                  <button onClick={() => handleFileUpload(g.id, 'inline')} className="text-[14px] text-[#0072ce] flex items-center gap-1.5 hover:underline active:scale-95 transition-all">
+                                  <button onClick={() => handleFileUpload(g.id, 'inline')} className="text-[14px] text-[#000000] flex items-center gap-1.5 hover:underline active:scale-95 transition-all">
                                     <Upload size={12} /> Upload File
                                   </button>
                                 )}
@@ -502,8 +502,8 @@ function CreditLimitControl() {
                         ))}
                         <div className={`bg-white h-12 flex items-center px-4 ${ci === 0 ? 'rounded-bl-[4px]' : ''} ${ci === bankGuaranteeColumns.length - 1 ? 'rounded-br-[4px]' : ''}`}>
                           {ci === 0 && (
-                            <button onClick={() => { handleAddGuarantee(); setShowValidation(false); }} className="flex items-center gap-2 text-[12px] text-[#0072ce] font-medium active:scale-95 transition-transform">
-                              <Plus size={12} className="text-[#0072ce]" />
+                            <button onClick={() => { handleAddGuarantee(); setShowValidation(false); }} className="flex items-center gap-2 text-[12px] text-[#000000] font-medium active:scale-95 transition-transform">
+                              <Plus size={12} className="text-[#000000]" />
                               Add Bank Guarantee
                             </button>
                           )}
@@ -532,19 +532,19 @@ function CreditLimitControl() {
               {/* Credit Limit Display + Override Late Dues - Same Row */}
               <div className="flex gap-2">
                 {/* Credit Limit Display */}
-                <div className="flex-1 bg-[#f3f9fd] rounded-[4px] relative hidden">
-                  <div aria-hidden="true" className="absolute inset-0 border border-[#dbedf8] rounded-[4px] pointer-events-none hidden" />
+                <div className="flex-1 bg-[#f4f4f5] rounded-[4px] relative hidden">
+                  <div aria-hidden="true" className="absolute inset-0 border border-[#e4e4e7] rounded-[4px] pointer-events-none hidden" />
                   <div className="flex items-center justify-between px-[17px] py-[13px] hidden">
                     <div className="flex items-end gap-1">
-                      <span className="text-[19px] text-[#0072ce] font-medium leading-[1.2]">{Number(creditLimitAmount).toLocaleString()}</span>
+                      <span className="text-[19px] text-[#000000] font-medium leading-[1.2]">{Number(creditLimitAmount).toLocaleString()}</span>
                       <span className="text-[12px] text-[rgba(0,11,37,0.57)] pb-[2px] leading-[1.2]">OMR</span>
                     </div>
                     <button
                       onClick={handleOpenChangeLimitPopup}
-                      className="h-9 bg-[#dbedf8] rounded-[4px] relative px-4 flex items-center gap-2 text-[12px] text-[#0072ce] font-medium active:scale-95 transition-transform"
+                      className="h-9 bg-[#e4e4e7] rounded-[4px] relative px-4 flex items-center gap-2 text-[12px] text-[#000000] font-medium active:scale-95 transition-transform"
                     >
-                      <div aria-hidden="true" className="absolute inset-0 border border-[#dbedf8] rounded-[4px] pointer-events-none" />
-                      <Pencil size={12} className="text-[#0072ce]" />
+                      <div aria-hidden="true" className="absolute inset-0 border border-[#e4e4e7] rounded-[4px] pointer-events-none" />
+                      <Pencil size={12} className="text-[#000000]" />
                       Change Credit Limit
                     </button>
                   </div>
@@ -558,10 +558,10 @@ function CreditLimitControl() {
                 <div aria-hidden="true" className="absolute -inset-px border border-[#e2e8f0] rounded-[5px] pointer-events-none" />
                 <div className={`bg-[#f8fafc] ${showBankTable ? 'rounded-t-[4px]' : 'rounded-[4px]'} flex items-center justify-between px-4 h-12 ${showBankTable ? 'border-b border-[#e2e8f0]' : ''}`}>
                   <div className="flex items-center gap-2">
-                    <FileSpreadsheet size={14} className="text-[#0072ce]" />
+                    <FileSpreadsheet size={14} className="text-[#000000]" />
                     <span className="text-[14px] text-[#000b25]">Bank Guarantees</span>
                     {guarantees.length > 0 && (
-                      <span className="bg-[#0072ce] text-white text-[9px] min-w-[16px] px-[4px] py-[1px] rounded-full flex items-center justify-center font-medium">
+                      <span className="bg-[#000000] text-white text-[9px] min-w-[16px] px-[4px] py-[1px] rounded-full flex items-center justify-center font-medium">
                         {guarantees.length}
                       </span>
                     )}
@@ -571,7 +571,7 @@ function CreditLimitControl() {
                       onClick={() => setShowBankTable(!showBankTable)}
                       className="h-[27px] bg-white border border-[#e2e8f0] rounded-[4px] px-2 py-1 flex items-center gap-1 text-[12px] text-[rgba(0,11,37,0.6)] active:scale-95 transition-transform"
                     >
-                      <Eye size={9} className="text-[#0072ce]" />
+                      <Eye size={9} className="text-[#000000]" />
                       {showBankTable ? 'Hide' : 'Show'}
                       <ChevronDown size={9} className={`text-[rgba(0,11,37,0.6)] transition-transform ${showBankTable ? 'rotate-180' : ''}`} />
                     </button>
@@ -585,8 +585,8 @@ function CreditLimitControl() {
                           <div className="flex items-center gap-2">
                             <span className="text-[12px] text-[#000b25] font-medium">{col}</span>
                             <div className="flex flex-col items-center w-[9px] h-3">
-                              <ChevronUp size={9} className={`text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'asc' ? 'text-[#0072ce]' : ''}`} />
-                              <ChevronDown size={9} className={`-mt-1 text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'desc' ? 'text-[#0072ce]' : ''}`} />
+                              <ChevronUp size={9} className={`text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'asc' ? 'text-[#000000]' : ''}`} />
+                              <ChevronDown size={9} className={`-mt-1 text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'desc' ? 'text-[#000000]' : ''}`} />
                             </div>
                           </div>
                         </div>
@@ -599,7 +599,7 @@ function CreditLimitControl() {
                             {ci === 4 && (
                               <div className="flex items-center w-full">
                                 {g.bankFileName ? (
-                                  <button onClick={() => openFilePreview(g)} className="text-[14px] text-[#0072ce] flex items-center gap-1.5 hover:underline active:scale-95 transition-all max-w-[160px]" title={g.bankFileName}>
+                                  <button onClick={() => openFilePreview(g)} className="text-[14px] text-[#000000] flex items-center gap-1.5 hover:underline active:scale-95 transition-all max-w-[160px]" title={g.bankFileName}>
                                     <Eye size={12} className="shrink-0" />
                                     <span className="truncate">{g.bankFileName}</span>
                                   </button>
@@ -655,29 +655,29 @@ function CreditLimitControl() {
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-2">
                     <label className="text-[14px] text-[rgba(0,11,37,0.57)]">Title</label>
-                    <input type="text" value={popupTitle} onChange={(e) => setPopupTitle(e.target.value)} placeholder="Title" className="bg-white h-[38px] rounded-[4px] border border-[#e2e8f0] px-3 text-[16px] text-[#000b25] font-medium outline-none focus:border-[#0072ce] transition-colors" />
+                    <input type="text" value={popupTitle} onChange={(e) => setPopupTitle(e.target.value)} placeholder="Title" className="bg-white h-[38px] rounded-[4px] border border-[#e2e8f0] px-3 text-[16px] text-[#000b25] font-medium outline-none focus:border-[#000000] transition-colors" />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-[14px] text-[rgba(0,11,37,0.57)]">Effective Date</label>
-                    <input type="date" value={popupDate} onChange={(e) => setPopupDate(e.target.value)} className="bg-white h-[38px] rounded-[4px] border border-[#e2e8f0] px-3 text-[16px] text-[#000b25] font-medium outline-none focus:border-[#0072ce] transition-colors" />
+                    <input type="date" value={popupDate} onChange={(e) => setPopupDate(e.target.value)} className="bg-white h-[38px] rounded-[4px] border border-[#e2e8f0] px-3 text-[16px] text-[#000b25] font-medium outline-none focus:border-[#000000] transition-colors" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-[14px] text-[rgba(0,11,37,0.57)]">Description</label>
-                  <textarea value={popupDescription} onChange={(e) => setPopupDescription(e.target.value)} placeholder="Description text" rows={3} className="bg-white rounded-[4px] border border-[#e2e8f0] p-3 text-[16px] text-[#000b25] font-medium outline-none resize-y focus:border-[#0072ce] transition-colors min-h-[80px]" />
+                  <textarea value={popupDescription} onChange={(e) => setPopupDescription(e.target.value)} placeholder="Description text" rows={3} className="bg-white rounded-[4px] border border-[#e2e8f0] p-3 text-[16px] text-[#000b25] font-medium outline-none resize-y focus:border-[#000000] transition-colors min-h-[80px]" />
                 </div>
                 <div className="flex flex-col gap-3">
                   <span className="text-[14px] text-[#000b25] font-medium">Upload Bank Guarantee</span>
-                  <button className="bg-[#0072ce] h-10 rounded-[4px] px-4 flex items-center gap-2 text-[14px] text-white font-medium w-fit active:scale-95 transition-transform hover:bg-[#005ba1]">
+                  <button className="bg-[#000000] h-10 rounded-[4px] px-4 flex items-center gap-2 text-[14px] text-white font-medium w-fit active:scale-95 transition-transform hover:bg-[#005ba1]">
                     <Upload size={14} /> Upload file
                   </button>
                 </div>
               </div>
             </div>
             <div className="flex items-center justify-end gap-2">
-              <button onClick={() => setShowEditPopup(false)} className="h-10 rounded-[4px] border border-[#0072ce] px-4 text-[14px] text-[#0072ce] font-medium active:scale-95 transition-transform">Discard</button>
-              <button onClick={() => { setPopupTitle(''); setPopupDate(''); setPopupDescription(''); }} className="h-10 rounded-[4px] border border-[#0072ce] px-4 text-[14px] text-[#0072ce] font-medium active:scale-95 transition-transform">Save & New</button>
-              <button onClick={() => setShowEditPopup(false)} className="h-10 rounded-[4px] bg-[#0072ce] border border-[#0072ce] px-4 text-[14px] text-white font-medium active:scale-95 transition-transform hover:bg-[#005ba1]">Save & Close</button>
+              <button onClick={() => setShowEditPopup(false)} className="h-10 rounded-[4px] border border-[#000000] px-4 text-[14px] text-[#000000] font-medium active:scale-95 transition-transform">Discard</button>
+              <button onClick={() => { setPopupTitle(''); setPopupDate(''); setPopupDescription(''); }} className="h-10 rounded-[4px] border border-[#000000] px-4 text-[14px] text-[#000000] font-medium active:scale-95 transition-transform">Save & New</button>
+              <button onClick={() => setShowEditPopup(false)} className="h-10 rounded-[4px] bg-[#000000] border border-[#000000] px-4 text-[14px] text-white font-medium active:scale-95 transition-transform hover:bg-[#005ba1]">Save & Close</button>
             </div>
           </div>
         </div>
@@ -761,8 +761,8 @@ function CreditLimitControl() {
                           <div className="flex items-center gap-2">
                             <span className="text-[12px] text-[#000b25] font-medium">{col}</span>
                             <div className="flex flex-col items-center w-[9px] h-3">
-                              <ChevronUp size={9} className={`text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'asc' ? 'text-[#0072ce]' : ''}`} />
-                              <ChevronDown size={9} className={`-mt-1 text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'desc' ? 'text-[#0072ce]' : ''}`} />
+                              <ChevronUp size={9} className={`text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'asc' ? 'text-[#000000]' : ''}`} />
+                              <ChevronDown size={9} className={`-mt-1 text-[rgba(0,11,37,0.57)] ${sortColumn === col && sortDirection === 'desc' ? 'text-[#000000]' : ''}`} />
                             </div>
                           </div>
                         </div>
@@ -777,7 +777,7 @@ function CreditLimitControl() {
                                   type="date"
                                   value={g.effectiveDate}
                                   onChange={(e) => updatePopupGuarantee(g.id, 'effectiveDate', e.target.value)}
-                                  className="text-[12px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full cursor-pointer hover:text-[#0072ce] transition-colors relative [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
+                                  className="text-[12px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full cursor-pointer hover:text-[#000000] transition-colors relative [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
                                 />
                               </div>
                             )}
@@ -788,19 +788,19 @@ function CreditLimitControl() {
                                   value={g.expiryDate}
                                   onChange={(e) => updatePopupGuarantee(g.id, 'expiryDate', e.target.value)}
                                   min={g.effectiveDate || undefined}
-                                  className="text-[12px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full cursor-pointer hover:text-[#0072ce] transition-colors relative [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
+                                  className="text-[12px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full cursor-pointer hover:text-[#000000] transition-colors relative [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
                                 />
                               </div>
                             )}
                             {ci === 4 && (
                               <div className="flex items-center justify-between w-full">
                                 {g.bankFileName ? (
-                                  <button onClick={() => openFilePreview(g)} className="text-[12px] text-[#0072ce] flex items-center gap-1.5 font-medium hover:underline active:scale-95 transition-all max-w-[120px]" title={g.bankFileName}>
+                                  <button onClick={() => openFilePreview(g)} className="text-[12px] text-[#000000] flex items-center gap-1.5 font-medium hover:underline active:scale-95 transition-all max-w-[120px]" title={g.bankFileName}>
                                     <Eye size={12} className="shrink-0" />
                                     <span className="truncate">{g.bankFileName}</span>
                                   </button>
                                 ) : (
-                                  <button onClick={() => handleFileUpload(g.id, 'popup')} className="text-[12px] text-[#0072ce] flex items-center gap-1.5 font-medium hover:underline active:scale-95 transition-all">
+                                  <button onClick={() => handleFileUpload(g.id, 'popup')} className="text-[12px] text-[#000000] flex items-center gap-1.5 font-medium hover:underline active:scale-95 transition-all">
                                     <Upload size={12} /> Upload File
                                   </button>
                                 )}
@@ -812,8 +812,8 @@ function CreditLimitControl() {
                         {/* Add Row */}
                         <div className={`bg-white h-12 flex items-center px-4 ${ci === 0 ? 'rounded-bl-[4px]' : ''} ${ci === bankGuaranteeColumns.length - 1 ? 'rounded-br-[4px]' : ''}`}>
                           {ci === 0 && (
-                            <button onClick={() => { handlePopupAddGuarantee(); setPopupValidation(false); }} className="flex items-center gap-2 text-[12px] text-[#0072ce] font-medium active:scale-95 transition-transform">
-                              <Plus size={12} className="text-[#0072ce]" />
+                            <button onClick={() => { handlePopupAddGuarantee(); setPopupValidation(false); }} className="flex items-center gap-2 text-[12px] text-[#000000] font-medium active:scale-95 transition-transform">
+                              <Plus size={12} className="text-[#000000]" />
                               Add Bank Guarantee
                             </button>
                           )}
@@ -837,10 +837,10 @@ function CreditLimitControl() {
 
             {/* Modal Footer */}
             <div className="flex items-center justify-end gap-2">
-              <button onClick={handlePopupDiscard} className="h-10 rounded-[4px] border border-[#0072ce] px-4 text-[14px] text-[#0072ce] font-medium active:scale-95 transition-transform">
+              <button onClick={handlePopupDiscard} className="h-10 rounded-[4px] border border-[#000000] px-4 text-[14px] text-[#000000] font-medium active:scale-95 transition-transform">
                 Discard
               </button>
-              <button onClick={handlePopupSave} className="h-10 rounded-[4px] bg-[#0072ce] border border-[#0072ce] px-4 text-[14px] text-white font-medium active:scale-95 transition-transform">
+              <button onClick={handlePopupSave} className="h-10 rounded-[4px] bg-[#000000] border border-[#000000] px-4 text-[14px] text-white font-medium active:scale-95 transition-transform">
                 {creditLimitSet ? 'Save Changes' : 'Set Credit Limit'}
               </button>
             </div>
@@ -898,7 +898,7 @@ function CreditLimitControl() {
                             <button
                               key={reason}
                               onClick={() => { setOverrideReason(reason); setOverrideReasonOpen(false); }}
-                              className={`w-full text-left px-3 py-2 text-[14px] hover:bg-[#f3f9fd] transition-colors active:scale-[0.99] ${overrideReason === reason ? 'text-[#0072ce] bg-[#f3f9fd] font-medium' : 'text-[#000b25]'}`}
+                              className={`w-full text-left px-3 py-2 text-[14px] hover:bg-[#f4f4f5] transition-colors active:scale-[0.99] ${overrideReason === reason ? 'text-[#000000] bg-[#f4f4f5] font-medium' : 'text-[#000b25]'}`}
                             >
                               {reason}
                             </button>
@@ -916,7 +916,7 @@ function CreditLimitControl() {
                       <div className="flex items-center gap-2">
                         {/* Page Number */}
                         <div className="h-10 rounded-[4px] border border-[#d2d2d2] flex items-center">
-                          <span className="px-2 text-[16px] text-[#0072ce]">{currentPage}</span>
+                          <span className="px-2 text-[16px] text-[#000000]">{currentPage}</span>
                           <span className="text-[14px] text-[rgba(0,11,37,0.57)]">/</span>
                           <span className="px-2 text-[16px] text-[rgba(0,11,37,0.64)]">{totalPages}</span>
                         </div>
@@ -945,7 +945,7 @@ function CreditLimitControl() {
                         {overrideAttachmentColumns.map((col, ci) => (
                           <div key={col} className={`flex-1 flex flex-col ${ci === overrideAttachmentColumns.length - 1 ? '' : ''}`}>
                             {/* Header */}
-                            <div className={`bg-[#f3f9fd] h-12 flex items-center px-4 border-b border-[#e2e8f0] ${ci === 0 ? 'rounded-tl-[4px]' : ''} ${ci === overrideAttachmentColumns.length - 1 ? '' : ''}`}>
+                            <div className={`bg-[#f4f4f5] h-12 flex items-center px-4 border-b border-[#e2e8f0] ${ci === 0 ? 'rounded-tl-[4px]' : ''} ${ci === overrideAttachmentColumns.length - 1 ? '' : ''}`}>
                               <div className="flex items-center gap-2">
                                 <span className="text-[12px] text-[#000b25] font-medium">{col}</span>
                                 <div className="flex flex-col items-center w-[9px] h-3">
@@ -959,18 +959,18 @@ function CreditLimitControl() {
                               <div key={a.id} className={`${rowIdx % 2 === 0 ? 'bg-white' : 'bg-[#f8fafc]'} h-12 flex items-center px-4 border-b border-[#e2e8f0]`}>
                                 {ci === 0 && <input type="text" value={a.title} onChange={(e) => updateOverrideAttachment(a.id, 'title', e.target.value)} className="text-[14px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full" placeholder="Title" />}
                                 {ci === 1 && (
-                                  <input type="date" value={a.effectiveDate} onChange={(e) => updateOverrideAttachment(a.id, 'effectiveDate', e.target.value)} className="text-[14px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full cursor-pointer hover:text-[#0072ce] transition-colors" />
+                                  <input type="date" value={a.effectiveDate} onChange={(e) => updateOverrideAttachment(a.id, 'effectiveDate', e.target.value)} className="text-[14px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full cursor-pointer hover:text-[#000000] transition-colors" />
                                 )}
                                 {ci === 2 && <input type="text" value={a.description} onChange={(e) => updateOverrideAttachment(a.id, 'description', e.target.value)} className="text-[14px] text-[rgba(0,11,37,0.64)] bg-transparent outline-none w-full" placeholder="Description" />}
                                 {ci === 3 && (
                                   <div className="flex items-center justify-between w-full">
                                     {a.bankFileName ? (
-                                      <button onClick={() => openOverrideFilePreview(a)} className="text-[14px] text-[#0072ce] flex items-center gap-1.5 font-medium hover:underline active:scale-95 transition-all max-w-[120px]" title={a.bankFileName}>
+                                      <button onClick={() => openOverrideFilePreview(a)} className="text-[14px] text-[#000000] flex items-center gap-1.5 font-medium hover:underline active:scale-95 transition-all max-w-[120px]" title={a.bankFileName}>
                                         <Eye size={12} className="shrink-0" />
                                         <span className="truncate">{a.bankFileName}</span>
                                       </button>
                                     ) : (
-                                      <button onClick={() => handleFileUpload(a.id, 'override')} className="text-[14px] text-[#0072ce] flex items-center gap-1.5 font-medium hover:underline active:scale-95 transition-all">
+                                      <button onClick={() => handleFileUpload(a.id, 'override')} className="text-[14px] text-[#000000] flex items-center gap-1.5 font-medium hover:underline active:scale-95 transition-all">
                                         <Upload size={12} /> Upload File
                                       </button>
                                     )}
@@ -981,8 +981,8 @@ function CreditLimitControl() {
                             {/* Add Row */}
                             <div className={`bg-white h-11 flex items-center px-4 ${ci === 0 ? 'rounded-bl-[4px]' : ''} ${ci === overrideAttachmentColumns.length - 1 ? 'rounded-br-[4px]' : ''}`}>
                               {ci === 0 && (
-                                <button onClick={handleOverrideAddAttachment} className="flex items-center gap-2 text-[14px] text-[#4297dd] font-medium active:scale-95 transition-transform">
-                                  <Plus size={12} className="text-[#4297dd]" />
+                                <button onClick={handleOverrideAddAttachment} className="flex items-center gap-2 text-[14px] text-[#3f3f46] font-medium active:scale-95 transition-transform">
+                                  <Plus size={12} className="text-[#3f3f46]" />
                                   Add Attachments
                                 </button>
                               )}
@@ -991,7 +991,7 @@ function CreditLimitControl() {
                         ))}
                         {/* Delete Column */}
                         <div className="w-[80px] shrink-0 flex flex-col">
-                          <div className="bg-[#f3f9fd] h-12 rounded-tr-[4px] border-b border-[#e2e8f0]" />
+                          <div className="bg-[#f4f4f5] h-12 rounded-tr-[4px] border-b border-[#e2e8f0]" />
                           {pagedAttachments.map((a, rowIdx) => (
                             <div key={a.id} className={`${rowIdx % 2 === 0 ? 'bg-white' : 'bg-[#f8fafc]'} h-12 flex items-center justify-center border-b border-[#e2e8f0]`}>
                               <button onClick={() => handleOverrideDeleteAttachment(a.id)} className="w-6 h-6 rounded-full hover:bg-[#f02b02]/10 flex items-center justify-center active:scale-95 transition-all">
@@ -1009,10 +1009,10 @@ function CreditLimitControl() {
 
               {/* Modal Footer */}
               <div className="flex items-center justify-end gap-2">
-                <button onClick={handleOverrideCancel} className="h-10 rounded-[4px] border border-[#0072ce] px-4 text-[14px] text-[#0072ce] font-medium active:scale-95 transition-transform">
+                <button onClick={handleOverrideCancel} className="h-10 rounded-[4px] border border-[#000000] px-4 text-[14px] text-[#000000] font-medium active:scale-95 transition-transform">
                   Cancel
                 </button>
-                <button onClick={handleOverrideSubmit} className="h-10 rounded-[4px] bg-[#0072ce] border border-[#0072ce] px-4 text-[14px] text-white font-medium active:scale-95 transition-transform">
+                <button onClick={handleOverrideSubmit} className="h-10 rounded-[4px] bg-[#000000] border border-[#000000] px-4 text-[14px] text-white font-medium active:scale-95 transition-transform">
                   Submit
                 </button>
               </div>
@@ -1039,11 +1039,11 @@ function CreditLimitControl() {
               <div className="flex items-center gap-3 min-w-0">
                 <div className="w-8 h-8 rounded-[4px] bg-[rgba(0,114,206,0.08)] flex items-center justify-center shrink-0">
                   {filePreviewType.startsWith('image/') ? (
-                    <FileImage size={16} className="text-[#0072ce]" />
+                    <FileImage size={16} className="text-[#000000]" />
                   ) : filePreviewType === 'application/pdf' ? (
-                    <FileText size={16} className="text-[#0072ce]" />
+                    <FileText size={16} className="text-[#000000]" />
                   ) : (
-                    <FileIcon size={16} className="text-[#0072ce]" />
+                    <FileIcon size={16} className="text-[#000000]" />
                   )}
                 </div>
                 <span className="text-[16px] text-[#000b25] font-medium truncate">{filePreviewName}</span>
@@ -1061,7 +1061,7 @@ function CreditLimitControl() {
               ) : (
                 <div className="flex flex-col items-center gap-4 text-center py-8">
                   <div className="w-16 h-16 rounded-full bg-[rgba(0,114,206,0.08)] flex items-center justify-center">
-                    <FileIcon size={28} className="text-[#0072ce]" />
+                    <FileIcon size={28} className="text-[#000000]" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className="text-[16px] text-[#000b25] font-medium">{filePreviewName}</span>
@@ -1070,7 +1070,7 @@ function CreditLimitControl() {
                   <a
                     href={filePreviewData}
                     download={filePreviewName}
-                    className="h-9 bg-[#0072ce] rounded-[4px] px-4 flex items-center gap-2 text-[12px] text-white font-medium active:scale-95 transition-transform"
+                    className="h-9 bg-[#000000] rounded-[4px] px-4 flex items-center gap-2 text-[12px] text-white font-medium active:scale-95 transition-transform"
                   >
                     <ArrowRight size={12} /> Download File
                   </a>
@@ -1082,11 +1082,11 @@ function CreditLimitControl() {
               <a
                 href={filePreviewData}
                 download={filePreviewName}
-                className="h-9 rounded-[4px] border border-[#0072ce] px-4 flex items-center gap-2 text-[12px] text-[#0072ce] font-medium active:scale-95 transition-transform"
+                className="h-9 rounded-[4px] border border-[#000000] px-4 flex items-center gap-2 text-[12px] text-[#000000] font-medium active:scale-95 transition-transform"
               >
                 <ArrowRight size={12} /> Download
               </a>
-              <button onClick={() => setFilePreviewOpen(false)} className="h-9 rounded-[4px] bg-[#0072ce] border border-[#0072ce] px-4 flex items-center gap-2 text-[12px] text-white font-medium active:scale-95 transition-transform">
+              <button onClick={() => setFilePreviewOpen(false)} className="h-9 rounded-[4px] bg-[#000000] border border-[#000000] px-4 flex items-center gap-2 text-[12px] text-white font-medium active:scale-95 transition-transform">
                 Close
               </button>
             </div>
@@ -1116,12 +1116,12 @@ function SmartButtonsRow() {
         {visible.map(({ name, icon: Icon, count }) => (
           <button
             key={name}
-            className="h-10 rounded-[4px] border border-[#e2e8f0] flex items-center gap-2 px-4 relative hover:bg-[#eef5fd] hover:border-[#90c2f0] active:scale-95 transition-all"
+            className="h-10 rounded-[4px] border border-[#e2e8f0] flex items-center gap-2 px-4 relative hover:bg-[#f4f4f5] hover:border-[#d4d4d8] active:scale-95 transition-all"
           >
             <Icon size={14} className="text-[rgba(0,11,37,0.57)]" />
             <span className="text-[14px] text-[rgba(0,11,37,0.57)] truncate">{name}</span>
             {count !== undefined && (
-              <span className="absolute -top-2 left-1 bg-[#0072ce] text-white text-[10px] px-1 py-[1px] rounded-full">{count}</span>
+              <span className="absolute -top-2 left-1 bg-[#000000] text-white text-[10px] px-1 py-[1px] rounded-full">{count}</span>
             )}
           </button>
         ))}
@@ -1151,7 +1151,7 @@ function ChannelMemberHeader() {
     <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <span className="text-[17px] text-[#000b25] font-medium">Channel Member Name</span>
-        <span className="bg-[#f8fafc] border border-[#e2e8f0] rounded-[4px] px-2 py-1 text-[12px] text-[#4297dd] font-medium">Operator</span>
+        <span className="bg-[#f8fafc] border border-[#e2e8f0] rounded-[4px] px-2 py-1 text-[12px] text-[#3f3f46] font-medium">Operator</span>
       </div>
       <div className="flex gap-2">
         <InfoField label="Code" value="5456589" />
@@ -1188,10 +1188,10 @@ function DealerCard({ title, dealerName }: { title: string; dealerName: string }
 // ── E-Wallet Wallet Card ──
 function WalletCard({ label }: { label: string }) {
   return (
-    <div className="bg-[#f3f9fd] rounded-[4px] flex-1 p-3">
+    <div className="bg-[#f4f4f5] rounded-[4px] flex-1 p-3">
       <div className="flex items-center justify-between mb-2">
         <span className="text-[14px] text-[#000b25] font-bold">{label}</span>
-        <span className="border border-[#0072ce] rounded-full px-2 py-[1px] text-[12px] text-[#0072ce] font-medium">Label</span>
+        <span className="border border-[#000000] rounded-full px-2 py-[1px] text-[12px] text-[#000000] font-medium">Label</span>
       </div>
       <div className="flex items-center gap-1 mb-1">
         <span className="bg-[#e6f7f7] border border-[#ededed] rounded-[2px] px-1 py-[1px] text-[12px] text-[#00b0b2]">+</span>
@@ -1208,7 +1208,7 @@ function EWalletSection() {
     <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4 flex-1">
       <div className="flex items-center justify-between">
         <span className="text-[17px] text-[#000b25] font-medium">E - Wallet Account</span>
-        <button className="text-[14px] text-[#0072ce] font-medium active:scale-95 transition-transform">View all</button>
+        <button className="text-[14px] text-[#000000] font-medium active:scale-95 transition-transform">View all</button>
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex gap-2">
@@ -1231,7 +1231,7 @@ function LatestCommissionDetails() {
     <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4 flex-1">
       <div className="flex items-center justify-between">
         <span className="text-[17px] text-[#000b25] font-medium">Latest Commission Details</span>
-        <button className="text-[14px] text-[#0072ce] font-medium active:scale-95 transition-transform">History</button>
+        <button className="text-[14px] text-[#000000] font-medium active:scale-95 transition-transform">History</button>
       </div>
       {/* Unpaid Commission Card */}
       <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-[4px] p-3 flex items-center justify-between">
@@ -1257,7 +1257,7 @@ function LatestCommissionDetails() {
             onClick={() => setActivePlan(plan)}
             className={`flex-1 py-2 rounded-[4px] text-[14px] text-center transition-all active:scale-95 ${
               activePlan === plan
-                ? 'bg-white border border-[#0072ce] text-[#0072ce] font-medium'
+                ? 'bg-white border border-[#000000] text-[#000000] font-medium'
                 : 'text-[rgba(0,11,37,0.64)]'
             }`}
           >
@@ -1275,9 +1275,9 @@ function LatestCommissionDetails() {
           <span className="text-[14px] text-[rgba(0,11,37,0.64)]">Achieved %</span>
           <span className="text-[14px] text-[#087443] font-medium">65%</span>
         </div>
-        <div className="flex-1 bg-[#f3f9fd] border border-[#dbedf8] rounded-[4px] flex flex-col items-center justify-center py-3 gap-2">
+        <div className="flex-1 bg-[#f4f4f5] border border-[#e4e4e7] rounded-[4px] flex flex-col items-center justify-center py-3 gap-2">
           <span className="text-[14px] text-[rgba(0,11,37,0.64)]">Commission</span>
-          <span className="text-[14px] text-[#0072ce] font-medium">Edit OMR</span>
+          <span className="text-[14px] text-[#000000] font-medium">Edit OMR</span>
         </div>
       </div>
     </div>
@@ -1285,7 +1285,7 @@ function LatestCommissionDetails() {
 }
 
 // ── Channel Member Details ──
-const inputCls = 'w-full h-10 px-3 rounded-[4px] border border-[#e2e8f0] bg-white text-[14px] text-[#000b25] outline-none focus:border-[#0072ce]';
+const inputCls = 'w-full h-10 px-3 rounded-[4px] border border-[#e2e8f0] bg-white text-[14px] text-[#000b25] outline-none focus:border-[#000000]';
 
 function FormField({ label, children, help }: { label: string; children: React.ReactNode; help?: boolean }) {
   return (
@@ -1298,7 +1298,7 @@ function FormField({ label, children, help }: { label: string; children: React.R
 
 function FormSection({ title }: { title: string }) {
   return (
-    <div className="bg-[#f8fafc] border-l-[3px] border-[#90c2f0] px-3 py-2 text-[14px] text-[#000b25] font-medium">{title}</div>
+    <div className="bg-[#f8fafc] border-l-[3px] border-[#000000] px-3 py-2 text-[14px] text-[#000b25] font-medium">{title}</div>
   );
 }
 
@@ -1314,10 +1314,10 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
               <button
                 onClick={() => setShowParents(true)}
                 aria-describedby="hierarchy-view-tip"
-                className="h-9 px-3 rounded-[4px] bg-[#eef5fd] text-[14px] text-[#0072ce] font-medium flex items-center gap-2 hover:bg-[#dbeafb] active:scale-95 transition-all"
+                className="h-9 px-3 rounded-[4px] bg-[#f4f4f5] text-[14px] text-[#000000] font-medium flex items-center gap-2 hover:bg-[#e4e4e7] active:scale-95 transition-all"
               >
                 <ListTree size={16} /> Hierarchy View
-                <span className="bg-[#0072ce] text-white text-[11px] px-1.5 rounded-full">{parents.length - 1}</span>
+                <span className="bg-[#000000] text-white text-[11px] px-1.5 rounded-full">{parents.length - 1}</span>
               </button>
               <div
                 id="hierarchy-view-tip"
@@ -1332,7 +1332,7 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
             <button
               aria-disabled="true"
               aria-describedby="hierarchy-settings-tip"
-              className="h-9 px-3 rounded-[4px] bg-[#eef5fd] text-[14px] text-[#0072ce] font-medium flex items-center gap-2 cursor-default"
+              className="h-9 px-3 rounded-[4px] bg-[#f4f4f5] text-[14px] text-[#000000] font-medium flex items-center gap-2 cursor-default"
             >
               <Network size={16} /> Hierarchy Settings
             </button>
@@ -1430,10 +1430,10 @@ function ProfileSettings() {
 
 // ── Channel Member Parents ──
 const parents = [
-  { letter: 'O', name: 'Operator', role: 'BeyondOne Sales Channels', color: '#0072ce' },
+  { letter: 'O', name: 'Operator', role: 'BeyondOne Sales Channels', color: '#000000' },
   { letter: 'A', name: 'Abdel Lateef Azzuni', role: 'Sales Support / Channels Directors', color: '#1d9a9a' },
-  { letter: 'A', name: 'Ayoub', role: 'Indirect Sales Channels Mobile Shops', color: '#0072ce' },
-  { letter: 'Z', name: 'Zakaria Mohammad Hassan AlMulla', role: 'Regional Manager(Indirect Sales)', color: '#0072ce' },
+  { letter: 'A', name: 'Ayoub', role: 'Indirect Sales Channels Mobile Shops', color: '#000000' },
+  { letter: 'Z', name: 'Zakaria Mohammad Hassan AlMulla', role: 'Regional Manager(Indirect Sales)', color: '#000000' },
   { letter: 'Y', name: 'Yousef qat', role: 'Account Manager / Supervisor', color: '#2a8f8f' },
   { letter: 'A', name: 'Ahmad Raed', role: 'Distributors', color: '#16b364' },
   { letter: 'S', name: 'Sales Rep1', role: 'Sales Rep', color: '#5b4b9a' },
@@ -1449,7 +1449,7 @@ function HierarchyTree() {
         <div
           key={i}
           className={`relative flex items-center gap-3 rounded-[4px] px-3 py-2 ${
-            p.active ? 'ml-8 bg-[#eef5fd] border border-[#90c2f0]' : 'bg-[#f5f5f5]'
+            p.active ? 'ml-8 bg-[#f4f4f5] border border-[#d4d4d8]' : 'bg-[#f5f5f5]'
           }`}
         >
           <div className="w-8 h-8 rounded-full flex items-center justify-center text-white text-[12px] shrink-0" style={{ backgroundColor: p.color }}>
@@ -1500,7 +1500,7 @@ function UploadDocument() {
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <span className="text-[17px] text-[#000b25] font-medium">Upload Document</span>
-        <button className="flex items-center gap-2 text-[14px] text-[#0072ce] font-medium active:scale-95 transition-transform">
+        <button className="flex items-center gap-2 text-[14px] text-[#000000] font-medium active:scale-95 transition-transform">
           View All <ArrowRight size={14} />
         </button>
       </div>
@@ -1520,7 +1520,7 @@ function UploadDocument() {
           </button>
         </div>
         {/* Empty upload zone */}
-        <div className="border border-dashed border-[#8dc1ec] bg-[#f8fafc] rounded-[4px] h-[182px] flex flex-col items-center justify-center gap-4">
+        <div className="border border-dashed border-[#d4d4d8] bg-[#f8fafc] rounded-[4px] h-[182px] flex flex-col items-center justify-center gap-4">
           <div className="bg-[#f5f5f5] w-[60px] h-[60px] rounded-[12px] flex items-center justify-center">
             <FileText size={30} className="text-[#9e9e9e]" />
           </div>
@@ -1579,7 +1579,7 @@ function ConfigurationSettings() {
               onClick={() => setActiveConfigTab(tab)}
               className={`flex-1 py-2 px-2 rounded-[4px] text-[12px] text-center transition-all whitespace-nowrap ${
                 activeConfigTab === tab
-                  ? 'bg-white border border-[#0072ce] text-[#0072ce] font-medium'
+                  ? 'bg-white border border-[#000000] text-[#000000] font-medium'
                   : 'text-[rgba(0,11,37,0.64)] hover:bg-white/60'
               }`}
             >
@@ -1608,7 +1608,7 @@ function ConfigurationSettings() {
                     onClick={() => setActiveNestedTab(tab)}
                     className={`flex-1 py-2 rounded-[4px] text-[13px] text-center transition-all ${
                       activeNestedTab === tab
-                        ? 'bg-[#0072ce] text-white font-medium'
+                        ? 'bg-[#000000] text-white font-medium'
                         : 'text-[rgba(0,11,37,0.64)] hover:bg-[#f8fafc]'
                     }`}
                   >
@@ -1626,14 +1626,14 @@ function ConfigurationSettings() {
                       value={value}
                       onChange={e => setCurrent(current.map((v, j) => (j === i ? e.target.value : v)))}
                       placeholder="Name"
-                      className="flex-1 h-8 bg-transparent text-[13px] text-[#0072ce] outline-none placeholder:text-[rgba(0,11,37,0.4)]"
+                      className="flex-1 h-8 bg-transparent text-[13px] text-[#000000] outline-none placeholder:text-[rgba(0,11,37,0.4)]"
                     />
                     <button onClick={() => setCurrent(current.filter((_, j) => j !== i))} aria-label="Remove line" className="text-[#f02b02] hover:bg-[#fdecea] rounded p-1 active:scale-95 transition-all">
                       <X size={14} />
                     </button>
                   </div>
                 ))}
-                <button onClick={() => setCurrent([...current, ''])} className="w-full text-left px-4 py-2.5 text-[13px] text-[#0072ce] font-medium flex items-center gap-1.5 hover:bg-[#f8fafc] transition-colors">
+                <button onClick={() => setCurrent([...current, ''])} className="w-full text-left px-4 py-2.5 text-[13px] text-[#000000] font-medium flex items-center gap-1.5 hover:bg-[#f8fafc] transition-colors">
                   <Plus size={12} /> Add a line
                 </button>
               </div>

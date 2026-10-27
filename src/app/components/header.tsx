@@ -30,13 +30,13 @@ export function Header({ title, description }: HeaderProps) {
         <div className="flex items-center gap-4">
           <button 
             onClick={toggleTheme}
-            className="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 rounded-full transition-all"
+            className="p-2 text-gray-500 hover:text-black hover:bg-zinc-100 dark:hover:bg-gray-800 rounded-full transition-all"
             title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
           >
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
           </button>
           
-          <button className="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 rounded-full transition-all relative">
+          <button className="p-2 text-gray-500 hover:text-black hover:bg-zinc-100 dark:hover:bg-gray-800 rounded-full transition-all relative">
             <Bell size={20} />
             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-gray-900"></span>
           </button>
@@ -51,7 +51,7 @@ export function Header({ title, description }: HeaderProps) {
               A
             </div>
             <div className="flex items-center gap-1">
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-200 group-hover:text-blue-600 transition-colors">Administrator</span>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-200 group-hover:text-black transition-colors">Administrator</span>
               <ChevronDown size={14} className={`text-gray-400 transition-transform ${isProfileOpen ? 'rotate-180' : ''}`} />
             </div>
           </button>
@@ -67,16 +67,16 @@ export function Header({ title, description }: HeaderProps) {
                   <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">Signed in as</p>
                   <p className="text-sm font-semibold text-gray-700 dark:text-gray-200">admin@salespoint.lp</p>
                 </div>
-                <button className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-600 transition-colors text-left">
+                <button className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-gray-700 hover:text-black transition-colors text-left">
                   <User size={16} />
                   My Profile
                 </button>
-                <button className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-600 transition-colors text-left">
+                <button className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-gray-700 hover:text-black transition-colors text-left">
                   <Keyboard size={16} />
                   <span className="flex-1">Shortcuts</span>
                   <span className="text-[11px] font-medium text-gray-400 bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded">CTRL+K</span>
                 </button>
-                <button className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-600 transition-colors text-left">
+                <button className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-gray-700 hover:text-black transition-colors text-left">
                   <Settings size={16} />
                   Preferences
                 </button>

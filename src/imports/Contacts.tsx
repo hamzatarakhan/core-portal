@@ -55,13 +55,13 @@ function Title() {
 }
 
 function Circle() {
-  return <div className="bg-[#0071cd] rounded-[160px] shrink-0 size-[8px]" data-name="Circle" />;
+  return <div className="bg-[#000000] rounded-[160px] shrink-0 size-[8px]" data-name="Circle" />;
 }
 
 function Icon1() {
   return (
     <div className="content-stretch flex items-center justify-center relative rounded-[160px] shrink-0 size-[16px]" data-name="Icon">
-      <div aria-hidden="true" className="absolute border-2 border-[#0071cd] border-solid inset-0 pointer-events-none rounded-[160px]" />
+      <div aria-hidden="true" className="absolute border-2 border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
       <Circle />
     </div>
   );
@@ -102,8 +102,8 @@ function Frame8() {
 
 function NumberCard() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Number card">
-      <div aria-hidden="true" className="absolute border border-[#8dc1ec] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Number card">
+      <div aria-hidden="true" className="absolute border border-[#d4d4d8] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-col justify-center size-full">
         <div className="content-stretch flex flex-col gap-[8px] items-start justify-center p-[16px] relative w-full">
           <Frame8 />
@@ -172,7 +172,7 @@ function Title1() {
 function Icon3() {
   return (
     <div className="content-stretch flex items-center justify-center relative rounded-[160px] shrink-0 size-[16px]" data-name="Icon">
-      <div aria-hidden="true" className="absolute border-2 border-[#0071cd] border-solid inset-0 pointer-events-none rounded-[160px]" />
+      <div aria-hidden="true" className="absolute border-2 border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
     </div>
   );
 }

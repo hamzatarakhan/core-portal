@@ -38,7 +38,7 @@ function SectionTitle() {
 
 function Button() {
   return (
-    <div className="content-stretch flex gap-[8px] items-center justify-center leading-[0] relative shrink-0 text-[#0071cd] text-[14px] whitespace-nowrap" data-name="Button">
+    <div className="content-stretch flex gap-[8px] items-center justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" data-name="Button">
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center not-italic relative shrink-0">
         <p className="leading-[normal]"></p>
       </div>
@@ -593,14 +593,14 @@ function Group8() {
 
 function Card() {
   return (
-    <div className="bg-[#e3f0fe] flex-[1_0_0] min-h-px min-w-px relative rounded-[8px]" data-name="Card">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-h-px min-w-px relative rounded-[8px]" data-name="Card">
       <div className="flex flex-row items-center overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex gap-[8px] items-center p-[12px] relative w-full">
           <WalletBalance />
           <Group8 />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#b0d9ef] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <div aria-hidden="true" className="absolute border border-[#d4d4d8] border-solid inset-0 pointer-events-none rounded-[8px]" />
     </div>
   );
 }
@@ -907,14 +907,14 @@ function WalletBalance1() {
 
 function Card1() {
   return (
-    <div className="bg-[#e3f0fe] flex-[1_0_0] min-h-px min-w-px relative rounded-[8px]" data-name="Card">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-h-px min-w-px relative rounded-[8px]" data-name="Card">
       <div className="flex flex-row items-center overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex gap-[8px] items-center p-[12px] relative w-full">
           <Group41 />
           <WalletBalance1 />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#b0d9ef] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <div aria-hidden="true" className="absolute border border-[#d4d4d8] border-solid inset-0 pointer-events-none rounded-[8px]" />
     </div>
   );
 }
@@ -946,7 +946,7 @@ function Frame6() {
 
 function TableStatus() {
   return (
-    <div className="bg-[#eff6ff] content-stretch flex gap-[3.6px] h-full items-center justify-center px-[8px] py-[2px] relative rounded-[49px] shrink-0" data-name="Table Status">
+    <div className="bg-[#f4f4f5] content-stretch flex gap-[3.6px] h-full items-center justify-center px-[8px] py-[2px] relative rounded-[49px] shrink-0" data-name="Table Status">
       <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[49px]" />
       <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#3b82f6] text-[10px] text-center" style={{ fontVariationSettings: "'wdth' 100" }}>
         Type
@@ -1245,7 +1245,7 @@ function Frame8() {
 
 function Button1() {
   return (
-    <div className="bg-[#0071cd] content-stretch flex gap-[8px] h-[40px] items-center justify-center leading-[0] px-[16px] relative rounded-[4px] shrink-0 text-[14px] text-white whitespace-nowrap" data-name="Button">
+    <div className="bg-[#000000] content-stretch flex gap-[8px] h-[40px] items-center justify-center leading-[0] px-[16px] relative rounded-[4px] shrink-0 text-[14px] text-white whitespace-nowrap" data-name="Button">
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center not-italic relative shrink-0 text-center">
         <p className="leading-[normal]"></p>
       </div>
@@ -1482,7 +1482,7 @@ function TableHeader13() {
 
 function TableHeader() {
   return (
-    <div className="bg-[#e6f1fa] content-stretch flex items-start relative rounded-[4px] shrink-0 w-full" data-name="Table-header">
+    <div className="bg-[#f4f4f5] content-stretch flex items-start relative rounded-[4px] shrink-0 w-full" data-name="Table-header">
       <div aria-hidden="true" className="absolute border border-[#e1e1e1] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <TableHeader1 />
       <TableHeader3 />
@@ -2015,11 +2015,11 @@ function Frame9() {
 function Button2() {
   return (
     <div className="content-stretch flex gap-[8px] h-[40px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#0071cd] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0071cd] text-[14px] text-center whitespace-nowrap">
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[14px] text-center whitespace-nowrap">
         <p className="leading-[normal]"></p>
       </div>
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0071cd] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
         <p className="leading-[1.2]">Refresh</p>
       </div>
     </div>
@@ -2028,7 +2028,7 @@ function Button2() {
 
 function Button3() {
   return (
-    <div className="bg-[#0071cd] content-stretch flex gap-[8px] h-[40px] items-center justify-center leading-[0] px-[16px] relative rounded-[4px] shrink-0 text-[14px] text-white whitespace-nowrap" data-name="Button">
+    <div className="bg-[#000000] content-stretch flex gap-[8px] h-[40px] items-center justify-center leading-[0] px-[16px] relative rounded-[4px] shrink-0 text-[14px] text-white whitespace-nowrap" data-name="Button">
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center not-italic relative shrink-0 text-center">
         <p className="leading-[normal]"></p>
       </div>
@@ -2052,10 +2052,10 @@ function SectionTitle2() {
 function Segmented() {
   return (
     <div className="bg-white flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-name="Segmented">
-      <div aria-hidden="true" className="absolute border border-[#0071cd] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex gap-[4px] items-center justify-center px-[24px] py-[8px] relative w-full">
-          <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0071cd] text-[14px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+          <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px]" style={{ fontVariationSettings: "'wdth' 100" }}>
             Model Name
           </p>
         </div>
@@ -2170,7 +2170,7 @@ function TableHeader18() {
 
 function TableHeader15() {
   return (
-    <div className="bg-[#e6f1fa] content-stretch flex items-start relative rounded-[4px] shrink-0 w-full" data-name="Table-header">
+    <div className="bg-[#f4f4f5] content-stretch flex items-start relative rounded-[4px] shrink-0 w-full" data-name="Table-header">
       <div aria-hidden="true" className="absolute border border-[#e1e1e1] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <TableHeader16 />
       <TableHeader18 />

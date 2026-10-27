@@ -75,7 +75,7 @@ export default function SmartButtonsSection() {
               <div className="bg-[#e1e1e1] content-stretch flex gap-[2px] items-center p-[4px] relative rounded-[4px] shrink-0" data-name="Segmented control">
                 <div className="bg-white content-stretch flex flex-col h-[33px] items-start relative shrink-0 w-[113px]">
                   <div className="absolute content-stretch flex gap-[4px] h-[33px] items-center justify-center left-0 px-[24px] py-[8px] rounded-[4px] top-0" data-name="Segmented">
-                    <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0071cd] text-[14px] text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+                    <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px] text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                       Pending
                     </p>
                   </div>

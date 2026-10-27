@@ -23,7 +23,7 @@ function Toggle({ className, leftLabelText = "Label", rightLabelText = "Label", 
             </p>
           )}
           {isState && (
-            <button className="bg-[#0072ce] content-stretch cursor-pointer flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
+            <button className="bg-[#000000] content-stretch cursor-pointer flex h-[24px] items-center justify-end px-[4px] py-[2px] relative rounded-[160px] shrink-0 w-[40px]" data-name="Toggle">
               <div className="bg-white relative rounded-[160px] shrink-0 size-[16px]" data-name="Handle" />
             </button>
           )}
@@ -64,7 +64,7 @@ type UserProps = {
 function User({ className, type = "Default" }: UserProps) {
   const isHovered = type === "Hovered";
   return (
-    <div className={className || `h-[40px] relative ${isHovered ? "bg-[#f3f9fd] rounded-[4px]" : ""}`}>
+    <div className={className || `h-[40px] relative ${isHovered ? "bg-[#f4f4f5] rounded-[4px]" : ""}`}>
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center px-[8px] relative size-full">
           <div className="h-full relative rounded-[4px] shrink-0" data-name="Profile">
@@ -81,7 +81,7 @@ function User({ className, type = "Default" }: UserProps) {
             </div>
           </div>
           <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Name">
-            <p className={`[word-break:break-word] font-["Roboto:Regular",sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] w-[94px] ${isHovered ? "text-[#0072ce]" : "text-[rgba(0,11,37,0.87)]"}`} style={{ fontVariationSettings: '"wdth" 100' }}>
+            <p className={`[word-break:break-word] font-["Roboto:Regular",sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] w-[94px] ${isHovered ? "text-[#000000]" : "text-[rgba(0,11,37,0.87)]"}`} style={{ fontVariationSettings: '"wdth" 100' }}>
               Mitchell Admin
             </p>
           </div>
@@ -179,13 +179,13 @@ function Logo({ className, type = "Sales point" }: LogoProps) {
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center relative size-full">
           <div className="content-stretch flex flex-[1_0_0] gap-[8px] items-center min-w-px relative" data-name="Logo Container">
-            <div className="bg-[#f3f9fd] content-stretch flex flex-col items-start overflow-clip p-[3.544px] relative rounded-[3.544px] shrink-0" data-name="Logo 1">
+            <div className="bg-[#f4f4f5] content-stretch flex flex-col items-start overflow-clip p-[3.544px] relative rounded-[3.544px] shrink-0" data-name="Logo 1">
               <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="Logo">
                 <div className="col-1 h-[31.879px] ml-0 mt-0 relative row-1 w-[34.772px]" data-name="Logo">
                   <svg className="absolute block inset-0 size-full" fill="none" height="31.8788" preserveAspectRatio="none" viewBox="0 0 34.7724 31.8788" width="34.7724">
                     <g id="Logo">
-                      <path d={svgPaths.p22f46a00} fill="#0072CE" id="Path 31643" />
-                      <path d={svgPaths.p28967800} fill="#0072CE" id="Path 31644" />
+                      <path d={svgPaths.p22f46a00} fill="#000000" id="Path 31643" />
+                      <path d={svgPaths.p28967800} fill="#000000" id="Path 31644" />
                     </g>
                   </svg>
                 </div>
@@ -229,7 +229,7 @@ function LogoLine() {
 function Icon() {
   return (
     <div className="content-stretch flex h-[17px] items-center justify-center relative shrink-0 w-[14px]" data-name="Icon">
-      <p className="[word-break:break-word] font-['Font_Awesome_6_Pro:Solid',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#0072ce] text-[14px] text-center whitespace-nowrap">{`\uF2BB`}</p>
+      <p className="[word-break:break-word] font-['Font_Awesome_6_Pro:Solid',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#000000] text-[14px] text-center whitespace-nowrap">{`\uF2BB`}</p>
     </div>
   );
 }
@@ -237,7 +237,7 @@ function Icon() {
 function Text() {
   return (
     <div className="content-stretch flex flex-[1_0_0] items-center min-w-px relative" data-name="Text">
-      <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[14px] text-left whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+      <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] text-left whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
         <p className="leading-[1.2]">Sales Teams</p>
       </div>
     </div>
@@ -248,7 +248,7 @@ function RightIcon() {
   return (
     <div className="flex flex-row items-center self-stretch">
       <div className="content-stretch flex flex-col h-full items-center justify-center relative shrink-0 w-[11px]" data-name="Right icon">
-        <p className="[word-break:break-word] font-['Font_Awesome_6_Pro:Solid',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#0072ce] text-[12px] text-center w-full">chevron-up</p>
+        <p className="[word-break:break-word] font-['Font_Awesome_6_Pro:Solid',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#000000] text-[12px] text-center w-full">chevron-up</p>
       </div>
     </div>
   );
@@ -265,7 +265,7 @@ function ItemIcon() {
 
 function Header() {
   return (
-    <div className="bg-[#f3f9fd] relative rounded-tl-[4px] rounded-tr-[4px] shrink-0 w-full" data-name="Header">
+    <div className="bg-[#f4f4f5] relative rounded-tl-[4px] rounded-tr-[4px] shrink-0 w-full" data-name="Header">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[12px] items-center p-[12px] relative size-full">
           <div className="h-[17px] relative rounded-[4px] shrink-0" data-name="Side Menu - Item Icons">
@@ -384,7 +384,7 @@ function Text2() {
   return (
     <div className="flex flex-[1_0_0] flex-row items-center self-stretch">
       <div className="content-stretch flex flex-[1_0_0] h-full items-center min-w-px relative" data-name="Text">
-        <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] text-left whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-left whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
           <p className="leading-[1.2]">Channel Members</p>
         </div>
       </div>
@@ -402,7 +402,7 @@ function ItemIcon2() {
 
 function Item1() {
   return (
-    <div className="bg-[#dbedf8] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Item">
+    <div className="bg-[#e4e4e7] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Item">
       <div className="flex flex-col items-center justify-center size-full">
         <div className="content-stretch flex flex-col items-center justify-center pl-[12px] pr-[8px] py-[12px] relative size-full">
           <ItemIcon2 />
@@ -1259,7 +1259,7 @@ function Group() {
     <div className="absolute inset-[27.73%_73.83%_21.99%_17.24%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-88.876px_-69.142px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="8.07793" preserveAspectRatio="none" viewBox="0 0 8.23104 8.07793" width="8.23104">
         <g id="Group">
-          <path d={svgPaths.p3bcd5f00} fill="#0072CE" id="Vector" />
+          <path d={svgPaths.p3bcd5f00} fill="#000000" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1279,7 +1279,7 @@ function Group1() {
     <div className="absolute inset-[-0.02%_63.05%_21.91%_28.01%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-98.795px_-64.684px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="12.5488" preserveAspectRatio="none" viewBox="0 0 8.2376 12.5488" width="8.2376">
         <g id="Group">
-          <path d={svgPaths.p2b5e7fc0} fill="#0072CE" id="Vector" />
+          <path d={svgPaths.p2b5e7fc0} fill="#000000" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1299,7 +1299,7 @@ function Group2() {
     <div className="absolute inset-[28.67%_58.95%_23.14%_39.35%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-109.242px_-69.293px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="7.74174" preserveAspectRatio="none" viewBox="0 0 1.56634 7.74174" width="1.56634">
         <g id="Group">
-          <path d={svgPaths.p2b786f00} fill="#0072CE" id="Vector" />
+          <path d={svgPaths.p2b786f00} fill="#000000" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1319,7 +1319,7 @@ function Group3() {
     <div className="absolute inset-[27.64%_48.69%_23.15%_43.45%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-113.017px_-69.128px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="7.90513" preserveAspectRatio="none" viewBox="0 0 7.23718 7.90513" width="7.23718">
         <g id="Group">
-          <path d={svgPaths.p2274f600} fill="#0072CE" id="Vector" />
+          <path d={svgPaths.p2274f600} fill="#000000" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1339,7 +1339,7 @@ function Group4() {
     <div className="absolute inset-[27.68%_37.99%_0.1%_53.06%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-121.869px_-69.135px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="11.6015" preserveAspectRatio="none" viewBox="0 0 8.24432 11.6015" width="8.24432">
         <g id="Group">
-          <path d={svgPaths.p36c93600} fill="#0072CE" id="Vector" />
+          <path d={svgPaths.p36c93600} fill="#000000" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1359,7 +1359,7 @@ function Group5() {
     <div className="absolute inset-[27.88%_83.36%_21.8%_7.77%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-80.163px_-69.166px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="8.08417" preserveAspectRatio="none" viewBox="0 0 8.16117 8.08417" width="8.16117">
         <g id="Group">
-          <path d={svgPaths.pc3d9380} fill="#0072CE" id="Vector" />
+          <path d={svgPaths.pc3d9380} fill="#000000" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1379,7 +1379,7 @@ function Group6() {
     <div className="absolute inset-[27.07%_17.11%_21.79%_74.03%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-141.183px_-69.036px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="8.21605" preserveAspectRatio="none" viewBox="0 0 8.16097 8.21605" width="8.16097">
         <g id="Group">
-          <path d={svgPaths.p2706f580} fill="#0072CE" id="Vector" />
+          <path d={svgPaths.p2706f580} fill="#000000" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1399,7 +1399,7 @@ function Group7() {
     <div className="absolute inset-[-0.11%_12.1%_72.98%_83.17%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-149.6px_-64.67px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="4.35769" preserveAspectRatio="none" viewBox="0 0 4.35679 4.35769" width="4.35679">
         <g id="Group">
-          <path d={svgPaths.p356c3900} fill="#0072CE" id="Vector" />
+          <path d={svgPaths.p356c3900} fill="#000000" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1419,7 +1419,7 @@ function Group8() {
     <div className="absolute inset-[10.99%_58.77%_77.17%_39.17%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-109.073px_-66.452px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="1.90327" preserveAspectRatio="none" viewBox="0 0 1.90418 1.90327" width="1.90418">
         <g id="Group">
-          <path d={svgPaths.p14074c00} fill="#0072CE" id="Vector" />
+          <path d={svgPaths.p14074c00} fill="#000000" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1439,7 +1439,7 @@ function Group9() {
     <div className="absolute inset-[28.87%_27.03%_6.3%_65.13%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-132.981px_-69.325px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="10.4156" preserveAspectRatio="none" viewBox="0 0 7.22 10.4156" width="7.22">
         <g id="Group">
-          <path d={svgPaths.p463d900} fill="#A8D0F0" id="Vector" />
+          <path d={svgPaths.p463d900} fill="#d4d4d8" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1459,7 +1459,7 @@ function Group10() {
     <div className="absolute inset-[36.96%_14.12%_26.86%_85.12%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-151.395px_-70.625px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="5.81124" preserveAspectRatio="none" viewBox="0 0 0.697611 5.81124" width="0.697611">
         <g id="Group">
-          <path d={svgPaths.p346c9100} fill="#A8D0F0" id="Vector" />
+          <path d={svgPaths.p346c9100} fill="#d4d4d8" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1479,7 +1479,7 @@ function Group11() {
     <div className="absolute inset-[28.91%_5.36%_26.84%_88.75%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-154.74px_-69.331px] mask-size-[238.103px_132.283px]" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="7.10994" preserveAspectRatio="none" viewBox="0 0 5.42514 7.10994" width="5.42514">
         <g id="Group">
-          <path d={svgPaths.p22587700} fill="#A8D0F0" id="Vector" />
+          <path d={svgPaths.p22587700} fill="#d4d4d8" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1499,7 +1499,7 @@ function Group12() {
     <div className="absolute inset-[10.28%_0_26.83%_96.44%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-112.213px_-21.553px] mask-size-[138.938px_62.814px]" style={{ maskImage: `url("${imgGroup1}")` }} data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" height="10.1022" preserveAspectRatio="none" viewBox="0 0 3.28404 10.1022" width="3.28404">
         <g id="Group">
-          <path d={svgPaths.p3d982100} fill="#A8D0F0" id="Vector" />
+          <path d={svgPaths.p3d982100} fill="#d4d4d8" id="Vector" />
         </g>
       </svg>
     </div>
@@ -1519,7 +1519,7 @@ function Layer() {
     <div className="absolute contents inset-[-402.67%_-79.27%_-320.77%_-79.27%]" data-name="Layer 1">
       <div className="absolute inset-[-0.06%_92.77%_23.11%_0]" data-name="Vector">
         <svg className="absolute block inset-0 size-full" fill="none" height="12.3618" preserveAspectRatio="none" viewBox="0 0 6.65584 12.3618" width="6.65584">
-          <path d={svgPaths.p3dfe0080} fill="#0072CE" id="Vector" />
+          <path d={svgPaths.p3dfe0080} fill="#000000" id="Vector" />
         </svg>
       </div>
       <ClipPathGroup />
@@ -1631,17 +1631,17 @@ function Cta() {
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[8px] items-center justify-end min-w-px relative" data-name="CTA">
       <div className="h-[40px] relative rounded-[4px] shrink-0" data-name="Button">
-        <div aria-hidden className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+        <div aria-hidden className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center px-[16px] relative size-full">
-            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               <p className="leading-[1.2]">Discard</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-[#0072ce] h-[40px] relative rounded-[4px] shrink-0" data-name="Button">
-        <div aria-hidden className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div className="bg-[#000000] h-[40px] relative rounded-[4px] shrink-0" data-name="Button">
+        <div aria-hidden className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center px-[16px] relative size-full">
             <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[14px] text-white whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
@@ -1658,17 +1658,17 @@ function Cta1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[8px] items-start min-w-px relative" data-name="CTA">
       <div className="h-[40px] relative rounded-[4px] shrink-0" data-name="Button">
-        <div aria-hidden className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+        <div aria-hidden className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center px-[16px] relative size-full">
-            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               <p className="leading-[1.2]">Action</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-[#0072ce] h-[40px] relative rounded-[4px] shrink-0" data-name="Button">
-        <div aria-hidden className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div className="bg-[#000000] h-[40px] relative rounded-[4px] shrink-0" data-name="Button">
+        <div aria-hidden className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center px-[16px] relative size-full">
             <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[14px] text-white whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
@@ -1687,7 +1687,7 @@ function SegmentedControlItem() {
       <div className="absolute bg-white h-[33px] left-0 rounded-[4px] top-0" data-name="Segmented">
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[4px] items-center justify-center px-[24px] py-[8px] relative size-full">
-            <p className="[word-break:break-word] font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#4297dd] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <p className="[word-break:break-word] font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#3f3f46] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               Submitted
             </p>
           </div>
@@ -1827,7 +1827,7 @@ function Container1() {
               <div className="[word-break:break-word] flex flex-[1_0_0] flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] min-w-px overflow-hidden relative text-[14px] text-[rgba(0,11,37,0.57)] text-ellipsis whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
                 <p className="leading-[1.2] overflow-hidden text-ellipsis">Smart Button Name</p>
               </div>
-              <div className="absolute bg-[#0072ce] left-[4px] rounded-[160px] top-[-8px]" data-name="Badge">
+              <div className="absolute bg-[#000000] left-[4px] rounded-[160px] top-[-8px]" data-name="Badge">
                 <div className="flex flex-row items-center justify-center overflow-clip rounded-[inherit] size-full">
                   <div className="content-stretch flex items-center justify-center px-[4px] py-[2px] relative size-full">
                     <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[10px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
@@ -1954,7 +1954,7 @@ function Tagchips() {
       <div className="bg-[#f8fafc] h-full relative rounded-[4px] shrink-0" data-name="Tagchips">
         <div aria-hidden className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[4px]" />
         <div className="flex flex-row items-center justify-center size-full">
-          <div className="[word-break:break-word] content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[4px] relative size-full text-[#4297dd] text-center whitespace-nowrap">
+          <div className="[word-break:break-word] content-stretch flex gap-[4px] items-center justify-center px-[8px] py-[4px] relative size-full text-[#3f3f46] text-center whitespace-nowrap">
             <p className="font-['Font_Awesome_6_Pro:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[13px]">{`\uF0E8`}</p>
             <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[12px]" style={{ fontVariationSettings: '"wdth" 100' }}>
               <p className="leading-[1.2]" dir="auto">
@@ -2350,7 +2350,7 @@ function WidgetTitleContainer3() {
       <div className="relative shrink-0" data-name="Button">
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center relative size-full">
-            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               <p className="leading-[1.2]">View all</p>
             </div>
           </div>
@@ -2367,10 +2367,10 @@ function Label() {
         Wallet
       </p>
       <div className="relative rounded-[160px] shrink-0" data-name="Tagchips">
-        <div aria-hidden className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[160px]" />
+        <div aria-hidden className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center px-[8px] py-[2px] relative size-full">
-            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               <p className="leading-[1.2]">Label</p>
             </div>
           </div>
@@ -2449,7 +2449,7 @@ function Col() {
 
 function Item6() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Item">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Item">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[12px] relative size-full">
           <Col />
@@ -2466,10 +2466,10 @@ function Label3() {
         Wallet
       </p>
       <div className="relative rounded-[160px] shrink-0" data-name="Tagchips">
-        <div aria-hidden className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[160px]" />
+        <div aria-hidden className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center px-[8px] py-[2px] relative size-full">
-            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               <p className="leading-[1.2]">Label</p>
             </div>
           </div>
@@ -2548,7 +2548,7 @@ function Col2() {
 
 function Item7() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Item">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Item">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[12px] relative size-full">
           <Col2 />
@@ -2574,10 +2574,10 @@ function Label6() {
         Wallet
       </p>
       <div className="relative rounded-[160px] shrink-0" data-name="Tagchips">
-        <div aria-hidden className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[160px]" />
+        <div aria-hidden className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center px-[8px] py-[2px] relative size-full">
-            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               <p className="leading-[1.2]">Label</p>
             </div>
           </div>
@@ -2656,7 +2656,7 @@ function Col4() {
 
 function Item8() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Item">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Item">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[12px] relative size-full">
           <Col4 />
@@ -2673,10 +2673,10 @@ function Label9() {
         Wallet
       </p>
       <div className="relative rounded-[160px] shrink-0" data-name="Tagchips">
-        <div aria-hidden className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[160px]" />
+        <div aria-hidden className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[160px]" />
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center px-[8px] py-[2px] relative size-full">
-            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               <p className="leading-[1.2]">Label</p>
             </div>
           </div>
@@ -2755,7 +2755,7 @@ function Col6() {
 
 function Item9() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Item">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Item">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[12px] relative size-full">
           <Col6 />
@@ -2808,7 +2808,7 @@ function WidgetTitleContainer4() {
       <div className="relative shrink-0" data-name="Button">
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center relative size-full">
-            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               <p className="leading-[1.2]">History</p>
             </div>
           </div>
@@ -3147,10 +3147,10 @@ function SegmentedControl1() {
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[2px] items-center p-[4px] relative size-full">
           <div className="bg-white flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Segmented">
-            <div aria-hidden className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+            <div aria-hidden className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
             <div className="flex flex-row items-center justify-center size-full">
               <div className="content-stretch flex gap-[4px] items-center justify-center px-[24px] py-[8px] relative size-full">
-                <p className="[word-break:break-word] font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>{`Plan 1 `}</p>
+                <p className="[word-break:break-word] font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>{`Plan 1 `}</p>
               </div>
             </div>
           </div>
@@ -3256,7 +3256,7 @@ function Text40() {
   return (
     <div className="[word-break:break-word] content-stretch flex gap-[4px] items-center relative shrink-0 whitespace-nowrap" data-name="text">
       <p className="font-['Roboto:Regular',sans-serif] font-normal leading-[1.2] relative shrink-0 text-[14px] text-[rgba(0,11,37,0.64)]" style={{ fontVariationSettings: '"wdth" 100' }}>{`Commission `}</p>
-      <div className="flex flex-col font-['Font_Awesome_6_Pro:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0072ce] text-[10px] text-center">
+      <div className="flex flex-col font-['Font_Awesome_6_Pro:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[10px] text-center">
         <p className="leading-[normal]">{`\uF68B`}</p>
       </div>
     </div>
@@ -3266,7 +3266,7 @@ function Text40() {
 function Text41() {
   return (
     <div className="content-stretch flex items-start relative shrink-0" data-name="Text">
-      <p className="[word-break:break-word] font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+      <p className="[word-break:break-word] font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
         5369 OMR
       </p>
     </div>
@@ -3275,8 +3275,8 @@ function Text41() {
 
 function Field8() {
   return (
-    <div className="bg-[#f3f9fd] flex-[1_0_0] h-full min-w-px relative rounded-[4px]" data-name="field">
-      <div aria-hidden className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#f4f4f5] flex-[1_0_0] h-full min-w-px relative rounded-[4px]" data-name="field">
+      <div aria-hidden className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-col items-center justify-center size-full">
         <div className="content-stretch flex flex-col gap-[8px] items-center justify-center px-[8px] py-[12px] relative size-full">
           <Text40 />
@@ -3503,7 +3503,7 @@ function Subsection() {
                   <div className="h-0 relative w-full">
                     <div className="absolute inset-[-1px_-3.03%]">
                       <svg className="block size-full" fill="none" height="2" preserveAspectRatio="none" viewBox="0 0 35 2" width="35">
-                        <path d="M1 1H34" id="Line 1" stroke="#8DC1EC" strokeLinecap="round" strokeWidth="2" />
+                        <path d="M1 1H34" id="Line 1" stroke="#d4d4d8" strokeLinecap="round" strokeWidth="2" />
                       </svg>
                     </div>
                   </div>
@@ -3635,7 +3635,7 @@ function Subsection1() {
                   <div className="h-0 relative w-full">
                     <div className="absolute inset-[-1px_-3.03%]">
                       <svg className="block size-full" fill="none" height="2" preserveAspectRatio="none" viewBox="0 0 35 2" width="35">
-                        <path d="M1 1H34" id="Line 1" stroke="#8DC1EC" strokeLinecap="round" strokeWidth="2" />
+                        <path d="M1 1H34" id="Line 1" stroke="#d4d4d8" strokeLinecap="round" strokeWidth="2" />
                       </svg>
                     </div>
                   </div>
@@ -3917,7 +3917,7 @@ function Subsection3() {
                   <div className="h-0 relative w-full">
                     <div className="absolute inset-[-1px_-3.03%]">
                       <svg className="block size-full" fill="none" height="2" preserveAspectRatio="none" viewBox="0 0 35 2" width="35">
-                        <path d="M1 1H34" id="Line 1" stroke="#8DC1EC" strokeLinecap="round" strokeWidth="2" />
+                        <path d="M1 1H34" id="Line 1" stroke="#d4d4d8" strokeLinecap="round" strokeWidth="2" />
                       </svg>
                     </div>
                   </div>
@@ -4087,7 +4087,7 @@ function Subsection4() {
                   <div className="h-0 relative w-full">
                     <div className="absolute inset-[-1px_-3.03%]">
                       <svg className="block size-full" fill="none" height="2" preserveAspectRatio="none" viewBox="0 0 35 2" width="35">
-                        <path d="M1 1H34" id="Line 1" stroke="#8DC1EC" strokeLinecap="round" strokeWidth="2" />
+                        <path d="M1 1H34" id="Line 1" stroke="#d4d4d8" strokeLinecap="round" strokeWidth="2" />
                       </svg>
                     </div>
                   </div>
@@ -4253,7 +4253,7 @@ function Subsection5() {
                   <div className="h-0 relative w-full">
                     <div className="absolute inset-[-1px_-3.03%]">
                       <svg className="block size-full" fill="none" height="2" preserveAspectRatio="none" viewBox="0 0 35 2" width="35">
-                        <path d="M1 1H34" id="Line 1" stroke="#8DC1EC" strokeLinecap="round" strokeWidth="2" />
+                        <path d="M1 1H34" id="Line 1" stroke="#d4d4d8" strokeLinecap="round" strokeWidth="2" />
                       </svg>
                     </div>
                   </div>
@@ -4390,7 +4390,7 @@ function Icon27() {
       <div className="absolute inset-[0_-3.13%_0_0]">
         <svg className="block size-full" fill="none" height="32" preserveAspectRatio="none" viewBox="0 0 33 32" width="33">
           <g id="Icon">
-            <line id="Line 1" stroke="#A8D0F0" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="#d4d4d8" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -4464,7 +4464,7 @@ function Icon29() {
       <div className="absolute inset-[0_-3.13%_0_0]">
         <svg className="block size-full" fill="none" height="32" preserveAspectRatio="none" viewBox="0 0 33 32" width="33">
           <g id="Icon">
-            <line id="Line 1" stroke="#A8D0F0" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="#d4d4d8" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -4538,7 +4538,7 @@ function Icon31() {
       <div className="absolute inset-[0_-3.13%_0_0]">
         <svg className="block size-full" fill="none" height="32" preserveAspectRatio="none" viewBox="0 0 33 32" width="33">
           <g id="Icon">
-            <line id="Line 1" stroke="#A8D0F0" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="#d4d4d8" x1="32.5" x2="32.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -4548,7 +4548,7 @@ function Icon31() {
 
 function Icon32() {
   return (
-    <div className="bg-[#4297dd] content-stretch flex flex-col gap-[3.2px] items-center justify-center relative rounded-[128px] shrink-0 size-[32px]" data-name="Icon">
+    <div className="bg-[#3f3f46] content-stretch flex flex-col gap-[3.2px] items-center justify-center relative rounded-[128px] shrink-0 size-[32px]" data-name="Icon">
       <div className="[word-break:break-word] flex flex-col font-['Font_Awesome_6_Pro:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#f8fafc] text-[12.8px] whitespace-nowrap">
         <p className="leading-[1.2]">H</p>
       </div>
@@ -4611,8 +4611,8 @@ function PercentIcon() {
 
 function Level2() {
   return (
-    <div className="bg-[#f3f9fd] content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[8px] shrink-0 w-[284px]" data-name="Level  11">
-      <div aria-hidden className="absolute border border-[#a8d0f0] border-solid inset-0 pointer-events-none rounded-[8px]" />
+    <div className="bg-[#f4f4f5] content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[8px] shrink-0 w-[284px]" data-name="Level  11">
+      <div aria-hidden className="absolute border border-[#d4d4d8] border-solid inset-0 pointer-events-none rounded-[8px]" />
       <Inner3 />
       <PercentIcon />
     </div>
@@ -4623,7 +4623,7 @@ function Container32() {
   return (
     <div className="content-stretch flex flex-col gap-[10px] items-end justify-center relative shrink-0 w-full" data-name="Container">
       <div className="absolute left-[32px] rounded-bl-[16px] rounded-tr-[16px] size-[25px] top-0" data-name="Line">
-        <div aria-hidden className="absolute border-[#a8d0f0] border-b border-l border-solid inset-0 pointer-events-none rounded-bl-[16px] rounded-tr-[16px]" />
+        <div aria-hidden className="absolute border-[#d4d4d8] border-b border-l border-solid inset-0 pointer-events-none rounded-bl-[16px] rounded-tr-[16px]" />
       </div>
       <Level2 />
     </div>
@@ -4636,7 +4636,7 @@ function Icon33() {
       <div className="absolute inset-[0_-1.25%_0_0]">
         <svg className="block size-full" fill="none" height="32" preserveAspectRatio="none" viewBox="0 0 81 32" width="81">
           <g id="Icon">
-            <line id="Line 1" stroke="#A8D0F0" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="#d4d4d8" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -4714,7 +4714,7 @@ function Icon35() {
       <div className="absolute inset-[0_-1.25%_0_0]">
         <svg className="block size-full" fill="none" height="32" preserveAspectRatio="none" viewBox="0 0 81 32" width="81">
           <g id="Icon">
-            <line id="Line 1" stroke="#A8D0F0" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="#d4d4d8" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -4792,7 +4792,7 @@ function Icon37() {
       <div className="absolute inset-[0_-1.25%_0_0]">
         <svg className="block size-full" fill="none" height="32" preserveAspectRatio="none" viewBox="0 0 81 32" width="81">
           <g id="Icon">
-            <line id="Line 1" stroke="#A8D0F0" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
+            <line id="Line 1" stroke="#d4d4d8" x1="80.5" x2="80.5" y1="2.18557e-08" y2="32" />
           </g>
         </svg>
       </div>
@@ -4954,7 +4954,7 @@ function Cta2() {
       <div className="content-stretch flex flex-col h-full items-center justify-center relative shrink-0" data-name="CTA">
         <div className="relative shrink-0" data-name="Button">
           <div className="flex flex-row items-center justify-center size-full">
-            <div className="[word-break:break-word] content-stretch flex gap-[8px] items-center justify-center leading-[0] relative size-full text-[#0072ce] text-[14px] whitespace-nowrap">
+            <div className="[word-break:break-word] content-stretch flex gap-[8px] items-center justify-center leading-[0] relative size-full text-[#000000] text-[14px] whitespace-nowrap">
               <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center relative shrink-0" style={{ fontVariationSettings: '"wdth" 100' }}>
                 <p className="leading-[1.2]">View All</p>
               </div>
@@ -5083,10 +5083,10 @@ function Subsection7() {
             <div aria-hidden className="absolute border border-[#e2e8f0] border-dashed inset-0 pointer-events-none rounded-[4px]" />
             <div className="flex flex-col items-center justify-center size-full">
               <div className="content-stretch flex flex-col gap-[12px] items-center justify-center p-[16px] relative size-full">
-                <div className="bg-[#dbedf8] relative rounded-[26.667px] shrink-0 size-[50px]" data-name="Empty - Icons">
+                <div className="bg-[#e4e4e7] relative rounded-[26.667px] shrink-0 size-[50px]" data-name="Empty - Icons">
                   <div className="flex flex-row items-center justify-center size-full">
                     <div className="content-stretch flex items-center justify-center p-[12.5px] relative size-full">
-                      <div className="[word-break:break-word] flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 size-[25px] text-[#0072ce] text-[18px] text-center">
+                      <div className="[word-break:break-word] flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 size-[25px] text-[#000000] text-[18px] text-center">
                         <p className="leading-[normal]">circle-info</p>
                       </div>
                     </div>
@@ -5200,7 +5200,7 @@ function Subsection8() {
           <div className="content-stretch flex items-center relative size-full">
             <div className="flex-[1_0_0] min-w-px relative" data-name="Table's Columns">
               <div className="content-stretch flex flex-col items-start relative size-full">
-                <div className="bg-[#dbedf8] h-[48px] relative rounded-tl-[4px] shrink-0 w-full" data-name="Header Cell">
+                <div className="bg-[#e4e4e7] h-[48px] relative rounded-tl-[4px] shrink-0 w-full" data-name="Header Cell">
                   <div aria-hidden className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tl-[4px]" />
                   <div className="flex flex-row items-center size-full">
                     <div className="content-stretch flex items-center py-[10px] relative size-full">
@@ -5310,7 +5310,7 @@ function Subsection8() {
                           <div className="content-stretch flex gap-[7px] items-center px-[16px] relative size-full">
                             <div className="relative rounded-[4px] shrink-0" data-name="Button">
                               <div className="flex flex-row items-center justify-center size-full">
-                                <div className="[word-break:break-word] content-stretch flex gap-[8px] items-center justify-center leading-[0] px-[16px] py-[9px] relative size-full text-[#0072ce] text-[12px] whitespace-nowrap">
+                                <div className="[word-break:break-word] content-stretch flex gap-[8px] items-center justify-center leading-[0] px-[16px] py-[9px] relative size-full text-[#000000] text-[12px] whitespace-nowrap">
                                   <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center not-italic relative shrink-0 text-center">
                                     <p className="leading-[normal]">Plus</p>
                                   </div>
@@ -5330,7 +5330,7 @@ function Subsection8() {
             </div>
             <div className="flex-[1_0_0] min-w-px relative" data-name="Table's Columns">
               <div className="content-stretch flex flex-col items-start relative size-full">
-                <div className="bg-[#dbedf8] h-[48px] relative shrink-0 w-full" data-name="Header Cell">
+                <div className="bg-[#e4e4e7] h-[48px] relative shrink-0 w-full" data-name="Header Cell">
                   <div aria-hidden className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
                   <div className="flex flex-row items-center size-full">
                     <div className="content-stretch flex items-center py-[10px] relative size-full">
@@ -5502,11 +5502,11 @@ function SectionTitle5() {
 function TabContainer() {
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[2px] items-center min-w-px overflow-clip relative" data-name="Tab Container">
-      <div className="bg-[#f3f9fd] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Tab Segments">
-        <div aria-hidden className="absolute border border-[#a8d0f0] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div className="bg-[#f4f4f5] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Tab Segments">
+        <div aria-hidden className="absolute border border-[#d4d4d8] border-solid inset-0 pointer-events-none rounded-[4px]" />
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex items-center justify-center px-[16px] py-[8px] relative size-full">
-            <p className="[word-break:break-word] font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <p className="[word-break:break-word] font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               User Management
             </p>
           </div>
@@ -5565,22 +5565,22 @@ function Subsection9() {
       <div className="bg-[#f8fafc] relative rounded-[4px] shrink-0 w-full" data-name="Tabs">
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex gap-[8px] items-center justify-center p-[4px] relative size-full">
-            <div className="bg-[#dbedf8] relative rounded-[160px] shrink-0 size-[32px]" data-name="Button">
-              <div aria-hidden className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[160px]" />
+            <div className="bg-[#e4e4e7] relative rounded-[160px] shrink-0 size-[32px]" data-name="Button">
+              <div aria-hidden className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[160px]" />
               <div className="flex flex-row items-center justify-center size-full">
                 <div className="content-stretch flex items-center justify-center relative size-full">
-                  <div className="[word-break:break-word] flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0072ce] text-[14px] text-center whitespace-nowrap">
+                  <div className="[word-break:break-word] flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[14px] text-center whitespace-nowrap">
                     <p className="leading-[normal]">chevron-left</p>
                   </div>
                 </div>
               </div>
             </div>
             <TabContainer />
-            <div className="bg-[#dbedf8] relative rounded-[160px] shrink-0 size-[32px]" data-name="Button">
-              <div aria-hidden className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[160px]" />
+            <div className="bg-[#e4e4e7] relative rounded-[160px] shrink-0 size-[32px]" data-name="Button">
+              <div aria-hidden className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[160px]" />
               <div className="flex flex-row items-center justify-center size-full">
                 <div className="content-stretch flex items-center justify-center relative size-full">
-                  <div className="[word-break:break-word] flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0072ce] text-[14px] text-center whitespace-nowrap">
+                  <div className="[word-break:break-word] flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[14px] text-center whitespace-nowrap">
                     <p className="leading-[normal]">chevron-right</p>
                   </div>
                 </div>
@@ -5609,10 +5609,10 @@ function Header1() {
 function TabContainer1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[2px] items-center min-w-px overflow-clip relative" data-name="Tab Container">
-      <div className="bg-[#dbedf8] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Tab Segments">
+      <div className="bg-[#e4e4e7] flex-[1_0_0] min-w-px relative rounded-[4px]" data-name="Tab Segments">
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex items-center justify-center px-[24px] py-[8px] relative size-full">
-            <p className="[word-break:break-word] font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <p className="[word-break:break-word] font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
               Sales App Rights Group
             </p>
           </div>
@@ -5678,7 +5678,7 @@ function Container44() {
           <div className="content-stretch flex items-center relative size-full">
             <div className="flex-[1_0_0] min-w-px relative" data-name="Table's Columns">
               <div className="content-stretch flex flex-col items-start relative size-full">
-                <div className="bg-[#dbedf8] h-[48px] relative rounded-tl-[4px] shrink-0 w-full" data-name="Header Cell">
+                <div className="bg-[#e4e4e7] h-[48px] relative rounded-tl-[4px] shrink-0 w-full" data-name="Header Cell">
                   <div aria-hidden className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tl-[4px]" />
                   <div className="flex flex-row items-center size-full">
                     <div className="content-stretch flex items-center py-[10px] relative size-full">
@@ -5700,7 +5700,7 @@ function Container44() {
                           <div className="content-stretch flex gap-[7px] items-center px-[16px] relative size-full">
                             <div className="relative rounded-[4px] shrink-0" data-name="Button">
                               <div className="flex flex-row items-center justify-center size-full">
-                                <div className="[word-break:break-word] content-stretch flex gap-[8px] items-center justify-center leading-[0] px-[16px] py-[9px] relative size-full text-[#0072ce] text-[12px] whitespace-nowrap">
+                                <div className="[word-break:break-word] content-stretch flex gap-[8px] items-center justify-center leading-[0] px-[16px] py-[9px] relative size-full text-[#000000] text-[12px] whitespace-nowrap">
                                   <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center not-italic relative shrink-0 text-center">
                                     <p className="leading-[normal]">Plus</p>
                                   </div>
@@ -5720,7 +5720,7 @@ function Container44() {
             </div>
             <div className="flex-[1_0_0] min-w-px relative" data-name="Table's Columns">
               <div className="content-stretch flex flex-col items-start relative size-full">
-                <div className="bg-[#dbedf8] h-[48px] relative rounded-tr-[4px] shrink-0 w-full" data-name="Header Cell">
+                <div className="bg-[#e4e4e7] h-[48px] relative rounded-tr-[4px] shrink-0 w-full" data-name="Header Cell">
                   <div aria-hidden className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tr-[4px]" />
                   <div className="flex flex-row items-center size-full">
                     <div className="content-stretch flex items-center py-[10px] relative size-full">

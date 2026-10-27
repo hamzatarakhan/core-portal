@@ -138,4 +138,23 @@
 :where(.dark) .\!bg-\[\#f5f5f5\] { background-color: #0f1829 !important; }
 :where(.dark) .bg-\[\#e6f7ed\] { background-color: rgba(22,179,100,0.16); }
 :where(.dark) .text-\[\#0e8345\] { color: #4ade80; }
+:where(.dark) .bg-\[\#f4f4f5\] { background-color: #13273f; }
+:where(.dark) .bg-\[\#e4e4e7\] { background-color: #173250; }
+:where(.dark) .bg-\[\#000000\] { background-color: #334155; }
+:where(.dark) .bg-\[\#262626\]:hover { background-color: #475569; }
+:where(.dark) .bg-\[\#262626\] { background-color: #475569; }
+:where(.dark) .border-\[\#000000\] { border-color: #64748b; }
+:where(.dark) .border-\[\#d4d4d8\] { border-color: #3a4663; }
+:where(.dark) .text-\[\#000000\] { color: #e6edf7; }
+:where(.dark) .text-\[\#3f3f46\] { color: #94a3b8; }
+:where(.dark) .text-\[\#262626\] { color: #94a3b8; }
+:where(.dark) .bg-black { background-color: #334155; }
+:where(.dark) .text-black { color: #e6edf7; }
+:where(.dark) .border-black { border-color: #64748b; }
+:where(.dark) .hover\:bg-zinc-800:hover { background-color: #475569; }
+:where(.dark) .hover\:text-black:hover { color: #ffffff; }
+:where(.dark) .bg-zinc-100 { background-color: #17233b; }
+:where(.dark) .bg-zinc-200 { background-color: #17233b; }
+:where(.dark) .hover\:bg-zinc-100:hover { background-color: #17233b; }
+:where(.dark) .border-zinc-300 { border-color: #3a4663; }
 }

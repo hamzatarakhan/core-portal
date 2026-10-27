@@ -16,8 +16,8 @@ interface BrandDetailsProps {
 
 export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
   const [brandName, setBrandName] = useState('');
-  const [primaryColor, setPrimaryColor] = useState('#0072CE');
-  const [secondaryColor, setSecondaryColor] = useState('#0072CE');
+  const [primaryColor, setPrimaryColor] = useState('#000000');
+  const [secondaryColor, setSecondaryColor] = useState('#000000');
   const [isActive, setIsActive] = useState(true);
   const [logoFile, setLogoFile] = useState<File | null>(null);
   const [showUsersModal, setShowUsersModal] = useState(false);
@@ -40,8 +40,8 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
     } else if (brandId === 'new') {
       // Reset form for new brand
       setBrandName('');
-      setPrimaryColor('#0072CE');
-      setSecondaryColor('#0072CE');
+      setPrimaryColor('#000000');
+      setSecondaryColor('#000000');
       setIsActive(true);
       setLogoFile(null);
     }
@@ -93,7 +93,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                   <div className="flex flex-[1_0_0] flex-col font-medium justify-center leading-[0] min-h-px min-w-px overflow-hidden relative text-[14px] text-[rgba(0,11,37,0.57)] text-ellipsis whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                     <p className="leading-[1.2] overflow-hidden text-ellipsis">Users Linked</p>
                   </div>
-                  <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[4px] overflow-clip px-[4px] py-[2px] rounded-[160px] top-[-8px]" data-name="Badge">
+                  <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[4px] overflow-clip px-[4px] py-[2px] rounded-[160px] top-[-8px]" data-name="Badge">
                     <div className="flex flex-col font-medium justify-center leading-[0] relative shrink-0 text-[10px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                       <p className="leading-[1.2]">16</p>
                     </div>
@@ -203,7 +203,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                       <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
                         <button
                           onClick={() => setIsActive(!isActive)}
-                          className={`content-stretch cursor-pointer flex h-[24px] items-center ${isActive ? 'justify-end' : 'justify-start'} px-[4px] py-[2px] relative rounded-[160px] w-[40px] transition-colors ${isActive ? 'bg-[#0072ce]' : 'bg-[#bebebe]'}`}
+                          className={`content-stretch cursor-pointer flex h-[24px] items-center ${isActive ? 'justify-end' : 'justify-start'} px-[4px] py-[2px] relative rounded-[160px] w-[40px] transition-colors ${isActive ? 'bg-[#000000]' : 'bg-[#bebebe]'}`}
                         >
                           <div className="bg-white rounded-[160px] shrink-0 size-[16px]" />
                         </button>
@@ -216,7 +216,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                 <div className="content-stretch flex flex-col gap-[16px] items-start relative rounded-[2px] shrink-0 w-full">
                   <div className="bg-[#f8fafc] h-[33px] relative shrink-0 w-full flex items-center">
                     <div className="content-stretch flex gap-[8px] items-center pr-[8px] relative w-full">
-                      <div className="h-[2px] w-[21px] bg-[#8DC1EC] rounded-full" />
+                      <div className="h-[2px] w-[21px] bg-[#d4d4d8] rounded-full" />
                       <p className="font-medium text-[#000b25] text-[14px]">Brand Logo</p>
                     </div>
                   </div>
@@ -230,7 +230,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                             {logoFile ? (
                               <img src={URL.createObjectURL(logoFile)} alt="Logo" className="max-w-full max-h-full object-contain" />
                             ) : (
-                              <div className="w-[24px] h-[24px] bg-[#0072ce] rounded-[2px]" />
+                              <div className="w-[24px] h-[24px] bg-[#000000] rounded-[2px]" />
                             )}
                           </div>
                           <div className="flex flex-[1_0_0] flex-col gap-[4px]">
@@ -243,7 +243,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                             <button className="bg-[#fff1f0] content-stretch flex flex-col items-center justify-center relative rounded-[39px] shrink-0 size-[26px] border-[0.5px] border-[#feeae6] hover:bg-[#ffe7e4] transition-colors active:scale-95">
                               <Trash2 className="w-[9.1px] h-[9.1px] text-[#f5222d]" />
                             </button>
-                            <label className="bg-[#eff8ff] content-stretch flex flex-col items-center justify-center relative rounded-[39px] shrink-0 size-[26px] border-[0.5px] border-[#d1e9ff] hover:bg-[#e0f2fe] transition-colors active:scale-95 cursor-pointer">
+                            <label className="bg-[#eff8ff] content-stretch flex flex-col items-center justify-center relative rounded-[39px] shrink-0 size-[26px] border-[0.5px] border-[#e4e4e7] hover:bg-[#e0f2fe] transition-colors active:scale-95 cursor-pointer">
                               <input
                                 type="file"
                                 accept="image/*,.pdf"
@@ -277,7 +277,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                 {/* Checkbox Column */}
                 <div className="content-stretch flex flex-col items-start relative shrink-0 w-[52px]">
                   {/* Header Cell */}
-                  <div className="bg-[#dbedf8] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tl-[4px] shrink-0 w-full">
+                  <div className="bg-[#e4e4e7] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tl-[4px] shrink-0 w-full">
                     <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tl-[4px]" />
                     <div className="flex-[1_0_0] min-h-px min-w-px relative">
                       <div className="flex flex-row items-center size-full">
@@ -285,7 +285,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                           <button className="content-stretch cursor-pointer flex flex-col items-center justify-center relative shrink-0 size-[20px] active:scale-95 transition-transform">
                             <div className="relative shrink-0 size-[16px]">
                               <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
-                                <rect width="14" height="14" x="1" y="1" stroke="#0072CE" strokeWidth="1.5" rx="2" />
+                                <rect width="14" height="14" x="1" y="1" stroke="#000000" strokeWidth="1.5" rx="2" />
                               </svg>
                             </div>
                           </button>
@@ -309,7 +309,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                               >
                                 <div className="relative shrink-0 size-[16px]">
                                   <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
-                                    <rect width="14" height="14" x="1" y="1" stroke="#0072CE" strokeWidth="1.5" rx="2" fill={process.isChecked ? '#0072CE' : 'none'} />
+                                    <rect width="14" height="14" x="1" y="1" stroke="#000000" strokeWidth="1.5" rx="2" fill={process.isChecked ? '#000000' : 'none'} />
                                     {process.isChecked && (
                                       <path d="M4 8l2 2 4-4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                     )}
@@ -336,7 +336,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                 {/* Process Type Column */}
                 <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative">
                   {/* Header Cell */}
-                  <div className="bg-[#dbedf8] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
+                  <div className="bg-[#e4e4e7] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
                     <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
                     <div className="flex-[1_0_0] min-h-px min-w-px relative">
                       <div className="flex flex-row items-center size-full">
@@ -391,7 +391,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                 {/* Module Name Column */}
                 <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative">
                   {/* Header Cell */}
-                  <div className="bg-[#dbedf8] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
+                  <div className="bg-[#e4e4e7] content-stretch flex h-[48px] items-center py-[10px] relative shrink-0 w-full">
                     <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none" />
                     <div className="flex-[1_0_0] min-h-px min-w-px relative">
                       <div className="flex flex-row items-center size-full">
@@ -450,7 +450,7 @@ export function BrandDetails({ brandId, onBack }: BrandDetailsProps) {
                 {/* Actions Column */}
                 <div className="content-stretch flex flex-col items-start relative shrink-0 w-[118px]">
                   {/* Header Cell */}
-                  <div className="bg-[#dbedf8] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tr-[4px] shrink-0 w-full">
+                  <div className="bg-[#e4e4e7] content-stretch flex h-[48px] items-center py-[10px] relative rounded-tr-[4px] shrink-0 w-full">
                     <div aria-hidden="true" className="absolute border-[#e2e8f0] border-b border-solid inset-0 pointer-events-none rounded-tr-[4px]" />
                     <div className="flex-[1_0_0] min-h-px min-w-px relative">
                       <div className="flex flex-row items-center size-full">

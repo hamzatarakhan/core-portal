@@ -33,7 +33,7 @@ export function DomainFilter() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-[12px]">
-          <h3 className="text-[15px] font-medium text-[#000b25] dark:text-blue-100 font-['Roboto']">
+          <h3 className="text-[15px] font-medium text-[#000b25] dark:text-zinc-100 font-['Roboto']">
             Rules & Filters
           </h3>
         </div>
@@ -43,7 +43,7 @@ export function DomainFilter() {
           </button>
           <button 
             onClick={addRule}
-            className="h-[32px] px-[12px] bg-[#0071cd] text-white rounded-[4px] text-[13px] font-medium hover:bg-[#005fa3] transition-all cursor-pointer active:scale-95 shadow-sm"
+            className="h-[32px] px-[12px] bg-[#000000] text-white rounded-[4px] text-[13px] font-medium hover:bg-[#262626] transition-all cursor-pointer active:scale-95 shadow-sm"
           >
             New Rules
           </button>
@@ -59,7 +59,7 @@ export function DomainFilter() {
           <select 
             value={matchType}
             onChange={(e) => setMatchType(e.target.value)}
-            className="w-full h-[32px] pl-[12px] pr-[24px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[13px] font-medium bg-white dark:bg-slate-900 outline-none appearance-none cursor-pointer focus:border-[#0071cd]"
+            className="w-full h-[32px] pl-[12px] pr-[24px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[13px] font-medium bg-white dark:bg-slate-900 outline-none appearance-none cursor-pointer focus:border-[#000000]"
           >
             <option value="All">All</option>
             <option value="Any">Any</option>
@@ -81,7 +81,7 @@ export function DomainFilter() {
             
             {/* Field Dropdown */}
             <div className="relative flex-1">
-              <select className="w-full h-[38px] pl-[12px] pr-[24px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[14px] bg-white dark:bg-slate-900 outline-none appearance-none cursor-pointer focus:border-[#0071cd]">
+              <select className="w-full h-[38px] pl-[12px] pr-[24px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[14px] bg-white dark:bg-slate-900 outline-none appearance-none cursor-pointer focus:border-[#000000]">
                 <option>{rule.field || 'Stage'}</option>
               </select>
               <ChevronDown size={14} className="absolute right-[8px] top-1/2 -translate-y-1/2 text-[#000b25]/40 pointer-events-none" />
@@ -89,7 +89,7 @@ export function DomainFilter() {
 
             {/* Operator Dropdown */}
             <div className="relative w-[140px]">
-              <select className="w-full h-[38px] pl-[12px] pr-[24px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[14px] bg-white dark:bg-slate-900 outline-none appearance-none cursor-pointer focus:border-[#0071cd]">
+              <select className="w-full h-[38px] pl-[12px] pr-[24px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[14px] bg-white dark:bg-slate-900 outline-none appearance-none cursor-pointer focus:border-[#000000]">
                 <option>{rule.operator || 'Operator'}</option>
               </select>
               <ChevronDown size={14} className="absolute right-[8px] top-1/2 -translate-y-1/2 text-[#000b25]/40 pointer-events-none" />
@@ -100,7 +100,7 @@ export function DomainFilter() {
               <input 
                 type="text" 
                 placeholder="Value"
-                className="w-full h-[38px] px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[14px] bg-white dark:bg-slate-900 outline-none focus:border-[#0071cd]"
+                className="w-full h-[38px] px-[12px] border border-[#d2d2d2] dark:border-slate-700 rounded-[4px] text-[14px] bg-white dark:bg-slate-900 outline-none focus:border-[#000000]"
               />
             </div>
 

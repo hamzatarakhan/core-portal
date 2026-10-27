@@ -96,7 +96,7 @@ export function RerunModal({ isOpen, onClose, planName = "KAM Plan", version = "
           {/* Header */}
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400">
+              <div className="w-10 h-10 bg-zinc-100 dark:bg-zinc-900/30 rounded-lg flex items-center justify-center text-black dark:text-zinc-500">
                 <RotateCcw size={20} />
               </div>
               <div className="flex flex-col">
@@ -115,40 +115,40 @@ export function RerunModal({ isOpen, onClose, planName = "KAM Plan", version = "
           </div>
 
           {/* Table Container */}
-          <div className="bg-white dark:bg-gray-800 border border-blue-100 dark:border-blue-900/50 rounded-[8px] overflow-hidden shadow-sm">
+          <div className="bg-white dark:bg-gray-800 border border-zinc-100 dark:border-zinc-900/50 rounded-[8px] overflow-hidden shadow-sm">
             {/* Table Header Controls */}
-            <div className="p-[16px] flex items-center justify-between gap-[16px] border-b border-blue-50 dark:border-blue-900/30">
+            <div className="p-[16px] flex items-center justify-between gap-[16px] border-b border-zinc-100 dark:border-zinc-900/30">
               <div className="relative flex-1 max-w-[500px]">
-                <Search size={16} className="absolute left-[12px] top-1/2 -translate-y-1/2 text-blue-400" />
+                <Search size={16} className="absolute left-[12px] top-1/2 -translate-y-1/2 text-zinc-500" />
                 <input 
                   type="text" 
                   placeholder="Search members or codes..." 
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full h-[38px] pl-[38px] pr-[12px] bg-blue-50/30 dark:bg-gray-900 border border-blue-100 dark:border-blue-800 rounded-[4px] text-[14px] outline-none focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-blue-300"
+                  className="w-full h-[38px] pl-[38px] pr-[12px] bg-zinc-100/30 dark:bg-gray-900 border border-zinc-100 dark:border-zinc-800 rounded-[4px] text-[14px] outline-none focus:ring-1 focus:ring-black transition-all placeholder:text-zinc-300"
                 />
               </div>
 
               <div className="flex items-center gap-[8px]">
-                <div className="flex items-center h-[32px] bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900 rounded-[4px] px-2 gap-2">
-                  <span className="text-[12px] font-bold text-blue-600 dark:text-blue-400">{currentPage}</span>
-                  <span className="text-[12px] text-blue-300">/</span>
-                  <span className="text-[12px] font-medium text-blue-400">{totalPages || 1}</span>
+                <div className="flex items-center h-[32px] bg-zinc-100 dark:bg-zinc-900/40 border border-zinc-100 dark:border-zinc-900 rounded-[4px] px-2 gap-2">
+                  <span className="text-[12px] font-bold text-black dark:text-zinc-500">{currentPage}</span>
+                  <span className="text-[12px] text-zinc-300">/</span>
+                  <span className="text-[12px] font-medium text-zinc-500">{totalPages || 1}</span>
                 </div>
                 <div className="flex gap-[4px]">
                   <button 
                     disabled={currentPage === 1}
                     onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                    className="size-[32px] flex items-center justify-center bg-white dark:bg-gray-800 border border-blue-100 dark:border-blue-900 rounded-[4px] hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors disabled:opacity-30"
+                    className="size-[32px] flex items-center justify-center bg-white dark:bg-gray-800 border border-zinc-100 dark:border-zinc-900 rounded-[4px] hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors disabled:opacity-30"
                   >
-                    <ChevronLeft size={16} className="text-blue-600" />
+                    <ChevronLeft size={16} className="text-black" />
                   </button>
                   <button 
                     disabled={currentPage === totalPages || totalPages === 0}
                     onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                    className="size-[32px] flex items-center justify-center bg-white dark:bg-gray-800 border border-blue-100 dark:border-blue-900 rounded-[4px] hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors disabled:opacity-30"
+                    className="size-[32px] flex items-center justify-center bg-white dark:bg-gray-800 border border-zinc-100 dark:border-zinc-900 rounded-[4px] hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors disabled:opacity-30"
                   >
-                    <ChevronRight size={16} className="text-blue-600" />
+                    <ChevronRight size={16} className="text-black" />
                   </button>
                 </div>
               </div>
@@ -158,46 +158,46 @@ export function RerunModal({ isOpen, onClose, planName = "KAM Plan", version = "
             <div className="w-full overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-[#e6f4ff] dark:bg-blue-950/60 border-b border-blue-100 dark:border-blue-900">
+                  <tr className="bg-[#f4f4f5] dark:bg-zinc-900/60 border-b border-zinc-100 dark:border-zinc-900">
                     <th className="p-[12px] px-[16px] w-[52px]">
                       <div 
                         onClick={toggleSelectAll}
                         className={clsx(
                           "size-[18px] rounded-[4px] border flex items-center justify-center cursor-pointer transition-all",
                           paginatedMembers.every(m => selectedIds.has(m.id)) && paginatedMembers.length > 0
-                            ? "bg-blue-600 border-blue-600"
-                            : "bg-white dark:bg-gray-900 border-blue-300 dark:border-blue-700 hover:border-blue-400"
+                            ? "bg-black border-black"
+                            : "bg-white dark:bg-gray-900 border-zinc-300 dark:border-zinc-800 hover:border-zinc-500"
                         )}
                       >
                         {paginatedMembers.every(m => selectedIds.has(m.id)) && paginatedMembers.length > 0 ? (
                           <Check size={12} className="text-white" strokeWidth={4} />
                         ) : paginatedMembers.some(m => selectedIds.has(m.id)) ? (
-                          <div className="w-[10px] h-[2px] bg-blue-600 rounded-full" />
+                          <div className="w-[10px] h-[2px] bg-black rounded-full" />
                         ) : null}
                       </div>
                     </th>
                     <th className="p-[12px] px-[16px] text-left">
-                      <div className="flex items-center gap-[8px] text-[11px] font-bold text-blue-800 dark:text-blue-200 uppercase tracking-wider">
-                        Name <ChevronsUpDown size={12} className="text-blue-400" />
+                      <div className="flex items-center gap-[8px] text-[11px] font-bold text-zinc-800 dark:text-zinc-300 uppercase tracking-wider">
+                        Name <ChevronsUpDown size={12} className="text-zinc-500" />
                       </div>
                     </th>
                     <th className="p-[12px] px-[16px] text-left">
-                      <div className="flex items-center gap-[8px] text-[11px] font-bold text-blue-800 dark:text-blue-200 uppercase tracking-wider">
-                        Code <ChevronsUpDown size={12} className="text-blue-400" />
+                      <div className="flex items-center gap-[8px] text-[11px] font-bold text-zinc-800 dark:text-zinc-300 uppercase tracking-wider">
+                        Code <ChevronsUpDown size={12} className="text-zinc-500" />
                       </div>
                     </th>
                     <th className="p-[12px] px-[16px] text-left">
-                      <div className="flex items-center gap-[8px] text-[11px] font-bold text-blue-800 dark:text-blue-200 uppercase tracking-wider">
-                        Reason for Exclusion <ChevronsUpDown size={12} className="text-blue-400" />
+                      <div className="flex items-center gap-[8px] text-[11px] font-bold text-zinc-800 dark:text-zinc-300 uppercase tracking-wider">
+                        Reason for Exclusion <ChevronsUpDown size={12} className="text-zinc-500" />
                       </div>
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-blue-50 dark:divide-blue-900/30">
+                <tbody className="divide-y divide-zinc-100 dark:divide-zinc-900/30">
                   {paginatedMembers.length > 0 ? paginatedMembers.map((member) => (
                     <tr 
                       key={member.id} 
-                      className="hover:bg-blue-50/40 dark:hover:bg-blue-950/20 transition-colors cursor-pointer group"
+                      className="hover:bg-zinc-100/40 dark:hover:bg-zinc-900/20 transition-colors cursor-pointer group"
                       onClick={() => toggleMember(member.id)}
                     >
                       <td className="p-[12px] px-[16px]" onClick={(e) => e.stopPropagation()}>
@@ -206,8 +206,8 @@ export function RerunModal({ isOpen, onClose, planName = "KAM Plan", version = "
                           className={clsx(
                             "size-[18px] rounded-[4px] border flex items-center justify-center cursor-pointer transition-all",
                             selectedIds.has(member.id)
-                              ? "bg-blue-600 border-blue-600 scale-110"
-                              : "bg-white dark:bg-gray-900 border-blue-200 dark:border-blue-800 group-hover:border-blue-400"
+                              ? "bg-black border-black scale-110"
+                              : "bg-white dark:bg-gray-900 border-zinc-300 dark:border-zinc-800 group-hover:border-zinc-500"
                           )}
                         >
                           {selectedIds.has(member.id) && (
@@ -235,7 +235,7 @@ export function RerunModal({ isOpen, onClose, planName = "KAM Plan", version = "
                     <tr>
                       <td colSpan={4} className="p-16 text-center">
                         <div className="flex flex-col items-center gap-2">
-                          <Search size={32} className="text-blue-100" />
+                          <Search size={32} className="text-zinc-100" />
                           <p className="text-sm text-gray-400 italic">No members found matching your criteria</p>
                         </div>
                       </td>
@@ -248,7 +248,7 @@ export function RerunModal({ isOpen, onClose, planName = "KAM Plan", version = "
 
           {/* Footer */}
           <div className="flex items-center justify-between w-full mt-[8px]">
-            <div className="text-[12px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+            <div className="text-[12px] font-bold text-black dark:text-zinc-500 uppercase tracking-widest">
               {selectedIds.size} Members Selected
             </div>
             <div className="flex items-center gap-[12px]">
@@ -261,7 +261,7 @@ export function RerunModal({ isOpen, onClose, planName = "KAM Plan", version = "
               <button 
                 onClick={handleRerun}
                 disabled={selectedIds.size === 0 || isProcessing}
-                className="h-[40px] px-[24px] bg-blue-600 hover:bg-blue-700 text-white rounded-[6px] text-[14px] font-bold flex items-center gap-[10px] transition-all active:scale-95 disabled:opacity-50 disabled:grayscale shadow-lg shadow-blue-200 dark:shadow-none"
+                className="h-[40px] px-[24px] bg-black hover:bg-zinc-800 text-white rounded-[6px] text-[14px] font-bold flex items-center gap-[10px] transition-all active:scale-95 disabled:opacity-50 disabled:grayscale shadow-lg shadow-zinc-300 dark:shadow-none"
               >
                 {isProcessing ? (
                    <RotateCcw size={16} className="animate-spin" />

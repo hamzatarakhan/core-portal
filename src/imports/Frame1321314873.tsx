@@ -23,7 +23,7 @@ function TableHeader({ children, text }: React.PropsWithChildren<TableHeaderProp
 
 function Members({ children }: React.PropsWithChildren<{}>) {
   return (
-    <div className="basis-0 bg-[#e6f1fa] grow min-h-px min-w-px relative rounded-[4px] shrink-0">
+    <div className="basis-0 bg-[#f4f4f5] grow min-h-px min-w-px relative rounded-[4px] shrink-0">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[8px] relative w-full">{children}</div>
       </div>
@@ -33,7 +33,7 @@ function Members({ children }: React.PropsWithChildren<{}>) {
 
 function Wrapper2({ children }: React.PropsWithChildren<{}>) {
   return (
-    <div className="basis-0 bg-[#e6f1fa] grow h-full min-h-px min-w-px relative rounded-[4px] shrink-0">
+    <div className="basis-0 bg-[#f4f4f5] grow h-full min-h-px min-w-px relative rounded-[4px] shrink-0">
       <div className="flex flex-col justify-center size-full">
         <div className="content-stretch flex flex-col gap-[4px] items-start justify-center p-[8px] relative size-full">{children}</div>
       </div>
@@ -43,7 +43,7 @@ function Wrapper2({ children }: React.PropsWithChildren<{}>) {
 
 function Wrapper1({ children }: React.PropsWithChildren<{}>) {
   return (
-    <div className="basis-0 bg-[#e6f1fa] grow h-full min-h-px min-w-px relative rounded-[4px] shrink-0">
+    <div className="basis-0 bg-[#f4f4f5] grow h-full min-h-px min-w-px relative rounded-[4px] shrink-0">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[8px] relative size-full">{children}</div>
       </div>
@@ -76,7 +76,7 @@ type PaginationTextProps = {
 
 function PaginationText({ text }: PaginationTextProps) {
   return (
-    <div className="bg-[#0071cd] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[30px]">
+    <div className="bg-[#000000] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[30px]">
       <div aria-hidden="true" className="absolute border-[#e2e8f0] border-[0.75px] border-solid inset-[-0.375px] pointer-events-none rounded-[4.375px]" />
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-center text-nowrap text-white">
         <p className="leading-[normal]">{text}</p>
@@ -362,7 +362,7 @@ function Icon() {
       <div className="absolute inset-0" style={{ "--stroke-0": "rgba(0, 113, 205, 1)" } as React.CSSProperties}>
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
           <g id="Icon">
-            <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0071CD)" strokeWidth="1.5" />
+            <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -551,8 +551,8 @@ export default function Frame() {
               <div className="bg-[#edf1f5] content-stretch flex gap-[2px] items-center p-[4px] relative rounded-[4px] shrink-0" data-name="Segmented control">
                 <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[4px]" />
                 <div className="bg-white content-stretch flex gap-[4px] items-center justify-center px-[24px] py-[8px] relative rounded-[4px] shrink-0" data-name="Segmented">
-                  <div aria-hidden="true" className="absolute border border-[#0071cd] border-solid inset-0 pointer-events-none rounded-[4px]" />
-                  <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0071cd] text-[14px] text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+                  <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
+                  <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px] text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                     Plans
                   </p>
                 </div>
@@ -567,11 +567,11 @@ export default function Frame() {
               <div className="content-stretch flex gap-[8px] h-full items-center relative shrink-0">
                 <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-name="CTA">
                   <div className="content-stretch flex gap-[8px] h-[40px] items-center justify-center px-[16px] py-0 relative rounded-[4px] shrink-0" data-name="Button">
-                    <div aria-hidden="true" className="absolute border border-[#0071cd] border-solid inset-0 pointer-events-none rounded-[4px]" />
-                    <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0071cd] text-[14px] text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+                    <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
+                    <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                       <p className="leading-[1.2]">Operations</p>
                     </div>
-                    <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0071cd] text-[14px] text-nowrap">
+                    <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[14px] text-nowrap">
                       <p className="leading-[normal]"></p>
                     </div>
                   </div>
@@ -583,7 +583,7 @@ export default function Frame() {
                       <p className="leading-[normal]"></p>
                     </div>
                   </div>
-                  <div className="bg-[#0071cd] content-stretch flex h-[31.304px] items-center justify-center px-[8px] py-0 relative rounded-[3.2px] shrink-0" data-name="Button">
+                  <div className="bg-[#000000] content-stretch flex h-[31.304px] items-center justify-center px-[8px] py-0 relative rounded-[3.2px] shrink-0" data-name="Button">
                     <div className="flex flex-col font-['Font_Awesome_6_Pro:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-center text-nowrap text-white">
                       <p className="leading-[normal]">list</p>
                     </div>
@@ -633,7 +633,7 @@ export default function Frame() {
           <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
             <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
               <div className="bg-white relative rounded-[4px] shrink-0 w-full" data-name="Title">
-                <div aria-hidden="true" className="absolute border border-[#d9eaf8] border-solid inset-0 pointer-events-none rounded-[4px] shadow-[0px_3px_20px_0px_rgba(0,0,0,0.05)]" />
+                <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px] shadow-[0px_3px_20px_0px_rgba(0,0,0,0.05)]" />
                 <div className="flex flex-row items-center size-full">
                   <div className="content-stretch flex gap-[8px] items-center px-[16px] py-[12px] relative w-full">
                     <div className="basis-0 flex flex-row grow items-center self-stretch shrink-0">
@@ -687,7 +687,7 @@ export default function Frame() {
               <div className="content-stretch flex flex-col items-end justify-center relative shrink-0 w-[1112px]" data-name="List - Plan">
                 <div className="bg-white content-stretch flex flex-col items-start relative rounded-[4px] shrink-0 w-full" data-name="Subscription details">
                   <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[4px]" />
-                  <div className="bg-[#e6f1fa] content-stretch flex items-start relative rounded-[4px] shrink-0 w-full" data-name="Table-header">
+                  <div className="bg-[#f4f4f5] content-stretch flex items-start relative rounded-[4px] shrink-0 w-full" data-name="Table-header">
                     <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[4px]" />
                     <div className="self-stretch shrink-0 w-[46px]" data-name="Table cell" />
                     <div className="content-stretch flex flex-col items-center justify-center px-[16px] py-[8px] relative self-stretch shrink-0" data-name="Table cell">
@@ -711,7 +711,7 @@ export default function Frame() {
                     <div className="content-stretch flex items-center justify-center px-[16px] py-[12px] shrink-0" data-name="Table header" />
                   </div>
                   <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Table-row">
-                    <div aria-hidden="true" className="absolute border-[#d9eaf8] border-[1px_1px_0px] border-solid inset-0 pointer-events-none" />
+                    <div aria-hidden="true" className="absolute border-[#e4e4e7] border-[1px_1px_0px] border-solid inset-0 pointer-events-none" />
                     <div className="flex flex-row items-center self-stretch">
                       <div className="content-stretch flex h-full items-center justify-center px-[16px] py-[8px] relative shrink-0 w-[46px]" data-name="Table cell">
                         <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-[rgba(0,11,37,0.64)] text-nowrap">
@@ -748,7 +748,7 @@ export default function Frame() {
                     <TableHeaderText text="ellipsis" />
                   </div>
                   <div className="bg-[#f8fafc] relative rounded-[4px] shrink-0 w-full" data-name="SMS">
-                    <div aria-hidden="true" className="absolute border border-[#d9eaf8] border-solid inset-0 pointer-events-none rounded-[4px]" />
+                    <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
                     <div className="flex flex-row items-center size-full">
                       <div className="content-stretch flex items-center p-[12px] relative w-full">
                         <div className="basis-0 content-stretch flex flex-col gap-[8px] grow items-end justify-center min-h-px min-w-px relative shrink-0">
@@ -1034,7 +1034,7 @@ export default function Frame() {
                             <div className="bg-[#f8fafc] content-stretch flex gap-[1.5px] h-full items-center justify-center px-[6px] py-[1.5px] relative rounded-[4px] shrink-0" data-name="Count Of Pages">
                               <div aria-hidden="true" className="absolute border-[#e2e8f0] border-[0.75px] border-solid inset-[-0.375px] pointer-events-none rounded-[4.375px]" />
                               <div className="content-stretch flex h-full items-center justify-center relative rounded-[4px] shrink-0" data-name="Pagination item">
-                                <div className="flex flex-col font-['Roboto:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#0071cd] text-[12px] text-center text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+                                <div className="flex flex-col font-['Roboto:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                                   <p className="leading-[1.2]">10</p>
                                 </div>
                               </div>

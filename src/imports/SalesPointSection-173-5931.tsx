@@ -36,7 +36,7 @@ function Circle() {
 
 function Badge() {
   return (
-    <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
+    <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[7.5px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">16</p>
       </div>
@@ -69,7 +69,7 @@ function Circle1() {
 
 function Badge1() {
   return (
-    <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
+    <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[7.5px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">16</p>
       </div>
@@ -102,7 +102,7 @@ function Circle2() {
 
 function Badge2() {
   return (
-    <div className="absolute bg-[#0072ce] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
+    <div className="absolute bg-[#000000] content-stretch flex items-center justify-center left-[3px] overflow-clip px-[3px] py-[1.5px] rounded-[120px] top-[-6px]" data-name="Badge">
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[7.5px] text-center text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">16</p>
       </div>
@@ -125,7 +125,7 @@ function SmartButton2() {
 
 function Frame1() {
   return (
-    <div className="bg-[#f3f9fd] mb-[-1px] relative rounded-tl-[4px] rounded-tr-[4px] shrink-0 w-full">
+    <div className="bg-[#f4f4f5] mb-[-1px] relative rounded-tl-[4px] rounded-tr-[4px] shrink-0 w-full">
       <div aria-hidden="true" className="absolute border-[#e2e8f0] border-l border-r border-solid border-t inset-0 pointer-events-none rounded-tl-[4px] rounded-tr-[4px]" />
       <div className="content-stretch flex gap-[8px] items-start px-[16px] py-[12px] relative w-full">
         <SmartButton />
@@ -308,13 +308,13 @@ function WalletBalance2() {
 
 function Card2() {
   return (
-    <div className="bg-[#f5faff] flex-[1_0_0] h-[78px] min-h-px min-w-px relative rounded-[4px]" data-name="Card">
+    <div className="bg-[#f4f4f5] flex-[1_0_0] h-[78px] min-h-px min-w-px relative rounded-[4px]" data-name="Card">
       <div className="flex flex-row items-center justify-center overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex items-center justify-center p-[12px] relative size-full">
           <WalletBalance2 />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#d1e9ff] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
     </div>
   );
 }
@@ -436,8 +436,8 @@ function Textfield() {
 
 function Button() {
   return (
-    <div className="bg-[#0072ce] content-stretch flex gap-[8px] h-[36px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#000000] content-stretch flex gap-[8px] h-[36px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-center text-white whitespace-nowrap">
         <p className="leading-[normal]">save</p>
       </div>
@@ -452,10 +452,10 @@ function Button1() {
   return (
     <div className="content-stretch flex gap-[8px] h-[36px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#0072ce] text-[12px] text-center whitespace-nowrap">
+      <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#000000] text-[12px] text-center whitespace-nowrap">
         <p className="leading-[normal]">close</p>
       </div>
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Cancel</p>
       </div>
     </div>
@@ -521,7 +521,7 @@ function HeaderCell() {
 
 function Button2() {
   return (
-    <div className="content-stretch flex gap-[8px] items-center justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[12px] whitespace-nowrap" data-name="Button">
+    <div className="content-stretch flex gap-[8px] items-center justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] whitespace-nowrap" data-name="Button">
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center not-italic relative shrink-0">
         <p className="leading-[normal]">plus</p>
       </div>
@@ -837,8 +837,8 @@ function AlertMessage() {
 
 function Container() {
   return (
-    <div className="bg-[#f3f9fd] relative rounded-[4px] shrink-0 w-full" data-name="Container">
-      <div aria-hidden="true" className="absolute border border-[#dbedf8] border-dashed inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#f4f4f5] relative rounded-[4px] shrink-0 w-full" data-name="Container">
+      <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-dashed inset-0 pointer-events-none rounded-[4px]" />
       <div className="content-stretch flex flex-col gap-[16px] items-start px-[17px] py-[13px] relative w-full">
         <Frame6 />
         <NewTable />

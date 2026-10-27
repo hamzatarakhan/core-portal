@@ -132,7 +132,7 @@ function Card({ className, type = "Order" }: CardProps) {
   const isReceiptHighlighted = type === "Receipt Highlighted";
   const isReceiptOrReceiptHighlighted = ["Receipt", "Receipt Highlighted"].includes(type);
   return (
-    <div className={className || `relative rounded-bl-[4px] rounded-br-[8px] rounded-tl-[4px] rounded-tr-[8px] w-[200px] ${isReceiptHighlighted ? "bg-[#fefbe8]" : type === "pAYMENT Highlighted" ? "bg-[#edfcf2] h-[97px]" : type === "Invoice Highlighted" ? "bg-[#f4f3ff]" : isOrderHighlighted ? "bg-[#f3f9fd]" : type === "payment" ? "bg-white h-[97px]" : "bg-white"}`}>
+    <div className={className || `relative rounded-bl-[4px] rounded-br-[8px] rounded-tl-[4px] rounded-tr-[8px] w-[200px] ${isReceiptHighlighted ? "bg-[#fefbe8]" : type === "pAYMENT Highlighted" ? "bg-[#edfcf2] h-[97px]" : type === "Invoice Highlighted" ? "bg-[#f4f3ff]" : isOrderHighlighted ? "bg-[#f4f4f5]" : type === "payment" ? "bg-white h-[97px]" : "bg-white"}`}>
       <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-bl-[4px] rounded-br-[8px] rounded-tl-[4px] rounded-tr-[8px]" />
       <div className={`content-stretch flex flex-col gap-[8px] items-start px-[16px] py-[12px] relative ${isPaymentOrPAymentHighlighted ? "size-full" : "w-full"}`}>
         <div className="content-stretch flex flex-col gap-[8px] items-start pb-[4px] relative shrink-0 w-[168px]" data-name="Margin">
@@ -180,7 +180,7 @@ function Card({ className, type = "Order" }: CardProps) {
         </div>
         <div className={`absolute flex items-center justify-center left-0 top-0 w-[4px] ${isReceiptOrReceiptHighlighted ? "h-[95px]" : "h-[97px]"}`}>
           <div className="-scale-y-100 flex-none rotate-180">
-            <div className={`rounded-br-[4px] rounded-tr-[4px] w-[4px] ${isReceiptOrReceiptHighlighted ? "bg-[#fac515] h-[95px]" : isPaymentOrPAymentHighlighted ? "bg-[#16b364] h-[97px]" : isInvoiceOrInvoiceHighlighted ? "bg-[#6938ef] h-[97px]" : "bg-[#0072ce] h-[97px]"}`} data-name="Divider" />
+            <div className={`rounded-br-[4px] rounded-tr-[4px] w-[4px] ${isReceiptOrReceiptHighlighted ? "bg-[#fac515] h-[95px]" : isPaymentOrPAymentHighlighted ? "bg-[#16b364] h-[97px]" : isInvoiceOrInvoiceHighlighted ? "bg-[#6938ef] h-[97px]" : "bg-[#000000] h-[97px]"}`} data-name="Divider" />
           </div>
         </div>
       </div>
@@ -193,8 +193,8 @@ export default function MainContainer() {
     <div className="bg-white content-stretch flex flex-col items-center pb-[20px] pt-[16px] px-[16px] relative size-full" data-name="Main Container">
       <div className="content-stretch flex flex-[1_0_0] items-start justify-center mb-[-4px] min-h-px min-w-px overflow-clip relative rounded-[4px]" data-name="Container">
         <div className="bg-[#f8fafc] h-[583px] max-h-[600px] overflow-clip relative shrink-0 w-[1100px]" data-name="Workflow - test">
-          <div className="absolute bg-[#f3f9fd] inset-[7.89%_78.09%_75.64%_3.73%] rounded-bl-[4px] rounded-br-[8px] rounded-tl-[4px] rounded-tr-[8px]" data-name="Card">
-            <div aria-hidden="true" className="absolute border border-[#a8d0f0] border-solid inset-0 pointer-events-none rounded-bl-[4px] rounded-br-[8px] rounded-tl-[4px] rounded-tr-[8px]" />
+          <div className="absolute bg-[#f4f4f5] inset-[7.89%_78.09%_75.64%_3.73%] rounded-bl-[4px] rounded-br-[8px] rounded-tl-[4px] rounded-tr-[8px]" data-name="Card">
+            <div aria-hidden="true" className="absolute border border-[#d4d4d8] border-solid inset-0 pointer-events-none rounded-bl-[4px] rounded-br-[8px] rounded-tl-[4px] rounded-tr-[8px]" />
             <div className="content-stretch flex flex-col gap-[8px] items-start px-[16px] py-[12px] relative size-full">
               <div className="content-stretch flex flex-col gap-[8px] items-start pb-[4px] relative shrink-0 w-[168px]" data-name="Margin">
                 <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="Container">
@@ -232,7 +232,7 @@ export default function MainContainer() {
               </div>
               <div className="absolute flex h-[97px] items-center justify-center left-0 top-0 w-[4px]">
                 <div className="-scale-y-100 flex-none rotate-180">
-                  <div className="bg-[#0072ce] h-[97px] rounded-br-[4px] rounded-tr-[4px] w-[4px]" data-name="Divider" />
+                  <div className="bg-[#000000] h-[97px] rounded-br-[4px] rounded-tr-[4px] w-[4px]" data-name="Divider" />
                 </div>
               </div>
             </div>
@@ -323,7 +323,7 @@ export default function MainContainer() {
           </div>
           <div className="absolute contents left-[1096px] top-[7px]" data-name="Line Container">
             <div className="absolute bg-[#d9d9d9] h-[346px] left-[1096px] rounded-[4px] top-[7px] w-[4px]" data-name="Line" />
-            <div className="absolute bg-[#0072ce] h-[231.955px] left-[1096px] rounded-[4px] top-[121.04px] w-[4px]" data-name="Line" />
+            <div className="absolute bg-[#000000] h-[231.955px] left-[1096px] rounded-[4px] top-[121.04px] w-[4px]" data-name="Line" />
           </div>
         </div>
       </div>
@@ -331,7 +331,7 @@ export default function MainContainer() {
         <div className="flex-none rotate-90">
           <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative" data-name="Line Container">
             <div className="bg-[#d9d9d9] col-1 h-[1060px] ml-0 mt-0 rounded-[4px] row-1 w-[4px]" data-name="Line" />
-            <div className="bg-[#0072ce] col-1 h-[728px] ml-0 mt-[347.5px] rounded-[4px] row-1 w-[4px]" data-name="Line" />
+            <div className="bg-[#000000] col-1 h-[728px] ml-0 mt-[347.5px] rounded-[4px] row-1 w-[4px]" data-name="Line" />
           </div>
         </div>
       </div>

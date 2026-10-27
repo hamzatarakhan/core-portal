@@ -39,7 +39,7 @@ type PaginationTextProps = {
 
 function PaginationText({ text }: PaginationTextProps) {
   return (
-    <div className="bg-[#0071cd] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[30px]">
+    <div className="bg-[#000000] content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[30px]">
       <div aria-hidden="true" className="absolute border-[#e2e8f0] border-[0.75px] border-solid inset-[-0.375px] pointer-events-none rounded-[4.375px]" />
       <div className="flex flex-col font-['Font_Awesome_6_Pro:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[10.5px] text-center text-nowrap text-white">
         <p className="leading-[normal]">{text}</p>
@@ -222,7 +222,7 @@ type TableStatusTextProps = {
 
 function TableStatusText({ text }: TableStatusTextProps) {
   return (
-    <div className="bg-[#eff6ff] content-stretch flex gap-[3.6px] h-full items-start justify-center px-[8px] py-[2px] relative rounded-[49px] shrink-0">
+    <div className="bg-[#f4f4f5] content-stretch flex gap-[3.6px] h-full items-start justify-center px-[8px] py-[2px] relative rounded-[49px] shrink-0">
       <div aria-hidden="true" className="absolute border border-[#e2e8f0] border-solid inset-0 pointer-events-none rounded-[49px]" />
       <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#3b82f6] text-[9px] text-center text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
         {text}
@@ -237,7 +237,7 @@ function Icon() {
       <div className="absolute inset-0" style={{ "--stroke-0": "rgba(0, 113, 205, 1)" } as React.CSSProperties}>
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
           <g id="Icon">
-            <path d={svgPaths.p17146600} stroke="var(--stroke-0, #0071CD)" strokeWidth="1.5" />
+            <path d={svgPaths.p17146600} stroke="var(--stroke-0, #000000)" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -448,7 +448,7 @@ function CardInnerMember2() {
 export default function Sms() {
   return (
     <div className="bg-white content-stretch flex items-center pb-[12px] pt-[16px] px-[16px] relative rounded-bl-[8px] rounded-br-[8px] size-full" data-name="SMS">
-      <div aria-hidden="true" className="absolute border-[#d9eaf8] border-[0px_1px_1px] border-solid inset-0 pointer-events-none rounded-bl-[8px] rounded-br-[8px]" />
+      <div aria-hidden="true" className="absolute border-[#e4e4e7] border-[0px_1px_1px] border-solid inset-0 pointer-events-none rounded-bl-[8px] rounded-br-[8px]" />
       <div className="basis-0 content-stretch flex flex-col gap-[8px] grow items-end min-h-px min-w-px relative shrink-0">
         <CardInnerMember3>
           <div className="content-stretch flex gap-[3px] items-start relative shrink-0" data-name="Checkbox">
@@ -545,7 +545,7 @@ export default function Sms() {
           <div className="bg-[#f8fafc] content-stretch flex gap-[1.5px] h-full items-center justify-center px-[6px] py-[1.5px] relative rounded-[4px] shrink-0" data-name="Count Of Pages">
             <div aria-hidden="true" className="absolute border-[#e2e8f0] border-[0.75px] border-solid inset-[-0.375px] pointer-events-none rounded-[4.375px]" />
             <div className="content-stretch flex h-full items-center justify-center relative rounded-[4px] shrink-0" data-name="Pagination item">
-              <div className="flex flex-col font-['Roboto:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#0071cd] text-[12px] text-center text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+              <div className="flex flex-col font-['Roboto:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#000000] text-[12px] text-center text-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                 <p className="leading-[1.2]">10</p>
               </div>
             </div>

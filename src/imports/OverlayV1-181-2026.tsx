@@ -97,7 +97,7 @@ function Left() {
 function PaginationItem() {
   return (
     <div className="content-stretch flex h-full items-center justify-center px-[8px] relative rounded-[4px] shrink-0" data-name="Pagination item">
-      <div className="flex flex-col font-['Roboto:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[16px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div className="flex flex-col font-['Roboto:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#000000] text-[16px] text-center whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">1</p>
       </div>
     </div>
@@ -359,7 +359,7 @@ function Tr() {
 
 function Thead() {
   return (
-    <div className="bg-[#f3f9fd] content-stretch flex isolate items-start shrink-0 sticky top-0 w-full z-[2]" data-name="thead">
+    <div className="bg-[#f4f4f5] content-stretch flex isolate items-start shrink-0 sticky top-0 w-full z-[2]" data-name="thead">
       <Tr />
     </div>
   );
@@ -428,7 +428,7 @@ function TableCell7() {
 function Icon5() {
   return (
     <div className="content-stretch flex flex-col items-center justify-center py-[4px] relative shrink-0 size-[20px]" data-name="Icon">
-      <p className="font-['Font_Awesome_6_Pro:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#0072ce] text-[11px]">eye</p>
+      <p className="font-['Font_Awesome_6_Pro:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#000000] text-[11px]">eye</p>
     </div>
   );
 }
@@ -436,7 +436,7 @@ function Icon5() {
 function DocumentInfo() {
   return (
     <div className="content-stretch flex items-center relative shrink-0" data-name="Document Info">
-      <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         Document Name
       </p>
       <Icon5 />
@@ -548,7 +548,7 @@ function TableCell12() {
 function Icon7() {
   return (
     <div className="content-stretch flex flex-col items-center justify-center py-[4px] relative shrink-0 size-[20px]" data-name="Icon">
-      <p className="font-['Font_Awesome_6_Pro:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#0072ce] text-[11px]">eye</p>
+      <p className="font-['Font_Awesome_6_Pro:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#000000] text-[11px]">eye</p>
     </div>
   );
 }
@@ -556,7 +556,7 @@ function Icon7() {
 function DocumentInfo1() {
   return (
     <div className="content-stretch flex items-center relative shrink-0" data-name="Document Info">
-      <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#0072ce] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#000000] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         Document Name
       </p>
       <Icon7 />
@@ -610,7 +610,7 @@ function TableCell15() {
     <div className="flex-[1_0_0] h-[44px] min-h-px min-w-px relative" data-name="Table cell">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center px-[16px] py-[8px] relative size-full">
-          <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#4297dd] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>{`Add  Attachments`}</p>
+          <p className="font-['Roboto:Medium',sans-serif] font-medium leading-[1.2] relative shrink-0 text-[#3f3f46] text-[14px]" style={{ fontVariationSettings: "\'wdth\' 100" }}>{`Add  Attachments`}</p>
         </div>
       </div>
     </div>
@@ -689,8 +689,8 @@ function Container1() {
 function Button() {
   return (
     <div className="content-stretch flex gap-[8px] h-[40px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
-      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#0072ce] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#000000] text-[14px] whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Cancel</p>
       </div>
     </div>
@@ -699,8 +699,8 @@ function Button() {
 
 function Button1() {
   return (
-    <div className="bg-[#0072ce] content-stretch flex gap-[8px] h-[40px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
-      <div aria-hidden="true" className="absolute border border-[#0072ce] border-solid inset-0 pointer-events-none rounded-[4px]" />
+    <div className="bg-[#000000] content-stretch flex gap-[8px] h-[40px] items-center justify-center px-[16px] relative rounded-[4px] shrink-0" data-name="Button">
+      <div aria-hidden="true" className="absolute border border-[#000000] border-solid inset-0 pointer-events-none rounded-[4px]" />
       <div className="flex flex-col font-['Roboto:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[14px] text-white whitespace-nowrap" style={{ fontVariationSettings: "\'wdth\' 100" }}>
         <p className="leading-[1.2]">Submit</p>
       </div>

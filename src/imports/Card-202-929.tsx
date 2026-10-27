@@ -21,10 +21,10 @@ export default function Card() {
             </div>
           </div>
         </div>
-        <div className="bg-[#dbedf8] relative rounded-[4px] shrink-0" data-name="Button">
-          <div aria-hidden="true" className="absolute border border-[#dbedf8] border-solid inset-0 pointer-events-none rounded-[4px]" />
+        <div className="bg-[#e4e4e7] relative rounded-[4px] shrink-0" data-name="Button">
+          <div aria-hidden="true" className="absolute border border-[#e4e4e7] border-solid inset-0 pointer-events-none rounded-[4px]" />
           <div className="flex flex-row items-center justify-center size-full">
-            <div className="content-stretch flex gap-[4px] items-center justify-center leading-[0] p-[8px] relative text-[#0072ce] text-[10px] whitespace-nowrap">
+            <div className="content-stretch flex gap-[4px] items-center justify-center leading-[0] p-[8px] relative text-[#000000] text-[10px] whitespace-nowrap">
               <div className="flex flex-col font-['Font_Awesome_6_Pro:Regular',sans-serif] justify-center not-italic relative shrink-0 text-center">
                 <p className="leading-[normal]">edit</p>
               </div>
