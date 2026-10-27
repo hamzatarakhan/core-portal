@@ -1683,9 +1683,6 @@ export function SalesTeamProfile({ onOpenHierarchySettings, variant = 1 }: { onO
           <SmartButtonsRow />
         </div>
 
-        {/* Account Management (parents in the tree) */}
-        {variant === 1 && <AccountManagement />}
-
         {/* Channel Member Details */}
         {variant === 2 ? (
           <div className="grid grid-cols-[2fr_1fr] items-start gap-4">
@@ -1700,7 +1697,11 @@ export function SalesTeamProfile({ onOpenHierarchySettings, variant = 1 }: { onO
             </div>
           </div>
         ) : (
-          <ChannelMemberDetails onOpenHierarchySettings={onOpenHierarchySettings} />
+          <>
+            <ChannelMemberDetails onOpenHierarchySettings={onOpenHierarchySettings} />
+            {/* Account Management (parents in the tree) */}
+            <AccountManagement />
+          </>
         )}
 
         {/* Upload Document */}
