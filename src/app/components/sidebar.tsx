@@ -23,26 +23,12 @@ import {
 } from 'lucide-react';
 import logo from 'figma:asset/7a47870d2a1694273f16e4200d2c98592ab1c763.png';
 
+// Client preview: only the Profile item is shown. The full menu (Sales Team, POS Devices, Tracking,
+// E-Reload, Notification, Dynamic Elements, Orders, Visit, KPI Builder, Users, Brand Management,
+// Broadcast, Endpoints, Reporting, Tickets, Shift Planning, Stock, Form Builder, Integrations)
+// can be restored from git history.
 const navItems: { icon: React.ElementType; label: string; subItems?: string[] }[] = [
-  { icon: IdCard, label: 'Sales Team', subItems: ['Profile'] },
-  { icon: SquarePlus, label: 'POS Devices' },
-  { icon: MapPin, label: 'Tracking' },
-  { icon: RefreshCw, label: 'E-Reload' },
-  { icon: MessageCircle, label: 'Notification' },
-  { icon: Settings, label: 'Dynamic Elements' },
-  { icon: ShoppingCart, label: 'Orders Management' },
-  { icon: CalendarPlus, label: 'Visit Management' },
-  { icon: Wrench, label: 'KPI Builder' },
-  { icon: Users, label: 'Users' },
-  { icon: Tag, label: 'Brand Management' },
-  { icon: Send, label: 'Broadcast' },
-  { icon: ShoppingCart, label: 'Endpoints Management' },
-  { icon: FileText, label: 'Reporting' },
-  { icon: Ticket, label: 'Tickets' },
-  { icon: CalendarClock, label: 'Shift Planning' },
-  { icon: TrendingUp, label: 'Stock Management' },
-  { icon: ClipboardList, label: 'Form Builder' },
-  { icon: Link2, label: 'Integration Endpoints' },
+  { icon: IdCard, label: 'Profile' },
 ];
 
 interface SidebarProps {
@@ -51,7 +37,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ activeSubItem, onSubItemClick }: SidebarProps) {
-  const [activeItem, setActiveItem] = useState('Sales Team');
+  const [activeItem, setActiveItem] = useState('Profile');
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [openMenus, setOpenMenus] = useState<string[]>(['Sales Team']);
 
@@ -107,7 +93,7 @@ export function Sidebar({ activeSubItem, onSubItemClick }: SidebarProps) {
                     <item.icon size={16} className={`shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-500'}`} fill="currentColor" fillOpacity={0.12} />
                     {!isCollapsed && <span className="truncate">{item.label}</span>}
                   </div>
-                  {!isCollapsed && (
+                  {!isCollapsed && item.subItems && (
                     <ChevronDown
                       size={14}
                       className={`shrink-0 text-slate-400 transition-transform duration-200 ${openMenus.includes(item.label) ? 'rotate-180' : ''}`}

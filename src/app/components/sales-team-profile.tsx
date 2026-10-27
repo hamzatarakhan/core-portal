@@ -1347,19 +1347,9 @@ function ChannelMemberDetails({ onOpenHierarchySettings }: { onOpenHierarchySett
           <TextField label="Owner Civil ID" value="21321" />
         </div>
 
-        <div className="rounded-[4px] border border-[#e2e8f0] p-3 flex flex-col gap-3">
-          <div className="flex items-center gap-2 text-[14px] text-[#000b25] font-medium">
-            <MapPin size={16} className="text-[#0072ce]" /> National Address
-          </div>
-          <div className="grid grid-cols-3 gap-x-4 gap-y-3">
-            <TextField label="Building Number" value="8218" />
-            <TextField label="Street" value="Prince Sultan Street" />
-            <TextField label="District" value="Al Aziziyah" />
-            <TextField label="City" value="Makkah" />
-            <TextField label="Postal Code" value="24231" />
-            <TextField label="Additional Number" value="7355" />
-          </div>
-        </div>
+        <FormField label="National Address">
+          <textarea className={`${inputCls} h-[72px] py-2 font-normal resize-none`} defaultValue="Makkah, Al Aziziyah, Prince Sultan Street, Building 8218" />
+        </FormField>
       </div>
     </div>
   );
