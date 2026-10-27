@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Phone, Mail, Upload, FileText, ArrowRight, Check, CircleDot, Plus, Pencil, Trash2, FileSpreadsheet, X, Save, AlertCircle, Eye, EyeOff, Paperclip, FileImage, File as FileIcon, Edit2, Network, GitBranch, ChevronsDown, Briefcase, Package, Ticket, CalendarCheck, Laptop } from 'lucide-react';
+import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Phone, Mail, Upload, FileText, ArrowRight, Check, CircleDot, Plus, Pencil, Trash2, FileSpreadsheet, X, Save, AlertCircle, Eye, EyeOff, Paperclip, FileImage, File as FileIcon, Edit2, MapPin, Network, ListTree, ChevronsDown, Briefcase, Package, Ticket, CalendarCheck, Laptop } from 'lucide-react';
 import MainContainer from '../../imports/MainContainer-222-488';
 
 // ── Status Segmented Control ──
@@ -1313,7 +1313,7 @@ function ChannelMemberDetails({ onOpenHierarchySettings }: { onOpenHierarchySett
             onClick={() => setShowParents(true)}
             className="h-9 px-3 rounded-[4px] bg-[#eef5fd] text-[14px] text-[#0072ce] font-medium flex items-center gap-2 hover:bg-[#dbeafb] active:scale-95 transition-all"
           >
-            <GitBranch size={16} /> Parents
+            <ListTree size={16} /> Hierarchy View
             <span className="bg-[#0072ce] text-white text-[11px] px-1.5 rounded-full">{parents.length - 1}</span>
           </button>
           <button
@@ -1327,15 +1327,17 @@ function ChannelMemberDetails({ onOpenHierarchySettings }: { onOpenHierarchySett
       <ChannelMemberParentsDrawer isOpen={showParents} onClose={() => setShowParents(false)} />
       <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4">
         <FormSection title="Member Information" />
-        <div className="grid grid-cols-3 gap-x-4 gap-y-3">
+        <div className="grid grid-cols-4 gap-x-4 gap-y-3">
           <ReadonlyField label="Member Code" value="5456589" />
           <TextField label="Name" value="aaaz" />
           <TextField label="Phone" value="966554444443" />
+          <TextField label="Email" value="ss@gmail.com" />
         </div>
 
         <FormSection title="Organization Details" />
         <div className="grid grid-cols-3 gap-x-4 gap-y-3">
           <SelectField label="Store Name" value="tet" options={['Store A', 'Store B']} />
+          <SelectField label="Outlet Type" value="Kiosk" disabled />
           <TextField label="Organization ID" value="21323" />
           <TextField label="Commercial Registration (CR)" value="tes" />
           <TextField label="CR Expiry Date" type="date" value="2026-10-13" />
@@ -1343,16 +1345,20 @@ function ChannelMemberDetails({ onOpenHierarchySettings }: { onOpenHierarchySett
           <TextField label="Bank IBAN Proof" value="SA0380000000608010167519" />
           <TextField label="Owner Name" value="Khaled Al Harbi" />
           <TextField label="Owner Civil ID" value="21321" />
-          <TextField label="Email" value="ss@gmail.com" />
-          <div className="col-span-3">
-            <FormField label="National Address">
-              <textarea className={`${inputCls} h-[64px] py-2 resize-none`} defaultValue="Makkah, Al Aziziyah, Street 12" />
-            </FormField>
-          </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-x-4">
-          <SelectField label="Outlet Type" value="Kiosk" disabled />
+        <div className="rounded-[4px] border border-[#e2e8f0] p-3 flex flex-col gap-3">
+          <div className="flex items-center gap-2 text-[14px] text-[#000b25] font-medium">
+            <MapPin size={16} className="text-[#0072ce]" /> National Address
+          </div>
+          <div className="grid grid-cols-3 gap-x-4 gap-y-3">
+            <TextField label="Building Number" value="8218" />
+            <TextField label="Street" value="Prince Sultan Street" />
+            <TextField label="District" value="Al Aziziyah" />
+            <TextField label="City" value="Makkah" />
+            <TextField label="Postal Code" value="24231" />
+            <TextField label="Additional Number" value="7355" />
+          </div>
         </div>
       </div>
     </div>
@@ -1430,7 +1436,7 @@ function ChannelMemberParentsDrawer({ isOpen, onClose }: { isOpen: boolean; onCl
       >
         <div className="px-5 py-4 border-b border-[#e2e8f0] flex items-center justify-between">
           <div>
-            <h2 className="text-[17px] text-[#000b25] font-medium">Channel Member Parents</h2>
+            <h2 className="text-[17px] text-[#000b25] font-medium">Hierarchy View</h2>
             <p className="text-[12px] text-[rgba(0,11,37,0.64)] mt-0.5">{parents.length - 1} levels above this member</p>
           </div>
           <button onClick={onClose} aria-label="Close" className="text-[rgba(0,11,37,0.64)] hover:text-[#000b25] active:scale-95 transition-all">
