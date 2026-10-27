@@ -51,9 +51,9 @@ interface SidebarProps {
 }
 
 export function Sidebar({ activeSubItem, onSubItemClick }: SidebarProps) {
-  const [activeItem, setActiveItem] = useState('');
+  const [activeItem, setActiveItem] = useState('Sales Team');
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [openMenus, setOpenMenus] = useState<string[]>([]);
+  const [openMenus, setOpenMenus] = useState<string[]>(['Sales Team']);
 
   const handleItemClick = (item: (typeof navItems)[number]) => {
     setActiveItem(item.label);

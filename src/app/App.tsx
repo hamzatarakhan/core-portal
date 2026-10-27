@@ -20,7 +20,7 @@ import { ComponentStates } from './components/component-states';
 import { Toaster } from 'sonner';
 
 export default function App() {
-  const [currentSubItem, setCurrentSubItem] = useState('Dashboard');
+  const [currentSubItem, setCurrentSubItem] = useState('Profile');
   const [selectedCycle, setSelectedCycle] = useState<any | null>(null);
   const [selectedPlan, setSelectedPlan] = useState<any | null>(null);
   const [selectedBrandId, setSelectedBrandId] = useState<string | null>(null);
