@@ -20,7 +20,8 @@ import { ComponentStates } from './components/component-states';
 import { Toaster } from 'sonner';
 
 export default function App() {
-  const [currentSubItem, setCurrentSubItem] = useState('Profile - option 1');
+  const [currentSubItem, setCurrentSubItem] = useState('Profile');
+  const [menuOpen, setMenuOpen] = useState(false);
   const [selectedCycle, setSelectedCycle] = useState<any | null>(null);
   const [selectedPlan, setSelectedPlan] = useState<any | null>(null);
   const [selectedBrandId, setSelectedBrandId] = useState<string | null>(null);
@@ -74,7 +75,8 @@ export default function App() {
       return <TerritoryHierarchy />;
     }
 
-    if (currentSubItem === 'Profile - option 1' || currentSubItem === 'Profile - option 2') {
+    // 'Profile - option 2' (tree shown inline) is kept in code but hidden from the menu.
+    if (currentSubItem === 'Profile' || currentSubItem === 'Profile - option 2') {
       return (
         <SalesTeamProfile
           key={currentSubItem}
@@ -154,7 +156,12 @@ export default function App() {
   return (
     <div className="flex h-screen w-full bg-background text-foreground overflow-hidden font-sans">
       <Toaster position="top-right" richColors />
-      <Sidebar activeSubItem={currentSubItem} onSubItemClick={handleSubItemClick} />
+      <Sidebar
+        activeSubItem={currentSubItem}
+        onSubItemClick={handleSubItemClick}
+        mobileOpen={menuOpen}
+        onMobileClose={() => setMenuOpen(false)}
+      />
       <div className="flex-1 flex flex-col min-w-0">
         {currentSubItem === 'Brand Management' ? (
           <BrandHeader 
@@ -167,7 +174,8 @@ export default function App() {
             }}
           />
         ) : (currentSubItem !== 'Territory Map' && !selectedPlan) && (
-          <Header 
+          <Header
+            onMenuClick={() => setMenuOpen(true)}
             title={selectedCycle ? 'Cycle Run Details' : (currentSubItem === 'Excluded Members' ? 'Excluded Members' : (currentSubItem === 'Cycle Runs' ? 'Cycles Run' : currentSubItem))} 
             description={currentSubItem === 'Excluded Members' ? 'Overview of all members excluded across different calculation cycles.' : undefined}
           />

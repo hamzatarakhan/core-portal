@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   IdCard,
   SquarePlus,
@@ -29,19 +29,36 @@ import beyondOneLogo from '../../assets/beyond-one-logo.png';
 // Broadcast, Endpoints, Reporting, Tickets, Shift Planning, Stock, Form Builder, Integrations)
 // can be restored from git history.
 const navItems: { icon: React.ElementType; label: string; subItems?: string[] }[] = [
-  { icon: IdCard, label: 'Profile - option 1' },
-  { icon: IdCard, label: 'Profile - option 2' },
+  { icon: IdCard, label: 'Profile' },
 ];
 
 interface SidebarProps {
   activeSubItem: string;
   onSubItemClick: (subItem: string) => void;
+  /** Small screens: the menu is an off-canvas drawer. */
+  mobileOpen?: boolean;
+  onMobileClose?: () => void;
 }
 
-export function Sidebar({ activeSubItem, onSubItemClick }: SidebarProps) {
-  const [activeItem, setActiveItem] = useState('Profile - option 1');
-  const [isCollapsed, setIsCollapsed] = useState(false);
+function useIsDesktop() {
+  const query = '(min-width: 1024px)';
+  const [isDesktop, setIsDesktop] = useState(() => (typeof window === 'undefined' ? true : window.matchMedia(query).matches));
+  useEffect(() => {
+    const mq = window.matchMedia(query);
+    const onChange = () => setIsDesktop(mq.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+  return isDesktop;
+}
+
+export function Sidebar({ activeSubItem, onSubItemClick, mobileOpen = false, onMobileClose }: SidebarProps) {
+  const [activeItem, setActiveItem] = useState('Profile');
+  const [collapsedPref, setIsCollapsed] = useState(false);
   const [openMenus, setOpenMenus] = useState<string[]>(['Sales Team']);
+  const isDesktop = useIsDesktop();
+  // Collapsing to icons only makes sense on desktop; on small screens the menu is a drawer.
+  const isCollapsed = collapsedPref && isDesktop;
 
   const handleItemClick = (item: (typeof navItems)[number]) => {
     setActiveItem(item.label);
@@ -49,18 +66,26 @@ export function Sidebar({ activeSubItem, onSubItemClick }: SidebarProps) {
       setOpenMenus(prev => (prev.includes(item.label) ? prev.filter(m => m !== item.label) : [...prev, item.label]));
     } else {
       onSubItemClick(item.label);
+      onMobileClose?.();
     }
   };
 
   return (
-    <div className={`${isCollapsed ? 'w-[64px]' : 'w-[240px]'} border-r border-slate-200 dark:border-slate-800 h-screen bg-white dark:bg-slate-950 flex flex-col shrink-0 transition-all duration-300 ease-in-out`}>
+    <>
+    {/* Backdrop for the mobile drawer */}
+    <div
+      onClick={onMobileClose}
+      aria-hidden="true"
+      className={`fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 lg:hidden ${mobileOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+    />
+    <div className={`${isCollapsed ? 'lg:w-[64px]' : 'lg:w-[240px]'} w-[260px] max-w-[85vw] border-r border-slate-200 dark:border-slate-800 h-screen bg-white dark:bg-slate-950 flex flex-col shrink-0 transition-all duration-300 ease-in-out fixed inset-y-0 left-0 z-50 lg:static lg:z-auto ${mobileOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
       {/* Header */}
       <div className={`h-[60px] flex items-center ${isCollapsed ? 'justify-center' : 'justify-between px-4'} border-b border-slate-100 dark:border-slate-900`}>
         {!isCollapsed && (
           <img src={beyondOneLogo} alt="Beyond One" className="h-8 object-contain dark:brightness-0 dark:invert" />
         )}
         <button
-          onClick={() => setIsCollapsed(!isCollapsed)}
+          onClick={() => (isDesktop ? setIsCollapsed(!collapsedPref) : onMobileClose?.())}
           aria-label="Toggle menu"
           className="w-9 h-9 rounded-[4px] border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-black transition-colors"
         >
@@ -133,5 +158,6 @@ export function Sidebar({ activeSubItem, onSubItemClick }: SidebarProps) {
         .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; }
       `}} />
     </div>
+    </>
   );
 }

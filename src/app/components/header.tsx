@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { Moon, Sun, User, ChevronDown, Bell, Settings, LogOut, Keyboard } from 'lucide-react';
+import { Moon, Sun, User, ChevronDown, Bell, Settings, LogOut, Keyboard, Menu } from 'lucide-react';
 
 interface HeaderProps {
   title: string;
   description?: string;
+  /** Small screens: opens the side menu drawer. */
+  onMenuClick?: () => void;
 }
 
-export function Header({ title, description }: HeaderProps) {
+export function Header({ title, description, onMenuClick }: HeaderProps) {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
@@ -17,17 +19,22 @@ export function Header({ title, description }: HeaderProps) {
   };
 
   return (
-    <header className="h-16 border-b border-gray-200 bg-white dark:bg-gray-900 dark:border-gray-800 flex items-center justify-between px-6 shrink-0 transition-colors duration-200">
-      <div className="flex flex-col">
-        <h1 className="text-lg font-medium text-gray-800 dark:text-gray-100 leading-tight">{title}</h1>
+    <header className="h-16 border-b border-gray-200 bg-white dark:bg-gray-900 dark:border-gray-800 flex items-center justify-between gap-3 px-4 sm:px-6 shrink-0 transition-colors duration-200">
+      <div className="flex items-center gap-3 min-w-0">
+        <button onClick={onMenuClick} aria-label="Open menu" className="lg:hidden w-9 h-9 shrink-0 rounded-[4px] border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300">
+          <Menu size={18} />
+        </button>
+      <div className="flex flex-col min-w-0">
+        <h1 className="text-base sm:text-lg font-medium text-gray-800 dark:text-gray-100 leading-tight truncate">{title}</h1>
         {description && (
           <p className="text-[11px] text-gray-500 dark:text-gray-400 font-normal">{description}</p>
         )}
       </div>
-      
+      </div>
+
       {/* Theme toggle, notifications and profile menu are inactive for the client preview */}
-      <div className="flex items-center gap-6 pointer-events-none select-none" ref={el => el?.setAttribute('inert', '')}>
-        <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 sm:gap-6 pointer-events-none select-none shrink-0" ref={el => el?.setAttribute('inert', '')}>
+        <div className="flex items-center gap-1 sm:gap-4">
           <button 
             onClick={toggleTheme}
             className="p-2 text-gray-500 hover:text-black hover:bg-zinc-100 dark:hover:bg-gray-800 rounded-full transition-all"
@@ -51,7 +58,7 @@ export function Header({ title, description }: HeaderProps) {
               A
             </div>
             <div className="flex items-center gap-1">
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-200 group-hover:text-black transition-colors">Administrator</span>
+              <span className="hidden sm:inline text-sm font-medium text-gray-700 dark:text-gray-200 group-hover:text-black transition-colors">Administrator</span>
               <ChevronDown size={14} className={`text-gray-400 transition-transform ${isProfileOpen ? 'rotate-180' : ''}`} />
             </div>
           </button>

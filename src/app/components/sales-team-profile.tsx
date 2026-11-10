@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Phone, Mail, Upload, FileText, ArrowRight, Check, CircleDot, Plus, Pencil, Trash2, FileSpreadsheet, X, Save, AlertCircle, Eye, EyeOff, Paperclip, FileImage, File as FileIcon, Edit2, MapPin, Network, ListTree, ChevronsDown, Briefcase, Package, Ticket, CalendarCheck, Laptop } from 'lucide-react';
+import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Phone, Mail, Upload, FileText, ArrowRight, Check, CircleDot, Plus, Pencil, Trash2, FileSpreadsheet, X, Save, AlertCircle, Eye, EyeOff, Paperclip, FileImage, File as FileIcon, Edit2, MapPin, Network, ListTree, Banknote, HandCoins, Target, CircleCheck, Sigma, ChevronsDown, Briefcase, Package, Ticket, CalendarCheck, Laptop } from 'lucide-react';
 import MainContainer from '../../imports/MainContainer-222-488';
 
 // ── Status Segmented Control ──
@@ -1109,28 +1109,33 @@ const smartButtons = [
 
 function SmartButtonsRow() {
   const [expanded, setExpanded] = useState(false);
-  const visible = expanded ? smartButtons : smartButtons.slice(0, 5);
+  const SmartButton = ({ name, icon: Icon, count }: (typeof smartButtons)[number]) => (
+    <button
+      key={name}
+      className="h-10 shrink-0 min-w-[150px] lg:min-w-0 rounded-[4px] border border-[#e2e8f0] flex items-center gap-2 px-4 relative hover:bg-[#f4f4f5] hover:border-[#d4d4d8] active:scale-95 transition-all"
+    >
+      <Icon size={14} className="text-[rgba(0,11,37,0.57)]" />
+      <span className="text-[14px] text-[rgba(0,11,37,0.57)] truncate">{name}</span>
+      {count !== undefined && (
+        <span className="absolute -top-2 left-1 bg-[#000000] text-white text-[10px] px-1 py-[1px] rounded-full">{count}</span>
+      )}
+    </button>
+  );
+  const extra = smartButtons.slice(5);
   return (
-    <div className="bg-white rounded-[4px] border border-[#e2e8f0] flex">
-      <div className="flex-1 grid grid-cols-5 gap-4 p-4">
-        {visible.map(({ name, icon: Icon, count }) => (
-          <button
-            key={name}
-            className="h-10 rounded-[4px] border border-[#e2e8f0] flex items-center gap-2 px-4 relative hover:bg-[#f4f4f5] hover:border-[#d4d4d8] active:scale-95 transition-all"
-          >
-            <Icon size={14} className="text-[rgba(0,11,37,0.57)]" />
-            <span className="text-[14px] text-[rgba(0,11,37,0.57)] truncate">{name}</span>
-            {count !== undefined && (
-              <span className="absolute -top-2 left-1 bg-[#000000] text-white text-[10px] px-1 py-[1px] rounded-full">{count}</span>
-            )}
-          </button>
-        ))}
+    // The row keeps a fixed height; extra buttons open as an overlay instead of pushing the page down.
+    <div className="relative bg-white rounded-[4px] border border-[#e2e8f0] flex">
+      <div className="flex-1 min-w-0 flex gap-4 p-4 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-5 lg:overflow-visible">
+        {smartButtons.slice(0, 5).map(b => <SmartButton key={b.name} {...b} />)}
       </div>
-      <button onClick={() => setExpanded(e => !e)} className="border-l border-[#e2e8f0] w-12 flex items-center justify-center">
-        {expanded
-          ? <ChevronUp size={16} className="text-[rgba(0,11,37,0.64)]" />
-          : <ChevronDown size={16} className="text-[rgba(0,11,37,0.64)]" />}
+      <button onClick={() => setExpanded(e => !e)} aria-expanded={expanded} className="border-l border-[#e2e8f0] w-12 flex items-center justify-center">
+        <ChevronDown size={16} className={`text-[rgba(0,11,37,0.64)] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`} />
       </button>
+      {expanded && extra.length > 0 && (
+        <div className="absolute left-0 right-12 top-full z-30 -mt-px bg-white border border-[#e2e8f0] rounded-b-[4px] shadow-lg grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
+          {extra.map(b => <SmartButton key={b.name} {...b} />)}
+        </div>
+      )}
     </div>
   );
 }
@@ -1172,11 +1177,11 @@ function DealerCard({ title, dealerName }: { title: string; dealerName: string }
         <span className="text-[14px] text-[rgba(0,11,37,0.64)]">{dealerName}</span>
         <div className="flex gap-2">
           <div className="flex-1 flex items-center gap-2">
-            <Phone size={12} className="text-[rgba(0,11,37,0.57)]" />
+            <Phone size={14} fill="currentColor" className="text-[rgba(0,11,37,0.64)]" />
             <span className="text-[14px] text-[#000b25] font-medium">5456589</span>
           </div>
           <div className="flex-1 flex items-center gap-2">
-            <Mail size={12} className="text-[rgba(0,11,37,0.57)]" />
+            <Mail size={14} fill="currentColor" className="text-[rgba(0,11,37,0.64)] [&_path]:stroke-white [&_rect]:stroke-white" />
             <span className="text-[14px] text-[#000b25] font-medium">5456589</span>
           </div>
         </div>
@@ -1191,10 +1196,10 @@ function WalletCard({ label }: { label: string }) {
     <div className="bg-[#f4f4f5] rounded-[4px] flex-1 p-3">
       <div className="flex items-center justify-between mb-2">
         <span className="text-[14px] text-[#000b25] font-bold">{label}</span>
-        <span className="border border-[#000000] rounded-full px-2 py-[1px] text-[12px] text-[#000000] font-medium">Label</span>
+        <span className="bg-black/10 dark:bg-white/15 rounded-full px-2.5 py-[2px] text-[12px] text-[#000000] font-medium">Label</span>
       </div>
       <div className="flex items-center gap-1 mb-1">
-        <span className="bg-[#e6f7f7] border border-[#ededed] rounded-[2px] px-1 py-[1px] text-[12px] text-[#00b0b2]">+</span>
+        <span className="bg-[#e6f7f7] border border-[#d5f0f0] rounded-[2px] p-[2px] text-[#00b0b2] flex"><Banknote size={14} /></span>
         <span className="text-[12px] text-[#000b25] font-medium">123.333 OMR</span>
       </div>
       <p className="text-[12px] text-[rgba(0,11,37,0.64)]">Ooredoo</p>
@@ -1210,17 +1215,20 @@ function EWalletSection() {
         <span className="text-[17px] text-[#000b25] font-medium">E - Wallet Account</span>
         <button className="text-[14px] text-[#000000] font-medium active:scale-95 transition-transform">View all</button>
       </div>
-      <div className="flex flex-col gap-2">
-        <div className="flex gap-2">
-          <WalletCard label="Wallet" />
-          <WalletCard label="Wallet" />
-        </div>
-        <div className="flex gap-2">
-          <WalletCard label="Wallet" />
-          <WalletCard label="Wallet" />
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2">
+        <WalletCard label="Wallet" />
+        <WalletCard label="Wallet" />
+        <WalletCard label="Wallet" />
+        <WalletCard label="Wallet" />
       </div>
     </div>
+  );
+}
+
+// ── Wallet Widget: dealer contacts, e-wallet accounts and latest commission ──
+function WalletWidget() {
+  return (
+    <EWalletSection />
   );
 }
 
@@ -1242,11 +1250,8 @@ function LatestCommissionDetails() {
             <span className="text-[14px] text-[#b93815] font-medium pb-[1px]">OMR</span>
           </div>
         </div>
-        {/* Wallet icon placeholder */}
-        <div className="w-9 h-4 opacity-60">
-          <svg viewBox="0 0 36 15" fill="none" className="w-full h-full">
-            <rect width="36" height="15" rx="3" fill="#FABA97" opacity="0.4" />
-          </svg>
+        <div className="w-11 h-11 rounded-full bg-[#fff1e6] flex items-center justify-center text-[#f97316]">
+          <HandCoins size={24} />
         </div>
       </div>
       {/* Plan Tabs */}
@@ -1268,16 +1273,16 @@ function LatestCommissionDetails() {
       {/* Metrics */}
       <div className="flex gap-2">
         <div className="flex-1 bg-[#fafaff] border border-[#ebe9fe] rounded-[4px] flex flex-col items-center justify-center py-3 gap-2">
-          <span className="text-[14px] text-[rgba(0,11,37,0.64)]">Target</span>
+          <span className="text-[14px] text-[rgba(0,11,37,0.64)] flex items-center gap-1">Target <Target size={12} className="text-[#7a5af8]" /></span>
           <span className="text-[14px] text-[#7a5af8] font-medium">536 OMR</span>
         </div>
         <div className="flex-1 bg-[#edfcf2] border border-[#d3f8df] rounded-[4px] flex flex-col items-center justify-center py-3 gap-2">
-          <span className="text-[14px] text-[rgba(0,11,37,0.64)]">Achieved %</span>
+          <span className="text-[14px] text-[rgba(0,11,37,0.64)] flex items-center gap-1">Achieved % <CircleCheck size={12} className="text-[#087443]" /></span>
           <span className="text-[14px] text-[#087443] font-medium">65%</span>
         </div>
         <div className="flex-1 bg-[#f4f4f5] border border-[#e4e4e7] rounded-[4px] flex flex-col items-center justify-center py-3 gap-2">
-          <span className="text-[14px] text-[rgba(0,11,37,0.64)]">Commission</span>
-          <span className="text-[14px] text-[#000000] font-medium">Edit OMR</span>
+          <span className="text-[14px] text-[rgba(0,11,37,0.64)] flex items-center gap-1">Commission <Sigma size={12} /></span>
+          <span className="text-[14px] text-[#000000] font-medium">5369 OMR</span>
         </div>
       </div>
     </div>
@@ -1306,7 +1311,7 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
   const [showTree, setShowTree] = useState(false);
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <span className="text-[17px] text-[#000b25] font-medium">Channel Member Details</span>
         <div className="flex items-center gap-2">
           {showHierarchyView && (
@@ -1314,7 +1319,7 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
               <button
                 onClick={() => setShowTree(true)}
                 aria-describedby="hierarchy-view-tip"
-                className="h-9 px-3 rounded-[4px] bg-[#e4e4e7] text-[14px] text-[#000000] font-medium flex items-center gap-2 hover:bg-[#d4d4d8] active:scale-95 transition-all"
+                className="h-9 px-3 whitespace-nowrap rounded-[4px] bg-[#e4e4e7] text-[14px] text-[#000000] font-medium flex items-center gap-2 hover:bg-[#d4d4d8] active:scale-95 transition-all"
               >
                 <ListTree size={16} /> Hierarchy View
                 <span className="bg-[#000000] text-white text-[11px] px-1.5 rounded-full">{parents.length - 1}</span>
@@ -1332,7 +1337,7 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
             <button
               aria-disabled="true"
               aria-describedby="hierarchy-settings-tip"
-              className="h-9 px-3 rounded-[4px] bg-[#e4e4e7] text-[14px] text-[#000000] font-medium flex items-center gap-2 cursor-default"
+              className="h-9 px-3 whitespace-nowrap rounded-[4px] bg-[#e4e4e7] text-[14px] text-[#000000] font-medium flex items-center gap-2 cursor-default"
             >
               <Network size={16} /> Hierarchy Settings
             </button>
@@ -1349,7 +1354,7 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
       <ChannelMemberParentsDrawer isOpen={showTree} onClose={() => setShowTree(false)} />
       <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4">
         <FormSection title="Member Information" />
-        <div className="grid grid-cols-3 gap-x-4 gap-y-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
           <ReadonlyField label="Member Code" value="5456589" />
           <TextField label="Name" value="aaaz" />
           <TextField label="Phone" value="966554444443" />
@@ -1357,8 +1362,10 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
         </div>
 
         <FormSection title="Organization Details" />
-        <div className="grid grid-cols-3 gap-x-4 gap-y-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
           <SelectField label="Store Name" value="tet" options={['Store A', 'Store B']} />
+          <SelectField label="Hierarchy Type" value="Point of Sales Store" options={['Distributor', 'Dealer']} />
+          <ChipsField label="Allowed Channels" initial={['Sales App/Tablet']} />
           <TextField label="Organization ID" value="21323" />
           <TextField label="Commercial Registration (CR)" value="tes" />
           <TextField label="CR Expiry Date" type="date" value="2026-10-13" />
@@ -1382,7 +1389,7 @@ function AccountManagement() {
   return (
     <div className="flex flex-col gap-2">
       <span className="text-[17px] text-[#000b25] font-medium">Account Management</span>
-      <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 grid grid-cols-3 gap-x-4 gap-y-3">
+      <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
         {ancestors.map(p => (
           <ReadonlyField key={p.name} label={p.role} value={p.name} />
         ))}
@@ -1409,6 +1416,25 @@ function SelectField({ label, value = '', options = [], disabled, help }: { labe
           {[...new Set([value, ...options].filter(Boolean))].map(o => <option key={o}>{o}</option>)}
         </select>
         <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[rgba(0,11,37,0.64)]" />
+      </div>
+    </FormField>
+  );
+}
+
+// Multi-value field shown as removable chips.
+function ChipsField({ label, initial = [] }: { label: string; initial?: string[] }) {
+  const [chips, setChips] = useState(initial);
+  return (
+    <FormField label={label}>
+      <div className={`${inputCls} !h-auto min-h-10 py-1.5 flex flex-wrap items-center gap-1`}>
+        {chips.map(c => (
+          <span key={c} className="flex items-center gap-1 border border-[#000b25] rounded-full pl-2 pr-1 text-[12px] leading-5">
+            {c}
+            <button type="button" onClick={() => setChips(chips.filter(x => x !== c))} aria-label={`Remove ${c}`} className="rounded-full hover:bg-[#e4e4e7] p-0.5">
+              <X size={10} />
+            </button>
+          </span>
+        ))}
       </div>
     </FormField>
   );
@@ -1518,7 +1544,7 @@ function UploadDocument() {
         <div className="flex items-center gap-2">
           <div className="flex-1">
             <div className="bg-white border border-[#e5e7eb] rounded-[4px] h-[38px] flex items-center px-3 justify-between">
-              <span className="text-[16px] text-[rgba(0,11,37,0.57)]">Select document type</span>
+              <span className="text-[14px] sm:text-[16px] text-[rgba(0,11,37,0.57)] truncate">Select document type</span>
               <ChevronDown size={16} className="text-[#000b25]" />
             </div>
           </div>
@@ -1551,7 +1577,7 @@ function LocalitySettings() {
         <span className="text-[17px] text-[#000b25] font-medium">Locality Settings</span>
         <span className="text-[12px] text-[rgba(0,11,37,0.57)]">Read-only, inherited from parent store</span>
       </div>
-      <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 grid grid-cols-3 gap-x-4 gap-y-3">
+      <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
         <SelectField label="Region" value="Western Region" disabled />
         <SelectField label="Governorate" value="Makkah" disabled />
         <SelectField label="City" value="Makkah" disabled />
@@ -1572,7 +1598,7 @@ const nestedTabs = ['Sales App Rights Groups', 'Additional Users', 'Widgets', 'S
 function ConfigurationSettings() {
   const [activeConfigTab, setActiveConfigTab] = useState('User Management');
   const [activeNestedTab, setActiveNestedTab] = useState('Sales App Rights Groups');
-  const [lines, setLines] = useState<Record<string, string[]>>({ 'Sales App Rights Groups': ['Onboarding req'] });
+  const [lines, setLines] = useState<Record<string, string[]>>({ 'Sales App Rights Groups': ['Onboarding req'], Widgets: ['Wallet Widget'] });
   const current = lines[activeNestedTab] ?? [];
   const setCurrent = (next: string[]) => setLines(prev => ({ ...prev, [activeNestedTab]: next }));
 
@@ -1610,12 +1636,12 @@ function ConfigurationSettings() {
           {activeConfigTab === 'User Management' ? (
             <>
               {/* Nested tabs */}
-              <div className="bg-white border border-[#e2e8f0] rounded-[4px] flex gap-[2px] p-1">
+              <div className="bg-white border border-[#e2e8f0] rounded-[4px] flex gap-[2px] p-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {nestedTabs.map(tab => (
                   <button
                     key={tab}
                     onClick={() => setActiveNestedTab(tab)}
-                    className={`flex-1 py-2 rounded-[4px] text-[13px] text-center transition-all ${
+                    className={`flex-1 shrink-0 whitespace-nowrap px-3 py-2 rounded-[4px] text-[13px] text-center transition-all ${
                       activeNestedTab === tab
                         ? 'bg-[#000000] text-white font-medium'
                         : 'text-[rgba(0,11,37,0.64)] hover:bg-[#f8fafc]'
@@ -1645,8 +1671,7 @@ function ConfigurationSettings() {
                 <button onClick={() => setCurrent([...current, ''])} className="w-full text-left px-4 py-2.5 text-[13px] text-[#000000] font-medium flex items-center gap-1.5 hover:bg-[#f8fafc] transition-colors">
                   <Plus size={12} /> Add a line
                 </button>
-              </div>
-            </>
+              </div>            </>
           ) : (
             <div className="bg-white border border-dashed border-[#e2e8f0] rounded-[4px] py-8 text-center text-[13px] text-[rgba(0,11,37,0.57)]">
               Nothing configured yet
@@ -1662,10 +1687,10 @@ function ConfigurationSettings() {
 export function SalesTeamProfile({ onOpenHierarchySettings, variant = 1 }: { onOpenHierarchySettings?: () => void; variant?: 1 | 2 } = {}) {
   return (
     <div className="h-full overflow-y-auto custom-scrollbar-profile">
-      <div className="min-w-[1040px] bg-[#f5f6fa] p-6 flex flex-col gap-6">
+      <div className="bg-[#f5f6fa] p-4 sm:p-6 flex flex-col gap-4 sm:gap-6">
         {/* Action Bar + Status */}
         <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 shadow-[0_3px_10px_rgba(0,0,0,0.05)]">
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             <div className="flex gap-2 shrink-0">
               <button className="h-10 px-4 rounded-[4px] bg-[#e8f8ef] text-[14px] text-[#0f9d58] font-medium hover:bg-[#c9eedb] active:scale-95 transition-all">
                 Approve
@@ -1683,9 +1708,12 @@ export function SalesTeamProfile({ onOpenHierarchySettings, variant = 1 }: { onO
           <SmartButtonsRow />
         </div>
 
+        {/* Wallet Widget */}
+        <WalletWidget />
+
         {/* Channel Member Details */}
         {variant === 2 ? (
-          <div className="grid grid-cols-[2fr_1fr] items-start gap-4">
+          <div className="grid grid-cols-1 xl:grid-cols-[2fr_1fr] items-start gap-4">
             <ChannelMemberDetails onOpenHierarchySettings={onOpenHierarchySettings} showHierarchyView={false} />
             <div className="flex flex-col gap-2">
               <div className="flex items-center h-9">
