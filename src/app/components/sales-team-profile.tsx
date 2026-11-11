@@ -1379,20 +1379,18 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
 
         {/* Hierarchy and allocation rules live in their own group, so the choice cards don't interrupt the plain fields */}
         <FormSection title="Hierarchy & Allocation" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
           <SelectField label="Hierarchy Type" value="Point of Sales Store" options={['Distributor', 'Dealer']} />
           <ChipsField label="Allowed Channels" initial={['Sales App/Tablet']} />
-          <div className="col-span-full">
-            <ChoiceCardsField
-              label="Allocation Mode"
-              name="allocation-mode"
-              initial="Shared pool"
-              options={[
-                { value: 'Shared pool', title: 'Shared pool', description: 'One allocation shared across all allowed channels.', icon: Layers },
-                { value: 'Per channel', title: 'Per channel', description: 'A separate allocation for each allowed channel.', icon: Split },
-              ]}
-            />
-          </div>
+          <RadioInlineField
+            label="Allocation Mode"
+            name="allocation-mode"
+            initial="Shared pool"
+            options={[
+              { value: 'Shared pool', hint: 'One allocation shared across all allowed channels' },
+              { value: 'Per channel', hint: 'A separate allocation for each allowed channel' },
+            ]}
+          />
         </div>
       </div>
     </div>
@@ -1437,44 +1435,27 @@ function SelectField({ label, value = '', options = [], disabled, help }: { labe
   );
 }
 
-// Pick-one choice presented as selectable cards: each option explains what it means, so the user
-// doesn't have to guess. Native radios underneath keep keyboard (arrow keys) and screen-reader support.
-interface ChoiceOption { value: string; title: string; description: string; icon: React.ElementType }
+// Pick-one field with a few fixed values: compact inline radios inside a normal field box.
+// Native radios keep keyboard (arrow keys) and screen-reader support; `hint` shows as a tooltip.
+interface RadioOption { value: string; hint?: string }
 
-function ChoiceCardsField({ label, name, options, initial }: { label: string; name: string; options: ChoiceOption[]; initial: string }) {
+function RadioInlineField({ label, name, options, initial }: { label: string; name: string; options: RadioOption[]; initial: string }) {
   const [value, setValue] = useState(initial);
   return (
     <fieldset className="flex flex-col gap-1 min-w-0">
       <legend className="text-[12px] text-[rgba(0,11,37,0.64)] mb-1">{label}</legend>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {options.map(({ value: v, title, description, icon: Icon }) => (
-          <label key={v} className="relative cursor-pointer">
+      <div className="h-10 flex items-center gap-5">
+        {options.map(o => (
+          <label key={o.value} title={o.hint} className="flex items-center gap-2 cursor-pointer text-[14px] text-[#000b25]">
             <input
               type="radio"
               name={name}
-              value={v}
-              checked={value === v}
-              onChange={() => setValue(v)}
-              className="peer sr-only"
+              value={o.value}
+              checked={value === o.value}
+              onChange={() => setValue(o.value)}
+              className="h-4 w-4 accent-black cursor-pointer"
             />
-            <div className="flex items-start gap-3 rounded-[4px] border-[1px] border-[#e2e8f0] bg-white p-3 pr-10 transition-all hover:border-[#d4d4d8] hover:bg-[#f8fafc] peer-checked:border-black/20 peer-checked:bg-[#f4f4f5] dark:peer-checked:border-white/20 peer-focus-visible:ring-2 peer-focus-visible:ring-offset-1 peer-focus-visible:ring-[#000000]">
-              <span className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-[4px] transition-colors ${value === v ? 'bg-[#3f3f46] text-white' : 'bg-[#e4e4e7] text-[#3f3f46]'}`}>
-                <Icon size={16} />
-              </span>
-              <span className="flex flex-col gap-0.5 min-w-0">
-                <span className="text-[14px] font-medium text-[#000b25]">{title}</span>
-                <span className="text-[12px] leading-snug text-[rgba(0,11,37,0.64)]">{description}</span>
-              </span>
-            </div>
-            {/* Selection indicator */}
-            <span
-              aria-hidden="true"
-              className={`pointer-events-none absolute right-3 top-3 flex h-5 w-5 items-center justify-center rounded-full border transition-all ${
-                value === v ? 'border-[#3f3f46] bg-[#3f3f46] text-white' : 'border-[#d4d4d8] bg-white text-transparent'
-              }`}
-            >
-              <Check size={12} strokeWidth={3} />
-            </span>
+            {o.value}
           </label>
         ))}
       </div>
