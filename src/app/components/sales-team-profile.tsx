@@ -1193,7 +1193,7 @@ function DealerCard({ title, dealerName }: { title: string; dealerName: string }
 // ── E-Wallet Wallet Card ──
 function WalletCard({ label }: { label: string }) {
   return (
-    <div className="bg-[#f4f4f5] rounded-[4px] flex-1 p-3">
+    <div className="bg-[#f4f4f5] rounded-[4px] flex-1 p-3 border border-transparent cursor-default transition-all duration-200 hover:bg-[#ebebed] hover:border-black/10 hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)] dark:hover:bg-white/5 dark:hover:border-white/15">
       <div className="flex items-center justify-between mb-2">
         <span className="text-[14px] text-[#000b25] font-bold">{label}</span>
         <span className="bg-black/10 dark:bg-white/15 rounded-full px-2.5 py-[2px] text-[12px] text-[#000000] font-medium">Label</span>
@@ -1379,11 +1379,9 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
 
         {/* Hierarchy and allocation rules live in their own group, so the choice cards don't interrupt the plain fields */}
         <FormSection title="Hierarchy & Allocation" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
           <SelectField label="Hierarchy Type" value="Point of Sales Store" options={['Distributor', 'Dealer']} />
-          <div className="sm:col-span-1 lg:col-span-2">
-            <ChipsField label="Allowed Channels" initial={['Sales App/Tablet']} />
-          </div>
+          <ChipsField label="Allowed Channels" initial={['Sales App/Tablet']} />
           <div className="col-span-full">
             <ChoiceCardsField
               label="Allocation Mode"
