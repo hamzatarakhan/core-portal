@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Phone, Mail, Upload, FileText, ArrowRight, Check, CircleDot, Plus, Pencil, Trash2, FileSpreadsheet, X, Save, AlertCircle, Eye, EyeOff, Paperclip, FileImage, File as FileIcon, Edit2, MapPin, Network, ListTree, Banknote, HandCoins, Target, CircleCheck, Sigma, ChevronsDown, Briefcase, Package, Ticket, CalendarCheck, Laptop } from 'lucide-react';
+import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Phone, Mail, Upload, FileText, ArrowRight, Check, CircleDot, Plus, Pencil, Trash2, FileSpreadsheet, X, Save, AlertCircle, Eye, EyeOff, Paperclip, FileImage, File as FileIcon, Edit2, MapPin, Network, ListTree, Banknote, HandCoins, Target, CircleCheck, Sigma, Layers, Split, ChevronsDown, Briefcase, Package, Ticket, CalendarCheck, Laptop } from 'lucide-react';
 import MainContainer from '../../imports/MainContainer-222-488';
 
 // ── Status Segmented Control ──
@@ -1364,8 +1364,6 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
         <FormSection title="Organization Details" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
           <SelectField label="Store Name" value="tet" options={['Store A', 'Store B']} />
-          <SelectField label="Hierarchy Type" value="Point of Sales Store" options={['Distributor', 'Dealer']} />
-          <ChipsField label="Allowed Channels" initial={['Sales App/Tablet']} />
           <TextField label="Organization ID" value="21323" />
           <TextField label="Commercial Registration (CR)" value="tes" />
           <TextField label="CR Expiry Date" type="date" value="2026-10-13" />
@@ -1378,6 +1376,26 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
         <FormField label="National Address">
           <textarea className={`${inputCls} h-[72px] py-2 font-normal resize-none`} defaultValue="Makkah, Al Aziziyah, Prince Sultan Street, Building 8218" />
         </FormField>
+
+        {/* Hierarchy and allocation rules live in their own group, so the choice cards don't interrupt the plain fields */}
+        <FormSection title="Hierarchy & Allocation" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4">
+          <SelectField label="Hierarchy Type" value="Point of Sales Store" options={['Distributor', 'Dealer']} />
+          <div className="sm:col-span-1 lg:col-span-2">
+            <ChipsField label="Allowed Channels" initial={['Sales App/Tablet']} />
+          </div>
+          <div className="col-span-full">
+            <ChoiceCardsField
+              label="Allocation Mode"
+              name="allocation-mode"
+              initial="Shared pool"
+              options={[
+                { value: 'Shared pool', title: 'Shared pool', description: 'One allocation shared across all allowed channels.', icon: Layers },
+                { value: 'Per channel', title: 'Per channel', description: 'A separate allocation for each allowed channel.', icon: Split },
+              ]}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -1418,6 +1436,51 @@ function SelectField({ label, value = '', options = [], disabled, help }: { labe
         <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[rgba(0,11,37,0.64)]" />
       </div>
     </FormField>
+  );
+}
+
+// Pick-one choice presented as selectable cards: each option explains what it means, so the user
+// doesn't have to guess. Native radios underneath keep keyboard (arrow keys) and screen-reader support.
+interface ChoiceOption { value: string; title: string; description: string; icon: React.ElementType }
+
+function ChoiceCardsField({ label, name, options, initial }: { label: string; name: string; options: ChoiceOption[]; initial: string }) {
+  const [value, setValue] = useState(initial);
+  return (
+    <fieldset className="flex flex-col gap-1 min-w-0">
+      <legend className="text-[12px] text-[rgba(0,11,37,0.64)] mb-1">{label}</legend>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {options.map(({ value: v, title, description, icon: Icon }) => (
+          <label key={v} className="relative cursor-pointer">
+            <input
+              type="radio"
+              name={name}
+              value={v}
+              checked={value === v}
+              onChange={() => setValue(v)}
+              className="peer sr-only"
+            />
+            <div className="flex items-start gap-3 rounded-[4px] border-[1px] border-[#e2e8f0] bg-white p-3 pr-10 transition-all hover:border-[#d4d4d8] hover:bg-[#f8fafc] peer-checked:border-black/20 peer-checked:bg-[#f4f4f5] dark:peer-checked:border-white/20 peer-focus-visible:ring-2 peer-focus-visible:ring-offset-1 peer-focus-visible:ring-[#000000]">
+              <span className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-[4px] transition-colors ${value === v ? 'bg-[#3f3f46] text-white' : 'bg-[#e4e4e7] text-[#3f3f46]'}`}>
+                <Icon size={16} />
+              </span>
+              <span className="flex flex-col gap-0.5 min-w-0">
+                <span className="text-[14px] font-medium text-[#000b25]">{title}</span>
+                <span className="text-[12px] leading-snug text-[rgba(0,11,37,0.64)]">{description}</span>
+              </span>
+            </div>
+            {/* Selection indicator */}
+            <span
+              aria-hidden="true"
+              className={`pointer-events-none absolute right-3 top-3 flex h-5 w-5 items-center justify-center rounded-full border transition-all ${
+                value === v ? 'border-[#3f3f46] bg-[#3f3f46] text-white' : 'border-[#d4d4d8] bg-white text-transparent'
+              }`}
+            >
+              <Check size={12} strokeWidth={3} />
+            </span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
   );
 }
 
