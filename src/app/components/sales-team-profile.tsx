@@ -1364,6 +1364,8 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
         <FormSection title="Organization Details" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
           <SelectField label="Store Name" value="tet" options={['Store A', 'Store B']} />
+          <SelectField label="Hierarchy Type" value="Point of Sales Store" options={['Distributor', 'Dealer']} />
+          <ChipsField label="Allowed Channels" initial={['Sales App/Tablet']} />
           <TextField label="Organization ID" value="21323" />
           <TextField label="Commercial Registration (CR)" value="tes" />
           <TextField label="CR Expiry Date" type="date" value="2026-10-13" />
@@ -1377,11 +1379,8 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
           <textarea className={`${inputCls} h-[72px] py-2 font-normal resize-none`} defaultValue="Makkah, Al Aziziyah, Prince Sultan Street, Building 8218" />
         </FormField>
 
-        {/* Hierarchy and allocation rules live in their own group, so the choice cards don't interrupt the plain fields */}
-        <FormSection title="Hierarchy & Allocation" />
+        <FormSection title="Allocation" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
-          <SelectField label="Hierarchy Type" value="Point of Sales Store" options={['Distributor', 'Dealer']} />
-          <ChipsField label="Allowed Channels" initial={['Sales App/Tablet']} />
           <RadioInlineField
             label="Allocation Mode"
             name="allocation-mode"
