@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Phone, Mail, Upload, FileText, ArrowRight, Check, CircleDot, Plus, Pencil, Trash2, FileSpreadsheet, X, Save, AlertCircle, Eye, EyeOff, Paperclip, FileImage, File as FileIcon, Edit2, MapPin, Network, ListTree, Banknote, HandCoins, Target, CircleCheck, Sigma, Layers, Split, ChevronsDown, Briefcase, Package, Ticket, CalendarCheck, Laptop } from 'lucide-react';
+import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Phone, Mail, Upload, FileText, ArrowRight, Check, CircleDot, Plus, Pencil, Trash2, FileSpreadsheet, X, Save, AlertCircle, Eye, EyeOff, Paperclip, FileImage, File as FileIcon, Edit2, MapPin, Network, ListTree, Banknote, HandCoins, Target, CircleCheck, Sigma, Layers, Split, UserRound, UsersRound, Building2, ChevronsDown, Briefcase, Package, Ticket, CalendarCheck, Laptop } from 'lucide-react';
 import MainContainer from '../../imports/MainContainer-222-488';
 
 // ── Status Segmented Control ──
@@ -1301,11 +1301,15 @@ function FormField({ label, children, help }: { label: string; children: React.R
   );
 }
 
+
+const fieldGrid = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3';
+
 function FormSection({ title }: { title: string }) {
   return (
     <div className="bg-[#f8fafc] border-l-[3px] border-[#000000] px-3 py-2 text-[14px] text-[#000b25] font-medium">{title}</div>
   );
 }
+
 
 function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = true }: { onOpenHierarchySettings?: () => void; showHierarchyView?: boolean }) {
   const [showTree, setShowTree] = useState(false);
@@ -1353,44 +1357,78 @@ function ChannelMemberDetails({ onOpenHierarchySettings, showHierarchyView = tru
       </div>
       <ChannelMemberParentsDrawer isOpen={showTree} onClose={() => setShowTree(false)} />
       <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4">
-        <FormSection title="Member Information" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
-          <ReadonlyField label="Member Code" value="5456589" />
-          <TextField label="Name" value="aaaz" />
-          <TextField label="Phone" value="966554444443" />
-          <TextField label="Email" value="ss@gmail.com" />
-        </div>
+        <MemberFormFields name="allocation-mode" />
+      </div>
+    </div>
+  );
+}
 
-        <FormSection title="Organization Details" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
-          <SelectField label="Store Name" value="tet" options={['Store A', 'Store B']} />
-          <SelectField label="Hierarchy Type" value="Point of Sales Store" options={['Distributor', 'Dealer']} />
-          <ChipsField label="Allowed Channels" initial={['Sales App/Tablet']} />
-          <TextField label="Organization ID" value="21323" />
-          <TextField label="Commercial Registration (CR)" value="tes" />
-          <TextField label="CR Expiry Date" type="date" value="2026-10-13" />
-          <TextField label="Municipality License Expiry Date" type="date" value="2026-10-15" />
-          <TextField label="Bank IBAN Proof" value="SA0380000000608010167519" />
-          <TextField label="Owner Name" value="Khaled Al Harbi" />
-          <TextField label="Owner Civil ID" value="21321" />
-          <SelectField label="Outlet Type" value="Kiosk" disabled />
-        </div>
-        <FormField label="National Address">
-          <textarea className={`${inputCls} h-[72px] py-2 font-normal resize-none`} defaultValue="Makkah, Al Aziziyah, Prince Sultan Street, Building 8218" />
-        </FormField>
+// The member form: Member Information, Organization Details, Allocation.
+// Reused read-only for the parent, so the two always have the same fields.
+function MemberFormFields({ name, disabled, showOrganization = true }: { name: string; disabled?: boolean; showOrganization?: boolean }) {
+  return (
+    <>
+      <FormSection title="Member Information" />
+      <div className={fieldGrid}>
+        {disabled
+          ? <TextField label="Member Code" value="5456589" disabled />
+          : <ReadonlyField label="Member Code" value="5456589" />}
+        <TextField label="Name" value="aaaz" disabled={disabled} />
+        <TextField label="Phone" value="966554444443" disabled={disabled} />
+        <TextField label="Email" value="ss@gmail.com" disabled={disabled} />
+      </div>
 
-        <FormSection title="Allocation" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
-          <RadioInlineField
-            label="Allocation Mode"
-            name="allocation-mode"
-            initial="Shared pool"
-            options={[
-              { value: 'Shared pool', hint: 'One allocation shared across all allowed channels' },
-              { value: 'Per channel', hint: 'A separate allocation for each allowed channel' },
-            ]}
-          />
-        </div>
+      {showOrganization && (<>
+      <FormSection title="Organization Details" />
+      <div className={fieldGrid}>
+        <SelectField label="Store Name" value="tet" options={['Store A', 'Store B']} disabled={disabled} />
+        <SelectField label="Hierarchy Type" value="Point of Sales Store" options={['Distributor', 'Dealer']} disabled={disabled} />
+        <ChipsField label="Allowed Channels" initial={['Sales App/Tablet']} disabled={disabled} />
+        <TextField label="Organization ID" value="21323" disabled={disabled} />
+        <TextField label="Commercial Registration (CR)" value="tes" disabled={disabled} />
+        <TextField label="CR Expiry Date" type="date" value="2026-10-13" disabled={disabled} />
+        <TextField label="Municipality License Expiry Date" type="date" value="2026-10-15" disabled={disabled} />
+        <TextField label="Bank IBAN Proof" value="SA0380000000608010167519" disabled={disabled} />
+        <TextField label="Owner Name" value="Khaled Al Harbi" disabled={disabled} />
+        <TextField label="Owner Civil ID" value="21321" disabled={disabled} />
+        <SelectField label="Outlet Type" value="Kiosk" disabled />
+      </div>
+      <FormField label="National Address">
+        <textarea
+          disabled={disabled}
+          className={`${inputCls} h-[72px] py-2 font-normal resize-none disabled:bg-[#f5f5f5] disabled:text-[rgba(0,11,37,0.4)] disabled:cursor-not-allowed`}
+          defaultValue="Makkah, Al Aziziyah, Prince Sultan Street, Building 8218"
+        />
+      </FormField>
+      </>)}
+
+      <FormSection title="Allocation" />
+      <div className={fieldGrid}>
+        <RadioInlineField
+          label="Allocation Mode"
+          name={name}
+          initial="Shared pool"
+          disabled={disabled}
+          options={[
+            { value: 'Shared pool', hint: 'One allocation shared across all allowed channels' },
+            { value: 'Per channel', hint: 'A separate allocation for each allowed channel' },
+          ]}
+        />
+      </div>
+    </>
+  );
+}
+
+// Stand-alone section for the parent: same fields as the member form, all read-only, tagged "Parent".
+function ParentDetails() {
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="flex items-center gap-2">
+        <span className="text-[17px] text-[#000b25] font-medium">Parent Details</span>
+        <span className="rounded-full bg-violet-100 px-2.5 py-0.5 text-[12px] font-medium text-violet-800 dark:bg-violet-500/20 dark:text-violet-200">Parent</span>
+      </div>
+      <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4">
+        <MemberFormFields name="parent-allocation-mode" disabled />
       </div>
     </div>
   );
@@ -1411,10 +1449,15 @@ function AccountManagement() {
   );
 }
 
-function TextField({ label, value = '', type = 'text' }: { label: string; value?: string; type?: string }) {
+function TextField({ label, value = '', type = 'text', disabled }: { label: string; value?: string; type?: string; disabled?: boolean }) {
   return (
     <FormField label={label}>
-      <input type={type} className={inputCls} defaultValue={value} />
+      <input
+        type={type}
+        disabled={disabled}
+        className={`${inputCls} disabled:bg-[#f5f5f5] disabled:text-[rgba(0,11,37,0.4)] disabled:cursor-not-allowed`}
+        defaultValue={value}
+      />
     </FormField>
   );
 }
@@ -1438,21 +1481,21 @@ function SelectField({ label, value = '', options = [], disabled, help }: { labe
 // Native radios keep keyboard (arrow keys) and screen-reader support; `hint` shows as a tooltip.
 interface RadioOption { value: string; hint?: string }
 
-function RadioInlineField({ label, name, options, initial }: { label: string; name: string; options: RadioOption[]; initial: string }) {
+function RadioInlineField({ label, name, options, initial, disabled }: { label: string; name: string; options: RadioOption[]; initial: string; disabled?: boolean }) {
   const [value, setValue] = useState(initial);
   return (
-    <fieldset className="flex flex-col gap-1 min-w-0">
+    <fieldset disabled={disabled} className="flex flex-col gap-1 min-w-0">
       <legend className="text-[12px] text-[rgba(0,11,37,0.64)] mb-1">{label}</legend>
-      <div className="h-10 flex items-center gap-5">
+      <div className={`h-10 flex items-center gap-5 ${disabled ? 'opacity-50' : ''}`}>
         {options.map(o => (
-          <label key={o.value} title={o.hint} className="flex items-center gap-2 cursor-pointer text-[14px] text-[#000b25]">
+          <label key={o.value} title={o.hint} className={`flex items-center gap-2 text-[14px] text-[#000b25] ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
             <input
               type="radio"
               name={name}
               value={o.value}
               checked={value === o.value}
               onChange={() => setValue(o.value)}
-              className="h-4 w-4 accent-black cursor-pointer"
+              className="h-4 w-4 accent-black cursor-pointer disabled:cursor-not-allowed"
             />
             {o.value}
           </label>
@@ -1463,17 +1506,22 @@ function RadioInlineField({ label, name, options, initial }: { label: string; na
 }
 
 // Multi-value field shown as removable chips.
-function ChipsField({ label, initial = [] }: { label: string; initial?: string[] }) {
+function ChipsField({ label, initial = [], disabled }: { label: string; initial?: string[]; disabled?: boolean }) {
   const [chips, setChips] = useState(initial);
   return (
     <FormField label={label}>
-      <div className={`${inputCls} !h-auto min-h-10 py-1.5 flex flex-wrap items-center gap-1`}>
+      <div
+        aria-disabled={disabled}
+        className={`${inputCls} !h-auto min-h-10 py-1.5 flex flex-wrap items-center gap-1 ${disabled ? '!bg-[#f5f5f5] opacity-60 cursor-not-allowed' : ''}`}
+      >
         {chips.map(c => (
           <span key={c} className="flex items-center gap-1 border border-[#000b25] rounded-full pl-2 pr-1 text-[12px] leading-5">
             {c}
-            <button type="button" onClick={() => setChips(chips.filter(x => x !== c))} aria-label={`Remove ${c}`} className="rounded-full hover:bg-[#e4e4e7] p-0.5">
-              <X size={10} />
-            </button>
+            {!disabled && (
+              <button type="button" onClick={() => setChips(chips.filter(x => x !== c))} aria-label={`Remove ${c}`} className="rounded-full hover:bg-[#e4e4e7] p-0.5">
+                <X size={10} />
+              </button>
+            )}
           </span>
         ))}
       </div>
@@ -1768,6 +1816,7 @@ export function SalesTeamProfile({ onOpenHierarchySettings, variant = 1 }: { onO
         ) : (
           <>
             <ChannelMemberDetails onOpenHierarchySettings={onOpenHierarchySettings} />
+            <ParentDetails />
             {/* Account Management (parents in the tree) */}
             <AccountManagement />
           </>
