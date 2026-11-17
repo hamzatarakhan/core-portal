@@ -1425,9 +1425,10 @@ function ParentDetails() {
     <div className="flex flex-col gap-2">
       <div className="flex items-center gap-2">
         <span className="text-[17px] text-[#000b25] font-medium">Parent Details</span>
-        <span className="rounded-full bg-violet-100 px-2.5 py-0.5 text-[12px] font-medium text-violet-800 dark:bg-violet-500/20 dark:text-violet-200">Parent</span>
+        <span className="rounded-full bg-violet-100 px-2.5 py-0.5 text-[12px] font-medium text-violet-700 dark:bg-violet-500/20 dark:text-violet-200">Parent</span>
       </div>
-      <div className="bg-white rounded-[4px] border border-[#e2e8f0] p-4 flex flex-col gap-4">
+      {/* A violet edge runs the full height of the section, so it's recognisable while scrolling */}
+      <div className="bg-white rounded-[4px] border border-[#e2e8f0] border-l-4 border-l-violet-300 p-4 flex flex-col gap-4 dark:border-l-violet-500/50">
         <MemberFormFields name="parent-allocation-mode" disabled />
       </div>
     </div>
